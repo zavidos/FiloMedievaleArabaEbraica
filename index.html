@@ -1175,6 +1175,288 @@ body {
 .s9-row-esc td:first-child { color: var(--gold); }
 
 /* ══════════════════════════════════════
+   SCHEMA 10 — Averroè: unicità intelletto
+══════════════════════════════════════ */
+
+/* Three-column comparison */
+.s10-tricomp {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.s10-col {
+  border-radius: var(--r);
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.s10-col:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+
+.s10-alex { background: linear-gradient(160deg, rgba(45,107,74,0.08), var(--surface2)); border-left: 4px solid var(--greek); }
+.s10-temis { background: linear-gradient(160deg, rgba(139,90,26,0.08), var(--surface2)); border-left: 4px solid var(--arab); }
+.s10-averr { background: linear-gradient(160deg, rgba(36,64,122,0.12), var(--surface2)); border-left: 4px solid var(--latin-l); box-shadow: 0 0 0 1px rgba(45,84,160,0.3); }
+
+.s10-col-name { font-family: var(--font-h); font-size: 1rem; font-weight: 700; }
+.s10-alex .s10-col-name { color: var(--greek-l); }
+.s10-temis .s10-col-name { color: var(--arab-l); }
+.s10-averr .s10-col-name { color: var(--latin-l); }
+
+.s10-col-date { font-size: 0.72rem; color: var(--muted2); margin-top: -0.4rem; }
+
+.s10-prop {
+  font-size: 0.8rem;
+  color: var(--cream);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--r-sm);
+  background: rgba(0,0,0,0.2);
+  border-left: 2px solid;
+  line-height: 1.5;
+}
+.s10-alex .s10-prop { border-left-color: var(--greek); }
+.s10-temis .s10-prop { border-left-color: var(--arab); }
+.s10-averr .s10-prop { border-left-color: var(--latin-l); }
+
+.s10-prop-lbl { font-family: var(--font-h); font-size: 0.68rem; color: var(--muted2); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.2rem; }
+
+.s10-verdict {
+  margin-top: auto;
+  font-size: 0.72rem;
+  font-family: var(--font-h);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.s10-verdict-no { background: rgba(139,24,24,0.2); color: #d45050; border: 1px solid rgba(139,24,24,0.4); }
+.s10-verdict-part { background: rgba(201,151,58,0.15); color: var(--gold); border: 1px solid var(--gold-d); }
+.s10-verdict-full { background: rgba(36,64,122,0.25); color: #6090e0; border: 1px solid var(--latin); }
+.s10-verdict-warn { background: rgba(139,24,24,0.15); color: #d45050; border: 1px solid rgba(139,24,24,0.3); font-size: 0.68rem; }
+
+/* Arguments grid */
+.s10-args {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.s10-arg {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.18s;
+}
+.s10-arg:hover { transform: translateY(-2px); }
+
+.s10-arg-num {
+  font-family: var(--font-h);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgba(201,151,58,0.25);
+  line-height: 1;
+  margin-bottom: -0.25rem;
+}
+
+.s10-arg-title {
+  font-family: var(--font-h);
+  font-size: 0.92rem;
+  color: var(--cream);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.s10-arg-body {
+  font-size: 0.82rem;
+  color: var(--muted2);
+  line-height: 1.6;
+}
+.s10-arg-body strong { color: var(--cream); }
+
+.s10-arg-vs {
+  font-size: 0.7rem;
+  color: var(--muted);
+  background: var(--surface3);
+  padding: 0.25rem 0.55rem;
+  border-radius: 3px;
+  display: inline-block;
+  font-family: var(--font-h);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  align-self: flex-start;
+}
+
+.s10-arg-conc {
+  font-size: 0.78rem;
+  color: var(--gold-l);
+  border-top: 1px solid var(--border);
+  padding-top: 0.45rem;
+  margin-top: 0.15rem;
+  display: flex; align-items: flex-start; gap: 0.3rem;
+}
+.s10-arg-conc::before { content: '→'; flex-shrink: 0; }
+
+/* Syllogism box */
+.s10-syllogism {
+  background: linear-gradient(135deg, rgba(36,64,122,0.1), var(--surface2));
+  border: 1px solid var(--latin);
+  border-radius: var(--r);
+  padding: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.s10-syl-hdr {
+  font-family: var(--font-h);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--latin-l);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(45,84,160,0.3);
+}
+
+.s10-syl-steps { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.s10-syl-step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--r-sm);
+  background: rgba(0,0,0,0.2);
+  font-size: 0.85rem;
+  color: var(--cream);
+  line-height: 1.55;
+}
+.s10-syl-step:last-child {
+  background: rgba(45,84,160,0.15);
+  border: 1px solid rgba(45,84,160,0.35);
+  color: var(--cream);
+}
+
+.s10-syl-label {
+  font-family: var(--font-h);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--latin-l);
+  min-width: 36px;
+  padding-top: 0.1rem;
+  flex-shrink: 0;
+}
+.s10-syl-step:last-child .s10-syl-label { color: var(--gold); }
+
+/* Individual/universal diagram */
+.s10-individ {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  gap: 0;
+  align-items: center;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.s10-ind-side {
+  padding: 1.25rem;
+}
+.s10-ind-center {
+  background: var(--surface3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.2rem;
+  color: var(--muted);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+.s10-ind-hdr {
+  font-family: var(--font-h);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border);
+}
+.s10-ind-hdr.h-ind { color: var(--arab-l); border-bottom-color: var(--arab); }
+.s10-ind-hdr.h-ess { color: var(--latin-l); border-bottom-color: var(--latin); }
+
+.s10-ind-items { display: flex; flex-direction: column; gap: 0.45rem; }
+.s10-ind-item {
+  font-size: 0.82rem;
+  color: var(--cream);
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.s10-ind-item::before { content: '·'; color: var(--gold); }
+
+/* Consequences */
+.s10-consq {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.s10-consq-card {
+  border-radius: var(--r);
+  padding: 1.1rem;
+  border: 1px solid var(--border);
+}
+.s10-consq-hdr {
+  font-family: var(--font-h);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 0.6rem;
+}
+.s10-cq-phil { background: rgba(36,64,122,0.08); }
+.s10-cq-phil .s10-consq-hdr { color: var(--latin-l); }
+.s10-cq-theo { background: rgba(139,24,24,0.08); border-color: rgba(139,24,24,0.3); }
+.s10-cq-theo .s10-consq-hdr { color: #d45050; }
+
+.s10-consq-body { font-size: 0.82rem; color: var(--cream); line-height: 1.6; }
+.s10-consq-body em { color: var(--gold-l); font-style: normal; font-family: var(--font-h); }
+
+/* Phantasmata box */
+.s10-phant {
+  background: rgba(201,151,58,0.06);
+  border: 1px solid var(--gold-d);
+  border-radius: var(--r);
+  padding: 1.1rem 1.3rem;
+  margin-top: 1rem;
+}
+.s10-phant-hdr {
+  font-family: var(--font-h);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.s10-phant-body { font-size: 0.85rem; color: var(--cream); line-height: 1.6; }
+.s10-phant-body strong { color: var(--gold-l); }
+
+@media (max-width: 900px) {
+  .s10-tricomp { grid-template-columns: 1fr; }
+  .s10-args { grid-template-columns: 1fr; }
+  .s10-consq { grid-template-columns: 1fr; }
+  .s10-individ { grid-template-columns: 1fr; }
+  .s10-ind-center { display: none; }
+}
+
+/* ══════════════════════════════════════
    RESPONSIVE + UTILITIES
 ══════════════════════════════════════ */
 .divider { height: 1px; background: var(--border); margin: 1.25rem 0; }
@@ -1209,7 +1491,7 @@ body {
   <div class="sb-logo">
     <div class="eyebrow">Università degli Studi di Milano</div>
     <div class="title">Filosofia Medievale<br>Araba ed Ebraica</div>
-    <div class="sub">Schemi delle lezioni 1–12</div>
+    <div class="sub">Schemi delle lezioni 1–13</div>
   </div>
   <ul class="nav-list">
     <li class="nav-item"><a href="#s1"><span class="nav-num">01</span>Catena di trasmissione filosofica</a></li>
@@ -1221,6 +1503,7 @@ body {
     <li class="nav-item"><a href="#s7"><span class="nav-num">07</span>Al-Ghazālī e il <em>Tahāfut</em></a></li>
     <li class="nav-item"><a href="#s8"><span class="nav-num">08</span>Processo della conoscenza intellettuale</a></li>
     <li class="nav-item"><a href="#s9"><span class="nav-num">09</span>Confronto: intelletto in tre autori</a></li>
+    <li class="nav-item"><a href="#s10"><span class="nav-num">10</span>Averroè: unicità dell'intelletto materiale</a></li>
   </ul>
   <div class="sb-footer">
     Corso: <em>Che cosa significa pensare?</em><br>
@@ -1233,13 +1516,13 @@ body {
 
 <!-- ──── HERO ──── -->
 <div class="hero">
-  <div class="hero-pill">9 schemi del corso</div>
+  <div class="hero-pill">10 schemi del corso</div>
   <h1>Filosofia Medievale<br><em>Araba ed Ebraica</em></h1>
   <p class="hero-sub">Schemi visivi per le lezioni 1–12 — dalla trasmissione aristotelica alla teoria dell'intelletto</p>
   <div class="hero-meta">
     <span>Università degli Studi di Milano</span>
     <span>A.A. 2025–2026</span>
-    <span>12 lezioni · 19 testi di riferimento</span>
+    <span>13 lezioni · 19 testi di riferimento</span>
   </div>
   <div class="hero-line"></div>
 </div>
@@ -2167,11 +2450,211 @@ body {
   </div>
 </section>
 
+<!-- ════════════════════════════════════
+  SCHEMA 10 — Averroè: unicità intelletto
+═════════════════════════════════════ -->
+<section class="ds" id="s10">
+  <div class="sec-top">
+    <span class="badge-n">Schema 10</span>
+    <span class="badge-l">L. 13</span>
+  </div>
+  <h2>Averroè e l'unicità dell'intelletto materiale</h2>
+  <p class="desc">Il culmine della disputa: Averroè contro Alessandro <em>e</em> contro Temistio, con un sillogismo aristotelico rigoroso che porta alla più controversa tesi del Medioevo — e alla negazione dell'immortalità personale.</p>
+
+  <!-- CONFRONTO TRE POSIZIONI -->
+  <div style="font-family:var(--font-h);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted2);margin-bottom:0.85rem;">Le tre posizioni a confronto sull'intelletto materiale</div>
+  <div class="s10-tricomp">
+
+    <!-- Alessandro -->
+    <div class="s10-col s10-alex">
+      <div class="s10-col-name">Alessandro di Afrodisia</div>
+      <div class="s10-col-date">II–III sec. d.C. · «Eseget»</div>
+      <div class="s10-prop">
+        <div class="s10-prop-lbl">Intelletto materiale</div>
+        Disposizione corporea (<em>epitēdeiotes</em>): emerge dal mixaggio fisico del corpo. Non una sostanza separata.
+      </div>
+      <div class="s10-prop">
+        <div class="s10-prop-lbl">Intelletto agente</div>
+        = Dio, Causa Prima. Unico e separato per tutto l'universo.
+      </div>
+      <div class="s10-prop">
+        <div class="s10-prop-lbl">Moltiplicazione?</div>
+        Sì — intelletti materiali = tanti quanti i corpi umani (ma corruttibili).
+      </div>
+      <div class="s10-verdict s10-verdict-no">✗ No immortalità individuale</div>
+    </div>
+
+    <!-- Temistio -->
+    <div class="s10-col s10-temis">
+      <div class="s10-col-name">Temistio</div>
+      <div class="s10-col-date">IV sec. d.C. · «Il Parafraste»</div>
+      <div class="s10-prop">
+        <div class="s10-prop-lbl">Intelletto materiale</div>
+        Forma con proprietà di ricettività universale. Immortale. <em>Noi siamo l'intelletto potenziale</em> (individuale).
+      </div>
+      <div class="s10-prop">
+        <div class="s10-prop-lbl">Intelletto agente</div>
+        Facoltà dell'anima individuale — immortale e personale.
+      </div>
+      <div class="s10-prop">
+        <div class="s10-prop-lbl">Moltiplicazione?</div>
+        Sì — ogni individuo ha il proprio intelletto materiale immortale.
+      </div>
+      <div class="s10-verdict s10-verdict-part">◑ Sì immortalità individuale</div>
+    </div>
+
+    <!-- Averroè -->
+    <div class="s10-col s10-averr">
+      <div class="s10-col-name">Averroè (Ibn Rushd)</div>
+      <div class="s10-col-date">1126–1198 · «Il Commentatore»</div>
+      <div class="s10-prop">
+        <div class="s10-prop-lbl">Intelletto materiale</div>
+        Sostanza separata, immateriale, immortale. <strong>Unica per tutta la specie umana.</strong> Non si moltiplica.
+      </div>
+      <div class="s10-prop">
+        <div class="s10-prop-lbl">Intelletto agente</div>
+        Unico e separato (come già concordato con Temistio e Alessandro).
+      </div>
+      <div class="s10-prop">
+        <div class="s10-prop-lbl">Moltiplicazione?</div>
+        No — le forme separate non si possono moltiplicare numericamente.
+      </div>
+      <div class="s10-verdict s10-verdict-warn">⚠ Nessuna immortalità <em>personale</em></div>
+    </div>
+  </div>
+
+  <!-- IL SILLOGISMO DI AVERROÈ -->
+  <div class="s10-syllogism">
+    <div class="s10-syl-hdr">⊢ Il sillogismo di Averroè — argomentazione apodittica in tre passi</div>
+    <div class="s10-syl-steps">
+      <div class="s10-syl-step">
+        <div class="s10-syl-label">P₁</div>
+        <div>L'intelletto opera senza alcun organo corporeo (Aristotele, <em>De Anima</em> III, dimostrато). Dunque è <strong>immortale e separato dalla materia</strong> corporea: non può perire quando il corpo si dissolve.</div>
+      </div>
+      <div class="s10-syl-step">
+        <div class="s10-syl-label">P₂</div>
+        <div>Nella metafisica aristotelica la <strong>moltiplicazione numerica</strong> di individui della stessa specie richiede la <strong>materia come principio di individuazione</strong>. Dieci cani hanno la stessa forma; è la materia a renderli dieci distinti individui. Una forma completamente separata dalla materia non può moltiplicarsi.</div>
+      </div>
+      <div class="s10-syl-step">
+        <div class="s10-syl-label">∴ C</div>
+        <div>L'intelletto materiale, essendo separato e immortale (P₁), <strong>non può moltiplicarsi numericamente</strong> (P₂). È perciò <strong>necessariamente unico</strong> per tutta la specie umana. Non c'è «il mio» intelletto materiale distinto dal «tuo».</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GLI ARGOMENTI -->
+  <div style="font-family:var(--font-h);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted2);margin-bottom:0.85rem;">I quattro argomenti chiave di Averroè</div>
+  <div class="s10-args">
+
+    <div class="s10-arg">
+      <div class="s10-arg-num">01</div>
+      <div class="s10-arg-vs">Contro Alessandro</div>
+      <div class="s10-arg-title">L'argomento dagli organi</div>
+      <div class="s10-arg-body">Se l'intelletto fosse una <strong>disposizione corporea</strong> (come sostiene Alessandro), dovrebbe perire con il corpo. Ma Aristotele dimostra che l'intelletto è immortale, perché opera <em>senza organi</em>. Dunque l'intelletto non può essere una disposizione corporea.</div>
+      <div class="s10-arg-conc">L'intelletto materiale non è una facoltà corporea: deve essere sostanza immateriale e separata.</div>
+    </div>
+
+    <div class="s10-arg">
+      <div class="s10-arg-num">02</div>
+      <div class="s10-arg-vs">Contro Alessandro</div>
+      <div class="s10-arg-title">L'argomento dal danno per intensità</div>
+      <div class="s10-arg-body">Le facoltà che operano tramite organi vengono <strong>danneggiate da stimoli eccessivi</strong>: la luce troppo forte brucia la retina e impedisce di vedere cose meno luminose; un suono troppo forte danneggia il timpano. L'intelletto invece si <strong>potenzia</strong> coi pensieri complessi: dopo aver pensato concetti difficili si pensano meglio anche quelli semplici. Questo dimostra che non usa organi.</div>
+      <div class="s10-arg-conc">L'intelletto è immateriale perché l'intensità dei suoi oggetti lo rafforza, non lo danneggia.</div>
+    </div>
+
+    <div class="s10-arg">
+      <div class="s10-arg-num">03</div>
+      <div class="s10-arg-vs">Contro Temistio</div>
+      <div class="s10-arg-title">Il dilemma della moltiplicazione</div>
+      <div class="s10-arg-body">Temistio vuole un intelletto che sia sia <strong>immortale</strong> sia <strong>moltiplicato</strong> negli individui. Ma queste due proprietà sono incompatibili: se l'intelletto è moltiplicato, deve esserlo in virtù della materia corporea → è corruttibile; se è separato dalla materia → non può moltiplicarsi. <strong>Non si può avere entrambe le cose.</strong></div>
+      <div class="s10-arg-conc">Temistio si trova in una contraddizione insolubile: l'intelletto individuale immortale è impossibile.</div>
+    </div>
+
+    <div class="s10-arg">
+      <div class="s10-arg-num">04</div>
+      <div class="s10-arg-vs">Argomento positivo</div>
+      <div class="s10-arg-title">L'ultimo recettore (<em>ultimum recipiens</em>)</div>
+      <div class="s10-arg-body">Le forme intelligibili che pensiamo sono <strong>universali e immateriali</strong> (il triangolo, la giustizia, il cane-in-quanto-tale). Solo qualcosa di immateriale può ricevere forme immateriali. «Soltanto l'essere può conoscere l'essere.» Il soggetto ultimo che riceve queste forme deve essere l'intelletto materiale immateriale — unico e separato.</div>
+      <div class="s10-arg-conc">L'intelletto materiale deve essere uno e immateriale: è il recettore assoluto dell'universale.</div>
+    </div>
+  </div>
+
+  <!-- INDIVIDUO VS ESSENZA (Temistio) -->
+  <div style="font-family:var(--font-h);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted2);margin-bottom:0.85rem;">La posizione di Temistio: individuo vs. essenza applicata all'intelletto</div>
+  <div class="s10-individ">
+    <div class="s10-ind-side">
+      <div class="s10-ind-hdr h-ind">Individuo (= «noi»)</div>
+      <div class="s10-ind-items">
+        <div class="s10-ind-item">Intelletto <em>potenziale</em> — moltiplicato in ciascuno</div>
+        <div class="s10-ind-item">Diverso per ciascun essere umano</div>
+        <div class="s10-ind-item">Es. «Snoopy» = <em>questo cane particolare</em></div>
+        <div class="s10-ind-item">Legato all'organismo individuale</div>
+        <div class="s10-ind-item" style="color:var(--danger-l);">Perisce con la morte dell'organismo</div>
+        <div class="s10-ind-item" style="color:var(--muted2);font-style:italic;">«La riflessione e il ricordo appartengono all'organismo comune che è perito»</div>
+      </div>
+    </div>
+    <div class="s10-ind-center">⇄</div>
+    <div class="s10-ind-side">
+      <div class="s10-ind-hdr h-ess">Essenza (= intelletto in atto)</div>
+      <div class="s10-ind-items">
+        <div class="s10-ind-item">Intelletto <em>agente</em> — uno solo, separato</div>
+        <div class="s10-ind-item">Comune a tutti gli esseri umani</div>
+        <div class="s10-ind-item">Es. «forma del cane» = <em>l'essenza universale</em></div>
+        <div class="s10-ind-item">Separato dalla materia corporea</div>
+        <div class="s10-ind-item" style="color:var(--greek-l);">Immortale ed eterno</div>
+        <div class="s10-ind-item" style="color:var(--muted2);font-style:italic;">«Dove c'è il fiore ci sarà il frutto; dove c'è il raggio ci sarà la luce»</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOLUZIONE AL PROBLEMA DELL'INDIVIDUAZIONE -->
+  <div class="s10-phant">
+    <div class="s10-phant-hdr">❓ Il problema dell'individuazione — e la risposta di Averroè</div>
+    <div class="s10-phant-body">
+      <strong>Obiezione:</strong> se l'intelletto materiale è unico per tutta la specie umana, come si spiega che io e te pensiamo cose diverse in momenti diversi? Come si individua l'atto di pensiero?
+      <br><br>
+      <strong>Risposta di Averroè — La teoria del doppio soggetto:</strong><br>
+      L'intelletto materiale è uno, ma si unisce all'individuo in quanto <em>quasi-forma</em>, attraverso le <strong>immagini sensibili individuali (<em>phantasmata</em>)</strong>, diverse per ciascun essere umano. I <em>phantasmata</em> conducono l'intelletto materiale ad astrarre e concepire. L'unico intelletto individuale autentico è l'<strong>intelletto speculativo acquisito</strong>.
+      <br><br>
+      <strong>Analogia del mezzo trasparente:</strong> come l'aria illuminata (mezzo trasparente unico) permette a molti osservatori di vedere molti colori diversi, così l'intelletto materiale unico permette una molteplicità di atti intellettivi individuali grazie ai diversi <em>phantasmata</em> di ciascuno.<br>
+      <span style="color:var(--muted2);font-size:0.78rem;font-style:italic;">— Cruz Hernández, <em>Storia del pensiero nel mondo islamico</em>, II, p. 679</span>
+    </div>
+  </div>
+
+  <!-- CONSEGUENZE -->
+  <div style="font-family:var(--font-h);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted2);margin:1.5rem 0 0.85rem;">Conseguenze e controversie</div>
+  <div class="s10-consq">
+    <div class="s10-consq-card s10-cq-phil">
+      <div class="s10-consq-hdr">🧭 Conseguenza filosofica</div>
+      <div class="s10-consq-body">
+        Se sia l'intelletto materiale sia l'intelletto agente sono unici e separati, alla morte dell'individuo sopravvive solo l'<em>intelletto universale</em> — non questo individuo particolare con i suoi ricordi, la sua storia, la sua identità.<br><br>
+        «Né l'intelletto agente che è separato, né quello materiale che è unico, né quello acquisito che è comune, possono essere chiamati dall'uomo concreto <em>il proprio intelletto</em>.»<br>
+        <span style="font-size:0.75rem;color:var(--muted2);">— Cruz Hernández, II, p. 683–684</span><br><br>
+        Averroè rivendica di essere il solo vero interprete di Aristotele — <em>«al-mu'allim al-awwal»</em>, il Primo Maestro.
+      </div>
+    </div>
+    <div class="s10-consq-card s10-cq-theo">
+      <div class="s10-consq-hdr">⛪ Ricezione nel mondo latino</div>
+      <div class="s10-consq-body">
+        La teoria averroista nega l'immortalità <em>personale</em> — dogma fondamentale del Cristianesimo che richiede la sopravvivenza dell'individuo per il giudizio, la ricompensa e la punizione eterna.<br><br>
+        <em>1270 e 1277</em> — il vescovo Étienne Tempier condanna a Parigi 219 tesi averroiste insegnate alla Facoltà delle Arti.<br><br>
+        <em>Tommaso d'Aquino</em> dedica un'intera opera alla confutazione: <em>De unitate intellectus contra Averroistas</em>.<br><br>
+        Nell'affresco di <em>Santa Maria Novella</em> (Firenze), Tommaso fulmina letteralmente Averroè ai suoi piedi — immagine plastica del conflitto filosofico-teologico che attraversa tutto il tardo Medioevo.
+      </div>
+    </div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-lbl">Punto chiave</div>
+    <p>Il problema dell'intelletto non è «un dettaglio tecnico marginale»: tocca il cuore dell'<strong>antropologia filosofica medievale</strong>. L'intelletto è ciò che distingue l'uomo dagli altri animali, è la sede della conoscenza razionale, è ciò che può essere immortale. Comprendere la natura dell'intelletto significa comprendere <strong>che cosa siamo</strong> come esseri umani e qual è il nostro destino ultimo. Le domande poste da Alessandro, Temistio e Averroè — che cos'è la mente? Come si individua il pensiero? Qual è il rapporto tra universalità della ragione e individualità della coscienza? — rimangono filosoficamente vive ancora oggi.</p>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <div style="padding:2rem 3.5rem;background:var(--surface);border-top:1px solid var(--border);font-size:0.78rem;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
   <div>
     <div style="font-family:var(--font-h);color:var(--cream);font-size:0.85rem;margin-bottom:0.2rem;">Filosofia Medievale Araba ed Ebraica</div>
-    <div style="font-style:italic;">9 schemi visivi · Lezioni 01–12 · Università degli Studi di Milano</div>
+    <div style="font-style:italic;">10 schemi visivi · Lezioni 01–13 · Università degli Studi di Milano</div>
   </div>
   <div style="font-style:italic;color:var(--muted2);">davide.prando@studenti.unimi.it</div>
 </div>
