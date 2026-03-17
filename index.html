@@ -1457,6 +1457,752 @@ body {
 }
 
 /* ══════════════════════════════════════
+   SCHEMA 11 — I sei automatismi
+══════════════════════════════════════ */
+.s11-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.s11-row {
+  display: grid;
+  grid-template-columns: 28px 1fr 40px 1fr;
+  gap: 0;
+  align-items: stretch;
+  border-radius: var(--r);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  min-height: 80px;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.s11-row:hover { transform: translateX(3px); box-shadow: 0 4px 18px rgba(0,0,0,0.35); }
+
+.s11-num-col {
+  background: var(--surface3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-h);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+  border-right: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.s11-myth {
+  background: rgba(60, 20, 20, 0.18);
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+  border-right: 1px solid rgba(139,24,24,0.25);
+}
+
+.s11-arrow-col {
+  background: var(--surface3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--gold);
+  border-right: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.s11-truth {
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.s11-lbl {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--font-h);
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+}
+.s11-myth .s11-lbl { color: rgba(200,80,80,0.7); }
+.s11-truth .s11-lbl { color: var(--gold); }
+
+.s11-myth-text {
+  font-size: 0.85rem;
+  color: rgba(220,200,200,0.7);
+  line-height: 1.4;
+  font-style: italic;
+}
+.s11-truth-text {
+  font-size: 0.85rem;
+  color: var(--cream);
+  line-height: 1.4;
+}
+.s11-truth-text strong { color: var(--gold-l); font-family: var(--font-h); }
+.s11-truth-text em { color: var(--muted2); font-size: 0.8rem; }
+
+/* Row accent colors */
+.s11-r1 .s11-truth { background: rgba(90,58,138,0.08); border-left: 3px solid var(--aristo); }
+.s11-r2 .s11-truth { background: rgba(36,64,122,0.08); border-left: 3px solid var(--latin); }
+.s11-r3 .s11-truth { background: rgba(61,107,80,0.08); border-left: 3px solid var(--greek); }
+.s11-r4 .s11-truth { background: rgba(201,151,58,0.06); border-left: 3px solid var(--gold-d); }
+.s11-r5 .s11-truth { background: rgba(61,107,80,0.08); border-left: 3px solid var(--greek-l); }
+.s11-r6 .s11-truth { background: rgba(139,90,26,0.08); border-left: 3px solid var(--arab); }
+
+.s11-header-row {
+  display: grid;
+  grid-template-columns: 28px 1fr 40px 1fr;
+  gap: 0;
+  margin-bottom: 0.4rem;
+  padding: 0 0 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+.s11-hdr {
+  font-family: var(--font-h);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  padding: 0 1rem;
+}
+.s11-hdr.hdr-myth { color: rgba(200,80,80,0.6); }
+.s11-hdr.hdr-truth { color: var(--gold); }
+
+/* ══════════════════════════════════════
+   SCHEMA 12 — Al-Farabi e Avicenna
+══════════════════════════════════════ */
+.s12-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Cosmological chain */
+.s12-cosmo {
+  position: relative;
+  padding: 1.3rem;
+  background: linear-gradient(180deg, rgba(90,58,138,0.12) 0%, var(--surface2) 100%);
+  border: 1px solid var(--aristo);
+  border-radius: var(--r);
+}
+
+.s12-cosmo-title {
+  font-family: var(--font-h);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--aristo-l);
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(90,58,138,0.35);
+}
+
+.s12-intel-chain {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.s12-intel-node {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--r-sm);
+  transition: background 0.18s;
+  position: relative;
+}
+.s12-intel-node:hover { background: rgba(255,255,255,0.04); }
+
+.s12-in-icon {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-family: var(--font-h);
+  font-weight: 700;
+  border: 1px solid;
+}
+
+.s12-in-name { font-family: var(--font-h); font-size: 0.82rem; color: var(--cream); font-weight: 600; line-height: 1.2; }
+.s12-in-desc { font-size: 0.72rem; color: var(--muted2); margin-top: 0.08rem; }
+
+.s12-in-arrow {
+  text-align: center;
+  padding: 0.1rem 0 0.1rem 0.9rem;
+  color: rgba(90,58,138,0.6);
+  font-size: 0.8rem;
+}
+
+/* Node levels */
+.s12-n-god .s12-in-icon { background: rgba(201,151,58,0.2); border-color: var(--gold); color: var(--gold-l); }
+.s12-n-i1 .s12-in-icon, .s12-n-i2 .s12-in-icon, .s12-n-i3 .s12-in-icon { background: rgba(90,58,138,0.2); border-color: var(--aristo); color: var(--aristo-l); }
+.s12-n-ix .s12-in-icon { background: rgba(139,90,26,0.3); border-color: var(--arab-l); color: var(--gold-l); }
+.s12-n-ix { border: 1px solid var(--arab-l); border-radius: var(--r-sm); background: rgba(139,90,26,0.08); }
+.s12-n-ix .s12-in-name { color: var(--gold-l); }
+
+.s12-n-world .s12-in-icon { background: rgba(61,107,80,0.2); border-color: var(--greek); color: var(--greek-l); }
+
+/* Right column: four intellects + connections */
+.s12-right { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.s12-section-hdr {
+  font-family: var(--font-h);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted2);
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Four intellects */
+.s12-four-intellects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55rem;
+}
+
+.s12-int-card {
+  padding: 0.7rem 0.85rem;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  transition: transform 0.18s;
+  position: relative;
+}
+.s12-int-card:hover { transform: translateY(-2px); }
+
+.s12-ic-num {
+  position: absolute;
+  top: 0.5rem; right: 0.7rem;
+  font-family: var(--font-h);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(201,151,58,0.12);
+  line-height: 1;
+}
+
+.s12-ic-name { font-family: var(--font-h); font-size: 0.85rem; color: var(--cream); font-weight: 600; }
+.s12-ic-lat { font-size: 0.7rem; color: var(--muted2); font-style: italic; margin-top: 0.05rem; }
+.s12-ic-desc { font-size: 0.78rem; color: var(--muted2); margin-top: 0.3rem; line-height: 1.4; }
+
+.s12-ic-1 { border-left: 3px solid rgba(139,24,24,0.7); }
+.s12-ic-2 { border-left: 3px solid var(--greek); }
+.s12-ic-3 { border-left: 3px solid var(--arab-l); background: rgba(139,90,26,0.07); }
+.s12-ic-4 { border-left: 3px solid var(--aristo-l); }
+
+/* Political connection */
+.s12-pol-box {
+  background: rgba(36,64,122,0.08);
+  border: 1px solid var(--latin);
+  border-radius: var(--r);
+  padding: 1rem;
+}
+
+.s12-pol-hdr {
+  font-family: var(--font-h);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--latin-l);
+  margin-bottom: 0.65rem;
+}
+
+.s12-pol-items { display: flex; flex-direction: column; gap: 0.45rem; }
+.s12-pol-item {
+  display: flex;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--cream);
+  line-height: 1.45;
+}
+.s12-pol-item::before { content: '→'; color: var(--gold); flex-shrink: 0; margin-top: 0.05rem; }
+
+/* Avicenna section */
+.s12-full-width {
+  grid-column: 1 / -1;
+}
+
+.s12-avi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.s12-avi-card {
+  border-radius: var(--r);
+  padding: 1.1rem;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.s12-avi-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+
+.s12-avi-icon { font-size: 1.6rem; margin-bottom: 0.4rem; }
+.s12-avi-name { font-family: var(--font-h); font-size: 0.92rem; color: var(--cream); font-weight: 600; margin-bottom: 0.5rem; }
+.s12-avi-body { font-size: 0.82rem; color: var(--muted2); line-height: 1.6; }
+.s12-avi-body strong { color: var(--cream); }
+.s12-avi-body em { color: var(--gold-l); font-style: italic; }
+
+.s12-diff-box {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1rem 1.3rem;
+  margin-top: 1rem;
+}
+
+.s12-diff-hdr {
+  font-family: var(--font-h);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted2);
+  margin-bottom: 0.6rem;
+}
+
+.s12-diff-table {
+  width: 100%;
+  font-size: 0.82rem;
+  border-collapse: collapse;
+}
+.s12-diff-table td {
+  padding: 0.45rem 0.75rem;
+  color: var(--cream);
+  line-height: 1.45;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.s12-diff-table tr:last-child td { border-bottom: none; }
+.s12-diff-table td:first-child {
+  font-family: var(--font-h);
+  font-size: 0.72rem;
+  color: var(--muted2);
+  font-weight: 600;
+  width: 120px;
+  border-right: 1px solid var(--border);
+}
+.s12-diff-table .td-farabi { color: var(--arab-l); }
+.s12-diff-table .td-avicen { color: var(--aristo-l); }
+.s12-diff-table th {
+  padding: 0.4rem 0.75rem;
+  font-family: var(--font-h);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 2px solid var(--border);
+}
+.s12-diff-table th:nth-child(2) { color: var(--arab-l); }
+.s12-diff-table th:nth-child(3) { color: var(--aristo-l); }
+
+@media (max-width: 900px) {
+  .s11-row { grid-template-columns: 28px 1fr; }
+  .s11-arrow-col, .s11-truth { display: none; }
+  .s12-layout { grid-template-columns: 1fr; }
+  .s12-avi-grid { grid-template-columns: 1fr; }
+  .s12-four-intellects { grid-template-columns: 1fr; }
+}
+
+/* ══════════════════════════════════════
+   SCHEMA 13 — Tre interpretazioni + gradi Al-Farabi
+══════════════════════════════════════ */
+
+/* Three interpretations row */
+.s13-interp-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.s13-interp-card {
+  border-radius: var(--r);
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.s13-interp-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,0.4); }
+
+.s13-ic-greek { background: linear-gradient(155deg, rgba(61,107,80,0.1), var(--surface2)); border-left: 4px solid var(--greek); }
+.s13-ic-arab  { background: linear-gradient(155deg, rgba(139,90,26,0.1), var(--surface2)); border-left: 4px solid var(--arab); }
+.s13-ic-nat   { background: linear-gradient(155deg, rgba(36,64,122,0.1), var(--surface2)); border-left: 4px solid var(--latin); }
+
+.s13-ic-num {
+  font-family: var(--font-h);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  padding: 0.18rem 0.55rem;
+  border-radius: 3px;
+  align-self: flex-start;
+}
+.s13-ic-greek .s13-ic-num { color: var(--greek-l); background: rgba(61,107,80,0.15); }
+.s13-ic-arab  .s13-ic-num { color: var(--arab-l);  background: rgba(139,90,26,0.15); }
+.s13-ic-nat   .s13-ic-num { color: var(--latin-l); background: rgba(36,64,122,0.15); }
+
+.s13-ic-title { font-family: var(--font-h); font-size: 1rem; font-weight: 700; }
+.s13-ic-greek .s13-ic-title { color: var(--greek-l); }
+.s13-ic-arab  .s13-ic-title { color: var(--arab-l); }
+.s13-ic-nat   .s13-ic-title { color: var(--latin-l); }
+
+.s13-ic-proponent {
+  font-size: 0.75rem;
+  color: var(--muted2);
+  font-style: italic;
+  border-top: 1px solid var(--border);
+  padding-top: 0.4rem;
+}
+
+.s13-ic-body { font-size: 0.82rem; color: var(--cream); line-height: 1.55; }
+.s13-ic-body strong { color: inherit; }
+
+.s13-ic-cons {
+  font-size: 0.76rem;
+  color: var(--muted2);
+  border-top: 1px solid var(--border);
+  padding-top: 0.4rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Degrees of intellect — al-Farabi */
+.s13-degrees {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 1.5rem;
+  border-radius: var(--r);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.s13-deg {
+  flex: 1;
+  padding: 1.1rem 0.85rem;
+  border-right: 1px solid var(--border);
+  text-align: center;
+  transition: background 0.18s, flex 0.25s;
+  cursor: default;
+  position: relative;
+}
+.s13-deg:last-child { border-right: none; }
+.s13-deg:hover { flex: 1.35; background: rgba(255,255,255,0.03); }
+
+.s13-deg-num {
+  font-family: var(--font-h);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.s13-deg-ar {
+  font-size: 0.68rem;
+  color: var(--muted2);
+  font-style: italic;
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+}
+
+.s13-deg-name { font-family: var(--font-h); font-size: 0.82rem; color: var(--cream); font-weight: 600; line-height: 1.3; }
+.s13-deg-desc { font-size: 0.72rem; color: var(--muted2); margin-top: 0.3rem; line-height: 1.4; }
+
+.s13-d1 { background: rgba(139,24,24,0.06); }
+.s13-d1 .s13-deg-num { color: rgba(200,80,80,0.5); }
+.s13-d2 { background: rgba(61,107,80,0.06); }
+.s13-d2 .s13-deg-num { color: var(--greek); }
+.s13-d3 { background: rgba(201,151,58,0.06); }
+.s13-d3 .s13-deg-num { color: var(--gold-d); }
+.s13-d4 {
+  background: linear-gradient(180deg, rgba(90,58,138,0.15), rgba(139,90,26,0.1));
+  border: none;
+  box-shadow: inset 0 0 0 1px var(--aristo);
+}
+.s13-d4 .s13-deg-num { color: var(--aristo-l); }
+.s13-d4 .s13-deg-name { color: var(--gold-l); }
+
+.s13-d4-badge {
+  position: absolute;
+  top: 6px; right: 6px;
+  font-size: 0.58rem;
+  background: rgba(201,151,58,0.15);
+  color: var(--gold);
+  border: 1px solid var(--gold-d);
+  border-radius: 3px;
+  padding: 0.1rem 0.35rem;
+  font-family: var(--font-h);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Light metaphor dual box */
+.s13-light-split {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  gap: 0;
+  border-radius: var(--r);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.s13-ls-side {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.s13-ls-center {
+  background: var(--surface3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.s13-ls-nat  { background: rgba(36,64,122,0.08); }
+.s13-ls-tra  { background: rgba(139,90,26,0.08); }
+
+.s13-ls-hdr {
+  font-family: var(--font-h);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0.1rem;
+}
+.s13-ls-nat .s13-ls-hdr { color: var(--latin-l); }
+.s13-ls-tra .s13-ls-hdr { color: var(--arab-l); }
+
+.s13-ls-body { font-size: 0.82rem; color: var(--cream); line-height: 1.6; }
+.s13-ls-body em { color: var(--gold-l); font-style: italic; }
+.s13-ls-body strong { font-family: var(--font-h); }
+
+.s13-ls-succ {
+  font-size: 0.72rem;
+  color: var(--muted2);
+  border-top: 1px solid var(--border);
+  padding-top: 0.4rem;
+  font-style: italic;
+}
+
+/* Sa'ada box */
+.s13-saada {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.s13-sa-card {
+  border-radius: var(--r);
+  padding: 1.1rem;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+}
+
+.s13-sa-hdr {
+  font-family: var(--font-h);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.6rem;
+}
+.s13-sa-card:first-child .s13-sa-hdr { color: var(--gold); }
+.s13-sa-card:last-child .s13-sa-hdr { color: var(--aristo-l); }
+
+.s13-sa-body { font-size: 0.82rem; color: var(--cream); line-height: 1.6; }
+.s13-sa-body strong { color: var(--gold-l); font-family: var(--font-h); }
+.s13-sa-body em { color: var(--muted2); font-size: 0.78rem; }
+
+/* ══════════════════════════════════════
+   SCHEMA 14 — Condanne + doppia verità
+══════════════════════════════════════ */
+
+.s14-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.s14-cond-block { display: flex; flex-direction: column; gap: 1.1rem; }
+
+.s14-cond-card {
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: transform 0.18s;
+}
+.s14-cond-card:hover { transform: translateY(-2px); }
+
+.s14-cc-hdr {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.s14-cc-year {
+  font-family: var(--font-h);
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.s14-cond1 .s14-cc-hdr { background: rgba(139,24,24,0.12); }
+.s14-cond1 .s14-cc-year { color: rgba(200,80,80,0.8); }
+.s14-cond2 .s14-cc-hdr { background: rgba(139,24,24,0.2); }
+.s14-cond2 .s14-cc-year { color: #d45050; }
+
+.s14-cc-title { font-family: var(--font-h); font-size: 0.88rem; color: var(--cream); }
+.s14-cc-sub   { font-size: 0.72rem; color: var(--muted2); }
+
+.s14-cc-body { padding: 0.9rem 1.1rem; background: var(--surface2); }
+
+.s14-tesi-list { display: flex; flex-direction: column; gap: 0.45rem; }
+
+.s14-tesi {
+  display: flex;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--cream);
+  padding: 0.45rem 0.6rem;
+  border-radius: var(--r-sm);
+  background: rgba(0,0,0,0.2);
+  border-left: 2px solid;
+  line-height: 1.4;
+}
+.s14-cond1 .s14-tesi { border-left-color: rgba(200,80,80,0.5); }
+.s14-cond2 .s14-tesi { border-left-color: rgba(200,80,80,0.7); }
+
+.s14-tesi-n {
+  font-family: var(--font-h);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: rgba(200,80,80,0.7);
+  flex-shrink: 0;
+  min-width: 22px;
+  padding-top: 0.05rem;
+}
+
+.s14-cc-note {
+  padding: 0.55rem 1.1rem;
+  background: rgba(201,151,58,0.05);
+  border-top: 1px solid var(--border);
+  font-size: 0.75rem;
+  color: var(--muted2);
+  font-style: italic;
+}
+
+/* Right column: double truth + Sigieri */
+.s14-right { display: flex; flex-direction: column; gap: 1.1rem; }
+
+.s14-dt-card {
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  overflow: hidden;
+}
+
+.s14-dt-hdr {
+  padding: 0.7rem 1.1rem;
+  background: var(--surface3);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-h);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--gold);
+}
+
+.s14-dt-body { padding: 0.9rem 1.1rem; display: flex; flex-direction: column; gap: 0.65rem; }
+
+.s14-interp {
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--r-sm);
+  border-left: 3px solid;
+  font-size: 0.82rem;
+  color: var(--cream);
+  line-height: 1.5;
+}
+.s14-interp-a { background: rgba(61,107,80,0.08); border-left-color: var(--greek); }
+.s14-interp-b { background: rgba(201,151,58,0.06); border-left-color: var(--gold-d); }
+.s14-interp-c { background: rgba(139,24,24,0.08); border-left-color: var(--danger); }
+
+.s14-interp-lbl {
+  font-family: var(--font-h);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.2rem;
+}
+.s14-interp-a .s14-interp-lbl { color: var(--greek-l); }
+.s14-interp-b .s14-interp-lbl { color: var(--gold); }
+.s14-interp-c .s14-interp-lbl { color: rgba(200,80,80,0.8); }
+
+.s14-sigieri {
+  background: linear-gradient(135deg, rgba(90,58,138,0.1), var(--surface2));
+  border: 1px solid var(--aristo);
+  border-radius: var(--r);
+  padding: 1.1rem;
+}
+
+.s14-sig-hdr {
+  font-family: var(--font-h);
+  font-size: 0.78rem;
+  color: var(--aristo-l);
+  font-weight: 600;
+  margin-bottom: 0.55rem;
+}
+
+.s14-sig-body { font-size: 0.82rem; color: var(--cream); line-height: 1.6; }
+.s14-sig-body em { color: var(--gold-l); font-style: italic; }
+.s14-sig-body strong { font-family: var(--font-h); }
+
+.s14-dante-box {
+  background: rgba(201,151,58,0.06);
+  border: 1px dashed var(--gold-d);
+  border-radius: var(--r-sm);
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  color: var(--muted2);
+  font-style: italic;
+  line-height: 1.5;
+}
+.s14-dante-box strong { color: var(--gold-l); font-style: normal; font-family: var(--font-h); }
+
+@media (max-width: 900px) {
+  .s13-interp-row { grid-template-columns: 1fr; }
+  .s13-degrees { flex-direction: column; }
+  .s13-deg { border-right: none; border-bottom: 1px solid var(--border); }
+  .s13-light-split { grid-template-columns: 1fr; }
+  .s13-ls-center { display: none; }
+  .s13-saada { grid-template-columns: 1fr; }
+  .s14-layout { grid-template-columns: 1fr; }
+}
+
+/* ══════════════════════════════════════
    RESPONSIVE + UTILITIES
 ══════════════════════════════════════ */
 .divider { height: 1px; background: var(--border); margin: 1.25rem 0; }
@@ -1494,16 +2240,20 @@ body {
     <div class="sub">Schemi delle lezioni 1–13</div>
   </div>
   <ul class="nav-list">
-    <li class="nav-item"><a href="#s1"><span class="nav-num">01</span>Catena di trasmissione filosofica</a></li>
-    <li class="nav-item"><a href="#s2"><span class="nav-num">02</span>Morte e resurrezione della filosofia</a></li>
-    <li class="nav-item"><a href="#s3"><span class="nav-num">03</span>Struttura dell'<em>Universitas</em></a></li>
-    <li class="nav-item"><a href="#s4"><span class="nav-num">04</span>Il Medioevo policentrico</a></li>
-    <li class="nav-item"><a href="#s5"><span class="nav-num">05</span>Trasmissione del <em>De Anima</em></a></li>
-    <li class="nav-item"><a href="#s6"><span class="nav-num">06</span>Anima tripartita e sensi interni</a></li>
-    <li class="nav-item"><a href="#s7"><span class="nav-num">07</span>Al-Ghazālī e il <em>Tahāfut</em></a></li>
-    <li class="nav-item"><a href="#s8"><span class="nav-num">08</span>Processo della conoscenza intellettuale</a></li>
-    <li class="nav-item"><a href="#s9"><span class="nav-num">09</span>Confronto: intelletto in tre autori</a></li>
-    <li class="nav-item"><a href="#s10"><span class="nav-num">10</span>Averroè: unicità dell'intelletto materiale</a></li>
+    <li class="nav-item"><a href="#s1"><span class="nav-num">01</span>I sei automatismi sul pensiero medievale</a></li>
+    <li class="nav-item"><a href="#s2"><span class="nav-num">02</span>La catena di trasmissione filosofica</a></li>
+    <li class="nav-item"><a href="#s3"><span class="nav-num">03</span>Morte e resurrezione della filosofia</a></li>
+    <li class="nav-item"><a href="#s4"><span class="nav-num">04</span>Struttura dell'Universitas medievale</a></li>
+    <li class="nav-item"><a href="#s5"><span class="nav-num">05</span>Il Medioevo policentrico</a></li>
+    <li class="nav-item"><a href="#s6"><span class="nav-num">06</span>Trasmissione testuale del De Anima</a></li>
+    <li class="nav-item"><a href="#s7"><span class="nav-num">07</span>L'anima tripartita e i sensi interni di Avicenna</a></li>
+    <li class="nav-item"><a href="#s8"><span class="nav-num">08</span>Al-Ghazālī e il Tahāfut al-falāsifa</a></li>
+    <li class="nav-item"><a href="#s9"><span class="nav-num">09</span>Al-Fārābī e Avicenna: intelletto, cosmologia e profezia</a></li>
+    <li class="nav-item"><a href="#s10"><span class="nav-num">10</span>La ricezione latina di Averroè: condanne, doppia verità, Sigieri di Brabante</a></li>
+    <li class="nav-item"><a href="#s11"><span class="nav-num">11</span>Le tre interpretazioni dell'intelletto produttivo e i gradi di Al-Fārābī</a></li>
+    <li class="nav-item"><a href="#s12"><span class="nav-num">12</span>Processo della conoscenza intellettuale</a></li>
+    <li class="nav-item"><a href="#s13"><span class="nav-num">13</span>Confronto sinottico: l'intelletto in tre autori</a></li>
+    <li class="nav-item"><a href="#s14"><span class="nav-num">14</span>Averroè e l'unicità dell'intelletto materiale</a></li>
   </ul>
   <div class="sb-footer">
     Corso: <em>Che cosa significa pensare?</em><br>
@@ -1516,7 +2266,7 @@ body {
 
 <!-- ──── HERO ──── -->
 <div class="hero">
-  <div class="hero-pill">10 schemi del corso</div>
+  <div class="hero-pill">14 schemi del corso</div>
   <h1>Filosofia Medievale<br><em>Araba ed Ebraica</em></h1>
   <p class="hero-sub">Schemi visivi per le lezioni 1–13 — dalla trasmissione aristotelica alla teoria dell'intelletto</p>
   <div class="hero-meta">
@@ -1533,6 +2283,114 @@ body {
 <section class="ds" id="s1">
   <div class="sec-top">
     <span class="badge-n">Schema 01</span>
+    <span class="badge-l">LL. 01–04</span>
+  </div>
+  <h2>I sei automatismi sul pensiero medievale</h2>
+  <p class="desc">Quattro lezioni intere sono dedicate a smontare questi sei pregiudizi strutturali. Non si tratta di dettagli storici: sono gli automatismi che rendono impossibile accedere alla ricchezza del pensiero medievale finché non vengono decostruiti.</p>
+
+  <div class="s11-header-row">
+    <div></div>
+    <div class="s11-hdr hdr-myth" style="padding-left:1rem;">✗ &nbsp;L'automatismo (pregiudizio)</div>
+    <div></div>
+    <div class="s11-hdr hdr-truth" style="padding-left:1rem;">✓ &nbsp;La confutazione</div>
+  </div>
+
+  <div class="s11-grid">
+
+    <!-- 1 -->
+    <div class="s11-row s11-r1">
+      <div class="s11-num-col">I</div>
+      <div class="s11-myth">
+        <div class="s11-lbl">✗ Automatismo</div>
+        <div class="s11-myth-text">Il filosofo medievale è un monaco isolato in un convento, lontano dalla vita civile e politica.</div>
+      </div>
+      <div class="s11-arrow-col">→</div>
+      <div class="s11-truth">
+        <div class="s11-lbl">✓ Realtà</div>
+        <div class="s11-truth-text">Il filosofo medievale è innanzitutto il <strong>faylasuf arabo</strong> (medico, giudice, intellettuale di corte) e il <strong>magister universitario</strong> — il primo intellettuale di professione della storia, pagato per un servizio sociale. <em>Avicenna era nato in Uzbekistan, Averroè era giudice a Cordova.</em></div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="s11-row s11-r2">
+      <div class="s11-num-col">II</div>
+      <div class="s11-myth">
+        <div class="s11-lbl">✗ Automatismo</div>
+        <div class="s11-myth-text">La filosofia medievale è dogmatica, ripetitiva, assoggettata al culto dell'<em>ipse dixit</em> e dell'auctoritas.</div>
+      </div>
+      <div class="s11-arrow-col">→</div>
+      <div class="s11-truth">
+        <div class="s11-lbl">✓ Realtà</div>
+        <div class="s11-truth-text">L'insegnamento universitario si fonda sulla <strong><em>quaestio</em></strong> e sulla <strong><em>disputatio</em></strong>: messa in dubbio sistematica di tutti i contenuti. L'<em>auctoritas</em> è uno <em>status quaestionis</em>, non un dogma. «Non è una buona conseguenza: lo dice Aristotele, dunque è vero» — <em>Ockham.</em></div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="s11-row s11-r3">
+      <div class="s11-num-col">III</div>
+      <div class="s11-myth">
+        <div class="s11-lbl">✗ Automatismo</div>
+        <div class="s11-myth-text">Tutta la cultura medievale è dominata da irrazionalismo e superstizione.</div>
+      </div>
+      <div class="s11-arrow-col">→</div>
+      <div class="s11-truth">
+        <div class="s11-lbl">✓ Realtà</div>
+        <div class="s11-truth-text">La filosofia universitaria medievale è un sapere <strong>critico, pubblico e progressivo</strong>. Non bisogna confondere storia della filosofia con macro-storia delle mentalità: la presenza di credenze popolari in ogni epoca non dice nulla sullo statuto della riflessione filosofica specialistica. <em>La caccia alle streghe è un fenomeno moderno (XVI–XVII sec.).</em></div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="s11-row s11-r4">
+      <div class="s11-num-col">IV</div>
+      <div class="s11-myth">
+        <div class="s11-lbl">✗ Automatismo</div>
+        <div class="s11-myth-text">Tutta la filosofia medievale coincide con la teologia e ne è subordinata.</div>
+      </div>
+      <div class="s11-arrow-col">→</div>
+      <div class="s11-truth">
+        <div class="s11-lbl">✓ Realtà</div>
+        <div class="s11-truth-text">La filosofia va cercata nella <strong>Facoltà delle Arti</strong> (non in quella di Teologia) e nella <em>falsafa</em> araba, dove i filosofi si scontrano apertamente con i teologi (<em>mutakallimūn</em>). Distinzione netta: filosofia = principi naturali; teologia = principi rivelati. <em>Averroè sostiene che gli elementi pericolosi per la società islamica sono i teologi, non i filosofi.</em></div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="s11-row s11-r5">
+      <div class="s11-num-col">V</div>
+      <div class="s11-myth">
+        <div class="s11-lbl">✗ Automatismo</div>
+        <div class="s11-myth-text">Il pensiero medievale è contrassegnato da condanne sistematiche, censure e intolleranza fisica.</div>
+      </div>
+      <div class="s11-arrow-col">→</div>
+      <div class="s11-truth">
+        <div class="s11-lbl">✓ Realtà</div>
+        <div class="s11-truth-text">Le censure medievali colpiscono prevalentemente <strong>proposizioni</strong>, non persone. L'università garantisce immunità fisica ai maestri (<strong><em>libertas docendi</em></strong>). Il primo maestro bruciato al rogo è Jan Hus al Concilio di Costanza nel 1415 — alle soglie dell'età moderna. <em>Socrate è condannato nel IV sec. a.C.; Giordano Bruno nel 1600 è un autore moderno.</em></div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="s11-row s11-r6">
+      <div class="s11-num-col">VI</div>
+      <div class="s11-myth">
+        <div class="s11-lbl">✗ Automatismo</div>
+        <div class="s11-myth-text">La filosofia medievale è essenzialmente filosofia latina e cristiana.</div>
+      </div>
+      <div class="s11-arrow-col">→</div>
+      <div class="s11-truth">
+        <div class="s11-lbl">✓ Realtà</div>
+        <div class="s11-truth-text">Il Medioevo è <strong>policentrico</strong>: quattro tradizioni coesistono e si ibridano — arabo-islamica, ebraica (arabofona), bizantino-ortodossa, latino-cristiana. Il primo momento di internazionalizzazione della filosofia non fu il latino ma l'<strong>arabo</strong>. «Riportarsi alla purezza di una tradizione è un'operazione squallidamente ideologica» — <em>il docente.</em></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-lbl">Punto chiave — il metodo storiografico</div>
+    <p>Lo scopo di questa decostruzione non è rovesciare gli stereotipi sostituendoli con altri: è <strong>fluidificare i concetti</strong>. Come dice Paul Veyne, il compito dello storico è fare un <em>«inventario delle differenze»</em> — essere sensibili alle discontinuità, agli scarti, a ciò che non quadra. Nella storia della filosofia le <strong>discontinuità sono più importanti delle continuità</strong>.</p>
+  </div>
+</section>
+
+<section class="ds" id="s2">
+  <div class="sec-top">
+    <span class="badge-n">Schema 02</span>
     <span class="badge-l">LL. 01–03</span>
   </div>
   <h2>La catena di trasmissione filosofica</h2>
@@ -1636,12 +2494,9 @@ body {
   </div>
 </section>
 
-<!-- ════════════════════════════════════
-  SCHEMA 2 — Morte e resurrezione
-═════════════════════════════════════ -->
-<section class="ds" id="s2">
+<section class="ds" id="s3">
   <div class="sec-top">
-    <span class="badge-n">Schema 02</span>
+    <span class="badge-n">Schema 03</span>
     <span class="badge-l">LL. 02–03</span>
   </div>
   <h2>Morte e resurrezione della filosofia</h2>
@@ -1724,12 +2579,9 @@ body {
   </div>
 </section>
 
-<!-- ════════════════════════════════════
-  SCHEMA 3 — Universitas
-═════════════════════════════════════ -->
-<section class="ds" id="s3">
+<section class="ds" id="s4">
   <div class="sec-top">
-    <span class="badge-n">Schema 03</span>
+    <span class="badge-n">Schema 04</span>
     <span class="badge-l">LL. 02–03</span>
   </div>
   <h2>Struttura dell'<em>Universitas</em> medievale</h2>
@@ -1844,12 +2696,9 @@ body {
   </div>
 </section>
 
-<!-- ════════════════════════════════════
-  SCHEMA 4 — Medioevo Policentrico
-═════════════════════════════════════ -->
-<section class="ds" id="s4">
+<section class="ds" id="s5">
   <div class="sec-top">
-    <span class="badge-n">Schema 04</span>
+    <span class="badge-n">Schema 05</span>
     <span class="badge-l">L. 05</span>
   </div>
   <h2>Il Medioevo policentrico</h2>
@@ -1919,12 +2768,9 @@ body {
   </div>
 </section>
 
-<!-- ════════════════════════════════════
-  SCHEMA 5 — Trasmissione De Anima
-═════════════════════════════════════ -->
-<section class="ds" id="s5">
+<section class="ds" id="s6">
   <div class="sec-top">
-    <span class="badge-n">Schema 05</span>
+    <span class="badge-n">Schema 06</span>
     <span class="badge-l">L. 06</span>
   </div>
   <h2>Trasmissione testuale del <em>De Anima</em></h2>
@@ -2032,12 +2878,9 @@ body {
   </div>
 </section>
 
-<!-- ════════════════════════════════════
-  SCHEMA 6 — Anima tripartita
-═════════════════════════════════════ -->
-<section class="ds" id="s6">
+<section class="ds" id="s7">
   <div class="sec-top">
-    <span class="badge-n">Schema 06</span>
+    <span class="badge-n">Schema 07</span>
     <span class="badge-l">L. 06</span>
   </div>
   <h2>L'anima tripartita e i sensi interni di Avicenna</h2>
@@ -2133,12 +2976,9 @@ body {
   </div>
 </section>
 
-<!-- ════════════════════════════════════
-  SCHEMA 7 — Al-Ghazali
-═════════════════════════════════════ -->
-<section class="ds" id="s7">
+<section class="ds" id="s8">
   <div class="sec-top">
-    <span class="badge-n">Schema 07</span>
+    <span class="badge-n">Schema 08</span>
     <span class="badge-l">L. 07</span>
   </div>
   <h2>Al-Ghazālī e il <em>Tahāfut al-falāsifa</em></h2>
@@ -2230,12 +3070,465 @@ body {
   </div>
 </section>
 
-<!-- ════════════════════════════════════
-  SCHEMA 8 — Processo conoscenza
-═════════════════════════════════════ -->
-<section class="ds" id="s8">
+<section class="ds" id="s9">
   <div class="sec-top">
-    <span class="badge-n">Schema 08</span>
+    <span class="badge-n">Schema 09</span>
+    <span class="badge-l">LL. 08–09</span>
+  </div>
+  <h2>Al-Fārābī e Avicenna: intelletto, cosmologia e profezia</h2>
+  <p class="desc">I due grandi architetti della filosofia araba orientale. Al-Fārābī costruisce il sistema neoplatonico delle 10 intelligenze; Avicenna lo porta alle estreme conseguenze e lo collega alla medicina, alla profezia e alla celebre autocoscienza dell'uomo volante.</p>
+
+  <div class="s12-layout">
+
+    <!-- LEFT: cosmological hierarchy -->
+    <div>
+      <div class="s12-cosmo">
+        <div class="s12-cosmo-title">⟨ Al-Fārābī — La gerarchia delle 10 Intelligenze ⟩</div>
+        <div class="s12-intel-chain">
+
+          <div class="s12-intel-node s12-n-god">
+            <div class="s12-in-icon">ا</div>
+            <div>
+              <div class="s12-in-name">Il Primo Principio — Dio</div>
+              <div class="s12-in-desc">Primo motore immobile · Puro atto · Pensa solo se stesso</div>
+            </div>
+          </div>
+          <div class="s12-in-arrow">↓ emanazione necessaria</div>
+
+          <div class="s12-intel-node s12-n-i1">
+            <div class="s12-in-icon">I</div>
+            <div>
+              <div class="s12-in-name">Prima Intelligenza</div>
+              <div class="s12-in-desc">Muove il primo cielo (stelle fisse)</div>
+            </div>
+          </div>
+          <div class="s12-in-arrow">↓</div>
+
+          <div class="s12-intel-node s12-n-i2">
+            <div class="s12-in-icon">…</div>
+            <div>
+              <div class="s12-in-name">II–IX Intelligenze</div>
+              <div class="s12-in-desc">Muovono i pianeti · Saturno, Giove, Marte, Sole, Venere, Mercurio, Luna</div>
+            </div>
+          </div>
+          <div class="s12-in-arrow">↓</div>
+
+          <div class="s12-intel-node s12-n-ix">
+            <div class="s12-in-icon">X</div>
+            <div>
+              <div class="s12-in-name">⭐ Decima Intelligenza — Intelletto Agente</div>
+              <div class="s12-in-desc"><em>Dator Formarum</em> · Governa il mondo sublunare · Si occupa dell'intelletto umano</div>
+            </div>
+          </div>
+          <div class="s12-in-arrow">↓ luce intellettuale</div>
+
+          <div class="s12-intel-node s12-n-world">
+            <div class="s12-in-icon">🌍</div>
+            <div>
+              <div class="s12-in-name">Mondo sublunare — gli uomini</div>
+              <div class="s12-in-desc">Intelletti umani · ricevono le forme intelligibili dall'Intelletto Agente</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight" style="margin-top:1.25rem;">
+        <div class="insight-lbl">Rivendicazione di metodo</div>
+        <p style="font-size:0.85rem;">«L'intelletto non è qualcosa che si porta con sé come dato biologico. È qualcosa che <strong>deve essere costruito attraverso l'esercizio</strong>. Possiamo costruirci un certo grado di immortalità.» — Al-Fārābī contrasta Alessandro di Afrodisia.</p>
+      </div>
+    </div>
+
+    <!-- RIGHT: four intellects + political connection -->
+    <div class="s12-right">
+      <div>
+        <div class="s12-section-hdr">I quattro intelletti secondo Al-Fārābī</div>
+        <div class="s12-four-intellects">
+          <div class="s12-int-card s12-ic-1">
+            <div class="s12-ic-num">1</div>
+            <div class="s12-ic-name">Intelletto materiale</div>
+            <div class="s12-ic-lat">nous hylikos</div>
+            <div class="s12-ic-desc">Pura potenzialità. Non ancora formato, comune a tutti gli umani alla nascita.</div>
+          </div>
+          <div class="s12-int-card s12-ic-2">
+            <div class="s12-ic-num">2</div>
+            <div class="s12-ic-name">Intelletto in abito</div>
+            <div class="s12-ic-lat">nous kath'héxin</div>
+            <div class="s12-ic-desc">Disposizione stabile acquisita dopo l'apprendimento. Lo studioso con il greco che non sta leggendo.</div>
+          </div>
+          <div class="s12-int-card s12-ic-3">
+            <div class="s12-ic-num">★</div>
+            <div class="s12-ic-name">Intelletto Agente</div>
+            <div class="s12-ic-lat">= Decima Intelligenza</div>
+            <div class="s12-ic-desc">Separato, unico per tutta la specie. Illumina gli intelletti umani come il sole illumina i colori. <strong>Non appartiene all'individuo.</strong></div>
+          </div>
+          <div class="s12-int-card s12-ic-4">
+            <div class="s12-ic-num">4</div>
+            <div class="s12-ic-name">Intelletto acquisito</div>
+            <div class="s12-ic-lat">nous epiktetos</div>
+            <div class="s12-ic-desc">Contatto pieno con l'Intelletto Agente. Vertice della perfezione umana. Rende possibile la profezia.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="s12-pol-box">
+        <div class="s12-pol-hdr">🏛️ Connessione psicologia → politica → profezia</div>
+        <div class="s12-pol-items">
+          <div class="s12-pol-item">L'intelletto non è innato ma si <strong>costruisce attraverso l'esercizio</strong> — quindi non è scontato che si possieda un'anima immortale.</div>
+          <div class="s12-pol-item">Diventare pienamente umani (animali razionali) non è un dato di fatto ma un <strong>compito esistenziale</strong>.</div>
+          <div class="s12-pol-item">È necessario che le condizioni <strong>socio-politiche favoriscano</strong> lo sviluppo dell'intelletto: la città ideale ha una «missione educativa fondamentale».</div>
+          <div class="s12-pol-item">Chi non raggiunge l'intelletto acquisito «resterà legato ai vincoli materiali e condividerà il destino finale della materia».</div>
+          <div class="s12-pol-item">Il <strong>profeta</strong> è colui che ha raggiunto il grado massimo dell'intelletto acquisito, permettendogli il contatto diretto con l'Intelletto Agente — spiegazione razionale del profetismo.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AVICENNA SECTION -->
+  <div style="margin-top:2rem;">
+    <div class="s12-section-hdr">Avicenna (Ibn Sīnā) — sviluppi e innovazioni rispetto ad Al-Fārābī</div>
+    <div class="s12-avi-grid">
+
+      <div class="s12-avi-card">
+        <div class="s12-avi-icon">🕊️</div>
+        <div class="s12-avi-name">L'uomo volante</div>
+        <div class="s12-avi-body">
+          Un uomo appena creato, sospeso nell'aria, privo di qualunque percezione sensoriale (occhi bendati, membra non si toccano). <strong>Sarebbe consapevole di esistere?</strong><br><br>
+          Sì — riconoscerebbe la propria esistenza senza ricorrere al corpo. Questo dimostra che l'<em>anima intellettiva</em> è <strong>autoconsapevole indipendentemente dal corpo</strong>.<br><br>
+          Considerato da molti il più importante <em>antecedente del cogito cartesiano</em> — ma il docente avvisa: nella storia della filosofia le discontinuità contano più delle continuità.
+        </div>
+      </div>
+
+      <div class="s12-avi-card">
+        <div class="s12-avi-icon">🧠</div>
+        <div class="s12-avi-name">Base neurofisiologica del pensiero</div>
+        <div class="s12-avi-body">
+          Avicenna è medico: il suo <em>Canone della medicina</em> sarà usato nelle università europee fino al XVII–XVIII secolo.<br><br>
+          Primo tentativo di descrivere una <strong>base neurofisiologica del pensiero</strong>: localizzazione precisa dei sensi interni in aree cerebrali. Metodo osservativo-clinico: le lesioni cerebrali impediscono determinate funzioni cognitive → la base del pensiero ha localizzazione cerebrale.<br><br>
+          <em>Il pensiero stesso rimane immateriale</em> — Avicenna non è riduzionista.
+        </div>
+      </div>
+
+      <div class="s12-avi-card">
+        <div class="s12-avi-icon">✨</div>
+        <div class="s12-avi-name">Profezia, sogni e <em>Dator Formarum</em></div>
+        <div class="s12-avi-body">
+          L'Intelletto Agente avicenniano = <em>Dator Formarum</em> (Donatore di Forme). Emana continuamente le forme intelligibili verso gli intelletti umani.<br><br>
+          Il <strong>profeta</strong> ha un intelletto così potente da ricevere in un solo istante ciò che il filosofo raggiunge dopo anni di studio.<br><br>
+          I <strong>sogni profetici</strong> avvengono quando l'immaginazione riceve forme dall'Intelletto Agente durante il sonno, quando i sensi sono sospesi. Questo fornisce una spiegazione razionale dell'escatologia islamica.
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparison table -->
+    <div class="s12-diff-box">
+      <div class="s12-diff-hdr">Confronto Al-Fārābī / Avicenna sui punti chiave</div>
+      <table class="s12-diff-table">
+        <thead>
+          <tr>
+            <th>Aspetto</th>
+            <th>Al-Fārābī (~950)</th>
+            <th>Avicenna (~1037)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Intelletto agente</td>
+            <td class="td-farabi">Decima Intelligenza nella gerarchia cosmica</td>
+            <td class="td-avicen">Dator Formarum — emana forme verso il mondo sublunare</td>
+          </tr>
+          <tr>
+            <td>Immortalità</td>
+            <td class="td-farabi">Chi costruisce l'intelletto acquisito può diventare immortale</td>
+            <td class="td-avicen">L'anima intellettiva è autoconsapevole e separabile dal corpo (uomo volante)</td>
+          </tr>
+          <tr>
+            <td>Profezia</td>
+            <td class="td-farabi">Il profeta = intelletto acquisito + immaginazione perfetta → governa la città</td>
+            <td class="td-avicen">Intelletto iperatttivo + immaginazione eccezionale → ricezione diretta dall'IA</td>
+          </tr>
+          <tr>
+            <td>Politica</td>
+            <td class="td-farabi">Filosofia politica centrale: città ideale con missione educativa</td>
+            <td class="td-avicen">Meno enfasi politica, più attenzione alla psicologia individuale e alla medicina</td>
+          </tr>
+          <tr>
+            <td>Influenza</td>
+            <td class="td-farabi">«Secondo Maestro» dopo Aristotele. Logica e filosofia politica fondamentali</td>
+            <td class="td-avicen">«Pandemia avicenniana» in tutto l'Islam orientale e occidentale. Poi i latini.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-lbl">Punto chiave</div>
+    <p>La grande originalità di Al-Fārābī è legare <strong>psicologia filosofica e filosofia politica</strong>: se l'intelletto si costruisce, allora le condizioni sociali contano per la realizzazione dell'umanità piena. Avicenna sposta il baricentro sull'interiorità e sulla medicina. Entrambi tuttavia pongono la stessa domanda che percorre tutto il corso: <strong>che cos'è l'intelletto, chi lo possiede, e cosa sopravvive della persona dopo la morte?</strong></p>
+  </div>
+</section>
+
+<section class="ds" id="s10">
+  <div class="sec-top">
+    <span class="badge-n">Schema 10</span>
+    <span class="badge-l">L. 08</span>
+  </div>
+  <h2>La ricezione latina di Averroè: condanne, doppia verità, Sigieri di Brabante</h2>
+  <p class="desc">L'averroismo latino scuote le università del XIII secolo. Le condanne del 1270 e 1277 fissano i limiti della filosofia laica; la questione della «doppia verità» resta ambigua; Dante porterà Sigieri in Paradiso.</p>
+
+  <div class="s14-layout">
+
+    <!-- LEFT: condanne -->
+    <div class="s14-cond-block">
+
+      <div class="s14-cond-card s14-cond1">
+        <div class="s14-cc-hdr">
+          <div class="s14-cc-year">1270</div>
+          <div>
+            <div class="s14-cc-title">Prima condanna — vescovo Étienne Tempier, Parigi</div>
+            <div class="s14-cc-sub">13 proposizioni condannate — risposta diretta all'averroismo della Facoltà delle Arti</div>
+          </div>
+        </div>
+        <div class="s14-cc-body">
+          <div class="s14-tesi-list">
+            <div class="s14-tesi"><div class="s14-tesi-n">1</div>L'intelletto di tutti gli uomini è unico e numericamente uno</div>
+            <div class="s14-tesi"><div class="s14-tesi-n">2</div>L'intelletto materiale non è unito all'individuo come forma sostanziale</div>
+            <div class="s14-tesi"><div class="s14-tesi-n">3</div>La volontà umana vuole e sceglie per necessità</div>
+            <div class="s14-tesi"><div class="s14-tesi-n">…</div>Altre 10 tesi su anima, necessità causale, provvidenza individuale</div>
+          </div>
+        </div>
+        <div class="s14-cc-note">⚡ Tommaso d'Aquino scrive il <em>De unitate intellectus contra Averroistas</em> nello stesso anno.</div>
+      </div>
+
+      <div class="s14-cond-card s14-cond2">
+        <div class="s14-cc-hdr">
+          <div class="s14-cc-year">1277</div>
+          <div>
+            <div class="s14-cc-title">Grande condanna — 219 tesi proibite</div>
+            <div class="s14-cc-sub">La più ampia condanna dottrinale del Medioevo — colpisce anche posizioni di Tommaso d'Aquino</div>
+          </div>
+        </div>
+        <div class="s14-cc-body">
+          <div class="s14-tesi-list">
+            <div class="s14-tesi"><div class="s14-tesi-n">①</div>L'intelletto di tutti gli uomini è uno e identico</div>
+            <div class="s14-tesi"><div class="s14-tesi-n">②</div>Il mondo è eterno (non ha avuto inizio nel tempo)</div>
+            <div class="s14-tesi"><div class="s14-tesi-n">③</div>Dio non può creare più di un mondo</div>
+            <div class="s14-tesi"><div class="s14-tesi-n">④</div>Gli eventi futuri sono necessari (determinismo)</div>
+            <div class="s14-tesi"><div class="s14-tesi-n">⑤</div>Dio non conosce i particolari, solo gli universali</div>
+            <div class="s14-tesi"><div class="s14-tesi-n">⑥</div>La felicità umana si trova in questa vita, non nell'altra</div>
+            <div class="s14-tesi"><div class="s14-tesi-n">⑦</div>La creazione dal nulla è impossibile</div>
+          </div>
+        </div>
+        <div class="s14-cc-note">⚠️ Effetto ambivalente: limita la libertà speculativa ma stimola riflessioni più profonde su ragione e fede. Alcune tesi condannate appartengono anche a Tommaso d'Aquino.</div>
+      </div>
+
+      <div class="insight" style="margin-top:0;">
+        <div class="insight-lbl">Lettura storiografica</div>
+        <p style="font-size:0.85rem;">Le condanne medievali colpiscono prevalentemente <strong>proposizioni</strong>, non persone. L'università garantisce la <em>libertas docendi</em>. La grande condanna del 1277 non fu univoca nel bersaglio: Étienne Tempier si mosse in fretta, includendo tesi di vari orientamenti, compresi tomisti. Luca Bianchi ha mostrato come fuori da Parigi si dicesse che «gli articoli non superano le Alpi».</p>
+      </div>
+    </div>
+
+    <!-- RIGHT: doppia verità + Sigieri + Dante -->
+    <div class="s14-right">
+
+      <div class="s14-dt-card">
+        <div class="s14-dt-hdr">🔀 La «doppia verità» — tre interpretazioni possibili</div>
+        <div class="s14-dt-body">
+          <div style="font-size:0.78rem;color:var(--muted2);margin-bottom:0.35rem;font-style:italic;">Nessun filosofo medievale afferma che la stessa proposizione sia simultaneamente vera e falsa — questo violerebbe il principio di non-contraddizione. Ci sono almeno tre modi di intendere la distinzione:</div>
+
+          <div class="s14-interp s14-interp-a">
+            <div class="s14-interp-lbl">A — Subordinazione moderata</div>
+            La ragione umana ha limiti strutturali e non può attingere verità che dipendono dalla volontà libera di Dio. La fede <em>completa e corregge</em> ciò che la ragione scopre da sola. La filosofia è serva della teologia.
+          </div>
+
+          <div class="s14-interp s14-interp-b">
+            <div class="s14-interp-lbl">B — Autonomia delle sfere</div>
+            Filosofia e teologia hanno metodi e ambiti propri — non si può chiedere alla filosofia di dimostrare articoli di fede. Ciascuna è sovrana nel proprio dominio.
+          </div>
+
+          <div class="s14-interp s14-interp-c">
+            <div class="s14-interp-lbl">C — Critica velata (sospetto ecclesiastico)</div>
+            Un modo sottile per mettere in dubbio i dogmi: «Io non nego la creazione, dico solo che Aristotele dimostra l'eternità del mondo». La fede come copertura per posizioni eterodosse.
+          </div>
+        </div>
+      </div>
+
+      <div class="s14-sigieri">
+        <div class="s14-sig-hdr">⚖️ Sigieri di Brabante (~1240–1284) — il caso emblematico</div>
+        <div class="s14-sig-body">
+          Maestro della Facoltà delle Arti di Parigi. Nei suoi scritti discute e talvolta sostiene la tesi averroista dell'unicità dell'intelletto, aggiungendo: «questa è la conclusione filosofica, <em>ma la fede insegna altro</em>».<br><br>
+          <strong>Era sincero?</strong> Stava semplicemente esponendo Aristotele nella sua versione più rigorosa — o usava la fede come copertura? Impossibile stabilirlo con certezza. Condannato nel 1270 e nel 1277, probabilmente assassinato ad Orvieto intorno al 1284.<br><br>
+          <strong>Ciò che è certo</strong>: il caso Sigieri mostra l'ambiguità strutturale della «doppia verità» e la difficoltà per il pensatore medievale di fare filosofia rigorosa senza sconfinare in territorio teologico.
+        </div>
+      </div>
+
+      <div class="s14-dante-box">
+        <strong>Dante, Paradiso X, 136–138</strong> — Sigieri di Brabante è collocato in Paradiso nel Cielo del Sole, tra i grandi sapienti, proprio accanto a Tommaso d'Aquino che fu il suo principale avversario. Dante lo descrive come colui che «sillogizzò invidiosi veri» — disse verità scomode ma genuine. Una riabilitazione poetica che ancora oggi divide gli studiosi: Dante lo considerava un filosofo perseguitato ingiustamente, o voleva dare una lettura ironica?
+      </div>
+
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:1rem;margin-top:0.5rem;">
+        <div style="font-family:var(--font-h);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted2);margin-bottom:0.6rem;">L'«averroismo latino» — i protagonisti</div>
+        <div style="display:flex;flex-direction:column;gap:0.45rem;font-size:0.82rem;color:var(--cream);">
+          <div style="display:flex;gap:0.5rem;"><span style="color:var(--arab-l);font-family:var(--font-h);min-width:140px;">Sigieri di Brabante</span>Facoltà delle Arti Parigi · unicità intelletto · condannato 1270/1277</div>
+          <div style="display:flex;gap:0.5rem;"><span style="color:var(--arab-l);font-family:var(--font-h);min-width:140px;">Boezio di Dacia</span>Facoltà delle Arti Parigi · <em>De summo bono</em> · felicità come vita filosofica</div>
+          <div style="display:flex;gap:0.5rem;"><span style="color:var(--latin-l);font-family:var(--font-h);min-width:140px;">Alberto Magno</span>Domenicano · Commento De Anima · posizione intermedia</div>
+          <div style="display:flex;gap:0.5rem;"><span style="color:var(--latin-l);font-family:var(--font-h);min-width:140px;">Tommaso d'Aquino</span>Domenicano · <em>De unitate intellectus</em> · confutazione sistematica averroismo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-lbl">Punto chiave</div>
+    <p>Le condanne del 1270/1277 non sono semplici atti repressivi: riflettono una tensione strutturale tra <strong>filosofia come scienza autonoma</strong> (il modello aristotelico accolto dalle Facoltà delle Arti) e <strong>teologia come supervisore</strong>. Questo conflitto alimenta la nascita della modernità: la rivendicazione dell'autonomia della ragione rispetto all'autorità religiosa, che troverà piena espressione solo nei secoli seguenti, germoglia proprio in queste dispute parigine del XIII secolo.</p>
+  </div>
+</section>
+
+<section class="ds" id="s11">
+  <div class="sec-top">
+    <span class="badge-n">Schema 11</span>
+    <span class="badge-l">L. 09</span>
+  </div>
+  <h2>Le tre interpretazioni dell'intelletto produttivo e i gradi di Al-Fārābī</h2>
+  <p class="desc">La lezione 09 costruisce il quadro interpretativo d'insieme: tre grandi famiglie ermeneutiche, quattro gradi dell'intelletto con nomi arabi, la metafora della luce in doppia versione, e la <em>sa'āda</em> come fine ultimo dell'esistenza umana.</p>
+
+  <!-- TRE INTERPRETAZIONI -->
+  <div style="font-family:var(--font-h);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted2);margin-bottom:0.85rem;">Le tre grandi interpretazioni dell'intelletto produttivo aristotelico (De Anima III.5)</div>
+  <div class="s13-interp-row">
+
+    <div class="s13-interp-card s13-ic-greek">
+      <div class="s13-ic-num">① Teologica</div>
+      <div class="s13-ic-title">Intelletto agente = Dio</div>
+      <div class="s13-ic-proponent">Alessandro di Afrodisia · II–III sec. d.C.</div>
+      <div class="s13-ic-body">Il Primo Motore Immobile — la divinità che pensa sempre. Quando gli esseri umani partecipano dell'attività teoretica, si «divinizzano» temporaneamente, esperienziano il divino.<br><br>Base testuale: <em>Etica Nicomachea</em> X — «partecipare dell'attività teoretica significa in qualche modo divinizzarsi».</div>
+      <div class="s13-ic-cons">Conseguenza: divinizzazione a tempo; nessuna immortalità individuale permanente. Influenza enorme nel Medioevo (tema della divinizzazione attraverso la conoscenza).</div>
+    </div>
+
+    <div class="s13-interp-card s13-ic-arab">
+      <div class="s13-ic-num">② Cosmologica-angelologica</div>
+      <div class="s13-ic-title">Intelletto agente = ultima Intelligenza separata</div>
+      <div class="s13-ic-proponent">Al-Fārābī · Avicenna · <em>Falsafa</em> araba</div>
+      <div class="s13-ic-body">Non è Dio ma l'ultima delle intelligenze motrici delle sfere celesti — quella che governa il mondo sublunare. <em>Dator Formarum</em>: dona le forme alla materia <em>e</em> gli intelligibili agli intelletti umani.<br><br>Sintesi tra emanatismo neoplatonico e cosmologia aristotelica delle sfere.</div>
+      <div class="s13-ic-cons">Conseguenza: conoscenza come illuminazione trascendente; parallelo strutturale con le Idee di Platone (universali in una sostanza separata). Influenza su tutta la <em>falsafa</em> e sulla scolastica latina.</div>
+    </div>
+
+    <div class="s13-interp-card s13-ic-nat">
+      <div class="s13-ic-num">③ Naturalistica</div>
+      <div class="s13-ic-title">Intelletto agente = facoltà dell'anima</div>
+      <div class="s13-ic-proponent">Temistio · Tommaso d'Aquino · Filosofia latina</div>
+      <div class="s13-ic-body">L'intelletto produttivo è semplicemente la capacità attiva dell'anima razionale individuale che astrae gli intelligibili dai <em>phantasmata</em>. Appartiene a ciascun individuo come propria facoltà.<br><br>Lettura più «lineare» del testo aristotelico senza presupposizioni metafisiche neoplatoniche.</div>
+      <div class="s13-ic-cons">Conseguenza: conoscenza come attualizzazione immanente; immortalità individuale garantita. Diventa la posizione ortodossa della scolastica latina dopo Tommaso.</div>
+    </div>
+  </div>
+
+  <!-- PROVOCAZIONE: anima immortale = verità universali -->
+  <div class="s13-sa-card" style="margin-bottom:1.5rem;border-left:4px solid var(--aristo);background:linear-gradient(135deg,rgba(90,58,138,0.08),var(--surface2));">
+    <div class="s13-sa-hdr" style="color:var(--aristo-l);">🎭 Provocazione ermeneutica del docente (L. 09)</div>
+    <div class="s13-sa-body">
+      «Spegnete i registratori» — ma poi spiega comunque. L'<strong>anima immortale per Aristotele</strong> potrebbe essere l'<em>insieme delle verità intelligibili universali</em>: il teorema di Pitagora, tutti i teoremi geometrici, i principi delle scienze, le quattro cause, il principio di non-contraddizione.<br><br>
+      Aristotele dice «noi non ricordiamo dopo la morte» e «noi siamo mortali». Ciò che sopravvive non è <em>io</em> come soggetto individuale, ma le verità che la specie umana possiede. Un'<strong>immortalità oggettiva degli universali</strong>, non soggettiva della persona. Siamo condizionati dalla concezione cristiana/islamica dell'anima individuale — ma Aristotele potrebbe avere in mente qualcosa di radicalmente diverso.
+    </div>
+  </div>
+
+  <!-- GRADI INTELLETTO AL-FARABI -->
+  <div style="font-family:var(--font-h);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted2);margin-bottom:0.85rem;">I quattro gradi dell'intelletto secondo Al-Fārābī — con nomi arabi</div>
+  <div class="s13-degrees">
+
+    <div class="s13-deg s13-d1">
+      <div class="s13-deg-num">①</div>
+      <div class="s13-deg-ar">'aql hayulānī</div>
+      <div class="s13-deg-name">Intelletto materiale / potenziale</div>
+      <div class="s13-deg-desc">Pura capacità di ricevere forme intelligibili. La tavoletta non ancora impressa. Tutti gli umani nascono con questo.</div>
+    </div>
+
+    <div class="s13-deg s13-d2">
+      <div class="s13-deg-num">②</div>
+      <div class="s13-deg-ar">'aql bi-l-fi'l</div>
+      <div class="s13-deg-name">Intelletto in atto / abituale</div>
+      <div class="s13-deg-desc">Ha acquisito stabilmente alcune conoscenze. Possiede il teorema di Pitagora anche quando non ci pensa. Lo studioso con il greco.</div>
+    </div>
+
+    <div class="s13-deg s13-d3">
+      <div class="s13-deg-num">③</div>
+      <div class="s13-deg-ar">'aql bi-l-fi'l mustafad</div>
+      <div class="s13-deg-name">Intelletto in esercizio</div>
+      <div class="s13-deg-desc">Effettivamente pensa ora. Sta usando le conoscenze acquisite. L'atto del pensare in corso, non solo il possesso.</div>
+    </div>
+
+    <div class="s13-deg s13-d4">
+      <div class="s13-d4-badge">★ culmine</div>
+      <div class="s13-deg-num">④</div>
+      <div class="s13-deg-ar">'aql mustafad</div>
+      <div class="s13-deg-name">Intelletto acquisito</div>
+      <div class="s13-deg-desc">Congiunzione stabile con l'Intelletto Agente. Quasi costantemente in contatto con la fonte degli intelligibili. Divinizzazione.</div>
+    </div>
+  </div>
+
+  <!-- CRITICA AVERROISTA -->
+  <div class="s13-sa-card" style="margin-bottom:1.5rem;border-left:4px solid var(--latin-l);background:rgba(36,64,122,0.06);">
+    <div class="s13-sa-hdr" style="color:var(--latin-l);">⚡ La critica averroista ad Al-Fārābī — il problema della causalità</div>
+    <div class="s13-sa-body">
+      Se l'Intelletto Agente emana <strong>continuamente e indiscriminatamente</strong> gli intelligibili verso tutti gli intelletti umani — perché un bambino non conosce la geometria?<br><br>
+      Al-Fārābī risponde: serve una <strong>preparazione</strong> dell'intelletto potenziale attraverso l'esperienza sensibile e lo studio. Lo specchio deve essere pulito per riflettere la luce.<br><br>
+      Ma Averroè ribatte: se la causa vera della conoscenza è l'emanazione dall'IA, l'esperienza sensibile diventa solo una <em>condizione preparatoria accessoria</em>, non la causa vera. Questo contraddice l'impostazione aristotelica per cui la conoscenza <strong>deriva necessariamente dai sensi</strong>. Il problema della causalità rimane aperto — spingerà Averroè a una soluzione radicalmente diversa.
+    </div>
+  </div>
+
+  <!-- METAFORA LUCE: DOPPIA INTERPRETAZIONE -->
+  <div style="font-family:var(--font-h);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted2);margin-bottom:0.85rem;">La metafora della luce: due interpretazioni opposte della stessa immagine</div>
+  <div class="s13-light-split">
+    <div class="s13-ls-side s13-ls-nat">
+      <div class="s13-ls-hdr">③ Naturalistica</div>
+      <div class="s13-ls-body">
+        La luce è una <em>facoltà interna</em> dell'anima. L'intelletto agente appartiene a ogni individuo e attualizza ciò che è già presente in potenza nei <em>phantasmata</em>.<br><br>
+        La luce <strong>non aggiunge nulla</strong> ai colori — li rende visibili (li attualizza). Analogamente, l'IA non aggiunge contenuto agli intelligibili, li rende pensabili a partire dall'esperienza.<br><br>
+        È un processo di <strong>attualizzazione immanente</strong> — tutto avviene all'interno dell'anima razionale.
+      </div>
+      <div class="s13-ls-succ">→ Tommaso d'Aquino e la scolastica latina</div>
+    </div>
+    <div class="s13-ls-center">⇄</div>
+    <div class="s13-ls-side s13-ls-tra">
+      <div class="s13-ls-hdr">② Cosmologica-angelologica</div>
+      <div class="s13-ls-body">
+        La luce proviene dall'<em>esterno</em>, da una sostanza separata trascendente. L'IA proietta gli intelligibili dall'alto verso gli intelletti umani preparati.<br><br>
+        La luce <strong>trasmette il contenuto</strong> intelligibile dall'IA all'intelletto umano — non solo attualizza ciò che c'è già, ma comunica forme dall'intelligenza cosmica.<br><br>
+        È un processo di <strong>illuminazione trascendente</strong> — richiede un principio superiore esterno.
+      </div>
+      <div class="s13-ls-succ">→ Al-Fārābī, Avicenna, e parte della tradizione agostiniana</div>
+    </div>
+  </div>
+
+  <!-- SA'ADA -->
+  <div style="font-family:var(--font-h);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted2);margin:1.5rem 0 0.85rem;">Sa'āda — la felicità suprema come congiunzione intellettuale</div>
+  <div class="s13-saada">
+    <div class="s13-sa-card">
+      <div class="s13-sa-hdr">🌟 La felicità come fine teoretico</div>
+      <div class="s13-sa-body">
+        In Al-Fārābī il fine ultimo dell'esistenza umana non è etico-pratico (virtù morale) ma <strong>teoretico-contemplativo</strong>: la <em>sa'āda</em>, la felicità suprema.<br><br>
+        Consiste nel raggiungimento dell'<em>'aql mustafad</em> — la congiunzione (<em>ittiṣāl</em>) stabile e intensa con l'Intelletto Agente cosmico.<br><br>
+        Chi raggiunge questo stato diventa quasi un'intelligenza angelica pur rimanendo nel corpo. <strong>Divinizzazione attraverso la conoscenza</strong>: eco diretta dell'<em>Etica Nicomachea</em> X.<br><br>
+        <em>«Tale stato rappresenta il fine sommo dell'esistenza umana, la più alta conoscenza e la massima felicità»</em> — Cruz Hernández.
+      </div>
+    </div>
+    <div class="s13-sa-card">
+      <div class="s13-sa-hdr" style="color:var(--aristo-l);">⚠️ Il problema teologico della sa'āda</div>
+      <div class="s13-sa-body">
+        Se la felicità suprema consiste nel congiungere il proprio intelletto con un'intelligenza separata <strong>comune a tutta la specie</strong> — cosa resta della mia individualità?<br><br>
+        La congiunzione avvicina l'individuo alle intelligenze separate e a Dio — ma dissolve l'io personale nell'universale.<br><br>
+        Questo pone problemi enormi per le religioni monoteiste: <strong>sopravvivenza personale, giudizio individuale, paradiso/inferno basati sui meriti propri</strong> — tutte queste dottrine presuppongono che rimanga qualcosa di individuale dopo la morte.<br><br>
+        La <em>falsafa</em> affronta il tema in modi diversi, ma non lo risolverà mai definitivamente — spiegando perché il dibattito continui attraverso Averroè e poi nel mondo latino.
+      </div>
+    </div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-lbl">Punto chiave</div>
+    <p>La stessa metafora della luce può essere letta in modi opposti — questa ambiguità non è un difetto del testo ma rivela una tensione reale: la conoscenza è un processo <strong>immanente</strong> all'anima o richiede un principio <strong>trascendente</strong>? Questa domanda attraversa tutta la filosofia medievale. Al-Fārābī sceglie la risposta trascendente, Tommaso la immanente — e Averroè proporrà una terza via radicale.</p>
+  </div>
+</section>
+
+<section class="ds" id="s12">
+  <div class="sec-top">
+    <span class="badge-n">Schema 12</span>
     <span class="badge-l">LL. 10–12</span>
   </div>
   <h2>Processo della conoscenza intellettuale</h2>
@@ -2336,13 +3629,10 @@ body {
   </div>
 </section>
 
-<!-- ════════════════════════════════════
-  SCHEMA 9 — Confronto intelletti
-═════════════════════════════════════ -->
-<section class="ds" id="s9">
+<section class="ds" id="s13">
   <div class="sec-top">
-    <span class="badge-n">Schema 09</span>
-    <span class="badge-l">LL. 10–12</span>
+    <span class="badge-n">Schema 13</span>
+    <span class="badge-l">LL. 10–13</span>
   </div>
   <h2>Confronto sinottico: l'intelletto in tre autori</h2>
   <p class="desc">Le divergenze interpretative non sono dettagli tecnici: decidono della concezione dell'essere umano, della sua immortalità e della responsabilità morale individuale.</p>
@@ -2450,12 +3740,9 @@ body {
   </div>
 </section>
 
-<!-- ════════════════════════════════════
-  SCHEMA 10 — Averroè: unicità intelletto
-═════════════════════════════════════ -->
-<section class="ds" id="s10">
+<section class="ds" id="s14">
   <div class="sec-top">
-    <span class="badge-n">Schema 10</span>
+    <span class="badge-n">Schema 14</span>
     <span class="badge-l">L. 13</span>
   </div>
   <h2>Averroè e l'unicità dell'intelletto materiale</h2>
@@ -2650,11 +3937,13 @@ body {
   </div>
 </section>
 
+
+
 <!-- FOOTER -->
 <div style="padding:2rem 3.5rem;background:var(--surface);border-top:1px solid var(--border);font-size:0.78rem;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
   <div>
     <div style="font-family:var(--font-h);color:var(--cream);font-size:0.85rem;margin-bottom:0.2rem;">Filosofia Medievale Araba ed Ebraica</div>
-    <div style="font-style:italic;">10 schemi visivi · Lezioni 01–13 · Università degli Studi di Milano</div>
+    <div style="font-style:italic;">14 schemi visivi · Lezioni 01–13 · Università degli Studi di Milano</div>
   </div>
   <div style="font-style:italic;color:var(--muted2);">davide.prando@studenti.unimi.it</div>
 </div>
