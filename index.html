@@ -4007,6 +4007,265 @@ body {
 
 [data-theme="light"] .s22-col { background: var(--surface); box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
 [data-theme="light"] .s23-section { background: var(--surface); box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+
+/* ── S30 ── Escatologia Avicenna: matrice 2×2 */
+.s30-premise { display:flex; gap:1rem; align-items:flex-start; background:var(--surface2); border:1px solid var(--border); border-radius:var(--r); padding:1rem 1.25rem; margin-bottom:1.5rem; }
+.s30-prem-icon { font-size:1.8rem; color:var(--gold); flex-shrink:0; line-height:1; margin-top:0.15rem; }
+.s30-prem-body { font-size:0.85rem; color:var(--card-text); line-height:1.6; }
+.s30-matrix-wrap { margin-bottom:1.5rem; }
+.s30-matrix-hdr-row { display:grid; grid-template-columns:155px 1fr 1fr; gap:0.5rem; margin-bottom:0.5rem; }
+.s30-matrix-col-hdr { text-align:center; font-family:var(--font-h); font-size:0.92rem; font-weight:600; padding:0.5rem; border-radius:var(--r-sm); }
+.s30-paradiso { background:rgba(45,107,74,0.15); color:var(--green-t); border:1px solid rgba(45,107,74,0.3); }
+.s30-inferno  { background:rgba(139,24,24,0.15); color:var(--danger-t); border:1px solid rgba(139,24,24,0.3); }
+.s30-matrix-body { display:grid; grid-template-columns:155px 1fr 1fr; gap:0.5rem; }
+.s30-row-hdr { display:flex; flex-direction:column; justify-content:center; padding:0.9rem; border-radius:var(--r-sm); }
+.s30-nonfilosofo { background:rgba(90,58,138,0.12); border:1px solid rgba(90,58,138,0.3); }
+.s30-filosofo   { background:rgba(201,151,58,0.12); border:1px solid rgba(201,151,58,0.3); }
+.s30-row-label  { font-family:var(--font-h); font-size:0.88rem; font-weight:600; margin-bottom:0.3rem; }
+.s30-nonfilosofo .s30-row-label { color:var(--aristo-l); }
+.s30-filosofo   .s30-row-label { color:var(--gold-l); }
+.s30-row-sub    { font-size:0.71rem; color:var(--muted2); font-style:italic; line-height:1.35; }
+.s30-cell       { background:var(--surface2); border:1px solid var(--border); border-radius:var(--r-sm); padding:1rem; display:flex; flex-direction:column; gap:0.5rem; }
+.s30-cell-title { font-family:var(--font-h); font-size:0.83rem; font-weight:600; }
+.s30-cell-icon  { font-size:1.3rem; line-height:1; }
+.s30-cell p     { font-size:0.77rem; color:var(--card-text); line-height:1.5; margin:0; flex:1; }
+.s30-cell-tag   { display:inline-block; font-size:0.63rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:0.2rem 0.5rem; border-radius:0.25rem; margin-top:auto; align-self:flex-start; }
+.s30-c-par-nf   { border-top:2px solid var(--green); }
+.s30-c-par-nf .s30-cell-title { color:var(--green-t); }
+.s30-c-par-nf .s30-cell-tag   { background:rgba(45,107,74,0.15); color:var(--green-t); }
+.s30-c-inf-nf   { border-top:2px solid var(--danger); }
+.s30-c-inf-nf .s30-cell-title { color:var(--danger-t); }
+.s30-c-inf-nf .s30-cell-tag   { background:rgba(139,24,24,0.15); color:var(--danger-t); }
+.s30-c-par-fil  { border-top:2px solid var(--gold); }
+.s30-c-par-fil .s30-cell-title { color:var(--gold-l); }
+.s30-c-par-fil .s30-cell-tag   { background:rgba(201,151,58,0.15); color:var(--gold-l); }
+.s30-c-inf-fil  { border-top:2px solid #7a5a18; }
+.s30-c-inf-fil .s30-cell-title { color:#c89030; }
+.s30-c-inf-fil .s30-cell-tag   { background:rgba(120,90,24,0.2); color:#c89030; }
+[data-theme="light"] .s30-premise { background:var(--surface); }
+[data-theme="light"] .s30-cell    { background:var(--surface); }
+
+/* ── S32 ── Al-Farabi: Doppia Attualizzazione */
+.s32-flow       { display:flex; flex-direction:column; gap:0.75rem; margin-bottom:1.5rem; }
+.s32-start      { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+.s32-col-label  { font-family:var(--font-h); font-size:0.65rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted2); margin-bottom:0.4rem; }
+.s32-state-box  { border-radius:var(--r-sm); padding:0.85rem; border:1px solid var(--border); }
+.s32-state-pot  { background:rgba(90,58,138,0.08); border-color:var(--aristo); }
+.s32-state-empty{ background:rgba(201,151,58,0.08); border-color:var(--gold-d); }
+.s32-state-title{ font-family:var(--font-h); font-size:0.82rem; font-weight:600; margin-bottom:0.15rem; }
+.s32-state-pot   .s32-state-title { color:var(--aristo-l); }
+.s32-state-empty .s32-state-title { color:var(--gold-l); }
+.s32-state-sub  { font-size:0.7rem; color:var(--muted2); font-style:italic; margin-bottom:0.4rem; }
+.s32-state-box p{ font-size:0.77rem; color:var(--card-text); line-height:1.45; margin:0; }
+.s32-arrow-label{ text-align:center; color:var(--muted); font-size:0.78rem; padding:0.15rem 0; }
+.s32-dual-act   { display:grid; grid-template-columns:1fr 48px 1fr; gap:0.5rem; align-items:stretch; }
+.s32-dual-card  { background:var(--surface2); border:1px solid var(--border); border-radius:var(--r-sm); padding:1rem; display:flex; flex-direction:column; }
+.s32-da-obj     { border-top:2px solid var(--aristo-l); }
+.s32-da-sub     { border-top:2px solid var(--gold); }
+.s32-da-header  { font-family:var(--font-h); font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; }
+.s32-da-obj .s32-da-header { color:var(--aristo-l); }
+.s32-da-sub .s32-da-header { color:var(--gold-l); }
+.s32-dual-card p{ font-size:0.78rem; color:var(--card-text); line-height:1.5; margin:0 0 0.6rem 0; flex:1; }
+.s32-da-formula { font-family:var(--font-h); font-size:0.73rem; color:var(--muted); font-style:italic; text-align:center; padding:0.3rem; background:var(--surface3); border-radius:3px; }
+.s32-da-center  { display:flex; align-items:center; justify-content:center; font-size:1.4rem; color:var(--gold); }
+.s32-acquired   { background:linear-gradient(135deg,rgba(45,107,74,0.12),var(--surface2)); border:1px solid var(--green); border-radius:var(--r-sm); padding:1rem; }
+.s32-acq-hdr    { font-family:var(--font-h); font-size:0.88rem; font-weight:600; color:var(--green-t); margin-bottom:0.6rem; }
+.s32-acq-body   { display:grid; grid-template-columns:1fr auto; gap:1rem; align-items:center; }
+.s32-acq-desc   { font-size:0.78rem; color:var(--card-text); line-height:1.5; }
+.s32-acq-chain  { display:flex; align-items:center; gap:0.3rem; flex-shrink:0; }
+.s32-chain-item { text-align:center; background:var(--surface3); border:1px solid var(--border); border-radius:var(--r-sm); padding:0.5rem 0.6rem; min-width:68px; }
+.s32-ci-icon    { font-size:1.2rem; line-height:1; margin-bottom:0.2rem; }
+.s32-ci-text    { font-size:0.67rem; color:var(--muted2); line-height:1.3; }
+.s32-chain-arr  { color:var(--gold); font-weight:600; flex-shrink:0; }
+[data-theme="light"] .s32-acquired  { background:linear-gradient(135deg,rgba(26,90,56,0.06),var(--surface)); }
+[data-theme="light"] .s32-dual-card { background:var(--surface); }
+
+/* ── S33 ── Al-Farabi: Forme Separate e Anima come Compito */
+.s33-paradox    { display:grid; grid-template-columns:1fr 60px 1fr; gap:1rem; align-items:stretch; margin-bottom:1.5rem; }
+.s33-par-side   { background:var(--surface2); border:1px solid var(--border); border-radius:var(--r-sm); padding:1.1rem; display:flex; flex-direction:column; gap:0.5rem; }
+.s33-par-left   { border-top:2px solid var(--gold-l); }
+.s33-par-right  { border-top:2px solid var(--aristo-l); }
+.s33-par-icon   { font-size:1.5rem; line-height:1; }
+.s33-par-title  { font-family:var(--font-h); font-size:0.9rem; font-weight:600; }
+.s33-par-left  .s33-par-title { color:var(--gold-l); }
+.s33-par-right .s33-par-title { color:var(--aristo-l); }
+.s33-par-sub    { font-size:0.71rem; color:var(--muted2); font-style:italic; margin-top:-0.3rem; }
+.s33-par-badge  { display:inline-block; font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:0.3rem 0.6rem; border-radius:var(--r-sm); line-height:1.3; align-self:flex-start; }
+.s33-badge-max  { background:rgba(201,151,58,0.15); color:var(--gold-l); border:1px solid rgba(201,151,58,0.3); }
+.s33-badge-not  { background:rgba(139,24,24,0.15); color:var(--danger-t); border:1px solid rgba(139,24,24,0.3); }
+.s33-par-side p { font-size:0.77rem; color:var(--card-text); line-height:1.5; margin:0; flex:1; }
+.s33-par-center { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.5rem; }
+.s33-par-vs     { font-size:2rem; color:var(--gold-d); font-family:var(--font-h); }
+.s33-par-but    { font-size:0.7rem; color:var(--muted); font-style:italic; }
+.s33-via-title  { font-family:var(--font-h); font-size:0.7rem; text-transform:uppercase; letter-spacing:0.09em; color:var(--muted2); margin-bottom:0.85rem; }
+.s33-journey    { display:flex; align-items:stretch; gap:0.3rem; margin-bottom:1.5rem; flex-wrap:nowrap; }
+.s33-step       { background:var(--surface2); border:1px solid var(--border); border-radius:var(--r-sm); padding:0.85rem; flex:1; display:flex; gap:0.65rem; align-items:flex-start; }
+.s33-step-1 { border-top:2px solid var(--aristo-l); }
+.s33-step-2 { border-top:2px solid var(--arab-l); }
+.s33-step-3 { border-top:2px solid var(--greek-l); }
+.s33-step-4 { border-top:2px solid var(--gold-l); }
+.s33-step-num { display:flex; align-items:center; justify-content:center; width:1.6rem; height:1.6rem; border-radius:50%; font-family:var(--font-h); font-weight:700; font-size:0.8rem; flex-shrink:0; }
+.s33-step-1 .s33-step-num { background:rgba(90,58,138,0.2); color:var(--aristo-l); }
+.s33-step-2 .s33-step-num { background:rgba(139,90,26,0.2); color:var(--arab-l); }
+.s33-step-3 .s33-step-num { background:rgba(61,107,80,0.2); color:var(--greek-l); }
+.s33-step-4 .s33-step-num { background:rgba(201,151,58,0.2); color:var(--gold-l); }
+.s33-step-name { font-family:var(--font-h); font-size:0.82rem; font-weight:600; color:var(--cream); margin-bottom:0.3rem; }
+.s33-step-desc { font-size:0.74rem; color:var(--card-text); line-height:1.45; }
+.s33-step-arr  { display:flex; align-items:center; color:var(--gold); font-size:1rem; padding:0 0.1rem; flex-shrink:0; align-self:center; }
+.s33-radical   { background:linear-gradient(135deg,rgba(201,151,58,0.08),var(--surface2)); border:1px solid var(--gold-d); border-radius:var(--r-sm); padding:1rem; margin-bottom:1.5rem; }
+.s33-rad-hdr   { font-family:var(--font-h); font-size:0.88rem; font-weight:600; color:var(--gold-l); margin-bottom:0.85rem; }
+.s33-rad-grid  { display:grid; grid-template-columns:1fr 30px 1fr; gap:0.75rem; align-items:center; }
+.s33-rad-item  { background:var(--surface3); border:1px solid var(--border); border-radius:var(--r-sm); padding:0.85rem; }
+.s33-rad-new   { border-left:2px solid var(--gold-l); }
+.s33-rad-label { font-family:var(--font-h); font-size:0.7rem; font-weight:600; color:var(--muted2); margin-bottom:0.4rem; text-transform:uppercase; letter-spacing:0.04em; }
+.s33-rad-body  { font-size:0.77rem; color:var(--card-text); line-height:1.5; }
+.s33-rad-arrow { text-align:center; color:var(--gold-l); font-size:1.2rem; }
+[data-theme="light"] .s33-radical  { background:linear-gradient(135deg,rgba(154,116,32,0.06),var(--surface)); }
+[data-theme="light"] .s33-par-side { background:var(--surface); }
+[data-theme="light"] .s33-step     { background:var(--surface); }
+
+/* ── Schema 24 · Siriano ─────────────────────────────────────────────── */
+.s24-chain       { display:flex; flex-direction:column; margin-bottom:1.5rem; }
+.s24-step        { display:flex; gap:0; border-radius:var(--r-sm); overflow:hidden; border:1px solid var(--border); }
+.s24-num         { width:48px; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-family:var(--font-h); font-size:1.2rem; font-weight:700; }
+.s24-step.ari .s24-num { background:color-mix(in srgb,var(--gold-d) 18%,var(--surface)); color:var(--gold); }
+.s24-step.pla .s24-num { background:color-mix(in srgb,var(--arab)   14%,var(--surface)); color:var(--arab-l); }
+.s24-step.neo .s24-num { background:color-mix(in srgb,var(--cream)  10%,var(--surface)); color:var(--cream); }
+.s24-body        { flex:1; padding:0.75rem 1rem; background:var(--surface2); }
+.s24-title       { font-family:var(--font-h); font-size:0.85rem; font-weight:700; }
+.s24-step.ari .s24-title { color:var(--gold); }
+.s24-step.pla .s24-title { color:var(--arab-l); }
+.s24-step.neo .s24-title { color:var(--cream); }
+.s24-phase       { display:inline-block; font-size:0.63rem; font-family:var(--font-h); text-transform:uppercase; letter-spacing:0.07em; padding:0.1rem 0.4rem; border-radius:3px; margin-left:0.5rem; vertical-align:middle; }
+.s24-step.ari .s24-phase { background:color-mix(in srgb,var(--gold) 12%,transparent); color:var(--gold); }
+.s24-step.pla .s24-phase { background:color-mix(in srgb,var(--arab) 12%,transparent); color:var(--arab-l); }
+.s24-step.neo .s24-phase { background:color-mix(in srgb,var(--cream) 10%,transparent); color:var(--cream); }
+.s24-desc        { font-size:0.79rem; color:var(--card-text); line-height:1.45; margin-top:0.3rem; }
+.s24-arrow       { display:flex; align-items:center; gap:0.5rem; padding:0.25rem 1rem 0.25rem 3rem; }
+.s24-arr-sym     { color:var(--muted2); font-size:0.95rem; }
+.s24-arr-lbl     { font-size:0.74rem; color:var(--muted); font-style:italic; }
+.s24-divide      { display:flex; align-items:center; gap:0.75rem; margin:0.1rem 0 0.1rem 0; font-family:var(--font-h); font-size:0.63rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--arab-l); padding-left:48px; }
+.s24-divide::after  { content:''; flex:1; height:1px; background:color-mix(in srgb,var(--arab) 35%,transparent); }
+
+/* ── Schema 19 · Alessandro privazione ──────────────────────────────── */
+.s19-aris        { background:color-mix(in srgb,var(--gold-d) 8%,var(--surface2)); border:1px solid color-mix(in srgb,var(--gold-d) 28%,var(--border)); border-radius:var(--r-sm); padding:0.85rem 1rem; margin-bottom:0.5rem; }
+.s19-alex        { background:color-mix(in srgb,var(--arab) 8%,var(--surface2)); border:1px solid color-mix(in srgb,var(--arab) 28%,var(--border)); border-radius:var(--r-sm); padding:0.85rem 1rem; margin-bottom:1rem; }
+.s19-lbl         { font-family:var(--font-h); font-size:0.7rem; text-transform:uppercase; letter-spacing:0.07em; margin-bottom:0.3rem; }
+.s19-aris .s19-lbl { color:var(--gold); }
+.s19-alex .s19-lbl { color:var(--arab-l); }
+.s19-txt         { font-size:0.8rem; color:var(--card-text); line-height:1.45; }
+.s19-step-arr    { text-align:center; color:var(--muted2); padding:0.2rem 0 0.2rem; margin-bottom:0.4rem; font-size:0.75rem; font-style:italic; }
+.s19-verdict     { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem; }
+.s19-v-card      { border-radius:var(--r-sm); padding:0.85rem 1rem; border:1px solid var(--border); }
+.s19-v-not       { background:color-mix(in srgb,var(--red)  6%,var(--surface2)); border-color:color-mix(in srgb,var(--red) 28%,var(--border)); }
+.s19-v-is        { background:color-mix(in srgb,var(--arab) 8%,var(--surface2)); border-color:color-mix(in srgb,var(--arab) 32%,var(--border)); }
+.s19-v-lbl       { font-family:var(--font-h); font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.35rem; }
+.s19-v-not .s19-v-lbl { color:var(--red); }
+.s19-v-is  .s19-v-lbl { color:var(--arab-l); }
+.s19-v-body      { font-size:0.8rem; color:var(--card-text); line-height:1.45; }
+
+/* ── Schema 02 · Bios vs Salvezza ───────────────────────────────────── */
+.s2-versus        { display:grid; grid-template-columns:1fr 40px 1fr; gap:0; align-items:stretch; margin-bottom:1.5rem; }
+.s2-col           { border:1px solid var(--border); border-radius:var(--r); overflow:hidden; }
+.s2-col-hdr       { padding:0.75rem 1rem; font-family:var(--font-h); font-size:0.82rem; font-weight:700; text-align:center; }
+.s2-col-hdr.bios  { background:color-mix(in srgb,var(--gold-d) 18%,var(--surface)); color:var(--gold); border-bottom:2px solid var(--gold-d); }
+.s2-col-hdr.cris  { background:color-mix(in srgb,var(--arab) 12%,var(--surface)); color:var(--arab-l); border-bottom:2px solid var(--arab); }
+.s2-rows          { display:flex; flex-direction:column; }
+.s2-row           { display:flex; gap:0; border-bottom:1px solid var(--border); }
+.s2-row:last-child{ border-bottom:none; }
+.s2-row-lbl       { width:85px; flex-shrink:0; background:var(--surface); border-right:1px solid var(--border); padding:0.65rem 0.6rem; font-family:var(--font-h); font-size:0.63rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--muted2); display:flex; align-items:center; }
+.s2-row-val       { flex:1; padding:0.65rem 0.75rem; font-size:0.8rem; color:var(--card-text); line-height:1.45; background:var(--surface2); display:flex; align-items:center; }
+.s2-vs-center     { display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:1.1rem; font-weight:700; }
+
+/* ── Schema 03 · Tre Rotture ────────────────────────────────────────── */
+.s3-rotture       { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-bottom:1.5rem; }
+.s3-rottura       { border-radius:var(--r); overflow:hidden; border:1px solid var(--border); }
+.s3-rot-hdr       { padding:0.7rem 0.9rem; display:flex; align-items:center; gap:0.5rem; }
+.s3-rot-num       { width:26px; height:26px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-h); font-size:0.85rem; font-weight:700; flex-shrink:0; }
+.s3-rot-name      { font-family:var(--font-h); font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; }
+.s3-rot-hdr.r1    { background:color-mix(in srgb,var(--red) 12%,var(--surface)); border-bottom:2px solid var(--red); }
+.s3-rot-hdr.r1 .s3-rot-num { background:var(--red); color:#fff; }
+.s3-rot-hdr.r1 .s3-rot-name{ color:var(--red); }
+.s3-rot-hdr.r2    { background:color-mix(in srgb,var(--arab) 10%,var(--surface)); border-bottom:2px solid var(--arab); }
+.s3-rot-hdr.r2 .s3-rot-num { background:var(--arab); color:#fff; }
+.s3-rot-hdr.r2 .s3-rot-name{ color:var(--arab-l); }
+.s3-rot-hdr.r3    { background:color-mix(in srgb,var(--gold-d) 12%,var(--surface)); border-bottom:2px solid var(--gold-d); }
+.s3-rot-hdr.r3 .s3-rot-num { background:var(--gold); color:var(--bg); }
+.s3-rot-hdr.r3 .s3-rot-name{ color:var(--gold); }
+.s3-rot-body      { background:var(--surface2); padding:0.9rem; }
+.s3-rot-before    { font-size:0.75rem; color:var(--muted); margin-bottom:0.5rem; padding-bottom:0.5rem; border-bottom:1px dashed var(--border); font-style:italic; }
+.s3-rot-before::before { content:"Prima: "; font-family:var(--font-h); font-size:0.63rem; text-transform:uppercase; letter-spacing:0.06em; font-style:normal; color:var(--muted2); }
+.s3-rot-after     { font-size:0.8rem; color:var(--card-text); line-height:1.45; }
+.s3-rot-after::before  { content:"Dopo: "; font-family:var(--font-h); font-size:0.63rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--gold); font-weight:600; }
+
+/* ── Schema 06 · Ordini Mendicanti ──────────────────────────────────── */
+.s6-contrast      { border:1px solid var(--border); border-radius:var(--r); overflow:hidden; margin-bottom:1.5rem; }
+.s6-contrast-hdrs { display:grid; grid-template-columns:110px 1fr 1fr; }
+.s6-hdr-empty     { background:var(--surface); border-bottom:1px solid var(--border); border-right:1px solid var(--border); }
+.s6-hdr-cell      { padding:0.65rem 0.9rem; font-family:var(--font-h); font-size:0.77rem; font-weight:700; text-align:center; border-bottom:1px solid var(--border); }
+.s6-hdr-cell.mon  { background:color-mix(in srgb,var(--red) 10%,var(--surface)); color:var(--red); border-right:1px solid var(--border); }
+.s6-hdr-cell.men  { background:color-mix(in srgb,var(--gold-d) 10%,var(--surface)); color:var(--gold); }
+.s6-row           { display:grid; grid-template-columns:110px 1fr 1fr; border-bottom:1px solid var(--border); }
+.s6-row:last-child{ border-bottom:none; }
+.s6-row-lbl       { background:var(--surface); border-right:1px solid var(--border); padding:0.7rem 0.7rem; font-family:var(--font-h); font-size:0.63rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--muted2); display:flex; align-items:center; }
+.s6-row-cell      { padding:0.7rem 0.9rem; font-size:0.79rem; color:var(--card-text); line-height:1.45; background:var(--surface2); }
+.s6-row-cell.mon  { border-right:1px solid var(--border); }
+
+/* ── Schema 09 · Stratificazione stereotipi ─────────────────────────── */
+.s9-strata        { border-radius:var(--r); overflow:hidden; border:1px solid var(--border); margin-bottom:1.5rem; }
+.s9-hdrs          { display:grid; grid-template-columns:120px 1fr 1.4fr 1.4fr; background:var(--surface); border-bottom:1px solid var(--border); }
+.s9-hdr-era       { padding:0.45rem 0.8rem; border-right:1px solid var(--border); font-family:var(--font-h); font-size:0.63rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--muted); }
+.s9-hdr-cell      { padding:0.45rem 0.75rem; font-family:var(--font-h); font-size:0.63rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--muted); border-right:1px solid var(--border); }
+.s9-hdr-cell:last-child { border-right:none; }
+.s9-stratum       { display:grid; grid-template-columns:120px 1fr 1.4fr 1.4fr; border-bottom:1px solid var(--border); }
+.s9-stratum:last-child { border-bottom:none; }
+.s9-era           { padding:0.8rem 0.85rem; display:flex; flex-direction:column; justify-content:center; border-right:1px solid var(--border); }
+.s9-era-name      { font-family:var(--font-h); font-size:0.8rem; font-weight:700; }
+.s9-era-date      { font-size:0.7rem; color:var(--muted2); font-style:italic; margin-top:0.15rem; }
+.s9-stratum.st1 .s9-era { background:color-mix(in srgb,var(--gold-d) 14%,var(--surface)); }
+.s9-stratum.st1 .s9-era-name { color:var(--gold); }
+.s9-stratum.st2 .s9-era { background:color-mix(in srgb,var(--red) 12%,var(--surface)); }
+.s9-stratum.st2 .s9-era-name { color:var(--red); }
+.s9-stratum.st3 .s9-era { background:color-mix(in srgb,var(--arab) 10%,var(--surface)); }
+.s9-stratum.st3 .s9-era-name { color:var(--arab-l); }
+.s9-stratum.st4 .s9-era { background:color-mix(in srgb,var(--cream) 8%,var(--surface)); }
+.s9-stratum.st4 .s9-era-name { color:var(--cream); }
+.s9-cell          { padding:0.75rem 0.8rem; font-size:0.78rem; color:var(--card-text); line-height:1.42; background:var(--surface2); border-right:1px solid var(--border); }
+.s9-cell:last-child { border-right:none; }
+
+/* ── Schema 10 · Peculiarità studio ─────────────────────────────────── */
+.s10-challenges   { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin-bottom:1.5rem; }
+.s10-challenge    { border-radius:var(--r); border:1px solid var(--border); overflow:hidden; }
+.s10-ch-hdr       { display:flex; align-items:center; gap:0.6rem; padding:0.7rem 1rem; border-bottom:1px solid var(--border); }
+.s10-ch-icon      { font-size:1.15rem; }
+.s10-ch-title     { font-family:var(--font-h); font-size:0.8rem; font-weight:700; }
+.s10-challenge.c1 .s10-ch-hdr { background:color-mix(in srgb,var(--arab) 10%,var(--surface)); border-bottom-color:var(--arab); }
+.s10-challenge.c1 .s10-ch-title { color:var(--arab-l); }
+.s10-challenge.c2 .s10-ch-hdr { background:color-mix(in srgb,var(--red) 10%,var(--surface)); border-bottom-color:var(--red); }
+.s10-challenge.c2 .s10-ch-title { color:var(--red); }
+.s10-challenge.c3 .s10-ch-hdr { background:color-mix(in srgb,var(--gold-d) 12%,var(--surface)); border-bottom-color:var(--gold-d); }
+.s10-challenge.c3 .s10-ch-title { color:var(--gold); }
+.s10-challenge.c4 .s10-ch-hdr { background:color-mix(in srgb,var(--cream) 8%,var(--surface)); border-bottom-color:var(--cream); }
+.s10-challenge.c4 .s10-ch-title { color:var(--cream); }
+.s10-ch-body      { background:var(--surface2); padding:0.85rem 1rem; }
+.s10-ch-item      { display:flex; gap:0.5rem; margin-bottom:0.45rem; font-size:0.79rem; color:var(--card-text); line-height:1.4; }
+.s10-ch-item:last-child { margin-bottom:0; }
+.s10-ch-dot       { color:var(--muted2); flex-shrink:0; margin-top:0.15rem; font-size:0.7rem; }
+
+/* ── Schema 12 · Anti-riduzionismo ──────────────────────────────────── */
+.s12-split        { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem; }
+.s12-side         { border-radius:var(--r); border:1px solid var(--border); overflow:hidden; }
+.s12-side-hdr     { padding:0.7rem 1rem; font-family:var(--font-h); font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; border-bottom:1px solid var(--border); }
+.s12-side.onto .s12-side-hdr  { background:color-mix(in srgb,var(--arab) 12%,var(--surface)); color:var(--arab-l); border-bottom-color:var(--arab); }
+.s12-side.epist .s12-side-hdr { background:color-mix(in srgb,var(--gold-d) 12%,var(--surface)); color:var(--gold); border-bottom-color:var(--gold-d); }
+.s12-side-body    { background:var(--surface2); padding:0.9rem 1rem; }
+.s12-platone      { font-size:0.76rem; color:var(--muted); font-style:italic; margin-bottom:0.6rem; padding-bottom:0.6rem; border-bottom:1px dashed var(--border); }
+.s12-platone::before { content:"Platone: "; font-family:var(--font-h); font-size:0.62rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted2); font-style:normal; }
+.s12-aristotele   { font-size:0.81rem; color:var(--card-text); line-height:1.5; }
+.s12-aristotele::before { content:"Aristotele: "; font-family:var(--font-h); font-size:0.62rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--gold); font-weight:600; font-style:normal; }
+.s12-endoxa       { background:var(--surface2); border:1px solid var(--border); border-left:3px solid var(--gold); border-radius:var(--r-sm); padding:0.85rem 1rem; margin-bottom:1rem; }
+.s12-endoxa-hdr   { font-family:var(--font-h); font-size:0.78rem; font-weight:700; color:var(--gold); margin-bottom:0.35rem; }
+.s12-endoxa-body  { font-size:0.8rem; color:var(--card-text); line-height:1.5; }
 </style>
 </head>
 <body>
@@ -4016,9 +4275,43 @@ body {
 <div class="sb-logo">
 <div class="eyebrow">Università degli Studi di Milano</div>
 <div class="title">Filosofia Medievale<br/>Araba ed Ebraica</div>
-<div class="sub">Schemi delle lezioni 1–16</div>
+<div class="sub">Schemi delle lezioni 1–<span class="ultima-lezione-var">18</span></div>
 </div>
-<ul class="nav-list"><li class="nav-item"><a href="#s1"><span class="nav-num">1</span>I sei automatismi sul pensiero medievale</a></li><li class="nav-item"><a href="#s2"><span class="nav-num">2</span>La catena di trasmissione filosofica</a></li><li class="nav-item"><a href="#s3"><span class="nav-num">3</span>Morte e resurrezione della filosofia</a></li><li class="nav-item"><a href="#s4"><span class="nav-num">4</span>Struttura dell'Universitas medievale</a></li><li class="nav-item"><a href="#s5"><span class="nav-num">5</span>Il Medioevo policentrico</a></li><li class="nav-item"><a href="#s6"><span class="nav-num">6</span>Trasmissione testuale del De Anima</a></li><li class="nav-item"><a href="#s7"><span class="nav-num">7</span>Aristotele: Ilomorfismo e Definizione di Anima</a></li><li class="nav-item"><a href="#s8"><span class="nav-num">8</span>Aristotele: L'Intelletto Potenziale e i Due Problemi</a></li><li class="nav-item"><a href="#s9"><span class="nav-num">9</span>Le tre interpretazioni dell'intelletto produttivo</a></li><li class="nav-item"><a href="#s10"><span class="nav-num">10</span>Alessandro di Afrodisia: il sistema degli intelletti</a></li><li class="nav-item"><a href="#s11"><span class="nav-num">11</span>Processo della conoscenza intellettuale</a></li><li class="nav-item"><a href="#s12"><span class="nav-num">12</span>Temistio: la gerarchia degli intelletti e il problema dell'identita</a></li><li class="nav-item"><a href="#s13"><span class="nav-num">13</span>Confronto sinottico: l'intelletto in tre autori</a></li><li class="nav-item"><a href="#s14"><span class="nav-num">14</span>La Falsafa: le tre matrici e la Causa Prima nella filosofia araba</a></li><li class="nav-item"><a href="#s15"><span class="nav-num">15</span>L'emanazione delle intelligenze secondo Avicenna</a></li><li class="nav-item"><a href="#s16"><span class="nav-num">16</span>Fonti neoplatoniche della Falsafa e Al-Kindi: il primo filosofo arabo</a></li><li class="nav-item"><a href="#s17"><span class="nav-num">17</span>Tipi di Intelletto</a></li><li class="nav-item"><a href="#s18"><span class="nav-num">18</span>Al-Farabi: Epistemologia e Organon</a></li><li class="nav-item"><a href="#s19"><span class="nav-num">19</span>I 6 significati di "Intelletto" ('Aql)</a></li></ul>
+<ul class="nav-list"><li class="nav-item">          <a href="#s1"><span class="nav-num">1</span>I sei automatismi sul pensiero medievale</a>
+          <a href="#s2"><span class="nav-num">2</span>La filosofia antica come "Bios" e stile di vita</a>
+          <a href="#s3"><span class="nav-num">3</span>Le tre rotture epocali dell'Università</a>
+          <a href="#s4"><span class="nav-num">4</span>La catena di trasmissione filosofica</a>
+          <a href="#s5"><span class="nav-num">5</span>Morte e resurrezione della filosofia</a>
+          <a href="#s6"><span class="nav-num">6</span>L'impatto degli Ordini Mendicanti</a>
+          <a href="#s7"><span class="nav-num">7</span>Struttura dell'<em>Universitas</em> medievale</a>
+          <a href="#s8"><span class="nav-num">8</span>Il metodo universitario: <em>Quaestio</em> e <em>Disputatio</em></a>
+          <a href="#s9"><span class="nav-num">9</span>La stratificazione storica degli stereotipi sul Medioevo</a>
+          <a href="#s10"><span class="nav-num">10</span>Le peculiarità dello studio della filosofia medievale</a>
+          <a href="#s11"><span class="nav-num">11</span>Il Medioevo policentrico</a>
+          <a href="#s12"><span class="nav-num">12</span>L'Anti-riduzionismo di Aristotele</a>
+          <a href="#s13"><span class="nav-num">13</span>Trasmissione testuale del <em>De Anima</em></a>
+          <a href="#s14"><span class="nav-num">14</span>Aristotele: Ilomorfismo e Definizione di Anima</a>
+          <a href="#s15"><span class="nav-num">15</span>Aristotele: L'Intelletto Potenziale e i Due Problemi</a>
+          <a href="#s16"><span class="nav-num">16</span>L'Intelletto Produttivo (Agente) in Aristotele</a>
+          <a href="#s17"><span class="nav-num">17</span>I due modelli di astrazione: Eliminativismo vs Cumulativismo</a>
+          <a href="#s18"><span class="nav-num">18</span>La metafora della luce: Lettura Oggettiva vs Soggettiva</a>
+          <a href="#s19"><span class="nav-num">19</span>Alessandro di Afrodisia: L'Intelletto come Pura Privazione</a>
+          <a href="#s20"><span class="nav-num">20</span>I sensi interni e la formazione dei Fantasmi (Temistio)</a>
+          <a href="#s21"><span class="nav-num">21</span>Le tre interpretazioni dell'intelletto produttivo</a>
+          <a href="#s22"><span class="nav-num">22</span>Alessandro di Afrodisia: il sistema degli intelletti</a>
+          <a href="#s23"><span class="nav-num">23</span>Processo della conoscenza intellettuale</a>
+          <a href="#s24"><span class="nav-num">24</span>L'epistemologia di Siriano: Saldatura tra Platone e Aristotele</a>
+          <a href="#s25"><span class="nav-num">25</span>Temistio: la gerarchia degli intelletti e il problema dell'identita</a>
+          <a href="#s26"><span class="nav-num">26</span>Confronto sinottico: l'intelletto in tre autori</a>
+          <a href="#s27"><span class="nav-num">27</span>Cosmologia medievale: Aristotele vs Tolomeo</a>
+          <a href="#s28"><span class="nav-num">28</span>La <em>Falsafa</em>: le tre matrici e la Causa Prima nella filosofia araba</a>
+          <a href="#s29"><span class="nav-num">29</span>L'emanazione delle intelligenze secondo Avicenna</a>
+          <a href="#s30"><span class="nav-num">30</span>L'escatologia filosofica di Avicenna (matrice)</a>
+          <a href="#s31"><span class="nav-num">31</span>Al-Kindī: I quattro intelletti e la trasmissione neoplatonica</a>
+          <a href="#s32"><span class="nav-num">32</span>Al-Farabi: Gerarchia della conoscenza — Filosofia, Kalam e Religione</a>
+          <a href="#s33"><span class="nav-num">33</span>Al-Farabi: I sei significati di «Intelletto» ('Aql)</a>
+          <a href="#s34"><span class="nav-num">34</span>Al-Farabi: Astrazione attiva e Doppia Attualizzazione</a>
+          <a href="#s35"><span class="nav-num">35</span>Al-Farabi: Forme Separate e Anima come Compito</a></li></ul>
 <div class="theme-toggle-wrap">
 <button aria-label="Cambia tema" class="theme-toggle" id="theme-toggle">
 <span class="theme-icon-dark">☾</span>
@@ -4034,13 +4327,13 @@ body {
 <main class="main">
 <!-- ──── HERO ──── -->
 <div class="hero">
-<div class="hero-pill">19 schemi del corso</div>
+<div class="hero-pill">35 schemi del corso</div>
 <h1>Filosofia Medievale<br/><em>Araba ed Ebraica</em></h1>
-<p class="hero-sub">Schemi visivi per le lezioni 1–17 — dalla trasmissione aristotelica alla <em>Falsafa</em> araba, Al-Kindi e Al-Farabi</p>
+<p class="hero-sub">Schemi visivi per le lezioni 1–<span class="ultima-lezione-var">18</span> — dalla trasmissione aristotelica alla <em>Falsafa</em> araba, Al-Kindi e Al-Farabi</p>
 <div class="hero-meta">
 <span>Università degli Studi di Milano</span>
 <span>A.A. 2025–2026</span>
-<span>17 lezioni · 19 schemi visivi</span>
+<span><span class="ultima-lezione-var">18</span> lezioni · <span class="schema-count-var">35</span> schemi visivi</span>
 </div>
 <div class="hero-line"></div>
 </div>
@@ -4148,6 +4441,93 @@ body {
 <section class="ds" id="s2">
 <div class="sec-top">
 <span class="badge-n">Schema 02</span>
+<span class="badge-l">L. 02</span>
+</div>
+<h2>La filosofia antica come "Bios" e stile di vita</h2>
+<p class="desc">Prima di diventare un corpus di dottrine nell'Alto Medioevo, la filosofia antica era intesa come un'arte del vivere e una "tecnica del sé". Questo modello entra in crisi e viene sostituito dal Cristianesimo.</p>
+
+<div class="s2-versus">
+  <div class="s2-col">
+    <div class="s2-col-hdr bios">Filosofia Antica · Il <em>Bios</em></div>
+    <div class="s2-rows">
+      <div class="s2-row">
+        <div class="s2-row-lbl">Natura</div>
+        <div class="s2-row-val">Stile di vita, esercizio pratico e spirituale: meditazione sulla morte, esame di coscienza, controllo delle passioni</div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Obiettivo</div>
+        <div class="s2-row-val"><strong>Felicità terrena</strong> — traguardo raggiungibile con le sole forze umane, qui e ora</div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Accesso</div>
+        <div class="s2-row-val">Sforzo elitario, riservato a pochi sapienti capaci di dedicare la vita all'esercizio filosofico</div>
+      </div>
+    </div>
+  </div>
+  <div class="s2-vs-center">→</div>
+  <div class="s2-col">
+    <div class="s2-col-hdr cris">Cristianesimo · La Salvezza</div>
+    <div class="s2-rows">
+      <div class="s2-row">
+        <div class="s2-row-lbl">Natura</div>
+        <div class="s2-row-val">Fede e ricezione di un dono divino (la Grazia), non un mero esercizio umano autonomo</div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Obiettivo</div>
+        <div class="s2-row-val"><strong>Salvezza nell'aldilà</strong> — la felicità terrena perfetta è impossibile; la vita è preparazione al giudizio finale</div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Accesso</div>
+        <div class="s2-row-val">Messaggio universale, aperto a tutti — anche ai più umili e alle masse (Agostino)</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="ds" id="s3">
+<div class="sec-top">
+<span class="badge-n">Schema 03</span>
+<span class="badge-l">LL. 02-03</span>
+</div>
+<h2>Le tre rotture epocali dell'Università</h2>
+<p class="desc">La fondazione delle Università nel Medioevo non cambia solo i programmi di studio, ma genera tre gigantesche rotture rispetto al modo di fare cultura dell'antichità.</p>
+
+<div class="s3-rotture">
+  <div class="s3-rottura">
+    <div class="s3-rot-hdr r1">
+      <div class="s3-rot-num">1</div>
+      <div class="s3-rot-name">Rottura Pedagogica</div>
+    </div>
+    <div class="s3-rot-body">
+      <div class="s3-rot-before">Rapporto privato maestro-discepolo, insegnamento orale non verificabile</div>
+      <div class="s3-rot-after">Insegnamento pubblico e standardizzato: programmi trasparenti, titoli validi ovunque (<em>ius ubique docendi</em>)</div>
+    </div>
+  </div>
+  <div class="s3-rottura">
+    <div class="s3-rot-hdr r2">
+      <div class="s3-rot-num">2</div>
+      <div class="s3-rot-name">Rottura Scientifica</div>
+    </div>
+    <div class="s3-rot-body">
+      <div class="s3-rot-before">Ricerca individuale e isolata, non sottoposta al vaglio critico dei pari</div>
+      <div class="s3-rot-after">Ricerca collettiva e pubblica: nasce la <em>peer review</em> e la condivisione aperta delle scoperte (antico <em>copyleft</em>)</div>
+    </div>
+  </div>
+  <div class="s3-rottura">
+    <div class="s3-rot-hdr r3">
+      <div class="s3-rot-num">3</div>
+      <div class="s3-rot-name">Rottura Sociale</div>
+    </div>
+    <div class="s3-rot-body">
+      <div class="s3-rot-before">Destino determinato dal ceto di nascita, mobilità sociale quasi assente</div>
+      <div class="s3-rot-after">Primo vero ascensore sociale: figli di contadini raggiungono i vertici — con la sola eccezione delle donne</div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="ds" id="s4">
+<div class="sec-top">
+<span class="badge-n">Schema 04</span>
 <span class="badge-l">LL. 01–03</span>
 </div>
 <h2>La catena di trasmissione filosofica</h2>
@@ -4243,9 +4623,9 @@ body {
 <p>Il percorso non è lineare: gli arabi hanno avuto accesso <strong>diretto ad Aristotele</strong> e <strong>all'intera biblioteca dei commentatori greci</strong>. I latini a loro volta conoscono sia Aristotele sia i falāsifa. Non esistono tradizioni pure: tutte le tradizioni sono ibridate continuamente.</p>
 </div>
 </section>
-<section class="ds" id="s3">
+<section class="ds" id="s5">
 <div class="sec-top">
-<span class="badge-n">Schema 03</span>
+<span class="badge-n">Schema 05</span>
 <span class="badge-l">LL. 02–03</span>
 </div>
 <h2>Morte e resurrezione della filosofia</h2>
@@ -4323,9 +4703,40 @@ body {
 <p>«<strong>La filosofia è qualcosa di molto fragile</strong>, che ha bisogno di condizioni sociopolitiche ideali per poter essere praticata». Senza trasmissione materiale dei manoscritti, la filosofia semplicemente muore. <strong>Senza la mediazione araba la filosofia sarebbe probabilmente scomparsa per sempre.</strong></p>
 </div>
 </section>
-<section class="ds" id="s4">
+<section class="ds" id="s6">
 <div class="sec-top">
-<span class="badge-n">Schema 04</span>
+<span class="badge-n">Schema 06</span>
+<span class="badge-l">L. 03</span>
+</div>
+<h2>L'impatto degli Ordini Mendicanti</h2>
+<p class="desc">La creazione dei Domenicani e Francescani costituisce il terzo grande fattore della rinascita filosofica medievale, modificando radicalmente la geopolitica del sapere rispetto al monachesimo rurale.</p>
+
+<div class="s6-contrast">
+  <div class="s6-contrast-hdrs">
+    <div class="s6-hdr-empty"></div>
+    <div class="s6-hdr-cell mon">Monachesimo Tradizionale<br><span style="font-weight:400;font-size:0.72rem;">es. Benedettini</span></div>
+    <div class="s6-hdr-cell men">Ordini Mendicanti<br><span style="font-weight:400;font-size:0.72rem;">Domenicani · Francescani</span></div>
+  </div>
+  <div class="s6-row">
+    <div class="s6-row-lbl">Collocazione</div>
+    <div class="s6-row-cell mon">Rurale, isolata dal mondo, legata alla terra (<em>stabilitas loci</em>) — l'abbazia come spazio chiuso e autarchico</div>
+    <div class="s6-row-cell men">Urbana, nei centri delle città, svincolata dal territorio — frati mobili ovunque si predichi</div>
+  </div>
+  <div class="s6-row">
+    <div class="s6-row-lbl">Attività</div>
+    <div class="s6-row-cell mon">Contemplazione, preghiera, conservazione dei testi — vita liturgica scandita dalle ore canoniche</div>
+    <div class="s6-row-cell men">Predicazione attiva + studio accademico obbligatorio per combattere le eresie (es. catari, valdesi)</div>
+  </div>
+  <div class="s6-row">
+    <div class="s6-row-lbl">Impatto</div>
+    <div class="s6-row-cell mon">Chiuso nelle mura del monastero — influenza culturale limitata al territorio circostante</div>
+    <div class="s6-row-cell men">Rete europea di <em>Studia</em> aperti ai laici (Dante vi studiò); «rotazione intellettuale» dei maestri universitari</div>
+  </div>
+</div>
+</section>
+<section class="ds" id="s7">
+<div class="sec-top">
+<span class="badge-n">Schema 07</span>
 <span class="badge-l">LL. 02–03</span>
 </div>
 <h2>Struttura dell'<em>Universitas</em> medievale</h2>
@@ -4433,9 +4844,171 @@ body {
 <p>L'<em>universitas</em> significa «corporazione», non «totalità del sapere». Il <strong>primato della ragione sull'autorità</strong> attraversa tutta la filosofia medievale: l'<em>auctoritas</em> è uno <em>status quaestionis</em>, non un dogma. «Non è una buona conseguenza: lo dice Aristotele, dunque è vero» — Guglielmo di Ockham.</p>
 </div>
 </section>
-<section class="ds" id="s5">
+<section class="ds" id="s8">
+  <div class="sec-top">
+    <span class="badge-n">Schema 08</span>
+    <span class="badge-l">LL. 03–04</span>
+  </div>
+  <h2>Il metodo universitario: <em>Quaestio</em> e <em>Disputatio</em></h2>
+  <p class="desc">La pedagogia universitaria medievale non è trasmissione passiva, ma <strong>messa in dubbio sistematica</strong> del sapere ereditato. Il dubbio è il motore della conoscenza e la <em>quaestio</em> ne è la struttura logico-argomentativa formale.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
+    <!-- Quaestio Structure -->
+    <div style="background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;">
+      <div style="font-family:var(--font-h);color:var(--gold-l);font-size:1.1rem;margin-bottom:1rem;border-bottom:1px solid var(--gold-d);padding-bottom:0.5rem;">La struttura della <em>Quaestio</em></div>
+
+      <div style="display:flex;flex-direction:column;gap:0.8rem;">
+        <div style="background:var(--surface3);border-left:3px solid var(--muted);padding:0.8rem;border-radius:0 var(--r-sm) var(--r-sm) 0;">
+          <div style="font-family:var(--font-h);color:var(--cream);font-size:0.9rem;margin-bottom:0.2rem;">1. Utrum (Se...)</div>
+          <div style="font-size:0.8rem;color:var(--card-text);">Formulazione del problema in forma interrogativa (es. "Se il mondo sia eterno").</div>
+        </div>
+
+        <div style="background:var(--surface3);border-left:3px solid #e53e3e;padding:0.8rem;border-radius:0 var(--r-sm) var(--r-sm) 0;">
+          <div style="font-family:var(--font-h);color:var(--cream);font-size:0.9rem;margin-bottom:0.2rem;">2. Videtur quod (Sembra che...)</div>
+          <div style="font-size:0.8rem;color:var(--card-text);">Argomenti a favore di una tesi (solitamente quella che il maestro rifiuterà). Sono obiezioni forti e fondate.</div>
+        </div>
+
+        <div style="background:var(--surface3);border-left:3px solid #3182ce;padding:0.8rem;border-radius:0 var(--r-sm) var(--r-sm) 0;">
+          <div style="font-family:var(--font-h);color:var(--cream);font-size:0.9rem;margin-bottom:0.2rem;">3. Sed contra (Ma al contrario...)</div>
+          <div style="font-size:0.8rem;color:var(--card-text);">Un argomento, spesso un'autorità contraria, che ribalta i <em>videtur quod</em>.</div>
+        </div>
+
+        <div style="background:var(--surface3);border-left:3px solid var(--gold);padding:0.8rem;border-radius:0 var(--r-sm) var(--r-sm) 0;">
+          <div style="font-family:var(--font-h);color:var(--cream);font-size:0.9rem;margin-bottom:0.2rem;">4. Respondeo / Determinatio</div>
+          <div style="font-size:0.8rem;color:var(--card-text);">Il "Corpo" dell'articolo: la determinazione magistrale, la soluzione logico-filosofica del problema da parte del maestro.</div>
+        </div>
+
+        <div style="background:var(--surface3);border-left:3px solid var(--latin);padding:0.8rem;border-radius:0 var(--r-sm) var(--r-sm) 0;">
+          <div style="font-family:var(--font-h);color:var(--cream);font-size:0.9rem;margin-bottom:0.2rem;">5. Ad argumenta</div>
+          <div style="font-size:0.8rem;color:var(--card-text);">Confutazione puntuale e analitica di ciascuno dei <em>videtur quod</em> iniziali.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Metodo & Dubbio -->
+    <div style="display:flex;flex-direction:column;gap:1.5rem;">
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;">
+        <div style="font-family:var(--font-h);color:var(--arab-l);font-size:1.1rem;margin-bottom:0.8rem;border-bottom:1px solid var(--arab-d);padding-bottom:0.5rem;">La <em>Disputatio</em></div>
+        <p style="font-size:0.85rem;color:var(--card-text);line-height:1.5;margin:0 0 0.8rem 0;">È il dibattito pubblico e cadenzato (es. ogni venerdì). Il maestro affida la difesa di una tesi a un baccelliere contro gli attacchi degli studenti e di altri maestri. Il giorno dopo il maestro offre la <em>determinatio</em>.</p>
+        <div style="font-size:0.8rem;font-style:italic;color:var(--muted);background:rgba(0,0,0,0.2);padding:0.6rem;border-radius:var(--r-sm);">
+          Le <strong>Disputationes de quolibet</strong> (a Natale e Pasqua) aprivano l'università alla città: chiunque poteva proporre questioni di ogni genere.
+        </div>
+      </div>
+
+      <div class="insight">
+        <div class="insight-lbl">Il valore del dubbio</div>
+        <p style="margin:0;">L'idea che il Medioevo sia l'epoca delle certezze dogmatiche è smentita dal metodo: «Non è possibile ricercare la verità senza prima aver considerato il dubbio» (Tommaso d'Aquino). Il dubbio metodologico precede Cartesio di secoli.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="ds" id="s9">
 <div class="sec-top">
-<span class="badge-n">Schema 05</span>
+<span class="badge-n">Schema 09</span>
+<span class="badge-l">L. 05</span>
+</div>
+<h2>La stratificazione storica degli stereotipi sul Medioevo</h2>
+<p class="desc">L'immagine negativa e oscura del Medioevo non è monocausale, ma si è formata attraverso quattro momenti polemici distinti, in cui i critici attaccavano i propri contemporanei retrodatando l'etichetta "medievale".</p>
+
+<div class="s9-strata">
+  <div class="s9-hdrs">
+    <div class="s9-hdr-era">Momento critico</div>
+    <div class="s9-hdr-cell">Target dell'attacco</div>
+    <div class="s9-hdr-cell">Accusa principale</div>
+    <div class="s9-hdr-cell">Esito sull'immagine del Medioevo</div>
+  </div>
+  <div class="s9-stratum st1">
+    <div class="s9-era">
+      <div class="s9-era-name">Umanesimo</div>
+      <div class="s9-era-date">XIV–XV sec.</div>
+    </div>
+    <div class="s9-cell">Il latino degli Scolastici contemporanei — la <em>barbaritas</em> linguistica percepita dai letterati</div>
+    <div class="s9-cell">Imbarbarimento della lingua e perdita dell'eleganza classica ciceroniana</div>
+    <div class="s9-cell">Nascita del concetto di «Età di Mezzo» come parentesi oscura tra Classicità e Rinascita</div>
+  </div>
+  <div class="s9-stratum st2">
+    <div class="s9-era">
+      <div class="s9-era-name">Riforma Luterana</div>
+      <div class="s9-era-date">XVI sec.</div>
+    </div>
+    <div class="s9-cell">La teologia cattolica e l'uso massiccio di Aristotele nella dottrina cristiana</div>
+    <div class="s9-cell">Eccesso di razionalismo: voler spiegare i misteri della fede con la ragione filosofica</div>
+    <div class="s9-cell">Scolastica = corruzione del puro messaggio evangelico, paganizzazione del Vangelo</div>
+  </div>
+  <div class="s9-stratum st3">
+    <div class="s9-era">
+      <div class="s9-era-name">Illuminismo</div>
+      <div class="s9-era-date">XVIII sec.</div>
+    </div>
+    <div class="s9-cell">L'oscurantismo religioso, il principio di autorità, la fede non critica delle masse</div>
+    <div class="s9-cell">Irrazionalismo, dogmatismo e superstizione cieca — antitetica ai Lumi della ragione</div>
+    <div class="s9-cell">Consolidamento del mito dei «secoli bui» come notte della ragione tra Antichità e Modernità</div>
+  </div>
+  <div class="s9-stratum st4">
+    <div class="s9-era">
+      <div class="s9-era-name">Neotomismo</div>
+      <div class="s9-era-date">Fine XIX sec.</div>
+    </div>
+    <div class="s9-cell">Il Modernismo laico e le filosofie positiviste — difesa dell'ortodossia cattolica</div>
+    <div class="s9-cell">L'enciclica <em>Aeterni Patris</em> (1879) impone il Tomismo come filosofia ufficiale della Chiesa</div>
+    <div class="s9-cell">«Strabismo» accademico: Medioevo studiato come apologia nelle università cattoliche, ignorato in quelle laiche</div>
+  </div>
+</div>
+</section>
+<section class="ds" id="s10">
+<div class="sec-top">
+<span class="badge-n">Schema 10</span>
+<span class="badge-l">L. 05</span>
+</div>
+<h2>Le peculiarità dello studio della filosofia medievale</h2>
+<p class="desc">Affrontare i testi degli Scolastici richiede metodi specifici, a causa di ostacoli materiali, documentari e filologici assenti nello studio della filosofia moderna.</p>
+
+<div class="s10-challenges">
+  <div class="s10-challenge c1">
+    <div class="s10-ch-hdr">
+      <div class="s10-ch-icon">📜</div>
+      <div class="s10-ch-title">Generi e mole documentaria</div>
+    </div>
+    <div class="s10-ch-body">
+      <div class="s10-ch-item"><div class="s10-ch-dot">▸</div><div>Prevalenza del <strong>commento</strong>: opere con lo stesso titolo sviluppano questioni originali e diverse — non semplici parafrasi dell'originale</div></div>
+      <div class="s10-ch-item"><div class="s10-ch-dot">▸</div><div>Produzione sterminata e non categorizzabile rigidamente — l'indagine procede «questione per questione»</div></div>
+    </div>
+  </div>
+  <div class="s10-challenge c2">
+    <div class="s10-ch-hdr">
+      <div class="s10-ch-icon">❓</div>
+      <div class="s10-ch-title">Difficoltà attributive</div>
+    </div>
+    <div class="s10-ch-body">
+      <div class="s10-ch-item"><div class="s10-ch-dot">▸</div><div>Opere spesso <strong>anonime o collettive</strong> — chi ha scritto davvero questo testo?</div></div>
+      <div class="s10-ch-item"><div class="s10-ch-dot">▸</div><div><em>Reportationes</em>: testi trascritti dagli appunti degli studenti, senza revisione né autorizzazione dell'autore</div></div>
+    </div>
+  </div>
+  <div class="s10-challenge c3">
+    <div class="s10-ch-hdr">
+      <div class="s10-ch-icon">🔍</div>
+      <div class="s10-ch-title">Sfide filologiche</div>
+    </div>
+    <div class="s10-ch-body">
+      <div class="s10-ch-item"><div class="s10-ch-dot">▸</div><div>Gran parte dei testi è ancora <strong>inedita e manoscritta</strong> — mai pubblicata in un'edizione critica moderna</div></div>
+      <div class="s10-ch-item"><div class="s10-ch-dot">▸</div><div>Necessità imprescindibile di <strong>paleografia latina</strong> per decifrare le abbreviazioni degli amanuensi medievali</div></div>
+    </div>
+  </div>
+  <div class="s10-challenge c4">
+    <div class="s10-ch-hdr">
+      <div class="s10-ch-icon">📄</div>
+      <div class="s10-ch-title">Il sistema delle Pecie</div>
+    </div>
+    <div class="s10-ch-body">
+      <div class="s10-ch-item"><div class="s10-ch-dot">▸</div><div>Libri spaginati e <strong>affittati in fascicoli</strong> (pecie) per velocizzare la copiatura simultanea tra più studenti</div></div>
+      <div class="s10-ch-item"><div class="s10-ch-dot">▸</div><div>Sistema ingegnoso ma fonte di enormi problemi filologici moderni in caso di smarrimento o disordine dei fascicoli</div></div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="ds" id="s11">
+<div class="sec-top">
+<span class="badge-n">Schema 11</span>
 <span class="badge-l">L. 05</span>
 </div>
 <h2>Il Medioevo policentrico</h2>
@@ -4498,9 +5071,38 @@ body {
 <p>Il sesto automatismo da decostruire: la filosofia medievale <strong>non si riduce a filosofia latina e cristiana</strong>. «Non esistono tradizioni pure: tutte le tradizioni sono tradizioni ibridate». Questa ibridazione è la peculiarità esclusiva del Medioevo — nel mondo antico la filosofia era solo greca, nel mondo moderno il dialogo fra le quattro culture si è interrotto.</p>
 </div>
 </section>
-<section class="ds" id="s6">
+<section class="ds" id="s12">
 <div class="sec-top">
-<span class="badge-n">Schema 06</span>
+<span class="badge-n">Schema 12</span>
+<span class="badge-l">L. 06</span>
+</div>
+<h2>L'Anti-riduzionismo di Aristotele</h2>
+<p class="desc">La rottura fondamentale tra Aristotele e Platone si gioca sul concetto di "riduzionismo", che Aristotele rifiuta radicalmente sia sul piano dell'essere che del sapere.</p>
+
+<div class="s12-split">
+  <div class="s12-side onto">
+    <div class="s12-side-hdr">Anti-riduzionismo Ontologico</div>
+    <div class="s12-side-body">
+      <div class="s12-platone">Ridurre la pluralità della realtà a poche Idee astratte trascendenti. Un'unica Idea del Bene «calata dall'alto» che fonda tutto ciò che è.</div>
+      <div class="s12-aristotele">«<em>L'ente si dice in molti modi</em>» — non esiste un'unica Idea di Essere. La realtà è irriducibilmente plurale: ciascun ente ha il proprio modo d'essere specifico.</div>
+    </div>
+  </div>
+  <div class="s12-side epist">
+    <div class="s12-side-hdr">Anti-riduzionismo Epistemologico</div>
+    <div class="s12-side-body">
+      <div class="s12-platone">Ricondurre tutte le scienze a un unico sapere supremo (la Dialettica) che le fonda e le legittima tutte dall'alto.</div>
+      <div class="s12-aristotele">Ogni scienza ha i propri princìpi, il proprio metodo e la propria <em>dignità autonoma</em>. La fisica non si riduce alla matematica, l'etica non si riduce alla metafisica.</div>
+    </div>
+  </div>
+</div>
+<div class="s12-endoxa">
+  <div class="s12-endoxa-hdr">Il Metodo Dialettico: Gli <em>Endoxa</em></div>
+  <div class="s12-endoxa-body">Per Aristotele l'indagine non parte mai dal «punto zero». La sua Dialettica raccoglie e vaglia criticamente gli <strong>Endoxa</strong> — le opinioni autorevoli dei predecessori e del senso comune — isolando i nuclei di verità in esse contenuti. È esattamente la procedura del Libro I del <em>De Anima</em>: prima di definire l'anima, Aristotele passa in rassegna e critica tutti i predecessori.</div>
+</div>
+</section>
+<section class="ds" id="s13">
+<div class="sec-top">
+<span class="badge-n">Schema 13</span>
 <span class="badge-l">L. 06</span>
 </div>
 <h2>Trasmissione testuale del <em>De Anima</em></h2>
@@ -4601,14 +5203,13 @@ body {
 <p>Gli arabi avevano accesso all'<strong>intera «biblioteca psicologica» dell'antichità</strong>: non solo il testo di Aristotele ma la totalità dei commenti tardoantichi. I latini hanno conosciuto la <em>Metafisica</em> di Avicenna <em>prima</em> della <em>Metafisica</em> di Aristotele nella sua interezza — e questo ha condizionato tutta la loro lettura di Aristotele.</p>
 </div>
 </section>
-<!-- ════════════════════════════════════
-  SCHEMA 07 — Aristotele: Ilomorfismo e Definizione di Anima
-════════════════════════════════════ -->
-<section class="ds" id="s7">
-<div class="ds-inner">
-<div class="schema-label">Schema 07 · Lezione 07</div>
+<section class="ds" id="s14">
+<div class="sec-top">
+<span class="badge-n">Schema 14</span>
+<span class="badge-l">L. 07</span>
+</div>
 <h2>Aristotele: Ilomorfismo e Definizione di Anima</h2>
-<p class="schema-desc">Il <em>De Anima</em> non è un'indagine sull'immortalità umana, ma un trattato biologico sul principio vitale (<em>psyché</em>). Aristotele rifiuta il dualismo platonico proponendo una soluzione <strong>ilomorfica</strong> (materia + forma).</p>
+<p class="desc">Il <em>De Anima</em> non è un'indagine sull'immortalità umana, ma un trattato biologico sul principio vitale (<em>psyché</em>). Aristotele rifiuta il dualismo platonico proponendo una soluzione <strong>ilomorfica</strong> (materia + forma).</p>
 <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
 <!-- Definizione -->
 <div style="background:var(--surface2); border:1px solid var(--border); border-radius:var(--r); padding:1.25rem;">
@@ -4652,16 +5253,14 @@ body {
 </div>
 </div>
 </div>
-</div>
 </section>
-<!-- ════════════════════════════════════
-  SCHEMA 08 — Aristotele: L'Intelletto Potenziale e la Tabula Rasa
-════════════════════════════════════ -->
-<section class="ds" id="s8">
-<div class="ds-inner">
-<div class="schema-label">Schema 08 · Lezioni 07–08</div>
+<section class="ds" id="s15">
+<div class="sec-top">
+<span class="badge-n">Schema 15</span>
+<span class="badge-l">LL. 07–08</span>
+</div>
 <h2>Aristotele: L'Intelletto Potenziale e i Due Problemi</h2>
-<p class="schema-desc">Nel libro III (cap. 4) del <em>De Anima</em>, Aristotele definisce la natura dell'intelletto potenziale, separandolo rigorosamente da qualsiasi mescolanza corporea per garantirne l'universalità.</p>
+<p class="desc">Nel libro III (cap. 4) del <em>De Anima</em>, Aristotele definisce la natura dell'intelletto potenziale, separandolo rigorosamente da qualsiasi mescolanza corporea per garantirne l'universalità.</p>
 <!-- Tabula rasa e impassibilità -->
 <div style="display:flex; gap:1.5rem; margin-bottom:1.5rem;">
 <div style="flex:1; background:var(--surface2); border-left:3px solid var(--gold-l); padding:1rem 1.25rem;">
@@ -4691,11 +5290,221 @@ body {
 <div class="insight-lbl">Punto chiave: L'Autocoscienza derivata</div>
 <p>Per Aristotele, l'intelletto allo stato potenziale è <strong>vuoto e indeterminato</strong>, quindi non conoscibile. Ci si accorge di possedere un intelletto <em>soltanto dopo</em> aver pensato a qualcosa del mondo esterno (attualizzazione). A differenza di Cartesio (il <em>Cogito</em> come certezza originaria), in Aristotele l'autocoscienza è un atto secondario e derivato dal contatto con la realtà.</p>
 </div>
+</section>
+<section class="ds" id="s16">
+<div class="sec-top">
+<span class="badge-n">Schema 16</span>
+<span class="badge-l">L. 08</span>
+</div>
+<h2>L'Intelletto Produttivo (Agente) in Aristotele</h2>
+<p class="desc">Nel capitolo 5 del Libro III del De Anima, Aristotele tratteggia rapidamente, in modo enigmatico, le caratteristiche dell'intelletto produttivo (o agente), in netta opposizione all'intelletto potenziale.</p>
+
+<div class="s2-versus">
+  <div class="s2-col">
+    <div class="s2-col-hdr bios">Intelletto Potenziale<br><span style="font-size:0.72rem;font-weight:400;">Passivo · Materiale</span></div>
+    <div class="s2-rows">
+      <div class="s2-row">
+        <div class="s2-row-lbl">Causalità</div>
+        <div class="s2-row-val">È ciò che <strong>"diventa tutte le cose"</strong> — ricettacolo passivo delle forme, analogo alla materia</div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Modalità</div>
+        <div class="s2-row-val">Scritto e impressionato dalle forme, come una tavoletta vergine che riceve i caratteri</div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Stato</div>
+        <div class="s2-row-val">Intermittente: passa dalla potenza all'atto e può non pensare</div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Natura</div>
+        <div class="s2-row-val">Corruttibile — legato all'individuo biologico e alla materia</div>
+      </div>
+    </div>
+  </div>
+  <div class="s2-vs-center">≠</div>
+  <div class="s2-col">
+    <div class="s2-col-hdr cris">Intelletto Produttivo (Agente)<br><span style="font-size:0.72rem;font-weight:400;">Attivo · Causa Efficiente</span></div>
+    <div class="s2-rows">
+      <div class="s2-row">
+        <div class="s2-row-lbl">Causalità</div>
+        <div class="s2-row-val">È ciò che <strong>"produce tutte le cose"</strong> — causa efficiente che attualizza le forme intelligibili</div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Modalità</div>
+        <div class="s2-row-val">Agisce come la <strong>luce sui colori</strong> — porta il potenziale all'atto senza essere modificato</div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Stato</div>
+        <div class="s2-row-val"><strong>Atto per essenza</strong> — non intermittente, pensa sempre e continuamente</div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Natura</div>
+        <div class="s2-row-val">L'unico principio <strong>immortale, eterno, separato e impassibile</strong> del <em>De Anima</em></div>
+      </div>
+    </div>
+  </div>
 </div>
 </section>
-<section class="ds" id="s9">
+<section class="ds" id="s17">
 <div class="sec-top">
-<span class="badge-n">Schema 09</span>
+<span class="badge-n">Schema 17</span>
+<span class="badge-l">L. 09</span>
+</div>
+<h2>I due modelli di astrazione: Eliminativismo vs Cumulativismo</h2>
+<p class="desc">Per Aristotele, il passaggio dalla potenza all'atto (la formazione del concetto universale) non avviene per "sottrazione" (eliminativismo) ma per "accumulo" (cumulativismo) di innumerevoli esperienze sensibili.</p>
+
+<div class="s2-versus">
+  <div class="s2-col">
+    <div class="s2-col-hdr bios">Modello Eliminativista<br><span style="font-size:0.72rem;font-weight:400;">Sottrattivo · Rifiutato</span></div>
+    <div class="s2-rows">
+      <div class="s2-row">
+        <div class="s2-row-lbl">Processo</div>
+        <div class="s2-row-val">Astrazione come «sbucciatura»: si tolgono gli strati accidentali (colore, dimensione, materia) per isolare il nucleo essenziale</div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Formula</div>
+        <div class="s2-row-val">Ente individuale − Tratti accidentali = <strong>Essenza</strong></div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Metafora</div>
+        <div class="s2-row-val">La cipolla: si sfogliano gli strati fino al cuore puro</div>
+      </div>
+    </div>
+  </div>
+  <div class="s2-vs-center">≠</div>
+  <div class="s2-col">
+    <div class="s2-col-hdr cris">Modello Cumulativista — Aristotele<br><span style="font-size:0.72rem;font-weight:400;">Additivo · Adottato</span></div>
+    <div class="s2-rows">
+      <div class="s2-row">
+        <div class="s2-row-lbl">Processo</div>
+        <div class="s2-row-val">L'universale si forma per <strong>sedimentazione</strong> induttiva — molteplici percezioni singole si stratificano nella memoria fino a stabilizzarsi in concetto</div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Formula</div>
+        <div class="s2-row-val">Esperienza₁ + Esperienza₂ + … → <strong>Concetto Universale</strong></div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Metafora</div>
+        <div class="s2-row-val">La <strong>ritirata militare</strong> (<em>Analitici Secondi</em>): soldati in fuga si fermano uno ad uno finché si ricostituisce la linea di difesa — così dal caos sensoriale emerge l'universale stabile</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="ds" id="s18">
+<div class="sec-top">
+<span class="badge-n">Schema 18</span>
+<span class="badge-l">LL. 10-11</span>
+</div>
+<h2>La metafora della luce: Lettura Oggettiva vs Soggettiva</h2>
+<p class="desc">La paragone aristotelico tra intelletto agente e luce (De Anima III, 5) apre a due esegesi radicalmente diverse del processo cognitivo.</p>
+
+<div class="s2-versus">
+  <div class="s2-col">
+    <div class="s2-col-hdr bios">Lettura Oggettiva<br><span style="font-size:0.72rem;font-weight:400;">Latini · Alessandro maturo</span></div>
+    <div class="s2-rows">
+      <div class="s2-row">
+        <div class="s2-row-lbl">Azione</div>
+        <div class="s2-row-val">La luce/intelletto agente illumina direttamente <strong>l'oggetto</strong> (il fantasma/colore) — agisce sulla cosa conoscibile</div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Effetto</div>
+        <div class="s2-row-val">Rende le forme immanenti intelligibili in atto, «estraendole» dalla materia affinché l'intelletto potenziale possa riceverle</div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Focus</div>
+        <div class="s2-row-val">Astrazione e preparazione dell'<strong>oggetto</strong> — il soggetto è passivo, l'azione è sul dato sensibile</div>
+      </div>
+    </div>
+  </div>
+  <div class="s2-vs-center">≠</div>
+  <div class="s2-col">
+    <div class="s2-col-hdr cris">Lettura Soggettiva<br><span style="font-size:0.72rem;font-weight:400;">Alessandro del <em>De Intellectu</em></span></div>
+    <div class="s2-rows">
+      <div class="s2-row">
+        <div class="s2-row-lbl">Azione</div>
+        <div class="s2-row-val">La luce/intelletto agente colpisce direttamente <strong>il soggetto</strong> (l'intelletto potenziale/la vista) — agisce sul conoscente</div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Effetto</div>
+        <div class="s2-row-val">Attiva la nostra capacità di pensare, trasformando l'intelletto materiale in intelletto abituale — è un'<em>accensione</em> del soggetto</div>
+      </div>
+      <div class="s2-row">
+        <div class="s2-row-lbl">Principio</div>
+        <div class="s2-row-val">«Causalità del massimo»: l'intelletto deve prima congiungersi al divino (il massimamente intelligibile) per poter pensare qualunque altra cosa</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="ds" id="s19">
+<div class="sec-top">
+<span class="badge-n">Schema 19</span>
+<span class="badge-l">L. 11</span>
+</div>
+<h2>Alessandro di Afrodisia: L'Intelletto come Pura Privazione</h2>
+<p class="desc">Alessandro porta alle estreme conseguenze l'approccio biologico di Aristotele, desostanzializzando completamente l'intelletto materiale (potenziale) umano per spiegarne la ricettività assoluta.</p>
+
+<div class="s19-aris">
+  <div class="s19-lbl">Aristotele — Punto di partenza</div>
+  <div class="s19-txt">L'intelletto potenziale è come una «tavoletta di cera» (<em>grammateion</em>) su cui nulla è ancora scritto. Deve essere vuoto per poter ricevere qualsiasi forma senza distorcerla.</div>
+</div>
+<div class="s19-step-arr">↓ Alessandro radicalizza: ma la tavoletta è pur sempre cera — ha una sua natura, e quella natura sarebbe un filtro deformante</div>
+<div class="s19-alex">
+  <div class="s19-lbl">Alessandro di Afrodisia — Radicalizzazione</div>
+  <div class="s19-txt">Una tavoletta di cera ha pur sempre forma e natura. Se l'intelletto conservasse anche solo una minima essenza materiale, quella funzionerebbe da «filtro», impedendo la ricezione universale. La ricettività assoluta richiede l'assenza totale di essenza propria.</div>
+</div>
+<div class="s19-verdict">
+  <div class="s19-v-card s19-v-not">
+    <div class="s19-v-lbl">✗ Non è</div>
+    <div class="s19-v-body">Una sostanza autonoma · l'anima (che per Alessandro è forma corruttibile del corpo) · la «tavoletta» stessa, che rappresenta l'individuo biologico nella sua complessione corporea</div>
+  </div>
+  <div class="s19-v-card s19-v-is">
+    <div class="s19-v-lbl">✓ È</div>
+    <div class="s19-v-body">Il <strong>«non-essere-scritto»</strong> della tavoletta — pura privazione, uno «zero assoluto», uno spazio radicalmente privo di essenza, e proprio per questo capace di ospitare l'infinita varietà degli universali</div>
+  </div>
+</div>
+</section>
+<section class="ds" id="s20">
+<div class="sec-top">
+<span class="badge-n">Schema 20</span>
+<span class="badge-l">L. 12</span>
+</div>
+<h2>I sensi interni e la formazione dei Fantasmi (Temistio)</h2>
+<p class="desc">Prima che l'intelletto entri in gioco astraendo l'universale, le informazioni del mondo esterno devono essere organizzate in immagini sensibili continue (i fantasmi). Questo è il compito dei sensi interni, la "cantina" dell'intelletto per Temistio.</p>
+
+<div class="s24-chain">
+  <div class="s24-step ari">
+    <div class="s24-num">01</div>
+    <div class="s24-body">
+      <div class="s24-title">Sensi Esterni</div>
+      <div class="s24-phase">Vista · Udito · Tatto · Olfatto · Gusto</div>
+      <div class="s24-desc">Catturano dati <strong>atomici, puntiformi e discontinui</strong>: una serie di macchie separate di colore, una sequenza di suoni isolati. Non producono ancora un'immagine coerente.</div>
+    </div>
+  </div>
+  <div class="s24-arrow">↓ Saldatura e unificazione psicologica</div>
+  <div class="s24-step pla">
+    <div class="s24-num">02</div>
+    <div class="s24-body">
+      <div class="s24-title">Senso Comune / Fantasia</div>
+      <div class="s24-phase">Sensus Communis · Sensi Interni</div>
+      <div class="s24-desc">Riempie i vuoti tra dati discontinui creando il <strong>continuo percettivo</strong>. Non più 100 macchie blu immobili, ma «una singola goccia d'acqua che scivola sul muro» — un'immagine fluida e unitaria (Temistio).</div>
+    </div>
+  </div>
+  <div class="s24-arrow">↓ Immagazzinamento come materia prima per l'intelletto astraente</div>
+  <div class="s24-step neo">
+    <div class="s24-num">03</div>
+    <div class="s24-body">
+      <div class="s24-title">Il Fantasma</div>
+      <div class="s24-phase">Phantasma · «Cantina» dell'intelletto</div>
+      <div class="s24-desc">L'immagine sensibile continua viene <strong>ritenuta e immagazzinata</strong>. Il <em>fantasma</em> è la materia prima su cui agirà l'intelletto astraente per estrarre la forma universale — base dell'intera epistemologia aristotelica.</div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="ds" id="s21">
+<div class="sec-top">
+<span class="badge-n">Schema 21</span>
 <span class="badge-l">L. 09</span>
 </div>
 <h2>Le tre interpretazioni dell'intelletto produttivo</h2>
@@ -4772,9 +5581,9 @@ body {
 <p>La stessa metafora della luce può essere letta in modi opposti — questa ambiguità non è un difetto del testo ma rivela una tensione reale: la conoscenza è un processo <strong>immanente</strong> all'anima o richiede un principio <strong>trascendente</strong>? Questa domanda attraversa tutta la filosofia medievale. Al-Fārābī sceglie la risposta trascendente, Tommaso la immanente — e Averroè proporrà una terza via radicale.</p>
 </div>
 </section>
-<section class="ds" id="s10">
+<section class="ds" id="s22">
 <div class="sec-top">
-<span class="badge-n">Schema 10</span>
+<span class="badge-n">Schema 22</span>
 <span class="badge-l">LL. 10-11</span>
 </div>
 <h2>Alessandro di Afrodisia: il sistema degli intelletti</h2>
@@ -4860,9 +5669,9 @@ body {
 <p>Alessandro <strong>desostanzializza radicalmente</strong> l'intelletto materiale: non è nemmeno un substrato vuoto, ma la pura <strong>ASSENZA</strong> di forma. L'unica immortalità è a tempo: siamo divini solo quando pensiamo il divino, e solo per la durata di quel pensiero.</p>
 </div>
 </section>
-<section class="ds" id="s11">
+<section class="ds" id="s23">
 <div class="sec-top">
-<span class="badge-n">Schema 11</span>
+<span class="badge-n">Schema 23</span>
 <span class="badge-l">LL. 10–12</span>
 </div>
 <h2>Processo della conoscenza intellettuale</h2>
@@ -4955,9 +5764,52 @@ body {
 <p>«Non si pensa senza immagini»: tutta la conoscenza parte dall'esperienza sensibile. L'analogia della luce percorre tutto il Medioevo: da Aristotele ad Alessandro, Temistio, al-Kindī, al-Fārābī, Avicenna, fino a Bonaventura e Tommaso. La domanda «<strong>chi è l'intelletto agente?</strong>» è il punto di svolta intorno al quale si organizza tutta la storia della psicologia filosofica medievale.</p>
 </div>
 </section>
-<section class="ds" id="s12">
+<section class="ds" id="s24">
 <div class="sec-top">
-<span class="badge-n">Schema 12</span>
+<span class="badge-n">Schema 24</span>
+<span class="badge-l">L. 14</span>
+</div>
+<h2>L'epistemologia di Siriano: Saldatura tra Platone e Aristotele</h2>
+<p class="desc">Siriano propone un sofisticato percorso della conoscenza che tenta di conciliare l'empirismo aristotelico (si parte dai sensi) con l'idealismo innatista platonico (le idee separate divine).</p>
+
+<div class="s24-chain">
+  <div class="s24-step ari">
+    <div class="s24-num">1</div>
+    <div class="s24-body">
+      <div><span class="s24-title">Percezione Sensibile</span><span class="s24-phase">Fase Aristotelica</span></div>
+      <div class="s24-desc">Punto di partenza obbligato: il mondo fisico e i fantasmi sensibili. L'intelletto riceve i dati del mondo esterno attraverso i sensi e le immagini continue che ne derivano.</div>
+    </div>
+  </div>
+  <div class="s24-arrow"><div class="s24-arr-sym">↓</div><div class="s24-arr-lbl">L'intelletto astrae dal dato sensibile</div></div>
+  <div class="s24-step ari">
+    <div class="s24-num">2</div>
+    <div class="s24-body">
+      <div><span class="s24-title">Forma Astratta Empirica</span><span class="s24-phase">Fase Aristotelica</span></div>
+      <div class="s24-desc">L'universale «debole» estratto dalle cose sensibili. Non è ancora la vera forma — ma funziona come <em>innesco</em> (pungolo, stimolo) che risveglia qualcosa di già latente nell'anima.</div>
+    </div>
+  </div>
+  <div class="s24-arrow"><div class="s24-arr-sym">↓</div><div class="s24-arr-lbl">Fa da innesco — risveglia e attiva...</div></div>
+  <div class="s24-divide">Passaggio: empirismo aristotelico → innatismo platonico</div>
+  <div class="s24-step pla">
+    <div class="s24-num">3</div>
+    <div class="s24-body">
+      <div><span class="s24-title">Forme Psichiche Innate in quiete</span><span class="s24-phase">Fase Platonica</span></div>
+      <div class="s24-desc">Le forme già presenti nell'anima fin dalla sua origine — non acquisite dall'esperienza ma portate dalla nascita. Il contatto con il dato empirico le «riattiva» in una reminiscenza (<em>anamnesis</em>) platonica.</div>
+    </div>
+  </div>
+  <div class="s24-arrow"><div class="s24-arr-sym">↓</div><div class="s24-arr-lbl">Corrispondono e si adeguano perfettamente a...</div></div>
+  <div class="s24-step neo">
+    <div class="s24-num">4</div>
+    <div class="s24-body">
+      <div><span class="s24-title">Forme Divine Oggettive nel Nous</span><span class="s24-phase">Fase Neoplatonica</span></div>
+      <div class="s24-desc">I paradigmi eterni del Demiurgo — le Idee platoniche rilette in chiave neoplatonica. Le forme psichiche dell'anima (livello 3) non sono autonome: corrispondono a queste forme divine trascendenti e vi si adeguano in armonia ontologica perfetta.</div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="ds" id="s25">
+<div class="sec-top">
+<span class="badge-n">Schema 25</span>
 <span class="badge-l">LL. 10-12</span>
 </div>
 <h2>Temistio: la gerarchia degli intelletti e il problema dell'identita</h2>
@@ -5040,9 +5892,9 @@ body {
 <p>Temistio introduce l'<strong>intelletto passivo</strong> — corruttibile e legato al corpo — creando una gerarchia a <strong>tre livelli</strong> che complica enormemente il problema dell'immortalita. La domanda <strong>«noi cosa siamo?»</strong> anticipa i problemi moderni dell'identita personale.</p>
 </div>
 </section>
-<section class="ds" id="s13">
+<section class="ds" id="s26">
 <div class="sec-top">
-<span class="badge-n">Schema 13</span>
+<span class="badge-n">Schema 26</span>
 <span class="badge-l">LL. 10–13</span>
 </div>
 <h2>Confronto sinottico: l'intelletto in tre autori</h2>
@@ -5148,12 +6000,50 @@ body {
 <p>La disputa non è astratta: se l'intelletto è <strong>unico</strong> (Alessandro, poi Averroè), non può esserci responsabilità morale individuale né salvezza personale. Se è <strong>individuale</strong> (Temistio, poi Tommaso), si salvaguarda l'identità personale ma si deve spiegare perché ogni individuo ha una componente «divina e immortale» propria. Le condanne parigine del 1270 e 1277 si spiegano esattamente con questa tensione.</p>
 </div>
 </section>
-<!-- ═══════════════════════════════════════════════════════════
-   SCHEMA 18 — La Falsafa: le tre matrici e la Causa Prima
-══════════════════════════════════════════════════════════ -->
-<section class="ds" id="s14">
+<section class="ds" id="s27">
 <div class="sec-top">
-<span class="badge-n">Schema 14</span>
+<span class="badge-n">Schema 27</span>
+<span class="badge-l">LL. 14–15</span>
+</div>
+<h2>Cosmologia medievale: Aristotele vs Tolomeo</h2>
+<p class="desc">Le due grandi visioni del cosmo che fanno da sfondo alle dottrine filosofiche e all'emanazione delle intelligenze celesti nel Medioevo.</p>
+
+<div class="s6-contrast">
+  <div class="s6-contrast-hdrs">
+    <div class="s6-hdr-empty"></div>
+    <div class="s6-hdr-cell mon">Modello Aristotelico<br><span style="font-weight:400;font-size:0.72rem;">Fisico-ontologico · Sfere di etere cristallino</span></div>
+    <div class="s6-hdr-cell men">Modello Tolemaico<br><span style="font-weight:400;font-size:0.72rem;">Matematico · Salva i fenomeni apparenti</span></div>
+  </div>
+  <div class="s6-row">
+    <div class="s6-row-lbl">Natura del sistema</div>
+    <div class="s6-row-cell mon"><strong>Fisico-ontologico</strong>: sfere reali di etere cristallino che ruotano effettivamente nel cosmo — descrizione di ciò che esiste</div>
+    <div class="s6-row-cell men"><strong>Matematico</strong>: costruito per calcolare e «salvare i fenomeni» apparenti — descrive i moti, non spiega la realtà fisica</div>
+  </div>
+  <div class="s6-row">
+    <div class="s6-row-lbl">Centratura</div>
+    <div class="s6-row-cell mon"><strong>Omocentrico e geocentrico</strong>: tutte le sfere hanno lo stesso centro, che coincide con la Terra</div>
+    <div class="s6-row-cell men"><strong>Geostatico ma non omocentrico</strong>: la Terra è ferma, ma il centro matematico dei moti è spostato — non coincide con la Terra</div>
+  </div>
+  <div class="s6-row">
+    <div class="s6-row-lbl">Meccanismo dei moti</div>
+    <div class="s6-row-cell mon">Sfere invisibili <strong>compensative</strong> che ruotano in senso contrario per neutralizzare e spiegare i moti complessi</div>
+    <div class="s6-row-cell men">Due sfere per pianeta: <strong>Deferente</strong> (sfera maggiore) + <strong>Epiciclo</strong> (sferetta minore su cui si muove il pianeta)</div>
+  </div>
+  <div class="s6-row">
+    <div class="s6-row-lbl">Obiettivo</div>
+    <div class="s6-row-cell mon">Garantire la perfezione ontologica e la continuità del moto trasmesso dal Motore Immobile giù lungo le sfere</div>
+    <div class="s6-row-cell men">Giustificare le anomalie osservate (moti retrogradi, variazioni di luminosità) mantenendo il moto circolare uniforme</div>
+  </div>
+</div>
+
+<div class="insight">
+<div class="insight-lbl">Punto chiave</div>
+<p>I <em>Falasifa</em> arabi ereditano un <strong>problema irrisolto</strong>: il modello aristotelico è fisicamente coerente ma astronomicamente insufficiente; quello tolemaico funziona per i calcoli ma viola il principio dell'omocentrismo. Avicenna e Al-Farabi utilizzano il modello tolemaico (deferente + epiciclo) per strutturare la <strong>catena delle 9 intelligenze</strong> emanate dalla Causa Prima.</p>
+</div>
+</section>
+<section class="ds" id="s28">
+<div class="sec-top">
+<span class="badge-n">Schema 28</span>
 <span class="badge-l">LL. 14–15</span>
 </div>
 <h2>La <em>Falsafa</em>: le tre matrici e la Causa Prima nella filosofia araba</h2>
@@ -5267,12 +6157,9 @@ body {
 <p>La <em>Falsafa</em> non è aristotelismo «puro»: è sempre un aristotelismo <strong>ibridato con il neoplatonismo</strong> e condizionato dall'orizzonte monoteistico islamico. Questa ibridazione produce concetti filosofici radicalmente nuovi rispetto alla filosofia greca classica: la contingenza, la creazione dal nulla, l'identificazione tra Dio e l'Essere Puro. Comprendere questi cambiamenti è essenziale per capire non solo la filosofia araba, ma tutta la scolastica latina che ne dipende.</p>
 </div>
 </section>
-<!-- ═══════════════════════════════════════════════════════════
-   SCHEMA 19 — L'emanazione delle intelligenze secondo Avicenna
-══════════════════════════════════════════════════════════ -->
-<section class="ds" id="s15">
+<section class="ds" id="s29">
 <div class="sec-top">
-<span class="badge-n">Schema 15</span>
+<span class="badge-n">Schema 29</span>
 <span class="badge-l">L. 15</span>
 </div>
 <h2>L'emanazione delle intelligenze secondo Avicenna</h2>
@@ -5402,407 +6289,500 @@ body {
 <p>Il sistema emanazionistico è una risposta filosofica sofisticata a un dilemma monoteistico: come può Dio essere assolutamente semplice e unitario, e al contempo produrre la molteplicità del mondo? Soluzione: Dio produce <em>direttamente</em> un solo effetto (Prima Intelligenza); la molteplicità emerge gradualmente attraverso le intelligenze intermedie. Ogni intelligenza pensa tre oggetti → produce tre cose: questa struttura triadica innerva tutta la metafisica medievale araba e latina.</p>
 </div>
 </section>
-<!-- ═══════════════════════════════════════════════════════════
-   SCHEMA 20 — Plotiniana Arabica, De Causis, Al-Kindi
-══════════════════════════════════════════════════════════ -->
-<section class="ds" id="s16">
+<section class="ds" id="s30">
 <div class="sec-top">
-<span class="badge-n">Schema 16</span>
+<span class="badge-n">Schema 30</span>
+<span class="badge-l">L. 15</span>
+</div>
+<h2>L'escatologia filosofica di Avicenna</h2>
+<p class="desc">Avicenna rifiuta la resurrezione della carne: l'aldilà non è un luogo ma uno <em>stato della mente</em>. La differenza tra paradiso e inferno non è morale — è <strong>epistemologica</strong>: dipende da quanto si è sviluppato l'intelletto durante la vita.</p>
+
+<div class="s30-premise">
+  <div class="s30-prem-icon">∞</div>
+  <div class="s30-prem-body"><strong>Premessa:</strong> L'anima sopravvive al corpo ma non risorge corporalmente. L'aldilà è puramente <em>ideale</em>: ogni anima rivive in eterno ciò che ha costruito in sé stessa durante la vita terrena. Non esiste un «altrove» fisico — esiste solo la propria mente, amplificata per sempre.</div>
+</div>
+
+<div class="s30-matrix-wrap">
+  <div class="s30-matrix-hdr-row">
+    <div></div>
+    <div class="s30-matrix-col-hdr s30-paradiso">🟢 Paradiso</div>
+    <div class="s30-matrix-col-hdr s30-inferno">🔴 Inferno</div>
+  </div>
+  <div class="s30-matrix-body">
+    <div class="s30-row-hdr s30-nonfilosofo">
+      <div class="s30-row-label">Non-Filosofo</div>
+      <div class="s30-row-sub">Chi non ha sviluppato l'intelletto — vive di immagini sensibili</div>
+    </div>
+    <div class="s30-cell s30-c-par-nf">
+      <div class="s30-cell-icon">🎭</div>
+      <div class="s30-cell-title">Paradiso Sensoriale</div>
+      <p>I desideri inappagati e le fantasie gratificanti si materializzano nella mente: un sogno perpetuo della propria idea di felicità. Il paradiso coranico (fiumi di latte, vergini) è metafora di queste proiezioni.</p>
+      <div class="s30-cell-tag">Fantasia reificata</div>
+    </div>
+    <div class="s30-cell s30-c-inf-nf">
+      <div class="s30-cell-icon">👻</div>
+      <div class="s30-cell-title">Inferno Sensoriale</div>
+      <p>Le paure peggiori e i rimorsi prendono forma di immagini terrificanti che l'anima stessa ha costruito: orrore personalizzato, non il fuoco generico ma il proprio incubo più profondo (<em>cfr.</em> Orwell, <em>1984</em>).</p>
+      <div class="s30-cell-tag">Terrore reificato</div>
+    </div>
+    <div class="s30-row-hdr s30-filosofo">
+      <div class="s30-row-label">Filosofo</div>
+      <div class="s30-row-sub">Chi ha coltivato l'intelletto — vive di forme intelligibili pure</div>
+    </div>
+    <div class="s30-cell s30-c-par-fil">
+      <div class="s30-cell-icon">🪞</div>
+      <div class="s30-cell-title">Paradiso Intellettuale</div>
+      <p>L'anima diventa uno <strong>specchio intelligibile</strong>: conosce istantaneamente e simultaneamente l'ordine perfetto dell'universo. Gioia suprema — come risolvere ogni teorema e vincere ogni scacchi, per sempre. (<em>Beatitudo intellectualis</em>)</p>
+      <div class="s30-cell-tag">Specchio intelligibile</div>
+    </div>
+    <div class="s30-cell s30-c-inf-fil">
+      <div class="s30-cell-icon">😔</div>
+      <div class="s30-cell-title">Inferno Intellettuale</div>
+      <p>Il rimpianto eterno e lucidissimo di aver sprecato la propria vita razionale. Dopo la morte non vi sono più sensi per imparare: la consapevolezza dell'occasione irreversibilmente perduta è permanente e assoluta.</p>
+      <div class="s30-cell-tag">Rimpianto eterno</div>
+    </div>
+  </div>
+</div>
+
+<div class="insight">
+<div class="insight-lbl">Punto chiave</div>
+<p>Per Avicenna il vero inferno non è il fuoco ma il <strong>rimpianto eterno del filosofo mancato</strong>. La distinzione non è morale ma <strong>epistemologica</strong>: chi ha o non ha sviluppato le proprie facoltà intellettuali. L'aldilà è la proiezione amplificata, eterna e immutabile di ciò che siamo stati.</p>
+</div>
+</section>
+<section class="ds" id="s31">
+<div class="sec-top">
+<span class="badge-n">Schema 31</span>
 <span class="badge-l">L. 16</span>
 </div>
-<h2>Fonti neoplatoniche della <em>Falsafa</em> e Al-Kindi: il primo filosofo arabo</h2>
-<p class="desc">I due testi che hanno veicolato il neoplatonismo nella filosofia araba e latina: la <em>Plotiniana Arabica</em> (<em>Teologia di Aristotele</em>) e il <em>Liber de Causis</em> (Proclo). Lo Pseudo-Dionigi. Al-Kindi e i suoi quattro intelletti.</p>
-<!-- DUE TESTI CHIAVE -->
-<div style="font-family:var(--font-h);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted2);margin-bottom:0.85rem;">I due testi che fondano la Falsafa neoplatonizzata</div>
+<h2>Al-Kindī: I quattro intelletti e la trasmissione neoplatonica</h2>
+<p class="desc">Al-Kindī (<em>Faylasuf al-'Arab</em>, il «Filosofo degli Arabi», IX sec.) è il primo grande <em>faylasuf</em>: pioniere della filosofia araba e inventore del lessico filosofico in arabo. La sua <em>Risāla fī l-'Aql</em> introduce i quattro intelletti — prima ricezione araba del <em>De Anima</em> — e si radica nei testi pseudo-aristotelici neoplatonici.</p>
+
+<div style="font-family:var(--font-h);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted2);margin-bottom:0.85rem;">I testi pseudo-aristotelici alla base della <em>Falsafa</em></div>
 <div class="s20-texts">
-<div class="s20-text-card s20-t-plotin">
-<div class="s20-text-hdr">① Plotiniana Arabica / Teologia di Aristotele</div>
-<div class="s20-text-body">
-<div class="s20-text-row"><span class="s20-text-lbl">Fonte</span>Ultime 3 Enneadi di Plotino (IV, V, VI) — riadattate in arabo nel circolo di Al-Kindi (inizio IX sec.)</div>
-<div class="s20-text-row"><span class="s20-text-lbl">Strategia</span>Attribuzione fittizia ad <strong>Aristotele</strong>: «continuazione della Metafisica» — Aristotele finge di spiegare la «sovranità divina». Piccolo falso dall'impatto enorme.</div>
-<div class="s20-text-row"><span class="s20-text-lbl">Contenuto</span>Struttura neoplatonica: la Causa Prima emana sull'intelletto, l'intelletto sull'anima celeste, l'anima sulla natura. Terminologia creazionistica sovrapposta a Plotino.</div>
-<div class="s20-text-row"><span class="s20-text-lbl">Fortuna</span>Solo nel mondo arabo — non tradotto in latino. Circola come autorevole «completamento» della Metafisica aristotelica sul divino.</div>
-</div>
-</div>
-<div class="s20-text-card s20-t-causis">
-<div class="s20-text-hdr">② Liber de Causis (Kitāb al-khayr al-maḥḍ)</div>
-<div class="s20-text-body">
-<div class="s20-text-row"><span class="s20-text-lbl">Fonte</span><em>Stoicheiōsis theologikē</em> di <strong>Proclo</strong> (V sec.) — tradotta e adattata nel circolo di Al-Kindi; stesso ambiente della Teologia di Aristotele</div>
-<div class="s20-text-row"><span class="s20-text-lbl">Traduzione latina</span><strong>Gerardo da Cremona</strong> (Toledo, XII sec.) → <em>Liber de Causis</em>. Citato da Dante nel <em>Convivio</em>. Letto nelle università latine come completamento della Metafisica aristotelica fino al XVI sec.</div>
-<div class="s20-text-row"><span class="s20-text-lbl">Tommaso</span>Primo a identificare la fonte procliana: nel suo commento al <em>De Causis</em> dimostra teorema per teorema la dipendenza dall'<em>Elementatio theologica</em> di Proclo.</div>
-<div class="s20-text-row"><span class="s20-text-lbl">Fortuna</span>Mondiale: arabo <em>e</em> latino. Testo universitario per secoli. Influenza diretta su Dante (<em>Paradiso</em>, struttura gerarchica), Tommaso, Alberto Magno.</div>
-</div>
-</div>
-</div>
-<!-- TEMI DEL DE CAUSIS -->
-<div style="background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.25rem;margin-bottom:1.5rem;">
-<div style="font-family:var(--font-h);font-size:0.78rem;font-weight:600;color:var(--cream);margin-bottom:0.65rem;">Temi filosofici fondamentali del <em>Liber de Causis</em></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.65rem;font-size:0.8rem;color:var(--card-text);">
-<div style="background:var(--surface3);border-radius:3px;padding:0.5rem 0.75rem;border-left:2px solid var(--greek);"><strong>Causa Prima = Essere Puro</strong> — primo testo filosofico con l'identificazione ontoteologica: Dio è l'Essere Puro (sconosciuta ai Greci; rottura totale con Plotino e Aristotele)</div>
-<div style="background:var(--surface3);border-radius:3px;padding:0.5rem 0.75rem;border-left:2px solid var(--greek);"><strong>Primato delle cause remote</strong> — la causa più lontana è più potente delle cause prossime; la causa remota <em>conferisce</em> alle cause seconde il loro potere causale</div>
-<div style="background:var(--surface3);border-radius:3px;padding:0.5rem 0.75rem;border-left:2px solid var(--gold);"><strong>Omne quod recipitur</strong> — ogni cosa è ricevuta secondo la misura del ricevente; spiega il «male metafisico» come differenza di grado, non come opposizione al bene</div>
-<div style="background:var(--surface3);border-radius:3px;padding:0.5rem 0.75rem;border-left:2px solid var(--gold);"><strong>Analogia dell'essere</strong> — la causa è presente nell'effetto al modo dell'effetto; l'effetto è precontenuto nella causa al modo (più eminente) della causa</div>
-</div>
-</div>
-<!-- MONÉ-PROODOS-EPISTROPHÉ -->
-<div style="font-family:var(--font-h);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted2);margin-bottom:0.85rem;">La circolarità causale neoplatonica: μονή — πρόοδος — ἐπιστροφή</div>
-<div class="s20-mpe">
-<div class="s20-mpe-hdr">La legge causale circolare di Proclo — cuore del neoplatonismo e dell'idealismo tedesco</div>
-<div class="s20-mpe-row">
-<div class="s20-mpe-step">
-<div class="s20-mpe-gr">μονή</div>
-<div class="s20-mpe-it">Moné · Manenza</div>
-<div class="s20-mpe-desc">Ogni cosa è prima <em>in sé</em>: le idee sono in sé nel Nous prima di emanarsi</div>
-</div>
-<div class="s20-mpe-arrow">→</div>
-<div class="s20-mpe-step">
-<div class="s20-mpe-gr">πρόοδος</div>
-<div class="s20-mpe-it">Proodos · Processione</div>
-<div class="s20-mpe-desc">Uscita da sé: la causa si diffonde negli effetti — la molteplicità del mondo</div>
-</div>
-<div class="s20-mpe-arrow">→</div>
-<div class="s20-mpe-step">
-<div class="s20-mpe-gr">ἐπιστροφή</div>
-<div class="s20-mpe-it">Epistrophé · Ritorno</div>
-<div class="s20-mpe-desc">Gli effetti portano il segno della causa: tendono a risalire verso l'origine</div>
-</div>
-</div>
-<div style="margin-top:0.75rem;font-size:0.78rem;color:var(--muted2);line-height:1.5;">
-      Questa struttura tripartita entra nel Cristianesimo medievale (<em>conversio</em> = ritorno a Dio), nella teologia negativa (la creatura reca traccia del Creatore), nell'analogia dell'essere (Tommaso). Hegel la riprende esplicitamente come <em>Ansich → Außersichsein → Anundfürsich</em>, riconoscendone la paternità procliana. Il neoplatonismo procliano è «la filosofia più ottimistica della storia»: tutto l'universo tende a rientrare nella sua origine.
+  <div class="s20-text-card s20-t-plotin">
+    <div class="s20-text-hdr"><em>Theologia Aristotelis</em></div>
+    <div class="s20-text-body">
+      <div class="s20-text-row"><span class="s20-text-lbl">Vera fonte:</span>Estratto delle <em>Enneadi</em> IV–VI di <strong>Plotino</strong></div>
+      <div class="s20-text-row"><span class="s20-text-lbl">Attribuito a:</span>Aristotele (errore di trasmissione siriaca)</div>
+      <div class="s20-text-row"><span class="s20-text-lbl">Contenuto:</span>Plotinismo integrale — l'Uno, l'Intelletto cosmico, l'Anima del Mondo</div>
+      <div class="s20-text-row"><span class="s20-text-lbl">Effetto:</span>L'aristotelismo arabo nasce intrinsecamente ibridato di neoplatonismo già dalla fonte</div>
     </div>
-</div>
-<!-- PSEUDO-DIONIGI -->
-<div class="s20-dionigi">
-<div class="s20-dion-hdr">⚠ Lo Pseudo-Dionigi l'Areopagita — il più grande falsario della storia della filosofia</div>
-<div class="s20-dion-body">
-<strong>Chi era:</strong> autore cristiano della fine del V–inizio VI sec. (probabilmente dell'entourage di Giustiniano a Costantinopoli), discepolo mediato di Proclo, che finge di essere il <em>Dionigi</em> convertito da Paolo ad Atene (Atti 17).<br/><br/>
-<strong>Il falso:</strong> scrive lettere agli stessi destinatari delle lettere paoline (Tito, Timoteo), afferma di aver assistito all'eclissi della morte di Cristo, si costruisce un'autorità apostolica. Scoperto definitivamente solo tra fine Ottocento e inizio Novecento (filologi tedeschi: conosce Proclo → è posteriore al V sec.).<br/><br/>
-<strong>Contenuto:</strong> introduce la teologia negativa di Proclo nel Cristianesimo: Dio è al di sopra di ogni attributo; si nega non solo ogni affermazione ma anche ogni negazione (via apofatica). Gerarchia angelica ispirata alla gerarchia delle intelligenze neoplatoniche.<br/><br/>
-<strong>Fortuna clamorosa:</strong> tradotto in latino (donato da imperatore bizantino ai Carolingi); confuso con San Dionigi patrono di Francia (Saint-Denis). Diventa uno dei <em>Padri della Chiesa</em> più autorevoli — e uno dei principali canali di Proclo nel Medioevo latino, insieme al <em>Liber de Causis</em>.
-    </div>
-</div>
-<!-- AL-KINDI: I QUATTRO INTELLETTI -->
-<div style="font-family:var(--font-h);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted2);margin-bottom:0.85rem;">Al-Kindi (c. 800–870) — Faylasuf al-Arab · Il De Intellectu: quattro intelletti</div>
-<div style="background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:0.75rem 1.1rem;margin-bottom:0.85rem;font-size:0.8rem;color:var(--card-text);">
-<strong style="color:var(--cream);">Contesto:</strong> Al-Kindi è il primo <em>Faylasuf al-Arab</em> — attivo a Baghdad sotto gli Abbasidi, in contatto con il <em>Bayt al-Ḥikma</em> (Casa della Sapienza, biblioteca-centro culturale di Baghdad). Creatore del <strong>lessico filosofico arabo</strong> (primo trattato di definizioni). Sincretismo esplicito: «Aristotele e il suo maestro Platone dicono la stessa cosa» — necessità di presentare il logos greco come unitario. Il <em>De Intellectu</em> (<em>Risāla fī al-ʿaql</em>) tradotto due volte in latino: come <em>De Ratione</em> (Gerardo da Cremona) e <em>De Intellectu</em> (Gundisalvi) — entrambi attivi a Toledo, XII sec.
   </div>
+  <div class="s20-text-card s20-t-causis">
+    <div class="s20-text-hdr"><em>Liber de Causis</em> (<em>Kitāb al-Khayr al-Maḥḍ</em>)</div>
+    <div class="s20-text-body">
+      <div class="s20-text-row"><span class="s20-text-lbl">Vera fonte:</span>Riduzione dell'<em>Elementatio Theologica</em> di <strong>Proclo</strong></div>
+      <div class="s20-text-row"><span class="s20-text-lbl">Attribuito a:</span>Aristotele («il Libro delle Cagioni», citato da Dante nel <em>Convivio</em>)</div>
+      <div class="s20-text-row"><span class="s20-text-lbl">Contenuto:</span>Gerarchia causale: Prima Causa → Intelligenza → Anima → Natura</div>
+      <div class="s20-text-row"><span class="s20-text-lbl">Effetto:</span>La struttura causale neoplatonica viene letta come «aristotelismo» in tutto il Medioevo latino</div>
+    </div>
+  </div>
+</div>
+
+<div style="font-family:var(--font-h);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted2);margin-bottom:0.85rem;">I quattro intelletti di Al-Kindī — <em>Risāla fī l-'Aql</em></div>
 <div class="s20-kindi-intellects">
-<div class="s20-ki">
-<div class="s20-ki-num">I</div>
-<div class="s20-ki-name">Intelletto sempre in atto</div>
-<div class="s20-ki-ar">al-ʿaql alladhī huwa bi-l-fiʿl abadan</div>
-<div class="s20-ki-desc">L'intelletto produttivo/agente aristotelico. Non appartiene all'anima umana — è separato e superiore. Non è Dio (come in Alessandro di Afrodisia) ma il <em>Nous</em> neoplatonico: il cosmo intelligibile, seconda ipostasi, causa e principio universale di tutti gli intelletti secondi. Luogo di tutte le forme intelligibili pure.</div>
+  <div class="s20-ki">
+    <div class="s20-ki-num">I°</div>
+    <div class="s20-ki-name">Intelletto sempre in Atto</div>
+    <div class="s20-ki-ar">al-'aql alladhī bi-l-fi'l dā'iman</div>
+    <div class="s20-ki-desc">= l'intelletto <em>agente/produttivo</em> aristotelico. <strong>Trascendente</strong>: non appartiene all'anima umana. Contiene tutte le forme intelligibili, pure, separate da materia e fantasia. Quando l'intelletto umano entra in contatto con esso, riceve le forme («illuminazione»).</div>
+  </div>
+  <div class="s20-ki">
+    <div class="s20-ki-num">II°</div>
+    <div class="s20-ki-name">Intelletto in Potenza</div>
+    <div class="s20-ki-ar">al-'aql alladhī bi-l-quwwa</div>
+    <div class="s20-ki-desc">L'intelletto <em>potenziale</em> dell'anima umana. Allo stato zero: <em>tabula rasa</em> assoluta, ancora vuota di forme intelligibili. Pura recettività — sa che potrebbe leggere, ma non legge ancora.</div>
+  </div>
+  <div class="s20-ki">
+    <div class="s20-ki-num">III°</div>
+    <div class="s20-ki-name">Intelletto passato in Atto</div>
+    <div class="s20-ki-ar">al-'aql alladhī kharaja min al-quwwa ilā al-fi'l</div>
+    <div class="s20-ki-desc">L'intelletto che <em>nell'anima</em> è già passato dalla potenza all'atto: ha acquisito stabilmente delle forme intelligibili. Una «seconda potenza»: sa e può riattuare la conoscenza senza ricominciare da zero (come chi sa leggere ma non sta leggendo).</div>
+  </div>
+  <div class="s20-ki">
+    <div class="s20-ki-num">IV°</div>
+    <div class="s20-ki-name">Intelletto Manifesto</div>
+    <div class="s20-ki-ar">al-'aql alladhī nusammīhi al-thānī</div>
+    <div class="s20-ki-desc">«L'intelletto che noi chiamiamo secondo»: la capacità di <strong>veicolare</strong> gli intelligibili all'esterno attraverso il <em>linguaggio</em>. Non si limita a pensare — esprime, comunica, manifesta i concetti. Prima apertura della <em>Falsafa</em> alla dimensione linguistica della conoscenza.</div>
+  </div>
 </div>
-<div class="s20-ki">
-<div class="s20-ki-num">II</div>
-<div class="s20-ki-name">Intelletto in potenza</div>
-<div class="s20-ki-ar">al-ʿaql alladhī huwa bi-l-quwwa fī al-nafs</div>
-<div class="s20-ki-desc">Appartiene all'anima. La tavoletta su cui non è scritto nulla — pura disposizione a ricevere forme intelligibili. Per passare dalla potenza all'atto ha bisogno di essere attivato dall'intelletto primo (niente si attualizza da solo: il tronco non diventa tavolo senza l'intervento di un agente già in atto).</div>
-</div>
-<div class="s20-ki">
-<div class="s20-ki-num">III</div>
-<div class="s20-ki-name">Intelletto passato dalla potenza all'atto</div>
-<div class="s20-ki-ar">al-ʿaql alladhī kharaja min al-quwwa ilā al-fiʿl</div>
-<div class="s20-ki-desc">L'intelletto «acquisito» o «in abito»: ha già stabilmente acquisito delle conoscenze. La capacità di scrivere nello scriba — sempre disponibile, ma non sempre attualizzata. Equivale all'intelletto secundum habitum di Alessandro e Aristotele.</div>
-</div>
-<div class="s20-ki">
-<div class="s20-ki-num">IV</div>
-<div class="s20-ki-name">Intelletto manifestato</div>
-<div class="s20-ki-ar">al-ʿaql al-thānī («secondo» ≠ intelletto II)</div>
-<div class="s20-ki-desc">L'intelletto che si manifesta all'esterno — quando l'anima esterna il proprio pensiero per renderlo presente in atto negli altri. Prima apertura alla dimensione <em>linguistica e comunicativa</em> dell'intelletto. <em>Intellectus</em> in latino significa sia «facoltà» sia «concetto» — il quarto intelletto è il concetto veicolato ad altri. Anticipa il <em>verbum mentis</em> della scolastica latina.</div>
-</div>
-</div>
-<!-- AL-KINDI: ALTRE OPERE -->
-<div style="font-family:var(--font-h);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted2);margin-bottom:0.85rem;">Al-Kindi: metafisica, De Radiis e altri contributi</div>
-<div class="s20-kindi-other">
-<div class="s20-ko-card">
-<div class="s20-ko-hdr">📐 La metafisica come Tawhīd</div>
-<div class="s20-ko-body">La <em>filosofia prima</em> di Al-Kindi è scienza dell'<strong>unicità di Dio</strong> (<em>Tawhīd</em>) — interpretazione «teologizzante» della metafisica aristotelica. La metafisica parla del Primo Motore, cioè dell'Uno neoplatonico. <em>Unicum</em> nella Falsafa: Al-Kindi sembra sostenere una <strong>creazione temporale</strong> del mondo (influenza di Giovanni Filopono, neoplatonico cristiano), mentre tutti i successori (Al-Farabi, Avicenna, Averroè) sosterranno solo la creazione eterna. Dio è ineffabile — via apofatica: si negano anche le negazioni.</div>
-</div>
-<div class="s20-ko-card">
-<div class="s20-ko-hdr">☀ De Radiis — legittimazione scientifica dell'astrologia</div>
-<div class="s20-ko-body">I corpi celesti esercitano un influsso sul mondo sublunare (convinzione universale nel Medioevo, non distingibile tra astronomia e astrologia). Ma <strong>come</strong> agisce questo influsso senza azione a distanza? Al-Kindi propone: attraverso i <strong>raggi luminosi</strong>. Ogni corpo celeste emette raggi che trasmettono il suo influsso sulle vicende terrestri. Dante (<em>Convivio</em>, <em>Paradiso</em> II): stessa teoria — Venere influenza l'amore attraverso i suoi raggi. Prima giustificazione fisica dell'astrologia. Successo enorme nel mondo latino.</div>
-</div>
-</div>
-<!-- BAYT AL-HIKMA E BAGHDAD -->
-<div style="background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:0.85rem 1.1rem;margin-bottom:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem;font-size:0.8rem;color:var(--card-text);">
-<div>
-<div style="font-family:var(--font-h);font-size:0.78rem;font-weight:600;color:var(--cream);margin-bottom:0.35rem;">🏛 Bayt al-Ḥikma — Casa della Sapienza</div>
-      Baghdad, inizio IX sec. Non un'università né un centro di traduzione formale, ma una <strong>biblioteca-polo culturale</strong> che attira traduttori e intellettuali sotto il mecenatismo abbaside. Probabilmente sede di Al-Kindi e del suo circolo. Le traduzioni avvengono <em>dal greco al siriaco</em>, poi <em>dal siriaco all'arabo</em> — non direttamente dal greco.
+
+<div class="s20-mpe">
+  <div class="s20-mpe-hdr">Il meccanismo di attualizzazione — contatto tra intelletti (modello illuminazionistico)</div>
+  <div class="s20-mpe-row">
+    <div class="s20-mpe-step">
+      <div class="s20-mpe-gr">I° Intelletto</div>
+      <div class="s20-mpe-it">sempre in atto · trascendente</div>
+      <div class="s20-mpe-desc">Le forme intelligibili sono in lui come in un luogo eterno</div>
     </div>
-<div>
-<div style="font-family:var(--font-h);font-size:0.78rem;font-weight:600;color:var(--cream);margin-bottom:0.35rem;">📜 Lessico filosofico arabo — merito di Al-Kindi</div>
-      Il primo trattato sulle <em>definizioni e descrizioni dei termini filosofici</em> in arabo. Distinzione tecnica: <strong>definizione</strong> (genere prossimo + differenza specifica) vs. <strong>descrizione</strong> (per ciò che non si può definire in senso stretto). Crea il vocabolario che tutti i Falasifa successivi useranno — e che passerà anche ai filosofi ebrei medievali.
+    <div class="s20-mpe-arrow">→</div>
+    <div class="s20-mpe-step">
+      <div class="s20-mpe-gr">Contatto</div>
+      <div class="s20-mpe-it">illuminazione</div>
+      <div class="s20-mpe-desc">La forma si «trasferisce» nell'intelletto potenziale umano per contatto diretto</div>
     </div>
+    <div class="s20-mpe-arrow">→</div>
+    <div class="s20-mpe-step">
+      <div class="s20-mpe-gr">II° → III°</div>
+      <div class="s20-mpe-it">attualizzazione</div>
+      <div class="s20-mpe-desc">L'intelletto umano acquista la forma in atto: passa dalla potenza all'atto</div>
+    </div>
+    <div class="s20-mpe-arrow">→</div>
+    <div class="s20-mpe-step">
+      <div class="s20-mpe-gr">IV° Intelletto</div>
+      <div class="s20-mpe-it">manifestazione</div>
+      <div class="s20-mpe-desc">L'intelligibile viene espresso nel linguaggio, comunicato agli altri</div>
+    </div>
+  </div>
 </div>
+
 <div class="insight">
 <div class="insight-lbl">Punto chiave</div>
-<p>La <em>Plotiniana Arabica</em> e il <em>Liber de Causis</em> sono stati concepiti per <strong>colmare la lacuna teologica</strong> percepita nella Metafisica di Aristotele: entrambi presentano testi neoplatonici sotto il nome di Aristotele, creando quella fusione aristotelico-neoplatonica che è il DNA della Falsafa. Al-Kindi introduce nel pensiero arabo quattro intelletti che rielaborano la tradizione greco-aristotelica: l'intelletto agente come Nous neoplatonico (non Dio), la distinzione potenza/atto/abito, e la dimensione <strong>comunicativa</strong> del pensiero (IV intelletto). Questi quattro intelletti — che «crescono come conigli», come nota il docente — saranno la base da cui Al-Farabi, Avicenna e Averroè svilupperanno le loro teorie.</p>
+<p>Al-Kindī opera una sintesi radicale: il <em>De Anima</em> aristotelico + il neoplatonismo mascherato da aristotelismo + il Corano. Il suo modello è fondamentalmente <strong>illuminazionistico</strong>: il contatto diretto dell'intelletto umano con l'intelletto agente trascendente. Questo diventerà il problema che Al-Farabi cercherà di superare e che Averroè radicalizzerà definitivamente.</p>
 </div>
 </section>
-<!-- ════════════════════════════════════
-  SCHEMA 21 — Tipi di intelletto: paralleli tra gli autori
-════════════════════════════════════ -->
-<section class="ds" id="s17">
-<div class="ds-inner">
-<div class="schema-label">Schema 17 · Lezioni 4–16</div>
-<h2>Tipi di Intelletto</h2>
-<p class="schema-desc">Paralleli tra gli autori: dalla distinzione aristotelica potenziale/agente alla quadripartizione di Al-Kindi. <strong>Stessa riga = stessa funzione</strong> — nomenclatura diversa per autore diverso.</p>
-<!-- Tabella comparativa principale -->
-<div class="s21-comp">
-<!-- Header -->
-<div class="s21-hdr-row">
-<div class="s21-hdr-cell">Funzione</div>
-<div class="s21-hdr-cell">Aristotele<br/><span style="font-weight:400;font-size:0.7rem;color:var(--muted2);">De Anima III, 4–5</span></div>
-<div class="s21-hdr-cell">Alessandro d.A.<br/><span style="font-weight:400;font-size:0.7rem;color:var(--muted2);">De Intellectu · De Anima</span></div>
-<div class="s21-hdr-cell">Temistio<br/><span style="font-weight:400;font-size:0.7rem;color:var(--muted2);">Parafrasi del De Anima</span></div>
-<div class="s21-hdr-cell">Al-Kindi<br/><span style="font-weight:400;font-size:0.7rem;color:var(--muted2);">De Intellectu (Fī al-ʿAql)</span></div>
+<section class="ds" id="s32">
+<div class="sec-top">
+<span class="badge-n">Schema 32</span>
+<span class="badge-l">L. 17</span>
 </div>
-<!-- Riga 1: Intelletto cosmico / sempre in atto -->
-<div class="s21-row row-cosmic">
-<div class="s21-label">Intelletto cosmico<br/>sempre in atto</div>
-<div class="s21-cell">
-<div class="s21-term gold">Intelletto produttivo / agente</div>
-<div class="s21-gr">νοῦς ποιητικός</div>
-<div style="font-size:0.73rem;color:var(--card-text);margin-top:0.2rem;">Separato, impassibile, immortale. Illumina gli intelligibili in potenza rendendoli in atto. <em>Statuto controverso</em>: interno o trascendente rispetto all'anima?</div>
-</div>
-<div class="s21-cell">
-<div class="s21-term gold">Intelletto agente = Causa Prima</div>
-<div class="s21-gr">νοῦς θύραθεν — «veniente dall'esterno»</div>
-<div style="font-size:0.73rem;color:var(--card-text);margin-top:0.2rem;">Identificato con Dio / Motore Immobile. <em>Esterno</em> all'anima umana. Luogo di tutte le forme pure senza materia né immagine.</div>
-<div class="s21-novelty">↑ Trascendente = Dio</div>
-</div>
-<div class="s21-cell">
-<div class="s21-term gold">Intelletto produttivo / agente</div>
-<div style="font-size:0.73rem;color:var(--card-text);margin-top:0.2rem;">Reinterpretato come <em>essenza dell'anima</em>: non separato ma immortale. Compone con l'intelletto potenziale una dyade ilemorfica (forma/atto ↔ potenza/materia). Appartiene alla <em>specie</em>, non all'individuo.</div>
-<div class="s21-novelty">↔ Interno (essenza anima)</div>
-</div>
-<div class="s21-cell">
-<div class="s21-term gold"><span class="s21-num">I</span>Intelletto primo / sempre in atto</div>
-<div class="s21-gr">al-ʿaql alladhī bi-l-fiʿl dāʾiman</div>
-<div style="font-size:0.73rem;color:var(--card-text);margin-top:0.2rem;">Luogo di tutte le forme intelligibili pure. Non è Dio (contro Alessandro): è il <em>Nous</em> neoplatonico, seconda ipostasi. Causa di tutti gli intelletti umani secondi.</div>
-<div class="s21-novelty">≠ Dio → Nous neoplatonico</div>
-</div>
-</div>
-<!-- Riga 2: Intelletto potenziale (grado zero) -->
-<div class="s21-row row-pot">
-<div class="s21-label">Intelletto potenziale<br/>(grado zero)</div>
-<div class="s21-cell">
-<div class="s21-term aristo">Intelletto potenziale</div>
-<div class="s21-gr">νοῦς δυνάμει</div>
-<div style="font-size:0.73rem;color:var(--card-text);margin-top:0.2rem;">Tavoletta su cui non è scritto nulla. Pura disponibilità a ricevere le forme. Impassibile: non si altera nel ricevere gli intelligibili.</div>
-</div>
-<div class="s21-cell">
-<div class="s21-term aristo">Intelletto materiale</div>
-<div class="s21-gr">νοῦς ὑλικός — «hylikos»</div>
-<div style="font-size:0.73rem;color:var(--card-text);margin-top:0.2rem;">Non la tavoletta ma il <em>non essere scritto</em> della tavoletta. Disposizione biologica dalla complessione organica. Interpretazione fortemente <em>naturalistica e materialistica</em>.</div>
-<div class="s21-novelty">→ Lettura biologistica</div>
-</div>
-<div class="s21-cell">
-<div class="s21-term aristo">Intelletto potenziale</div>
-<div style="font-size:0.73rem;color:var(--card-text);margin-top:0.2rem;">Impassibile. Funge da «potenza/materia» nella composizione ilemorfica con l'intelletto agente («forma/atto»). Appartiene all'anima a livello di specie, non individuale.</div>
-</div>
-<div class="s21-cell">
-<div class="s21-term aristo"><span class="s21-num">II</span>Intelletto secondo (in potenza)</div>
-<div class="s21-gr">al-ʿaql alladhī bi-l-quwwa</div>
-<div style="font-size:0.73rem;color:var(--card-text);margin-top:0.2rem;">«Appartiene all'anima» (vs. Intelletto I separato). Pura potenza a grado zero. Diventa intelligente in atto solo per contatto con l'Intelletto primo.</div>
-</div>
-</div>
-<!-- Riga 3: Intelletto come abito / acquisito -->
-<div class="s21-row row-hab">
-<div class="s21-label">Intelletto come abito<br/>/ acquisito<br/>(potenza 2° grado)</div>
-<div class="s21-cell">
-<div class="s21-term greek">Intelletto potenziale (2ª accezione)</div>
-<div style="font-size:0.73rem;color:var(--card-text);margin-top:0.2rem;">Non più grado zero: qualcosa è già stato appreso. Può richiamare ciò che sa senza che sia attualmente in atto. <em>Stessa tavoletta — ma con qualcosa già scritto</em>.</div>
-</div>
-<div class="s21-cell">
-<div class="s21-term greek">Intelletto secondo l'abito / acquisito</div>
-<div class="s21-gr">νοῦς κατʼ ἕξιν · νοῦς ἐπίκτητος</div>
-<div style="font-size:0.73rem;color:var(--card-text);margin-top:0.2rem;">Alessandro lo esplicita come categoria autonoma. Disposizione stabile acquisita: non si usa sempre, ma è pronta. Distingue nettamente il grado zero dal grado acquisito.</div>
-<div class="s21-novelty">→ Categoria autonoma</div>
-</div>
-<div class="s21-cell">
-<div class="s21-term greek">(implicito nel potenziale)</div>
-<div style="font-size:0.73rem;color:var(--card-text);margin-top:0.2rem;">Temistio non isola questa fase come categoria distinta: è inclusa nell'intelletto potenziale. La distinzione chiave per lui è piuttosto potenziale vs. passivo-individuale.</div>
-</div>
-<div class="s21-cell">
-<div class="s21-term greek"><span class="s21-num">III</span>Intelletto passato dalla potenza all'atto</div>
-<div class="s21-gr">al-ʿaql alladhī kharaja min al-quwwa ilā l-fiʿl</div>
-<div style="font-size:0.73rem;color:var(--card-text);margin-top:0.2rem;">La capacità dello <em>scriba</em>: acquisita, stabile, non sempre esercitata. Equivale al kat'hexin di Alessandro. Può attualizzarsi quando vuole: la usa e poi la ripone.</div>
-</div>
-</div>
-<!-- Riga 4: Intelletto passivo individuale (Temistio) -->
-<div class="s21-row row-pass">
-<div class="s21-label">Intelletto passivo<br/>individuale<br/>(mortale)</div>
-<div class="s21-cell empty">— non tematizzato —</div>
-<div class="s21-cell empty">— non tematizzato —</div>
-<div class="s21-cell">
-<div class="s21-term arab">Intelletto passivo-corruttibile-individuale</div>
-<div class="s21-gr">νοῦς παθητικός</div>
-<div style="font-size:0.73rem;color:var(--card-text);margin-top:0.2rem;"><strong>Novità assoluta di Temistio</strong>: l'intelletto con cui pensiamo concretamente, individuale, corruttibile, mortale. Si dissolve con la morte. Spiega la soggettività del pensiero senza compromettere l'immortalità dell'intelletto agente.</div>
-<div class="s21-novelty">★ Novità di Temistio</div>
-</div>
-<div class="s21-cell empty">— non tematizzato —</div>
-</div>
-<!-- Riga 5: Intelletto manifestato (Al-Kindi) -->
-<div class="s21-row row-manif">
-<div class="s21-label">Intelletto manifestato<br/>(espressione esterna)</div>
-<div class="s21-cell empty">— non tematizzato —</div>
-<div class="s21-cell empty">— non tematizzato —</div>
-<div class="s21-cell empty" style="font-size:0.7rem;font-style:italic;color:var(--muted2);">Temistio nota il problema<br/>della comunicazione intersoggettiva<br/>ma non lo risolve</div>
-<div class="s21-cell">
-<div class="s21-term blue"><span class="s21-num">IV</span>Intelletto che si manifesta</div>
-<div class="s21-gr">«chiamato secondo» — il concetto veicolato</div>
-<div style="font-size:0.73rem;color:var(--card-text);margin-top:0.2rem;">«Secondo» nel senso di <em>sostanza seconda</em> aristotelica: il concetto in quanto comunicato agli altri. Dimensione <strong>linguistica del pensiero</strong>. Anticipa la distinzione latina <em>intellectus / verbum</em> (Agostino, scolastica).</div>
-<div class="s21-novelty">★ Novità di Al-Kindi</div>
-</div>
-</div>
-</div>
-<!-- Siriano: framework diverso -->
-<div class="s21-siriano">
-<div class="s21-sir-hdr">Siriano (V sec.) — Teoria della cognizione: un framework alternativo</div>
-<p style="font-size:0.77rem;color:var(--card-text);margin-bottom:0.75rem;line-height:1.5;">Siriano non classifica <em>tipi</em> di intelletto ma descrive un <strong>processo di conoscenza a quattro stadi</strong> che salda aristotelismo e platonismo. Il Nous delle forme platoniche corrisponde funzionalmente all'intelletto cosmico; le forme innate quiescenti nell'anima fungono da cerniera tra la conoscenza sensibile e la certezza intelligibile.</p>
-<div class="s21-sir-chain">
-<div class="s21-sir-step"><span style="font-size:0.67rem;color:var(--muted2);">① aristotelico</span><br/><strong>Percezioni sensibili</strong><br/><span style="font-size:0.7rem;">→ immagini fantastiche</span></div>
-<div class="s21-sir-arrow">→</div>
-<div class="s21-sir-step"><span style="font-size:0.67rem;color:var(--muted2);">② aristotelico</span><br/><strong>Forma astratta</strong><br/><span style="font-size:0.7rem;">universale per induzione</span></div>
-<div class="s21-sir-arrow">→</div>
-<div class="s21-sir-step" style="border-color:rgba(90,58,138,0.45);background:rgba(90,58,138,0.07);"><span style="font-size:0.67rem;color:var(--aristo-l);">③ platonico-neoplatonico</span><br/><strong>Forme psichiche quiescenti</strong><br/><span style="font-size:0.7rem;">innate nell'anima — risvegliate dalla forma astratta</span></div>
-<div class="s21-sir-arrow">→</div>
-<div class="s21-sir-step" style="border-color:rgba(201,151,58,0.45);background:rgba(201,151,58,0.07);"><span style="font-size:0.67rem;color:var(--gold-l);">④ platonico</span><br/><strong>Forme nel Nous</strong><br/><span style="font-size:0.7rem;">idee platoniche oggettive — garanzia di certezza</span></div>
-</div>
-<p style="font-size:0.72rem;color:var(--muted2);margin-top:0.6rem;line-height:1.45;">La forma astratta (②) non è il termine della conoscenza: è il <em>catalizzatore</em> che risveglia la forma innata (③), a sua volta corrispondente all'idea platonica nel Nous (④). Influenza: Boezio, discussione scolastica sugli universali (ante rem / in re / post rem).</p>
-</div>
-<div class="insight">
-<div class="insight-lbl">Punto chiave</div>
-<p>La storia dei tipi di intelletto è una storia di <strong>moltiplicazione progressiva</strong>: Aristotele abbozza due poli (potenziale + agente), Alessandro ne esplicita tre (materiale + abito + agente=Dio), Temistio aggiunge il passivo individuale e riposiziona l'agente come essenza dell'anima, Al-Kindi conta ufficialmente quattro ricollocando l'intelletto agente — non più Dio (Alessandro) né essenza dell'anima (Temistio) — come <em>Nous neoplatonico</em>, e introducendo la dimensione comunicativa (IV intelletto). La costante trasversale: la tensione tra una <strong>potenza originaria vuota</strong> e un <strong>principio cosmico sempre in atto</strong> che la attiva — passaggio che nessuna cosa può compiere da sola.</p>
-</div>
-</div>
-</section>
-<!-- ════════════════════════════════════
-  SCHEMA 22 — Al-Farabi: Gerarchia Epistemologica
-════════════════════════════════════ -->
-<section class="ds" id="s18">
-<div class="ds-inner">
-<div class="schema-label">Schema 18 · Lezione 17</div>
-<h2>Al-Farabi: Epistemologia e Organon</h2>
-<p class="schema-desc">Al-Farabi amplia l'<em>Organon</em> aristotelico a 8 libri (includendo Retorica e Poetica) e stabilisce una gerarchia delle scienze basata sul <strong>grado di certezza logica</strong> (universale vs. dialettico vs. immaginativo).</p>
+<h2>Al-Farabi: Gerarchia della conoscenza — Filosofia, <em>Kalam</em> e Religione</h2>
+<p class="desc">Al-Farabi stabilisce una gerarchia rigorosa tra i diversi tipi di discorso integrando <em>Retorica</em> e <em>Poetica</em> nell'<em>Organon</em> aristotelico. L'operazione è radicale: la religione viene <em>subordinata</em> alla filosofia, e il <em>Kalam</em> viene distinto nettamente dalla vera scienza.</p>
+
 <div class="s22-org">
-<!-- Colonna 1: Filosofia e Scienza -->
-<div class="s22-col scienza">
-<div class="s22-hdr">Filosofia / Scienza</div>
-<div class="s22-box">
-<span class="s22-tag gold">Dimostrazione Universale</span>
-<p style="margin:0 0 0.5rem 0; font-size:0.82rem; color:var(--cream);">Supremazia assoluta della Filosofia</p>
-<p style="margin:0;">Le premesse sono <strong>vere, necessarie e universali</strong>. Le conclusioni sono inconfutabili e valide per tutta l'umanità, indipendentemente dalla religione o cultura.</p>
-<span class="s22-book">Riferimento: Analitici Secondi (Posteriori)</span>
+  <div class="s22-col scienza">
+    <div class="s22-hdr">Filosofia (<em>Falsafa</em>)</div>
+    <div class="s22-box">
+      <span class="s22-tag gold">Metodo</span>
+      Sillogismo dimostrativo (<em>burhān</em>): da premesse universali, necessarie e vere. Produce <strong>certezza assoluta</strong>.
+      <span class="s22-book">Analitici Posteriori (Aristotele)</span>
+    </div>
+    <div class="s22-box">
+      <span class="s22-tag gold">Oggetto</span>
+      Le cause necessarie e universali delle cose. La realtà come è veramente — indipendente dall'opinione e dalla fede.
+    </div>
+    <div class="s22-box">
+      <span class="s22-tag gold">Destinatari</span>
+      I filosofi e gli scienziati: chi ha la preparazione razionale per seguire dimostrazioni rigorose da premesse necessarie.
+    </div>
+    <div class="s22-box">
+      <span class="s22-tag gold">Il Profeta</span>
+      Non contraddice il filosofo: trasmette le stesse verità in forma immagistica (<em>imaginatio perfecta</em>), adatta alle moltitudini.
+    </div>
+  </div>
+
+  <div class="s22-col dialettica">
+    <div class="s22-hdr"><em>Kalam</em> (Teologia islamica)</div>
+    <div class="s22-box">
+      <span class="s22-tag blue">Metodo</span>
+      Argomentazione dialettica (<em>jadal</em>): da premesse probabili o già credute per fede. Produce <strong>persuasione</strong>, non certezza scientifica.
+      <span class="s22-book">Topici (Aristotele)</span>
+    </div>
+    <div class="s22-box">
+      <span class="s22-tag blue">Limite critico</span>
+      I <em>Mutakallimūn</em> credono di dimostrare, ma in realtà <em>difendono</em> premesse acquisite per fede costruendo argomenti dialettici. Non è scoperta della verità, ma protezione del dogma.
+    </div>
+    <div class="s22-box">
+      <span class="s22-tag blue">Distinzione</span>
+      Non va confuso con la filosofia: usa strumenti razionali per fini non razionali. Inferiore epistemicamente alla filosofia, superiore alla pura retorica.
+    </div>
+  </div>
+
+  <div class="s22-col religione">
+    <div class="s22-hdr">Religione (<em>Dīn</em>) · Profezia</div>
+    <div class="s22-box">
+      <span class="s22-tag arab">Metodo</span>
+      Retorica (<em>khaṭāba</em>) e Poetica (<em>shi'r</em>): persuasione attraverso immagini, simboli, metafore, emozioni. Non dimostrazioni.
+      <span class="s22-book">Retorica + Poetica (innovazione araba — non in Aristotele)</span>
+    </div>
+    <div class="s22-box">
+      <span class="s22-tag arab">Innovazione Al-Farabi</span>
+      Primo a parlare di «sillogismo poetico» (<em>qiyās shi'rī</em>): ragionamento che usa immagini come premesse. Non esiste in Aristotele — creazione della <em>Falsafa</em>.
+    </div>
+    <div class="s22-box">
+      <span class="s22-tag arab">Destinatari</span>
+      Le moltitudini: chi non può accedere alle dimostrazioni filosofiche. La religione è «filosofia per il volgo»: le stesse verità in forma immagistica e narrativa.
+    </div>
+  </div>
 </div>
+
+<div style="font-family:var(--font-h);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted2);margin-bottom:0.85rem;">La <em>Translatio Studiorum</em> — la trasmissione geografica della filosofia (Al-Farabi)</div>
+<div class="s20-mpe" style="margin-bottom:1.5rem;">
+  <div class="s20-mpe-hdr">Atene → Alessandria → Baghdad → Parigi/Oxford</div>
+  <div class="s20-mpe-row">
+    <div class="s20-mpe-step">
+      <div class="s20-mpe-gr">Atene</div>
+      <div class="s20-mpe-it">V–IV sec. a.C.</div>
+      <div class="s20-mpe-desc">Platone, Aristotele: nascita della filosofia come disciplina autonoma</div>
+    </div>
+    <div class="s20-mpe-arrow">→</div>
+    <div class="s20-mpe-step">
+      <div class="s20-mpe-gr">Alessandria</div>
+      <div class="s20-mpe-it">III sec. a.C.–V sec. d.C.</div>
+      <div class="s20-mpe-desc">Il Museo, la Biblioteca, i grandi commentatori: trasmissione e sintesi</div>
+    </div>
+    <div class="s20-mpe-arrow">→</div>
+    <div class="s20-mpe-step">
+      <div class="s20-mpe-gr">Baghdad</div>
+      <div class="s20-mpe-it">VIII–X sec. d.C.</div>
+      <div class="s20-mpe-desc"><em>Bayt al-Ḥikma</em>: Casa della Sapienza, grande movimento di traduzione</div>
+    </div>
+    <div class="s20-mpe-arrow">→</div>
+    <div class="s20-mpe-step">
+      <div class="s20-mpe-gr">Parigi · Oxford</div>
+      <div class="s20-mpe-it">XII–XIII sec. d.C.</div>
+      <div class="s20-mpe-desc">Università latine: ricezione dell'Aristotele arabo via Toledo e Sicilia</div>
+    </div>
+  </div>
 </div>
-<!-- Colonna 2: Teologia e Diritto -->
-<div class="s22-col dialettica">
-<div class="s22-hdr">Teologia (Kalam) / Diritto</div>
-<div class="s22-box">
-<span class="s22-tag blue">Dialettica Regionale</span>
-<p style="margin:0 0 0.5rem 0; font-size:0.82rem; color:var(--cream);">Scienze subordinate e confinate</p>
-<p style="margin:0;">Le premesse sono <strong>probabili e condivise</strong> solo all'interno di una determinata comunità (es. i credenti musulmani). Validità limitata, non universale.</p>
-<span class="s22-book">Riferimento: Topici</span>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+  <div style="background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:1rem;">
+    <div style="font-family:var(--font-h);font-size:0.82rem;font-weight:600;color:var(--arab-l);margin-bottom:0.4rem;">La città virtuosa (<em>al-Madīna al-Fāḍila</em>)</div>
+    <p style="font-size:0.78rem;color:var(--card-text);line-height:1.5;margin:0;">Il capo ideale unisce le funzioni del <em>filosofo-re</em> platonico e del <em>Profeta</em> islamico. Guida la città verso la felicità vera calibrando il discorso al livello intellettuale di ciascun cittadino. Le condizioni politiche sono <em>necessarie</em> per la realizzazione dell'anima razionale individuale.</p>
+  </div>
+  <div style="background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:1rem;">
+    <div style="font-family:var(--font-h);font-size:0.82rem;font-weight:600;color:var(--arab-l);margin-bottom:0.4rem;">La <em>Roma</em> di Al-Farabi — il segreto della grandezza</div>
+    <p style="font-size:0.78rem;color:var(--card-text);line-height:1.5;margin:0;">Nella <em>Translatio</em>, Al-Farabi esclude Roma dal percorso filosofico. Il suo «segreto» culturale: riconoscersi come cultura «seconda» rispetto ai Greci — e proprio per questo assimilarne l'eccellenza senza difesa identitaria. L'apertura all'altro come strategia di grandezza.</p>
+  </div>
 </div>
-</div>
-<!-- Colonna 3: Religione e Profezia -->
-<div class="s22-col religione">
-<div class="s22-hdr">Religione / Profezia</div>
-<div class="s22-box">
-<span class="s22-tag arab">Persuasione e Immagini</span>
-<p style="margin:0 0 0.5rem 0; font-size:0.82rem; color:var(--cream);">Nessuno statuto scientifico</p>
-<p style="margin:0;">Non dimostra verità ma <strong>convince le masse</strong> utilizzando simboli, metafore e allegorie (es. i fiumi di latte e miele nel Corano). Il Profeta comunica verità razionali ai "semplici".</p>
-<span class="s22-book">Riferimento: Retorica e Poetica</span>
-</div>
-</div>
-</div>
+
 <div class="insight">
 <div class="insight-lbl">Punto chiave</div>
-<p>Per Al-Farabi la religione (intesa come rivelazione per le masse) non ha fondamento scientifico e il Corano va letto <strong>allegoricamente</strong> dai filosofi. In questa visione, la filosofia è padrona e la teologia (kalam) è relegata a scienza dialettica inferiore. A questo si aggiunge il <strong>Primato della Politica</strong>: pur essendo la metafisica la scienza più degna, la Politica è <em>architettonica</em> perché garantisce la pace e le condizioni affinché gli studiosi possano fare filosofia e raggiungere l'immortalità/felicità.</p>
-</div>
+<p>Al-Farabi è il primo a integrare <em>Retorica</em> e <em>Poetica</em> nell'<em>Organon</em> come forme di sillogismo inferiori. Questa mossa subordina la religione alla filosofia: la religione non mente, ma <em>parla per immagini</em> ciò che la filosofia dimostra. Il profeta è un filosofo per le masse — posizione teologicamente audace nell'Islam medievale, che avrà conseguenze enormi sulla scolastica latina.</p>
 </div>
 </section>
-<!-- ════════════════════════════════════
-  SCHEMA 23 — Al-Farabi: I 6 significati di Intelletto
-════════════════════════════════════ -->
-<section class="ds" id="s19">
-<div class="ds-inner">
-<div class="schema-label">Schema 19 · Lezione 17</div>
-<h2>I 6 significati di "Intelletto" ('Aql)</h2>
-<p class="schema-desc">All'inizio della <em>Risala fi'l-Aql</em> (Epistola sull'Intelletto), Al-Farabi opera una <strong>disambiguazione</strong> del termine polisemico "Intelletto", elencando due accezioni pre-filosofiche e quattro accezioni aristoteliche.</p>
+<section class="ds" id="s33">
+<div class="sec-top">
+<span class="badge-n">Schema 33</span>
+<span class="badge-l">LL. 17–18</span>
+</div>
+<h2>Al-Farabi: I sei significati di «Intelletto» (<em>'Aql</em>)</h2>
+<p class="desc">Prima di trattare l'intelletto in senso filosofico, Al-Farabi disambigua il termine <em>'Aql</em> in sei accezioni distinte nella sua <em>Risāla fī l-'Aql</em>. Una mossa metodologica fondamentale: come Aristotele chiarisce il significato dell'«essere», così Al-Farabi chiarisce quello dell'«intelletto».</p>
+
 <div class="s23-grid">
-<!-- Colonna pre-filosofica -->
-<div class="s23-section" style="padding-bottom:1rem;">
-<div class="s23-sec-hdr">Accezioni Pre-Filosofiche</div>
-<div class="s23-item">
-<div class="s23-num">1</div>
-<div class="s23-content">
-<h4>Senso Comune</h4>
-<p>La cosa per cui la gente dice di qualcuno che è "intelligente" (es. astuzia, scaltrezza pratica, capacità di discernimento nel quotidiano).</p>
+  <div class="s23-section">
+    <div class="s23-sec-hdr">Significati Pre-filosofici</div>
+    <div class="s23-item">
+      <div class="s23-num">1</div>
+      <div class="s23-content">
+        <h4>L'opinione comune</h4>
+        <p>Il discernimento pratico quotidiano: capacità di prendere decisioni scaltre e immediate. Per Al-Farabi, «intelligente» implica buon fine morale — chi usa la mente per il male è «astuto» o «furbo», non propriamente intelligente.</p>
+      </div>
+    </div>
+    <div class="s23-item">
+      <div class="s23-num">2</div>
+      <div class="s23-content">
+        <h4>L'uso dei Teologi (<em>Mutakallimūn</em>)</h4>
+        <p>La semplice ragionevolezza comune: «ciò che l'intelletto esige». I teologi islamici pretendono di dimostrare, ma producono solo argomenti dialettici (probabili) — difendono premesse già credute per fede.</p>
+        <div class="s23-warning">⚠ <em>Kalam</em> ≠ Filosofia: la teologia usa la logica per proteggere il dogma, non per cercare la verità.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="s23-section">
+    <div class="s23-sec-hdr">Accezioni Aristoteliche (le più rilevanti per la Falsafa)</div>
+    <div class="s23-item">
+      <div class="s23-num">3</div>
+      <div class="s23-content">
+        <h4>Intelletto della <em>Dimostrazione</em></h4>
+        <p>La facoltà di cogliere i principi primi universali e necessari attraverso l'induzione sensibile. L'intelletto come capacità di fondare le scienze — intuisce le premesse da cui partono le dimostrazioni.</p>
+        <span class="s23-book-tag">Analitici Secondi (II.19)</span>
+      </div>
+    </div>
+    <div class="s23-item">
+      <div class="s23-num">4</div>
+      <div class="s23-content">
+        <h4>Intelletto dell'<em>Etica</em></h4>
+        <p>La prudenza (<em>phronesis</em>) come <em>abito</em> (hexis) pratico stabile, derivante da lunga esperienza morale. L'intelletto come saggezza pratica consolidata — capacità di deliberare correttamente in vista del bene.</p>
+        <span class="s23-book-tag">Etica Nicomachea (Libro VI)</span>
+      </div>
+    </div>
+    <div class="s23-item">
+      <div class="s23-num">5</div>
+      <div class="s23-content">
+        <h4>Intelletto del <em>De Anima</em></h4>
+        <p>Le fasi tecniche dell'intelletto umano: potenziale → in atto → acquisito → agente. <strong>L'accezione filosoficamente più rilevante</strong>: oggetto principale della <em>Risāla</em> e di tutto il corso.</p>
+        <span class="s23-book-tag">De Anima (Libro III)</span>
+      </div>
+    </div>
+    <div class="s23-item">
+      <div class="s23-num">6</div>
+      <div class="s23-content">
+        <h4>Intelletto della <em>Metafisica</em></h4>
+        <p>Il principio supremo separato: il Motore Immobile che è <em>noēsis noēseōs</em> (pensiero di pensiero). L'intelletto come Dio aristotelico — autoreferenziale, separato, sempre in atto.</p>
+        <span class="s23-book-tag">Metafisica (Libro Lambda)</span>
+      </div>
+    </div>
+  </div>
 </div>
+
+<div class="insight">
+<div class="insight-lbl">Punto chiave</div>
+<p>L'operazione di Al-Farabi è un <strong>preludio metodologico aristotelico</strong>: prima di discutere l'intelletto, occorre disambiguarlo — come Aristotele disambigua «l'essere». La distinzione cruciale: <em>Kalam</em> (teologia islamica) ≠ <em>Falsafa</em> (filosofia). I teologi credono di dimostrare, ma producono solo dialettica. Solo la filosofia, basata su premesse necessarie e universali, produce vera scienza.</p>
 </div>
-<div class="s23-item">
-<div class="s23-num">2</div>
-<div class="s23-content">
-<h4>Senso Teologico (Mutakallimun)</h4>
-<p>Ciò che l'opinione comune approva o rifiuta. Per i teologi, l'intelletto è usato come sinonimo di <em>opinione condivisa e diffusa</em>.</p>
+</section>
+<section class="ds" id="s34">
+<div class="sec-top">
+<span class="badge-n">Schema 34</span>
+<span class="badge-l">L. 18</span>
 </div>
+<h2>La conoscenza in Al-Farabi: Astrazione attiva e Doppia Attualizzazione</h2>
+<p class="desc">Rispetto ad Al-Kindi e Avicenna (che fanno dell'intelletto agente esterno il vero motore della conoscenza), Al-Farabi rivoluziona il modello: l'intelletto potenziale <em>astrae attivamente</em> le forme dal mondo sensibile. Ogni atto di conoscenza è una <strong>doppia trasformazione simultanea</strong> — dell'oggetto e del soggetto.</p>
+
+<div class="s32-flow">
+  <!-- Fase 0: punto di partenza -->
+  <div class="s32-start">
+    <div>
+      <div class="s32-col-label">Lato oggetto</div>
+      <div class="s32-state-box s32-state-pot">
+        <div class="s32-state-title">Forma Immanente</div>
+        <div class="s32-state-sub">intelligibile solo in potenza</div>
+        <p>La forma del cavallo è intrappolata nella materia sensibile, mescolata ad accidenti (tempo, spazio, quantità). Non è ancora pensabile in sé — è un intelligibile soltanto in potenza.</p>
+      </div>
+    </div>
+    <div>
+      <div class="s32-col-label">Lato soggetto</div>
+      <div class="s32-state-box s32-state-empty">
+        <div class="s32-state-title">Intelletto Potenziale</div>
+        <div class="s32-state-sub">tabula rasa — astrae attivamente</div>
+        <p>Non attende passivamente l'illuminazione dall'Intelletto Agente esterno. «Prende l'accetta»: astrae le forme dalle cose sensibili, spogliandole degli accidenti materiali.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="s32-arrow-label">↓ L'intelletto estrae la forma e la spoglia di tutti gli accidenti (spazio, tempo, quantità) ↓</div>
+
+  <!-- Fase 1: doppia attualizzazione -->
+  <div class="s32-dual-act">
+    <div class="s32-dual-card s32-da-obj">
+      <div class="s32-da-header">① Attualizzazione dell'Oggetto</div>
+      <p>La forma immanente viene estratta e purificata da ogni accidente. Diventando pensata, passa ad essere un <strong>Intelligibile in Atto</strong> — un «nuovo ente del mondo», un ente di ragione che prima non esisteva come tale. Rivoluzione ontologica: le forme pensate sono reali.</p>
+      <div class="s32-da-formula">Forma in potenza → Intelligibile in Atto</div>
+    </div>
+    <div class="s32-da-center">⇄</div>
+    <div class="s32-dual-card s32-da-sub">
+      <div class="s32-da-header">② Attualizzazione del Soggetto</div>
+      <p>L'intelletto potenziale riceve la forma astratta e <em>diventa</em> quella forma: pensando l'oggetto, passa dalla potenza all'atto. È cosciente di sé solo perché si sta riempiendo di forme — <strong>nessuna autocoscienza senza contenuto</strong>.</p>
+      <div class="s32-da-formula">Intelletto in potenza → Intelletto in Atto</div>
+    </div>
+  </div>
+
+  <div class="s32-arrow-label">↓ Il processo si ripete nel tempo: l'intelletto si colma progressivamente di forme intelligibili ↓</div>
+
+  <!-- Fase 2: intelletto acquisito -->
+  <div class="s32-acquired">
+    <div class="s32-acq-hdr">③ Intelletto Acquisito — il «magazzino» stabile delle forme</div>
+    <div class="s32-acq-body">
+      <div class="s32-acq-desc">A forza di esercitare l'astrazione, l'intelletto si stabilizza: diventa una <em>disposizione</em> stabile di intelligibili in atto. Ora può pensare le forme senza doverle ri-astrarre ogni volta. Diventato esso stesso un ente intelligibile, può conoscere se stesso e — al culmine — le Forme Separate (Intelligenze celesti).</div>
+      <div class="s32-acq-chain">
+        <div class="s32-chain-item"><div class="s32-ci-icon">📚</div><div class="s32-ci-text">Intelletto<br/>Acquisito</div></div>
+        <div class="s32-chain-arr">→</div>
+        <div class="s32-chain-item"><div class="s32-ci-icon">🪞</div><div class="s32-ci-text">Conosce<br/>se stesso</div></div>
+        <div class="s32-chain-arr">→</div>
+        <div class="s32-chain-item"><div class="s32-ci-icon">✨</div><div class="s32-ci-text">Conosce le<br/>Forme Separate</div></div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<div class="insight">
+<div class="insight-lbl">Punto chiave</div>
+<p>La rivoluzione di Al-Farabi rispetto ad Al-Kindi: gli intelligibili non «piovono» dall'Intelletto Agente esterno, ma vengono <strong>prodotti attivamente dall'intelletto umano</strong> a partire dal mondo fisico. L'intelletto non riceve — <em>costruisce</em>. E costruendo intelligibili, costruisce anche se stesso come ente razionale. Questo porta alla conseguenza più radicale: l'immortalità non è data, ma guadagnata.</p>
 </div>
-<!-- Colonna filosofica -->
-<div class="s23-section">
-<div class="s23-sec-hdr">Accezioni Filosofiche (Tratte da Aristotele)</div>
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
-<div class="s23-item">
-<div class="s23-num">3</div>
-<div class="s23-content">
-<h4>Induzione / Intuizione</h4>
-<p>Capacità di cogliere direttamente le premesse prime (vere, necessarie, universali) della dimostrazione scientifica.</p>
-<span class="s23-book-tag">Analitici Secondi</span>
+</section>
+<section class="ds" id="s35">
+<div class="sec-top">
+<span class="badge-n">Schema 35</span>
+<span class="badge-l">L. 18</span>
 </div>
+<h2>Al-Farabi: Le Forme Separate e l'Anima Razionale come Compito</h2>
+<p class="desc">Le Intelligenze celesti sono gli enti massimamente intelligibili — eppure non le conosciamo per prime. Per conoscere il divino, dobbiamo prima <em>costruire</em> noi stessi come enti razionali. Una rivoluzione copernicana dell'epistemologia medievale.</p>
+
+<!-- Il paradosso aristotelico -->
+<div class="s33-paradox">
+  <div class="s33-par-side s33-par-left">
+    <div class="s33-par-icon">✦</div>
+    <div class="s33-par-title">Forme Separate</div>
+    <div class="s33-par-sub">(Intelligenze aristoteliche — non Idee platoniche)</div>
+    <div class="s33-par-badge s33-badge-max">Massimamente intelligibili <em>per sé</em></div>
+    <p>Sostanze pure, mai immerse nella materia. Sono già atti intelligibili: non richiedono alcuna astrazione da parte nostra per essere pensabili — in sé sono i più conoscibili tra gli enti.</p>
+  </div>
+  <div class="s33-par-center">
+    <div class="s33-par-vs">≠</div>
+    <div class="s33-par-but">ma...</div>
+  </div>
+  <div class="s33-par-side s33-par-right">
+    <div class="s33-par-icon">👁️</div>
+    <div class="s33-par-title">Per noi umani</div>
+    <div class="s33-par-sub">(esseri senso-dipendenti, legati al corpo)</div>
+    <div class="s33-par-badge s33-badge-not">NON intelligibili subito</div>
+    <p>La conoscenza umana <em>parte dai sensi</em> (Aristotele). Non possiamo attivare l'intelletto partendo dalla contemplazione del divino: non c'è illuminazione immediata — al contrario di Al-Kindi.</p>
+  </div>
 </div>
-<div class="s23-item">
-<div class="s23-num">4</div>
-<div class="s23-content">
-<h4>Prudenza (Phronesis)</h4>
-<p>Intelletto pratico: l'abito/virtù di fare le scelte giuste nelle circostanze mutevoli della vita (deliberazione pratica).</p>
-<span class="s23-book-tag">Etica Nicomachea (Libro VI)</span>
+
+<!-- La via per le Forme Separate -->
+<div class="s33-via-title">La via di Al-Farabi verso le Forme Separate — quattro stadi</div>
+<div class="s33-journey">
+  <div class="s33-step s33-step-1">
+    <div class="s33-step-num">1</div>
+    <div class="s33-step-body">
+      <div class="s33-step-name">Mondo Sensibile</div>
+      <div class="s33-step-desc">Unico punto di partenza possibile per esseri corporei. L'intelletto potenziale inizia il contatto con le cose fisiche.</div>
+    </div>
+  </div>
+  <div class="s33-step-arr">→</div>
+  <div class="s33-step s33-step-2">
+    <div class="s33-step-num">2</div>
+    <div class="s33-step-body">
+      <div class="s33-step-name">Astrazione Attiva</div>
+      <div class="s33-step-desc">L'intelletto astrae le forme immanenti. Nel corso di anni di studio faticoso si costruisce un «magazzino» di intelligibili.</div>
+    </div>
+  </div>
+  <div class="s33-step-arr">→</div>
+  <div class="s33-step s33-step-3">
+    <div class="s33-step-num">3</div>
+    <div class="s33-step-body">
+      <div class="s33-step-name">Intelletto Acquisito</div>
+      <div class="s33-step-desc">Colmo di forme, l'intelletto è diventato esso stesso un ente intelligibile. Ora è <em>affine per natura</em> alle sostanze separate.</div>
+    </div>
+  </div>
+  <div class="s33-step-arr">→</div>
+  <div class="s33-step s33-step-4">
+    <div class="s33-step-num">4</div>
+    <div class="s33-step-body">
+      <div class="s33-step-name">Forme Separate</div>
+      <div class="s33-step-desc">Solo ora, diventato un ente intellettuale, può conoscere le Intelligenze celesti — per affinità ontologica, non per illuminazione.</div>
+    </div>
+  </div>
 </div>
+
+<!-- Conseguenza radicale -->
+<div class="s33-radical">
+  <div class="s33-rad-hdr">⚡ Il ribaltamento radicale: L'Anima Razionale come Compito, non come Dato</div>
+  <div class="s33-rad-grid">
+    <div class="s33-rad-item">
+      <div class="s33-rad-label">Visione tradizionale</div>
+      <div class="s33-rad-body">L'anima razionale è <em>data</em> all'essere umano per natura, alla nascita. L'immortalità è un dato biologico di partenza. Tutti gli esseri umani sopravvivono alla morte.</div>
+    </div>
+    <div class="s33-rad-arrow">→</div>
+    <div class="s33-rad-item s33-rad-new">
+      <div class="s33-rad-label">Al-Farabi (rivoluzione)</div>
+      <div class="s33-rad-body">L'anima razionale <strong>non è data ma costruita</strong>. L'immortalità è <em>condizionale</em>: dipende dall'aver edificato la propria anima razionale attraverso la filosofia. Chi non studia, non sopravvive. La città virtuosa (<em>al-Madīna al-Fāḍila</em>) è prerequisito politico necessario.</div>
+    </div>
+  </div>
 </div>
-<div class="s23-item">
-<div class="s23-num">5</div>
-<div class="s23-content">
-<h4>Intelletto dell'Anima</h4>
-<p>Accezione tecnica su cui si fonda l'epistola, divisa in 4 sotto-tipi: in potenza, in atto, acquisito, agente.</p>
-<span class="s23-book-tag">De Anima</span>
-<div class="s23-warning">Qui si trova l'Intelletto Agente</div>
-</div>
-</div>
-<div class="s23-item">
-<div class="s23-num">6</div>
-<div class="s23-content">
-<h4>Intelletto Divino</h4>
-<p>Accezione teologica: Dio come "Pensiero di pensiero" (noesis noeseos).</p>
-<span class="s23-book-tag">Metafisica (Libro Lambda)</span>
-<div class="s23-warning">Separato dall'Intelletto Agente</div>
-</div>
-</div>
-</div>
-<div class="insight" style="margin-top:1rem; padding:0.8rem 1rem;">
-<p style="margin:0; font-size:0.75rem;"><strong>Conseguenza Cruciale:</strong> Disambiguando l'Intelletto Agente (De Anima, 5° significato) dall'Intelletto Divino/Motore Immobile (Metafisica, 6° significato), <strong>Al-Farabi distanzia la sua posizione da Alessandro d'Afrodisia</strong>, rifiutando l'identificazione dell'Intelletto Agente con Dio.</p>
-</div>
-</div>
-</div>
+
+<div class="insight">
+<div class="insight-lbl">Punto chiave</div>
+<p>Per Al-Farabi, l'essere umano è un <strong>progetto</strong>, non un fatto. Diventare razionali è il compito della vita umana, non il suo punto di partenza. Questa posizione ha implicazioni politiche radicali: senza una <em>città virtuosa</em> che sostenga lo sviluppo intellettuale, l'individuo non può realizzare la propria anima razionale — e dunque non può raggiungere l'immortalità.</p>
 </div>
 </section>
 <!-- FOOTER -->
 <div style="padding:2rem 3.5rem;background:var(--surface);border-top:1px solid var(--border);font-size:0.78rem;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
 <div>
 <div style="font-family:var(--font-h);color:var(--cream);font-size:0.85rem;margin-bottom:0.2rem;">Filosofia Medievale Araba ed Ebraica</div>
-<div style="font-style:italic;">19 schemi visivi · Lezioni 01–17 · Università degli Studi di Milano</div>
+<div style="font-style:italic;"><span class="schema-count-var">35</span> schemi visivi · Lezioni 01–<span class="ultima-lezione-var">18</span> · Università degli Studi di Milano</div>
 </div>
 <div style="font-style:italic;color:var(--muted2);">davide.prando@studenti.unimi.it</div>
 </div>
@@ -5944,5 +6924,34 @@ if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
 const mobThemeBtn = document.getElementById('mob-theme-toggle');
 if (mobThemeBtn) mobThemeBtn.addEventListener('click', toggleTheme);
 </script>
+
+
+
+<script>
+// ==========================================
+// VARIABILE GLOBALE PER L'ULTIMA LEZIONE
+// ==========================================
+const ULTIMA_LEZIONE = 18;
+
+
+// ==========================================
+// VARIABILE GLOBALE PER IL NUMERO SCHEMI
+// ==========================================
+const TOTAL_SCHEMAS = 35;
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".ultima-lezione-var").forEach(el => {
+        el.textContent = ULTIMA_LEZIONE;
+    });
+    document.querySelectorAll(".schema-count-var").forEach(el => {
+        el.textContent = TOTAL_SCHEMAS;
+    });
+});
+
+});
+</script>
+
+
+
 </body>
 </html>
