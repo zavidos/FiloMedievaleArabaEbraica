@@ -3408,46 +3408,39 @@ body {
 
 /* ── Theme Toggle ── */
 .theme-toggle-wrap {
-  padding: 0.4rem 1.2rem;
-  border-top: 1px solid var(--border);
+  padding: 0.55rem 1.2rem 0.6rem;
+  border-bottom: 1px solid var(--border);
   flex-shrink: 0;
 }
-
 .theme-toggle {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  width: 100%;
-  padding: 0.35rem 0.8rem;
+  gap: 0.45rem;
+  padding: 0.28rem 0.75rem;
   background: var(--surface2);
   border: 1px solid var(--border);
   border-radius: var(--r);
-  color: var(--cream);
-  font-family: var(--font-h);
-  font-size: 0.7rem;
   cursor: pointer;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
-  letter-spacing: 0.06em;
+  transition: background 0.2s, border-color 0.2s;
+  font-size: 0.88rem;
+  line-height: 1;
 }
 .theme-toggle:hover {
   background: var(--surface3);
   border-color: var(--gold-d);
 }
-
-.theme-icon-dark,
-.theme-icon-light {
+.th-sun, .th-moon {
   font-size: 1rem;
   line-height: 1;
+  transition: color 0.2s, opacity 0.2s;
 }
-
-/* In dark mode: show sun (switch to light), hide moon */
-.theme-icon-dark { display: none; }
-.theme-icon-light { display: inline; }
-
-/* In light mode: show moon (switch to dark), hide sun */
-[data-theme="light"] .theme-icon-dark { display: inline; }
-[data-theme="light"] .theme-icon-light { display: none; }
+.th-sep { color: var(--border); font-size: 0.75rem; }
+/* dark mode active: moon bright, sun dimmed */
+.th-sun  { color: var(--muted2); opacity: 0.4; }
+.th-moon { color: var(--gold);   opacity: 1; }
+/* light mode active: sun bright, moon dimmed */
+[data-theme="light"] .th-sun  { color: var(--gold-l); opacity: 1; }
+[data-theme="light"] .th-moon { color: var(--muted2); opacity: 0.4; }
 
 /* Mobile theme toggle (floating) */
 .mob-theme-toggle {
@@ -4277,6 +4270,13 @@ body {
 <div class="title">Filosofia Medievale<br/>Araba ed Ebraica</div>
 <div class="sub">Schemi delle lezioni 1–<span class="ultima-lezione-var">18</span></div>
 </div>
+<div class="theme-toggle-wrap">
+<button aria-label="Cambia tema" class="theme-toggle" id="theme-toggle">
+<span class="th-sun">☼</span>
+<span class="th-sep">|</span>
+<span class="th-moon">☾</span>
+</button>
+</div>
 <ul class="nav-list"><li class="nav-item">          <a href="#s1"><span class="nav-num">1</span>I sei automatismi sul pensiero medievale</a>
           <a href="#s2"><span class="nav-num">2</span>La filosofia antica come "Bios" e stile di vita</a>
           <a href="#s3"><span class="nav-num">3</span>Le tre rotture epocali dell'Università</a>
@@ -4312,12 +4312,6 @@ body {
           <a href="#s33"><span class="nav-num">33</span>Al-Farabi: I sei significati di «Intelletto» ('Aql)</a>
           <a href="#s34"><span class="nav-num">34</span>Al-Farabi: Astrazione attiva e Doppia Attualizzazione</a>
           <a href="#s35"><span class="nav-num">35</span>Al-Farabi: Forme Separate e Anima come Compito</a></li></ul>
-<div class="theme-toggle-wrap">
-<button aria-label="Cambia tema" class="theme-toggle" id="theme-toggle">
-<span class="theme-icon-dark">☾</span>
-<span class="theme-icon-light">☼</span>
-</button>
-</div>
 <div class="sb-footer">
     Corso: <em>Che cosa significa pensare?</em><br/>
     Teoria dell'intelletto da Aristotele alla ricezione latina
