@@ -4691,7 +4691,42 @@ body {
   .s43-err-mid { padding:.6rem; border-left:none; border-right:none; }
   .s43-legacy { grid-template-columns:1fr; }
   .s43-cambridge { grid-template-columns:1fr; }
+
+  .s34-will-grid { grid-template-columns: 1fr; }
+  .s35-cosmo { grid-template-columns: 1fr; }
+  .s36-city { grid-template-columns: 1fr; }
 }
+
+
+
+/* S34 - Volontà e Male */
+.s34-will-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+.s34-will-card { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); padding: 1.25rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.s34-soc { border-top: 3px solid var(--greek); }
+.s34-ari { border-top: 3px solid var(--aristo); }
+.s34-ago { border-top: 3px solid var(--latin); }
+.s34-will-name { font-family: var(--font-h); font-weight: 700; font-size: 1.05rem; }
+.s34-soc .s34-will-name { color: var(--greek); }
+.s34-ari .s34-will-name { color: var(--aristo-l); }
+.s34-ago .s34-will-name { color: var(--latin-l); }
+.s34-will-cause { font-size: 0.85rem; font-weight: 600; color: var(--cream); margin-bottom: 0.5rem; }
+.s34-will-body { font-size: 0.82rem; color: var(--card-text); line-height: 1.5; flex: 1; }
+.s34-will-insight { background: linear-gradient(135deg, rgba(36,64,122,.1), rgba(139,90,26,.06)); border: 1px solid var(--latin); border-radius: var(--r); padding: 1.2rem; }
+
+/* S35 - Cosmologia */
+.s35-cosmo { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.5rem; }
+.s35-cosmo-box { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); padding: 1.2rem; }
+.s35-cosmo-box h4 { font-family: var(--font-h); font-size: 0.95rem; color: var(--arab-l); margin: 0 0 0.8rem 0; border-bottom: 1px dashed var(--border); padding-bottom: 0.5rem; }
+.s35-cosmo-body { font-size: 0.82rem; color: var(--card-text); line-height: 1.55; }
+
+/* S36 - Città Virtuosa */
+.s36-city { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.5rem; }
+.s36-virt { border: 1px solid var(--gold); background: rgba(201,151,58,.08); border-radius: var(--r); padding: 1.2rem; }
+.s36-ign { border: 1px solid var(--danger); background: rgba(220,53,69,.08); border-radius: var(--r); padding: 1.2rem; }
+.s36-city h4 { font-family: var(--font-h); font-size: 1.05rem; margin: 0 0 0.8rem 0; }
+.s36-virt h4 { color: var(--gold-l); }
+.s36-ign h4 { color: var(--danger-l); }
+.s36-city-body { font-size: 0.85rem; color: var(--card-text); line-height: 1.55; }
 
 /* Tablet landscape / iPad: keep desktop feel, avoid overlaps */
 @media (max-width:1180px) {
@@ -4987,10 +5022,13 @@ body {
           <a href="#s30"><span class="nav-num">30</span>Al-Fārābī: Astrazione e i tre stadi dell'intelletto</a>
           <a href="#s31"><span class="nav-num">31</span>Identità pensante/pensato · doppio regime delle essenze</a>
           <a href="#s32"><span class="nav-num">32</span>Cosmologia ed Emanazione · le dieci intelligenze</a>
-                              <a href="#s33"><span class="nav-num">33</span>La felicità mentale e l'errore filologico del <em>De anima</em></a></li></ul>
+                              <a href="#s33"><span class="nav-num">33</span>La felicità mentale e l\'errore filologico del <em>De anima</em></a>
+          <a href="#s34"><span class="nav-num">34</span>L'invenzione della volontà e il problema del male</a>
+          <a href="#s35"><span class="nav-num">35</span>I cieli come strumenti e la frattura tra Dio e Prima Intelligenza</a>
+          <a href="#s36"><span class="nav-num">36</span><em>Al-Madīna al-Fāḍila</em>: la dimensione politica dell'immortalità</a></li></ul>
 <div class="sb-footer">
     Corso: <em>Che cosa significa pensare?</em><br/>
-    Lezioni 1–20 · Al-Fārābī: intelletto agente cosmico, felicità mentale e causalità circolare
+    Lezioni 1–21 · Al-Fārābī: politica e immortalità, il problema del male e i cieli come organi
   </div>
 </aside>
 <!-- ════ MAIN ════ -->
@@ -7787,6 +7825,110 @@ body {
 </div>
 <div style="font-style:italic;color:var(--muted2);">davide.prando@studenti.unimi.it</div>
 </div>
+
+<!-- ════════════════════════════════════════════
+  SCHEMA 34 — L'invenzione della volontà e il male
+════════════════════════════════════════════════ -->
+<section class="ds" id="s34">
+<div class="sec-top">
+<span class="badge-n">Schema 34</span>
+<span class="badge-l">L. 21</span>
+</div>
+<h2>L'invenzione della volontà e il problema del male (Excursus)</h2>
+<p class="desc">La filosofia araba si muove tra il neoplatonismo greco (dove l'emanazione non è una scelta volontaria ma una sovrabbondanza necessaria) e il monoteismo (creazione). Un fondamentale excursus storiografico chiarisce la differenza tra la psicologia dell'azione greca e quella cristiana agostiniana.</p>
+
+<div class="s34-will-grid">
+  <div class="s34-will-card s34-soc">
+    <div class="s34-will-name">Socrate / Platone</div>
+    <div class="s34-will-cause">L'ignoranza</div>
+    <div class="s34-will-body">Intellettualismo etico: il male si compie sempre e solo per <strong>ignoranza</strong>. Se conoscessimo il vero bene, non sceglieremmo mai il male. L'azione viziosa è un errore di calcolo cognitivo, una mancata comprensione della giusta gerarchia dei beni.</div>
+  </div>
+  <div class="s34-will-card s34-ari">
+    <div class="s34-will-name">Aristotele</div>
+    <div class="s34-will-cause">L'<em>Akrasia</em> (debolezza)</div>
+    <div class="s34-will-body">Critica l'intellettualismo socratico, ma non arriva alla «volontà» moderna: introduce il concetto di <em>akrasia</em> (mancanza di controllo). So che una cosa fa male, ma altero il ragionamento pratico con una <strong>premessa particolare</strong> auto-assolutoria («sì, ma solo questa volta»). Non scelgo il male per il male.</div>
+  </div>
+  <div class="s34-will-card s34-ago">
+    <div class="s34-will-name">Agostino d'Ippona</div>
+    <div class="s34-will-cause">La Volontà</div>
+    <div class="s34-will-body">Irrompe l'idea, estranea ai Greci, di una facoltà autonoma: la <strong>Volontà</strong>. L'uomo può scegliere deliberatamente il male per il male. La teodicea scarica la responsabilità su di noi: «il bene è uno scandalo», il male è un prodotto umano radicato nel Peccato Originale.</div>
+  </div>
+</div>
+
+<div class="s34-will-insight">
+  <div class="insight-lbl">Punto chiave</div>
+  <p style="font-size:0.88rem;color:var(--card-text);line-height:1.5;margin:0;">L'emanazione neoplatonica che funge da modello per la <em>falsafa</em> <strong>non è inconsapevole ma non è neppure volontaria</strong>. All'Uno greco (e spesso alla Causa Prima degli arabi) manca l'idea di Volontà in senso cristiano. Il Principio conosce sé come causa degli effetti, e il Bene per sua natura si espande (<em>bonum est diffusivum sui</em>), non è «invidioso». L'emanazione islamica è dunque una mediazione raffinata tra necessità filosofica greca e Creazione rivelata.</p>
+</div>
+</section>
+
+<!-- ════════════════════════════════════════════
+  SCHEMA 35 — I cieli come strumenti
+════════════════════════════════════════════════ -->
+<section class="ds" id="s35">
+<div class="sec-top">
+<span class="badge-n">Schema 35</span>
+<span class="badge-l">L. 21</span>
+</div>
+<h2>I cieli come strumenti e la frattura tra Dio e Prima Intelligenza</h2>
+<p class="desc">Al-Fārābī perfeziona la cosmologia emanativa: i corpi celesti funzionano da «organi» materiali delle intelligenze celesti. Questo modello lo costringe a declassare il Primo Motore aristotelico, separandolo dall'Uno ineffabile.</p>
+
+<div class="s35-cosmo">
+  <div class="s35-cosmo-box">
+    <h4>I cieli come <em>Organi</em> materiali</h4>
+    <div class="s35-cosmo-body">
+      <p>Le Intelligenze non possono agire direttamente sulla materia grezza. Si servono dei corpi celesti (le sfere di etere e i pianeti) come <strong>strumenti materiali</strong>. I movimenti celesti (e di riflesso l'astrologia islamica) servono a <strong>predisporre la materia</strong> del mondo sublunare per ricevere gli intelligibili dall'intelletto agente.</p>
+      <p>Se l'intelletto agente è inesauribile, perché l'effetto non si dà sempre? Perché a valle, nel mondo sublunare, ci sono le interferenze delle cause seconde e la resistenza della materia, che non sempre è ben disposta a ricevere le forme.</p>
+    </div>
+  </div>
+  <div class="s35-cosmo-box">
+    <h4>Perché la Prima Intelligenza NON è Dio</h4>
+    <div class="s35-cosmo-body">
+      <p>La Prima Intelligenza, che muove il Primo Cielo (il Cristallino), ha il compito di produrre due cose distinte: 1) il Primo Cielo (materiale), 2) la Seconda Intelligenza (separata). </p>
+      <p>Siccome compie due azioni, possiede in sé <strong>due nature</strong>. Ma ciò che ha una duplice natura non è assolutamente semplice. Quindi la Prima Intelligenza <strong>non può essere l'Uno</strong>, cioè Dio. Aristotele aveva identificato Dio col Primo Motore (Lambda 7); Al-Fārābī affranca Dio dalla funzione cosmologica, spingendolo ancora più in alto, nell'assoluta unità neoplatonica.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ════════════════════════════════════════════
+  SCHEMA 36 — La Città Virtuosa (Al-Fārābī)
+════════════════════════════════════════════════ -->
+<section class="ds" id="s36">
+<div class="sec-top">
+<span class="badge-n">Schema 36</span>
+<span class="badge-l">L. 21</span>
+</div>
+<h2><em>Al-Madīna al-Fāḍila</em>: la dimensione politica dell'immortalità</h2>
+<p class="desc">Per Al-Fārābī l'immortalità non è un destino biologico automatico, ma un «compito ontologico» da realizzare in vita costituendo l'intelletto acquisito. Pertanto, l'escatologia (il destino finale) dipende drammaticamente dalla politica.</p>
+
+<div style="background:var(--surface3);border-radius:var(--r);padding:1.1rem;margin-bottom:1.5rem;text-align:center;">
+  <div style="font-family:var(--font-h);font-size:1rem;color:var(--arab-l);margin-bottom:0.4rem;">Il Califfo-Filosofo</div>
+  <div style="font-size:0.85rem;color:var(--card-text);">Raccogliendo la <em>Repubblica</em> di Platone (sconosciuta ai Latini), Al-Fārābī prescrive che il governante della Città Ideale debba essere un filosofo, o che almeno si dedichi alla filosofia, per creare le condizioni di pace e benessere in cui i cittadini possano studiare e «costruire» il proprio intelletto.</div>
+</div>
+
+<div class="s36-city">
+  <div class="s36-virt">
+    <h4>La Città Virtuosa</h4>
+    <div class="s36-city-body">
+      <p>I cittadini, potendosi dedicare alla filosofia, sviluppano l'intelletto acquisito. Alla morte, si «liberano della materia» e le loro anime si uniscono all'intelletto agente.</p>
+      <p><strong>Immortalità collettiva:</strong> l'anima non conserva l'individualità (gelosia o invidia). Le anime si uniscono come un gioco di specchi, godendo della reciproca riflessione degli intelligibili: la felicità del singolo aumenta all'unirsi di ogni nuova anima, <em>in eterno</em>.</p>
+    </div>
+  </div>
+  <div class="s36-ign">
+    <h4>La Città Ignorante o Corrotta</h4>
+    <div class="s36-city-body">
+      <p>Se il sovrano è ignorante (non conosce la verità) o corrotto (la conosce ma svia i cittadini verso piaceri materiali), il popolo non studia. Le loro anime rimangono allo stadio di pure potenze materiali legate al corpo.</p>
+      <p><strong>Nessuna immortalità:</strong> Alla morte del corpo, anche la potenza intellettiva si decompone. La forma si dissolve progressivamente passando per gli elementi base, fino a ritornare polvere, acqua o terra. <em>Polvere sei e polvere ritornerai.</em></p>
+    </div>
+  </div>
+</div>
+
+<div class="insight">
+  <div class="insight-lbl">Punto chiave</div>
+  <p>Da questo momento in poi, nell'orizzonte farabiano, <strong>essere umani non è più un «dato biologico» dalla nascita, ma un compito</strong>: la propria umanità e la propria sopravvivenza ultraterrena vanno conquistate attraverso lo studio filosofico. L'immenso lascito di questa visione arriverà fino a Dante (che leggeva l'idea di Al-Fārābī per cui la garanzia della pace politica data dall'Impero è la *conditio sine qua non* per il trionfo della filosofia e la beatitudine umana).</p>
+</div>
+</section>
+
 </main>
 <!-- ════ JAVASCRIPT ════ -->
 <script>
@@ -7932,13 +8074,13 @@ if (mobThemeBtn) mobThemeBtn.addEventListener('click', toggleTheme);
 // ==========================================
 // VARIABILE GLOBALE PER L'ULTIMA LEZIONE
 // ==========================================
-const ULTIMA_LEZIONE = 20;
+const ULTIMA_LEZIONE = 21;
 
 
 // ==========================================
 // VARIABILE GLOBALE PER IL NUMERO SCHEMI
 // ==========================================
-const TOTAL_SCHEMAS = 33;
+const TOTAL_SCHEMAS = 36;
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".ultima-lezione-var").forEach(el => {
