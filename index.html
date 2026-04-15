@@ -812,8 +812,8 @@ body {
 }
 
 .s4-facts { display: flex; flex-direction: column; gap: 0.4rem; }
-.s4-fact { font-size: 0.82rem; color: var(--card-text); display: flex; gap: 0.4rem; }
-.s4-fact::before { content: '·'; color: var(--gold); flex-shrink: 0; }
+.s4-fact { font-size: 0.82rem; color: var(--card-text); display: block; padding-left: 0.8em; text-indent: -0.8em; line-height: 1.45; }
+.s4-fact::before { content: '· '; color: var(--gold); }
 
 .s4-names {
   margin-top: 0.75rem; padding-top: 0.65rem;
@@ -1229,9 +1229,9 @@ body {
   border-top: 1px solid var(--border);
   padding-top: 0.45rem; margin-top: 0.45rem;
   font-style: italic;
-  display: flex; align-items: flex-start; gap: 0.3rem;
+  display: block; padding-left: 1.2em; text-indent: -1.2em;
 }
-.s8-ia-cons::before { content: '→'; color: var(--gold); font-style: normal; flex-shrink: 0; }
+.s8-ia-cons::before { content: '→ '; color: var(--gold); font-style: normal; }
 
 .s8-greek { background: linear-gradient(135deg, rgba(61,107,80,0.1), var(--surface2)); border-left: 3px solid var(--greek); }
 .s8-greek .s8-ia-name { color: var(--greek-l); }
@@ -4417,8 +4417,8 @@ body {
 .s39-meta { font-size:.78rem; color:var(--card-text); line-height:1.55; padding:.55rem .75rem; background:rgba(0,0,0,.2); border-radius:var(--r-sm); border-left:2px solid; font-style:italic; }
 .s39-ales .s39-meta { border-left-color:var(--greek); }
 .s39-fara .s39-meta { border-left-color:var(--arab-l); }
-.s39-cons { font-size:.76rem; color:var(--muted2); padding-top:.5rem; border-top:1px dashed var(--border); display:flex; align-items:flex-start; gap:.35rem; }
-.s39-cons::before { content:'→'; color:var(--gold); flex-shrink:0; }
+.s39-cons { font-size:.76rem; color:var(--muted2); padding-top:.5rem; border-top:1px dashed var(--border); display:block; padding-left:1.2em; text-indent:-1.2em; }
+.s39-cons::before { content:'→ '; color:var(--gold); }
 
 /* autocoscienza block */
 .s39-auto-title { font-family:var(--font-h); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted2); margin-bottom:.85rem; }
@@ -4561,8 +4561,8 @@ body {
 .s42-side-body { font-size:.82rem; color:var(--card-text); line-height:1.6; }
 .s42-side-body strong { color:var(--cream); font-family:var(--font-h); }
 .s42-side-body em { color:var(--gold-l); font-style:italic; }
-.s42-side-who { font-size:.72rem; color:var(--muted); padding-top:.4rem; border-top:1px dashed var(--border); display:flex; align-items:flex-start; gap:.35rem; }
-.s42-side-who::before { content:'→'; color:var(--gold); flex-shrink:0; }
+.s42-side-who { font-size:.72rem; color:var(--muted); padding-top:.4rem; border-top:1px dashed var(--border); display:block; padding-left:1.2em; text-indent:-1.2em; margin-top:.4rem; }
+.s42-side-who::before { content:'→ '; color:var(--gold); }
 /* Bonum box */
 .s42-bonum-title { font-family:var(--font-h); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--gold-l); margin-bottom:.85rem; }
 .s42-bonum { background:linear-gradient(135deg, rgba(201,151,58,.1), rgba(90,58,138,.06)); border:1px solid var(--gold-d); border-left:4px solid var(--gold); border-radius:var(--r); padding:1.3rem 1.5rem; margin-bottom:1.5rem; }
@@ -4984,12 +4984,10 @@ body {
           <a href="#s27"><span class="nav-num">27</span>Al-Kindī: I quattro intelletti e la trasmissione neoplatonica</a>
           <a href="#s28"><span class="nav-num">28</span>Al-Fārābī: Gerarchia della conoscenza — Filosofia, Kalam e Religione</a>
           <a href="#s29"><span class="nav-num">29</span>Al-Fārābī: I sei significati di «Intelletto» ('Aql)</a>
-          <a href="#s30"><span class="nav-num">30</span>Al-Fārābī: Astrazione attiva e doppia attualizzazione</a>
+          <a href="#s30"><span class="nav-num">30</span>Al-Fārābī: Astrazione e i tre stadi dell'intelletto</a>
           <a href="#s31"><span class="nav-num">31</span>Identità pensante/pensato · doppio regime delle essenze</a>
-          <a href="#s32"><span class="nav-num">32</span>Gerarchia ilemorfista · l'uomo come animale liminare</a>
-          <a href="#s33"><span class="nav-num">33</span>Al-Fārābī vs Alessandro · autocoscienza dell'acquisito</a>
-          <a href="#s34"><span class="nav-num">34</span>Le dieci intelligenze celesti e l'intelletto agente cosmico</a>
-          <a href="#s35"><span class="nav-num">35</span>La felicita mentale e l'errore filologico del <em>De anima</em></a></li></ul>
+          <a href="#s32"><span class="nav-num">32</span>Cosmologia ed Emanazione · le dieci intelligenze</a>
+                              <a href="#s33"><span class="nav-num">33</span>La felicita mentale e l'errore filologico del <em>De anima</em></a></li></ul>
 <div class="sb-footer">
     Corso: <em>Che cosa significa pensare?</em><br/>
     Lezioni 1–20 · Al-Fārābī: intelletto agente cosmico, felicita mentale e causalita circolare
@@ -4999,13 +4997,13 @@ body {
 <main class="main">
 <!-- ──── HERO ──── -->
 <div class="hero">
-<div class="hero-pill"><span class="schema-count-var">35</span> schemi del corso</div>
+<div class="hero-pill"><span class="schema-count-var">33</span> schemi del corso</div>
 <h1>Filosofia Medievale<br/><em>Araba ed Ebraica</em></h1>
 <p class="hero-sub">Schemi visivi per le lezioni 1–<span class="ultima-lezione-var">20</span> — dalla trasmissione aristotelica alla <em>Falsafa</em> araba, Al-Kindī e Al-Fārābī: intelletto agente, causalita circolare e felicita mentale</p>
 <div class="hero-meta">
 <span>Università degli Studi di Milano</span>
 <span>A.A. 2025–2026</span>
-<span><span class="ultima-lezione-var">20</span> lezioni · <span class="schema-count-var">35</span> schemi visivi</span>
+<span><span class="ultima-lezione-var">20</span> lezioni · <span class="schema-count-var">33</span> schemi visivi</span>
 </div>
 <div class="hero-line"></div>
 </div>
@@ -7164,8 +7162,30 @@ body {
 <span class="badge-n">Schema 30</span>
 <span class="badge-l">L. 18</span>
 </div>
-<h2>La conoscenza in Al-Fārābī: Astrazione attiva e doppia attualizzazione</h2>
-<p class="desc">Rispetto ad Al-Kindī e Avicenna, che fanno dell'intelletto agente esterno il vero motore della conoscenza, Al-Fārābī ridefinisce il modello: l'intelletto potenziale <em>astrae attivamente</em> le forme dal mondo sensibile. Ogni atto di conoscenza comporta una <strong>doppia trasformazione simultanea</strong>, dell'oggetto e del soggetto.</p>
+<h2>La conoscenza in Al-Fārābī: l'astrazione attiva e i tre stadi dell'intelletto</h2>
+<p class="desc">Rispetto ai predecessori greci e arabi, Al-Fārābī ridefinisce il modello cognitivo: l'intelletto umano non è passivo ma astrae attivamente le forme. Questo innesca un processo di sostanzializzazione che culmina nell'autocoscienza e nel contatto con le Intelligenze separate.</p>
+
+<!-- Confronto Alessandro vs Al-Farabi -->
+<div class="s39-vs">
+  <div class="s39-side s39-ales">
+    <div class="s39-name">Alessandro di Afrodisia</div>
+    <div class="s39-era">peripatetico greco · II–III sec. d.C. · <em>De anima</em>, <em>De intellectu</em></div>
+    <div class="s39-q">Chi compie l'astrazione delle forme?</div>
+    <div class="s39-a">L'<strong>intelletto agente esterno</strong>. L'intelletto potenziale è pura disposizione passiva — non la tavoletta, ma il «<em>non-essere-scritto</em>» della tavoletta.</div>
+    <div class="s39-meta">L'intelletto potenziale dipende addirittura dalla <em>complessione corporea</em>: è mera disposizione ricettiva, che <strong>aspetta</strong> di essere attivata dal contatto con l'intelletto agente (identificato con Dio / nous thyrathen). Senza quel contatto non si muove.</div>
+    <div class="s39-cons">Conseguenza: l'attività intellettiva umana è radicalmente <em>dipendente</em> da un principio esterno; l'immortalità è fluttuante (quando penso cose immortali, sono immortale; quando smetto, ritorno mortale).</div>
+  </div>
+  <div class="s39-sep">≠</div>
+  <div class="s39-side s39-fara">
+    <div class="s39-name">Al-Fārābī</div>
+    <div class="s39-era">falsafa araba · X sec. · <em>Risāla fī al-'Aql</em></div>
+    <div class="s39-q">Chi compie l'astrazione delle forme?</div>
+    <div class="s39-a">L'<strong>intelletto potenziale stesso</strong>. Non aspetta di essere attivato: si muove attivamente verso i dati sensibili, ne estrae le forme intelligibili, le riceve come propria attualizzazione.</div>
+    <div class="s39-meta">L'intelletto potenziale è la <em>materia</em>, gli intelligibili sono la <em>forma</em>: quando il primo riceve i secondi si attualizza, come ogni sostrato materiale che riceve la propria forma. Il baricentro dell'operazione conoscitiva si sposta <strong>dentro</strong> il soggetto umano.</div>
+    <div class="s39-cons">Conseguenza: l'autonomia intellettuale del soggetto; l'immortalità si consolida come statuto stabile (non fluttuante) man mano che si costituisce l'intelletto acquisito.</div>
+  </div>
+</div>
+
 
 <div class="s32-flow">
   <!-- Fase 0: punto di partenza -->
@@ -7300,9 +7320,33 @@ body {
   </div>
 </div>
 
+<div class="s39-auto-title">L'autocoscienza dell'intelletto acquisito: l'eccezione dell'astrazione</div>
+<div class="s39-auto">
+  <div class="s39-auto-card s39-auto-ext">
+    <span class="s39-auto-pill">Regola generale</span>
+    <div class="s39-auto-hdr">Conoscere un'essenza <em>esterna</em></div>
+    <div class="s39-auto-body">Per ogni essenza del mondo — triangolo, uomo, gatto — il procedimento richiede l'<strong>astrazione</strong>: si coglie l'essenza nell'esperienza sensibile e la si spoglia dagli accidenti. Il doppio regime: l'essenza esiste <em>nella materia</em> (con accidenti) e <em>nell'anima</em> (senza). L'astrazione è il ponte che attraversa i due regimi.</div>
+  </div>
+  <div class="s39-auto-card s39-auto-int">
+    <span class="s39-auto-pill">Eccezione unica</span>
+    <div class="s39-auto-hdr">Conoscere il <em>proprio</em> intelletto</div>
+    <div class="s39-auto-body">Quando l'intelletto acquisito si rivolge verso sé stesso, <strong>non deve astrarre nulla da nulla di esterno</strong>: il mio intelletto non ha un regime ontologico esterno all'anima diverso da quello nell'anima. Esiste <em>solo</em> come intelligibile in atto. È la scoperta che innesca l'accesso alle intelligenze separate: «quando mi accorgo che il mio intelletto non ha bisogno di essere astratto, riconosco che esistono altri intelletti separati».</div>
+  </div>
+</div>
+
+<div class="s39-paradox">
+  <div class="s39-par-icon">✦</div>
+  <div>
+    <div class="s39-par-title">Il paradosso dell'accesso alle forme pure (intelligenze)</div>
+    <div class="s39-par-body">Le <em>intelligenze separate</em> — gli «<strong>angeli filosofici</strong>» — sono forme pure, massimamente intelligibili in sé. Eppure il nostro intelletto, <strong>abituato ad astrarre le forme dalla materia</strong>, è inizialmente cieco davanti a loro: se non sono nella materia, non sa come prenderle. La via d'accesso si apre <em>solo</em> tramite l'autocoscienza dell'intelletto acquisito: una volta scoperto che <strong>il proprio intelletto non richiede astrazione</strong>, si è pronti a riconoscere altri intelletti completamente separati. È una sorta di divinizzazione disciplinata: non scintilla mistica, ma risultato progressivo del percorso filosofico.</div>
+  </div>
+</div>
+
+
 <div class="insight">
 <div class="insight-lbl">Punto chiave</div>
 <p>La novità di Al-Fārābī rispetto ad Al-Kindī è che gli intelligibili non «piovono» dall'Intelletto Agente esterno, ma vengono <strong>attivamente astratti dall'intelletto umano</strong> a partire dal mondo fisico. Gli atti di pensiero si accumulano, costituiscono l'intelletto acquisito e trasformano l'essere umano in un ente capace, solo al culmine, di conoscere le forme separate. Per questo l'immortalità non è data: è una costruzione ontologica.</p>
+<p>La linea che divide <strong>agostiniani/cartesiani</strong> da <strong>aristotelici/farabiani</strong>: per i primi l'intelletto coglie <em>prima</em> se stesso e poi tutto il resto (la <em>res cogitans</em> già data nel dubbio metodico); per Al-Fārābī l'intelletto ha bisogno di essere <em>già attualizzato</em>, di avere già contenuti, per potersi accorgere di sé. L'autocoscienza non è un punto di partenza ma una <strong>conquista tardiva</strong>: accessibile solo quando l'intelletto acquisito si è costituito come sostanza. Ribaltamento rispetto a Cartesio: non si parte da una sostanza pensante già data, ma da una pura disposizione che <em>di per sé non è ancora nulla</em> e che deve essere sviluppata. È la radice antropologica della <em>falsafa</em>: il vero uomo è il filosofo — non per orgoglio di scuola, ma per calcolo ontologico.</p>
 </div>
 </section>
 
@@ -7388,8 +7432,8 @@ body {
 <span class="badge-n">Schema 32</span>
 <span class="badge-l">L. 19</span>
 </div>
-<h2>La gerarchia ilemorfista dell'universo: <em>emanazione</em> e <em>risalita</em></h2>
-<p class="desc">Il sistema farabiano è neoplatonico nella struttura (una processione dall'Uno alla materia prima) ma aristotelico nelle categorie: ogni livello è <em>forma</em> rispetto a ciò che sta sotto e <em>materia</em> rispetto a ciò che sta sopra. Le frecce vanno in entrambe le direzioni: è il tratto caratteristico della <em>falsafa</em>.</p>
+<h2>Cosmologia ed Emanazione: le dieci intelligenze e la causalità circolare</h2>
+<p class="desc">Il sistema farabiano integra la cosmologia tolemaica e l'emanatismo neoplatonico, assegnando all'intelletto agente aristotelico la funzione di decima intelligenza. È una gerarchia ilemorfista (ogni livello è <em>forma</em> rispetto a ciò che sta sotto e <em>materia</em> rispetto a ciò che sta sopra) attraversata da un doppio movimento: la processione (discesa delle forme) e l'astrazione (risalita).</p>
 
 <div class="s38-layout">
 
@@ -7522,84 +7566,6 @@ body {
   <div class="s42-crea-body">Per al-Farabi la materia è eterna: non c'è creazione dal nulla in senso temporale. Dio produce direttamente solo la prima intelligenza; tutto il resto avviene per catena mediata. Conseguenza epistemica: il mondo è conoscibile perché l'intelligibile è già stato diffuso in esso.</div>
 </div>
 
-<div class="insight">
-<div class="insight-lbl">Punto chiave</div>
-<p>Il sistema è <strong>né puro Aristotele né puro Plotino</strong>: è la sintesi originale della <em>falsafa</em>. Da una matrice neoplatonica tardoantica, soprattutto <strong>procliana</strong>, viene la struttura emanazionistica con le frecce bidirezionali (processione/conversione); da Aristotele vengono le categorie di forma e materia che descrivono ogni livello. L'intelletto acquisito occupa il punto di cerniera — <em>animale liminare</em>, dirà poi Pico della Mirandola — e funziona come <strong><em>copula mundi</em></strong>: il luogo in cui la processione si richiude nel ritorno e il mondo sensibile può risalire verso l'intelligibile.</p>
-</div>
-</section>
-
-<!-- ════════════════════════════════════════════
-  SCHEMA 39 — Al-Fārābī vs Alessandro + autocoscienza dell'acquisito
-════════════════════════════════════════════════ -->
-<section class="ds" id="s33">
-<div class="sec-top">
-<span class="badge-n">Schema 33</span>
-<span class="badge-l">L. 19</span>
-</div>
-<h2>Chi compie l'astrazione? <em>Al-Fārābī contro Alessandro</em> · l'autocoscienza dell'intelletto acquisito</h2>
-<p class="desc">Due snodi teorici decisivi della <em>Risāla fī al-'Aql</em>: la novità farabiana sull'astrazione (l'intelletto potenziale come agente attivo, non più semplice recettività) e il fenomeno dell'autocoscienza — l'unico atto conoscitivo che <em>non</em> richiede astrazione, perché il proprio intelletto non ha regime ontologico esterno.</p>
-
-<!-- Confronto Alessandro vs Al-Farabi -->
-<div class="s39-vs">
-  <div class="s39-side s39-ales">
-    <div class="s39-name">Alessandro di Afrodisia</div>
-    <div class="s39-era">peripatetico greco · II–III sec. d.C. · <em>De anima</em>, <em>De intellectu</em></div>
-    <div class="s39-q">Chi compie l'astrazione delle forme?</div>
-    <div class="s39-a">L'<strong>intelletto agente esterno</strong>. L'intelletto potenziale è pura disposizione passiva — non la tavoletta, ma il «<em>non-essere-scritto</em>» della tavoletta.</div>
-    <div class="s39-meta">L'intelletto potenziale dipende addirittura dalla <em>complessione corporea</em>: è mera disposizione ricettiva, che <strong>aspetta</strong> di essere attivata dal contatto con l'intelletto agente (identificato con Dio / nous thyrathen). Senza quel contatto non si muove.</div>
-    <div class="s39-cons">Conseguenza: l'attività intellettiva umana è radicalmente <em>dipendente</em> da un principio esterno; l'immortalità è fluttuante (quando penso cose immortali, sono immortale; quando smetto, ritorno mortale).</div>
-  </div>
-  <div class="s39-sep">≠</div>
-  <div class="s39-side s39-fara">
-    <div class="s39-name">Al-Fārābī</div>
-    <div class="s39-era">falsafa araba · X sec. · <em>Risāla fī al-'Aql</em></div>
-    <div class="s39-q">Chi compie l'astrazione delle forme?</div>
-    <div class="s39-a">L'<strong>intelletto potenziale stesso</strong>. Non aspetta di essere attivato: si muove attivamente verso i dati sensibili, ne estrae le forme intelligibili, le riceve come propria attualizzazione.</div>
-    <div class="s39-meta">L'intelletto potenziale è la <em>materia</em>, gli intelligibili sono la <em>forma</em>: quando il primo riceve i secondi si attualizza, come ogni sostrato materiale che riceve la propria forma. Il baricentro dell'operazione conoscitiva si sposta <strong>dentro</strong> il soggetto umano.</div>
-    <div class="s39-cons">Conseguenza: l'autonomia intellettuale del soggetto; l'immortalità si consolida come statuto stabile (non fluttuante) man mano che si costituisce l'intelletto acquisito.</div>
-  </div>
-</div>
-
-<div class="s39-auto-title">L'autocoscienza dell'intelletto acquisito: l'eccezione dell'astrazione</div>
-<div class="s39-auto">
-  <div class="s39-auto-card s39-auto-ext">
-    <span class="s39-auto-pill">Regola generale</span>
-    <div class="s39-auto-hdr">Conoscere un'essenza <em>esterna</em></div>
-    <div class="s39-auto-body">Per ogni essenza del mondo — triangolo, uomo, gatto — il procedimento richiede l'<strong>astrazione</strong>: si coglie l'essenza nell'esperienza sensibile e la si spoglia dagli accidenti. Il doppio regime: l'essenza esiste <em>nella materia</em> (con accidenti) e <em>nell'anima</em> (senza). L'astrazione è il ponte che attraversa i due regimi.</div>
-  </div>
-  <div class="s39-auto-card s39-auto-int">
-    <span class="s39-auto-pill">Eccezione unica</span>
-    <div class="s39-auto-hdr">Conoscere il <em>proprio</em> intelletto</div>
-    <div class="s39-auto-body">Quando l'intelletto acquisito si rivolge verso sé stesso, <strong>non deve astrarre nulla da nulla di esterno</strong>: il mio intelletto non ha un regime ontologico esterno all'anima diverso da quello nell'anima. Esiste <em>solo</em> come intelligibile in atto. È la scoperta che innesca l'accesso alle intelligenze separate: «quando mi accorgo che il mio intelletto non ha bisogno di essere astratto, riconosco che esistono altri intelletti separati».</div>
-  </div>
-</div>
-
-<div class="s39-paradox">
-  <div class="s39-par-icon">✦</div>
-  <div>
-    <div class="s39-par-title">Il paradosso dell'accesso alle forme pure (intelligenze)</div>
-    <div class="s39-par-body">Le <em>intelligenze separate</em> — gli «<strong>angeli filosofici</strong>» — sono forme pure, massimamente intelligibili in sé. Eppure il nostro intelletto, <strong>abituato ad astrarre le forme dalla materia</strong>, è inizialmente cieco davanti a loro: se non sono nella materia, non sa come prenderle. La via d'accesso si apre <em>solo</em> tramite l'autocoscienza dell'intelletto acquisito: una volta scoperto che <strong>il proprio intelletto non richiede astrazione</strong>, si è pronti a riconoscere altri intelletti completamente separati. È una sorta di divinizzazione disciplinata: non scintilla mistica, ma risultato progressivo del percorso filosofico.</div>
-  </div>
-</div>
-
-<div class="insight">
-<div class="insight-lbl">Punto chiave</div>
-<p>La linea che divide <strong>agostiniani/cartesiani</strong> da <strong>aristotelici/farabiani</strong>: per i primi l'intelletto coglie <em>prima</em> se stesso e poi tutto il resto (la <em>res cogitans</em> già data nel dubbio metodico); per Al-Fārābī l'intelletto ha bisogno di essere <em>già attualizzato</em>, di avere già contenuti, per potersi accorgere di sé. L'autocoscienza non è un punto di partenza ma una <strong>conquista tardiva</strong>: accessibile solo quando l'intelletto acquisito si è costituito come sostanza. Ribaltamento rispetto a Cartesio: non si parte da una sostanza pensante già data, ma da una pura disposizione che <em>di per sé non è ancora nulla</em> e che deve essere sviluppata. È la radice antropologica della <em>falsafa</em>: il vero uomo è il filosofo — non per orgoglio di scuola, ma per calcolo ontologico.</p>
-</div>
-</section>
-
-
-<!-- ════════════════════════════════════════════
-  SCHEMA 40 — Le dieci intelligenze celesti e l'intelletto agente cosmico
-════════════════════════════════════════════════ -->
-<section class="ds" id="s34">
-<div class="sec-top">
-<span class="badge-n">Schema 34</span>
-<span class="badge-l">L. 20</span>
-</div>
-<h2>Le dieci intelligenze celesti e l'intelletto agente come <em>decima intelligenza</em></h2>
-<p class="desc">Al-Fārābī è il primo pensatore a identificare esplicitamente l'intelletto agente aristotelico con una sostanza cosmica determinata: la decima intelligenza celeste, quella che presiede al mondo sublunare. Qui si concentrano anche i due corollari decisivi: l'analogia del diafano intelligibile e l'intelletto agente come <em>luogo delle forme</em>.</p>
-
 <div style="background:rgba(201,151,58,0.12);border:1px solid var(--gold-d);border-radius:var(--r-sm);padding:0.85rem 1rem;margin-bottom:1.2rem;font-size:0.82rem;color:var(--card-text);">
 <strong style="color:var(--gold-l);">Formula secca:</strong> l'intelletto agente <strong>non è Dio</strong>, non è la Causa Prima e non è un <em>Nous</em> generico: è la <strong>decima intelligenza</strong>, quella del cielo della Luna, che opera sul mondo sublunare.
 </div>
@@ -7726,19 +7692,26 @@ body {
   </div>
 </div>
 
+
 <div class="insight">
 <div class="insight-lbl">Punto chiave</div>
+<p>Il sistema è <strong>né puro Aristotele né puro Plotino</strong>: è la sintesi originale della <em>falsafa</em>. Da una matrice neoplatonica tardoantica, soprattutto <strong>procliana</strong>, viene la struttura emanazionistica con le frecce bidirezionali (processione/conversione); da Aristotele vengono le categorie di forma e materia che descrivono ogni livello. L'intelletto acquisito occupa il punto di cerniera — <em>animale liminare</em>, dirà poi Pico della Mirandola — e funziona come <strong><em>copula mundi</em></strong>: il luogo in cui la processione si richiude nel ritorno e il mondo sensibile può risalire verso l'intelligibile.</p>
 <p>Le intelligenze celesti sono <strong>«angeli molto laici, molto filosofici e poco scritturali»</strong>: non hanno ali né volto come gli angeli della religione, ma muovono i cieli e possiedono in sé contenuti intelligibili indivisi. La decima intelligenza è, insieme, <strong>motore cosmico</strong>, <strong>diafano intelligibile</strong> e <strong>luogo delle forme</strong>: per questo la teoria farabiana ridisegna l'intera noologia medievale.</p>
 </div>
 </section>
 
-
+<!-- ════════════════════════════════════════════
+  SCHEMA 39 — Al-Fārābī vs Alessandro + autocoscienza dell'acquisito
+════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════
+  SCHEMA 40 — Le dieci intelligenze celesti e l'intelletto agente cosmico
+════════════════════════════════════════════════ -->
 <!-- ════════════════════════════════════════════
   SCHEMA 43 — La felicita mentale e l'errore filologico del De anima
 ════════════════════════════════════════════════ -->
-<section class="ds" id="s35">
+<section class="ds" id="s33">
 <div class="sec-top">
-<span class="badge-n">Schema 35</span>
+<span class="badge-n">Schema 33</span>
 <span class="badge-l">L. 20</span>
 </div>
 <h2>La felicita mentale e l'errore filologico del <em>De anima</em></h2>
@@ -7810,7 +7783,7 @@ body {
 <div style="padding:2rem 3.5rem;background:var(--surface);border-top:1px solid var(--border);font-size:0.78rem;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
 <div>
 <div style="font-family:var(--font-h);color:var(--cream);font-size:0.85rem;margin-bottom:0.2rem;">Filosofia Medievale Araba ed Ebraica</div>
-<div style="font-style:italic;"><span class="schema-count-var">35</span> schemi visivi · Lezioni 01–<span class="ultima-lezione-var">20</span> · Università degli Studi di Milano</div>
+<div style="font-style:italic;"><span class="schema-count-var">33</span> schemi visivi · Lezioni 01–<span class="ultima-lezione-var">20</span> · Università degli Studi di Milano</div>
 </div>
 <div style="font-style:italic;color:var(--muted2);">davide.prando@studenti.unimi.it</div>
 </div>
@@ -7965,7 +7938,7 @@ const ULTIMA_LEZIONE = 20;
 // ==========================================
 // VARIABILE GLOBALE PER IL NUMERO SCHEMI
 // ==========================================
-const TOTAL_SCHEMAS = 35;
+const TOTAL_SCHEMAS = 33;
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".ultima-lezione-var").forEach(el => {
