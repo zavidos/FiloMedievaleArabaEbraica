@@ -4644,6 +4644,54 @@ body {
 .s43-camb-def p { font-size:.82rem; color:var(--card-text); line-height:1.55; }
 .s43-camb-def strong { color:var(--gold-l); font-family:var(--font-h); }
 
+/* ═════════════════════════════════════════════════════
+   S44 — Confronto sinottico: Al-Kindī vs. Al-Fārābī (Schema 37)
+   Tipo: comparison table (3 colonne: Aspetto | Al-Kindī | Al-Fārābī)
+═════════════════════════════════════════════════════ */
+.s44-direction { display:grid; grid-template-columns:1fr 80px 1fr; border:1px solid var(--border); border-radius:var(--r); overflow:hidden; margin-bottom:1.5rem; }
+.s44-dir-side { padding:1.1rem 1.2rem; display:flex; flex-direction:column; gap:.4rem; }
+.s44-dir-kindi { background:linear-gradient(135deg, rgba(61,107,80,.12), var(--surface2)); }
+.s44-dir-farabi { background:linear-gradient(225deg, rgba(139,90,26,.12), var(--surface2)); }
+.s44-dir-center { display:flex; align-items:center; justify-content:center; background:var(--surface3); border-left:1px solid var(--border); border-right:1px solid var(--border); font-family:var(--font-h); font-size:1.8rem; font-weight:700; color:var(--gold); }
+.s44-dir-lbl { font-family:var(--font-h); font-size:.68rem; text-transform:uppercase; letter-spacing:.08em; font-weight:700; }
+.s44-dir-kindi .s44-dir-lbl { color:var(--greek-l); }
+.s44-dir-farabi .s44-dir-lbl { color:var(--arab-l); }
+.s44-dir-name { font-family:var(--font-h); font-size:1.05rem; font-weight:700; color:var(--cream); }
+.s44-dir-arrow { font-size:1.3rem; line-height:1; }
+.s44-dir-kindi .s44-dir-arrow { color:var(--greek-l); }
+.s44-dir-farabi .s44-dir-arrow { color:var(--arab-l); }
+.s44-dir-desc { font-size:.82rem; color:var(--card-text); line-height:1.5; }
+.s44-dir-desc strong { color:var(--cream); font-family:var(--font-h); }
+
+/* Griglia confronto */
+.s44-ident { display:grid; grid-template-columns:160px 1fr 1fr; gap:0; border:1px solid var(--border); border-radius:var(--r); overflow:hidden; margin-bottom:1.75rem; }
+.s44-hdr-row { display:contents; }
+.s44-hdr-row > * { padding:.85rem 1rem; font-family:var(--font-h); font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; border-bottom:2px solid var(--border); }
+.s44-hdr-aspect { background:var(--surface3); color:var(--muted2); border-right:1px solid var(--border); font-size:.68rem; display:flex; align-items:center; }
+.s44-hdr-kindi { background:linear-gradient(135deg, rgba(61,107,80,.2), var(--surface3)); color:var(--greek-l); border-right:1px solid var(--border); text-align:center; }
+.s44-hdr-farabi { background:linear-gradient(135deg, rgba(139,90,26,.2), var(--surface3)); color:var(--arab-l); text-align:center; }
+.s44-hdr-name { font-size:.95rem; display:block; margin-bottom:.15rem; letter-spacing:.02em; }
+.s44-hdr-sub { font-size:.65rem; font-weight:400; color:var(--muted); text-transform:none; letter-spacing:0; font-style:italic; display:block; }
+.s44-row { display:contents; }
+.s44-row > * { padding:.85rem 1rem; border-bottom:1px solid var(--border); font-size:.82rem; line-height:1.55; color:var(--card-text); transition:background .18s; }
+.s44-row:last-child > * { border-bottom:none; }
+.s44-row:hover > * { background:rgba(201,151,58,.04); }
+.s44-lbl { background:var(--surface); border-right:1px solid var(--border); font-family:var(--font-h); font-size:.78rem; font-weight:600; color:var(--gold); display:flex; align-items:flex-start; padding-top:.95rem; line-height:1.35; }
+.s44-lbl-icon { margin-right:.45rem; font-size:.85rem; flex-shrink:0; }
+.s44-cell-k { background:linear-gradient(180deg, rgba(61,107,80,.06), transparent); border-right:1px solid var(--border); }
+.s44-cell-k strong { color:var(--greek-l); font-family:var(--font-h); }
+.s44-cell-f { background:linear-gradient(180deg, rgba(139,90,26,.06), transparent); }
+.s44-cell-f strong { color:var(--arab-l); font-family:var(--font-h); }
+.s44-row.s44-key > .s44-lbl { background:rgba(201,151,58,.12); color:var(--gold-l); }
+.s44-row.s44-key > .s44-cell-k { background:linear-gradient(180deg, rgba(61,107,80,.12), rgba(61,107,80,.04)); }
+.s44-row.s44-key > .s44-cell-f { background:linear-gradient(180deg, rgba(139,90,26,.12), rgba(139,90,26,.04)); }
+.s44-pill { display:inline-block; font-size:.65rem; font-family:var(--font-h); font-weight:700; text-transform:uppercase; letter-spacing:.04em; padding:.15rem .45rem; border-radius:3px; margin-top:.35rem; }
+.s44-pill-illum { background:rgba(61,107,80,.2); color:var(--greek-l); border:1px solid rgba(61,107,80,.35); }
+.s44-pill-ascend { background:rgba(139,90,26,.2); color:var(--arab-l); border:1px solid rgba(139,90,26,.35); }
+.s44-pill-creat { background:rgba(139,24,24,.15); color:var(--danger-t); border:1px solid rgba(139,24,24,.3); }
+.s44-pill-eman { background:rgba(90,58,138,.15); color:var(--aristo-l); border:1px solid rgba(90,58,138,.3); }
+.s44-pill-concord { background:rgba(201,151,58,.15); color:var(--gold-l); border:1px solid var(--gold-d); }
+.s44-pill-subord { background:rgba(36,64,122,.15); color:var(--cream); border:1px solid rgba(36,64,122,.3); }
 
 /* Responsive */
 @media (max-width:1000px) {
@@ -4695,6 +4743,11 @@ body {
   .s34-will-grid { grid-template-columns: 1fr; }
   .s35-cosmo { grid-template-columns: 1fr; }
   .s36-city { grid-template-columns: 1fr; }
+  .s44-ident { grid-template-columns: 1fr; }
+  .s44-direction { grid-template-columns: 1fr; }
+  .s44-hdr-aspect { display: none; }
+  .s44-row > * { border-right: none !important; }
+  .s44-dir-center { padding: .6rem; }
 }
 
 
@@ -5025,7 +5078,8 @@ body {
                               <a href="#s33"><span class="nav-num">33</span>La felicità mentale e l\'errore filologico del <em>De anima</em></a>
           <a href="#s34"><span class="nav-num">34</span>L'invenzione della volontà e il problema del male</a>
           <a href="#s35"><span class="nav-num">35</span>I cieli come strumenti e la frattura tra Dio e Prima Intelligenza</a>
-          <a href="#s36"><span class="nav-num">36</span><em>Al-Madīna al-Fāḍila</em>: la dimensione politica dell'immortalità</a></li></ul>
+          <a href="#s36"><span class="nav-num">36</span><em>Al-Madīna al-Fāḍila</em>: la dimensione politica dell'immortalità</a>
+          <a href="#s37"><span class="nav-num">37</span>Confronto sinottico: Al-Kindī vs. Al-Fārābī</a></li></ul>
 <div class="sb-footer">
     Corso: <em>Che cosa significa pensare?</em><br/>
     Lezioni 1–21 · Al-Fārābī: politica e immortalità, il problema del male e i cieli come organi
@@ -7791,14 +7845,14 @@ body {
   <div class="s43-err-side s43-err-arab">
     <div class="s43-err-lbl">Traduzione araba (negazione caduta)</div>
     <div class="s43-err-text">&laquo;Questo intelletto <strong>talora agisce e talora no</strong>&raquo;</div>
-    <div class="s43-err-cons">Senza la negazione: l'intelletto agente <strong>non coincide piu immediatamente con Dio</strong>. Si apre cosi la correzione della lettura alessandrista.</div>
+    <div class="s43-err-cons">Senza la negazione: l'intelletto agente <strong>non coincide più immediatamente con Dio</strong>. Si apre così la correzione della lettura alessandrista.</div>
   </div>
 </div>
 
 <div class="s43-cambridge">
   <div class="s43-camb-side s43-camb-farabi">
     <div class="s43-camb-hdr">Al-Fārābī: l'intelletto agente</div>
-    <div class="s43-camb-body">L'intelletto agente non cambia nella propria <strong>sostanza</strong> (e sempre perfettissimo, sempre in atto). Cambia nei propri <strong>rapporti</strong> con la materia: la materia non e sempre ugualmente disposta a ricevere le forme. &laquo;Cio che cambia e il <em>modo di rapportarsi</em> alla materia.&raquo;</div>
+    <div class="s43-camb-body">L'intelletto agente non cambia nella propria <strong>sostanza</strong> (è sempre perfettissimo, sempre in atto). Cambia nei propri <strong>rapporti</strong> con la materia: la materia non è sempre ugualmente disposta a ricevere le forme. &laquo;Ciò che cambia è il <em>modo di rapportarsi</em> alla materia.&raquo;</div>
   </div>
   <div class="s43-camb-side s43-camb-tomm">
     <div class="s43-camb-hdr">Tommaso d'Aquino: Dio</div>
@@ -7807,7 +7861,7 @@ body {
   <div class="s43-camb-divider"></div>
   <div class="s43-camb-def">
     <div class="s43-camb-def-lbl">Cambridge change</div>
-    <p>Un cambiamento reale ma che <strong>non tocca l'essenza del soggetto</strong> che cambia, bensi le sue relazioni con altro. Nella prospettiva farabiana, Dio e molto piu perfetto e intoccabile: non interagisce in alcun modo con la materia, mentre l'intelletto agente si rapporta al mondo sublunare &mdash; ed e proprio per questo che non puo essere Dio.</p>
+    <p>Un cambiamento reale ma che <strong>non tocca l'essenza del soggetto</strong> che cambia, bensi le sue relazioni con altro. Nella prospettiva farabiana, Dio e molto piu perfetto e intoccabile: non interagisce in alcun modo con la materia, mentre l'intelletto agente si rapporta al mondo sublunare &mdash; ed è proprio per questo che non può essere Dio.</p>
   </div>
 </div>
 
@@ -7926,6 +7980,105 @@ body {
 <div class="insight">
   <div class="insight-lbl">Punto chiave</div>
   <p>Da questo momento in poi, nell'orizzonte farabiano, <strong>essere umani non è più un «dato biologico» dalla nascita, ma un compito</strong>: la propria umanità e la propria sopravvivenza ultraterrena vanno conquistate attraverso lo studio filosofico. L'immenso lascito di questa visione arriverà fino a Dante (che leggeva l'idea di Al-Fārābī per cui la garanzia della pace politica data dall'Impero è la *conditio sine qua non* per il trionfo della filosofia e la beatitudine umana).</p>
+</div>
+</section>
+
+<!-- ════════════════════════════════════════════
+  SCHEMA 37 — Confronto sinottico: Al-Kindī vs. Al-Fārābī
+════════════════════════════════════════════════ -->
+<section class="ds" id="s37">
+<div class="sec-top">
+<span class="badge-n">Schema 37</span>
+<span class="badge-l">LL. 16–21</span>
+</div>
+<h2>Confronto sinottico: Al-Kind&#299; vs. Al-F&#257;r&#257;b&#299;</h2>
+<p class="desc">I due capostipiti della <em>falsafa</em> condividono la griglia aristotelica del <em>De Anima</em>, ma la interpretano in modo profondamente diverso. Al-Kind&#299; costruisce un modello illuminazionistico dove l&rsquo;intelletto agente &egrave; trascendente e coincide con la Causa Prima; Al-F&#257;r&#257;b&#299; separa radicalmente Dio dall&rsquo;intelletto agente &mdash; che declassa a decima intelligenza &mdash; e trasforma il processo conoscitivo da &laquo;ricezione passiva&raquo; a &laquo;conquista attiva&raquo; dell&rsquo;essere razionale.</p>
+
+<!-- Mini-header con i due profili -->
+<div class="s44-direction">
+  <div class="s44-dir-side s44-dir-kindi">
+    <div class="s44-dir-lbl">Il Primo Filosofo Arabo</div>
+    <div class="s44-dir-name">Al-Kind&#299;</div>
+    <div class="s44-dir-arrow">&darr;</div>
+    <div class="s44-dir-desc">Modello <strong>discendente</strong>: l&rsquo;intelletto agente trascendente <strong>illumina dall&rsquo;alto</strong> l&rsquo;anima umana. Il contatto con la Causa Prima &egrave; il punto di <strong>partenza</strong> del processo conoscitivo.</div>
+  </div>
+  <div class="s44-dir-center">&ne;</div>
+  <div class="s44-dir-side s44-dir-farabi">
+    <div class="s44-dir-lbl">Il Secondo Maestro</div>
+    <div class="s44-dir-name">Al-F&#257;r&#257;b&#299;</div>
+    <div class="s44-dir-arrow">&uarr;</div>
+    <div class="s44-dir-desc">Modello <strong>ascendente</strong>: l&rsquo;uomo <strong>conquista</strong> il contatto con l&rsquo;intelletto agente (decima intelligenza, non Dio) attraverso un lungo processo di studio filosofico.</div>
+  </div>
+</div>
+
+<!-- Tabella comparativa -->
+<div class="s44-ident">
+  <!-- Header -->
+  <div class="s44-hdr-row">
+    <div class="s44-hdr-aspect">&#9670; Aspetto</div>
+    <div class="s44-hdr-kindi">
+      <span class="s44-hdr-name">Al-Kind&#299;</span>
+      <span class="s44-hdr-sub">&laquo;Filosofo degli Arabi&raquo; · IX sec.</span>
+    </div>
+    <div class="s44-hdr-farabi">
+      <span class="s44-hdr-name">Al-F&#257;r&#257;b&#299;</span>
+      <span class="s44-hdr-sub">&laquo;Secondo Maestro&raquo; · X sec.</span>
+    </div>
+  </div>
+
+  <!-- 1. N. intelletti -->
+  <div class="s44-row">
+    <div class="s44-lbl"><span class="s44-lbl-icon">&#128300;</span> N&deg; intelletti</div>
+    <div class="s44-cell-k"><strong>4</strong>: sempre in atto (trascendente), potenziale, passato in atto, manifesto/espresso</div>
+    <div class="s44-cell-f"><strong>4 nell&rsquo;anima</strong> (potenziale, in atto, acquisito, agente) + intelletto agente come quinta entit&agrave; separata</div>
+  </div>
+
+  <!-- 2. Intelletto agente — KEY -->
+  <div class="s44-row s44-key">
+    <div class="s44-lbl"><span class="s44-lbl-icon">&#9733;</span> Intelletto agente</div>
+    <div class="s44-cell-k"><strong>Trascendente</strong>, coincide con la Causa Prima / <em>Nous</em> neoplatonico. Illumina dall&rsquo;alto, &egrave; il principio primo.<br><span class="s44-pill s44-pill-illum">Causa Prima</span></div>
+    <div class="s44-cell-f"><strong>Decima intelligenza separata</strong> (NON Dio). Limite inferiore delle intelligenze celesti; &egrave; il culmine del percorso umano.<br><span class="s44-pill s44-pill-ascend">Decima intelligenza</span></div>
+  </div>
+
+  <!-- 3. Modello conoscitivo — KEY -->
+  <div class="s44-row s44-key">
+    <div class="s44-lbl"><span class="s44-lbl-icon">&#128161;</span> Modello conoscitivo</div>
+    <div class="s44-cell-k"><strong>Illuminazionistico</strong>: l&rsquo;intelletto agente agisce dall&rsquo;esterno sull&rsquo;anima umana per contatto diretto. Punto di <strong>partenza</strong>.<br><span class="s44-pill s44-pill-illum">Illuminazione</span></div>
+    <div class="s44-cell-f"><strong>Processo ascendente</strong>: potenziale &rarr; in atto &rarr; acquisito &rarr; <em>conjunctio</em> con l&rsquo;intelletto agente. Punto di <strong>arrivo</strong>.<br><span class="s44-pill s44-pill-ascend">Conquista</span></div>
+  </div>
+
+  <!-- 4. Intelletto acquisito -->
+  <div class="s44-row">
+    <div class="s44-lbl"><span class="s44-lbl-icon">&#128218;</span> Intelletto acquisito</div>
+    <div class="s44-cell-k">3&deg; intelletto: sapere stabile gi&agrave; acquisito. 4&deg; intelletto: sua <strong>manifestazione linguistica</strong> esterna verso gli altri.</div>
+    <div class="s44-cell-f">Stadio liminare cruciale: condizione di <strong>immortalit&agrave;</strong>. Processo di &laquo;sostanzializzazione&raquo; dell&rsquo;anima — l&rsquo;uomo si <em>costruisce</em> come ente razionale.</div>
+  </div>
+
+  <!-- 5. Cosmologia — KEY -->
+  <div class="s44-row s44-key">
+    <div class="s44-lbl"><span class="s44-lbl-icon">&#127760;</span> Cosmologia</div>
+    <div class="s44-cell-k"><strong>Creazione dal nulla</strong> con inizio temporale. Influenza di Filopono e del monoteismo islamico.<br><span class="s44-pill s44-pill-creat">Creazionismo</span></div>
+    <div class="s44-cell-f"><strong>Emanazione gerarchica necessaria</strong> delle 10 intelligenze (modello neoplatonico rigoroso).<br><span class="s44-pill s44-pill-eman">Emanazionismo</span></div>
+  </div>
+
+  <!-- 6. Dio e intelletto -->
+  <div class="s44-row">
+    <div class="s44-lbl"><span class="s44-lbl-icon">&#10035;</span> Dio e intelletto</div>
+    <div class="s44-cell-k">Dio = intelletto agente trascendente. <strong>Coincidenza forte</strong> tra Causa Prima e intelletto agente del <em>De Anima</em>.</div>
+    <div class="s44-cell-f">Dio &egrave; al di sopra di tutto (apofatico, assolutamente semplice). Intelletto agente = <strong>ultima</strong> delle 10 intelligenze, non Dio.</div>
+  </div>
+
+  <!-- 7. Ruolo della religione -->
+  <div class="s44-row">
+    <div class="s44-lbl"><span class="s44-lbl-icon">&#9764;</span> Religione</div>
+    <div class="s44-cell-k">Concordia tra filosofia e rivelazione islamica. Approccio <strong>complementare</strong>: la fede non contraddice la ragione.<br><span class="s44-pill s44-pill-concord">Concordia</span></div>
+    <div class="s44-cell-f">Religione <strong>subordinata</strong> alla filosofia: usa retorica e poetica per le moltitudini. Il profeta &egrave; un filosofo per le masse.<br><span class="s44-pill s44-pill-subord">Subordinazione</span></div>
+  </div>
+</div>
+
+<div class="insight">
+<div class="insight-lbl">Punto chiave</div>
+<p>La differenza pi&ugrave; profonda &egrave; strutturale: per Al-Kind&#299; l&rsquo;intelletto agente &egrave; un principio dato dall&rsquo;esterno (illuminazione), punto di <strong>partenza</strong> del processo; per Al-F&#257;r&#257;b&#299; &egrave; il punto di <strong>arrivo</strong> &mdash; la <em>conjunctio</em> con esso rappresenta l&rsquo;esito finale di una vita di studio filosofico. Questa inversione ridefinisce il significato stesso dell&rsquo;attivit&agrave; intellettuale umana: non ricezione passiva di una luce esterna, ma costruzione attiva di s&eacute; come ente razionale.</p>
 </div>
 </section>
 
@@ -8080,7 +8233,7 @@ const ULTIMA_LEZIONE = 21;
 // ==========================================
 // VARIABILE GLOBALE PER IL NUMERO SCHEMI
 // ==========================================
-const TOTAL_SCHEMAS = 36;
+const TOTAL_SCHEMAS = 37;
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".ultima-lezione-var").forEach(el => {
