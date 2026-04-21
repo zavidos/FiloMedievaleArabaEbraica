@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Schemi — Filosofia Medievale Araba ed Ebraica (Lez. 1–20)</title>
+<title>Schemi — Filosofia Medievale Araba ed Ebraica (Lez. 1–22)</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -140,6 +140,45 @@
 }
 [data-theme="light"] .aristotele-card:hover {
   box-shadow: 0 8px 28px rgba(90,58,138,0.12);
+}
+
+/* Light theme overrides for Schemas 38-39 */
+[data-theme="light"] .s38-profile,
+[data-theme="light"] .s38-crown,
+[data-theme="light"] .s38-panel,
+[data-theme="light"] .s38-context-card,
+[data-theme="light"] .s38-anecdote,
+[data-theme="light"] .s38-legacy,
+[data-theme="light"] .s39-panel,
+[data-theme="light"] .s39-definition,
+[data-theme="light"] .s39-gridcell,
+[data-theme="light"] .s39-candidate,
+[data-theme="light"] .s39-contrast-card,
+[data-theme="light"] .s39-echo-note {
+  border-color: var(--border);
+}
+
+[data-theme="light"] .s39-formula,
+[data-theme="light"] .s39-example,
+[data-theme="light"] .s39-echo-note,
+[data-theme="light"] .s38-crown-note,
+[data-theme="light"] .s38-anecdote-note {
+  background: rgba(0,0,0,0.04);
+  border-color: var(--border);
+}
+
+[data-theme="light"] .s39-trial {
+  background: rgba(0,0,0,0.02);
+}
+
+[data-theme="light"] .s38-work,
+[data-theme="light"] .s39-definition {
+  background: var(--surface2);
+}
+
+[data-theme="light"] .s38-place {
+  background: rgba(0,0,0,0.05);
+  color: var(--muted);
 }
 
 html { scroll-behavior: smooth; font-size: 18px; }
@@ -5025,6 +5064,1027 @@ body {
   .main { margin-left:0; }
   .ds { page-break-inside:avoid; opacity:1 !important; transform:none !important; }
 }
+/* S38: Avicenna: filosofo-medico, enciclopedia del sapere e svolta anti-eurocentrica */
+.s38-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.85fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.s38-left,
+.s38-right {
+  display: grid;
+  gap: 1rem;
+}
+
+.s38-profile,
+.s38-crown,
+.s38-panel,
+.s38-context-card,
+.s38-anecdote,
+.s38-legacy,
+.s38-synthesis {
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.s38-profile:hover,
+.s38-crown:hover,
+.s38-panel:hover,
+.s38-context-card:hover,
+.s38-anecdote:hover,
+.s38-legacy:hover,
+.s38-synthesis:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+}
+
+.s38-profile {
+  padding: 1.35rem;
+  background: linear-gradient(135deg, rgba(139,90,26,0.18), var(--surface2));
+  border-left: 4px solid var(--arab);
+}
+
+.s38-kicker,
+.s38-section-h,
+.s38-box-h,
+.s38-mini-h {
+  font-family: var(--font-h);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.s38-kicker {
+  color: var(--arab-l);
+  margin-bottom: 0.55rem;
+}
+
+.s38-name {
+  font-family: var(--font-h);
+  font-size: 1.45rem;
+  line-height: 1.15;
+  color: var(--cream);
+  margin-bottom: 0.25rem;
+}
+
+.s38-dates {
+  color: var(--muted2);
+  font-size: 0.88rem;
+  margin-bottom: 0.8rem;
+}
+
+.s38-summary {
+  color: var(--card-text);
+  font-size: 0.94rem;
+  line-height: 1.65;
+  margin-bottom: 0.9rem;
+}
+
+.s38-pill-row,
+.s38-place-row,
+.s38-legacy-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.s38-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.18rem 0.52rem;
+  border-radius: 999px;
+  font-family: var(--font-h);
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+  border: 1px solid transparent;
+}
+
+.s38-pill-arab {
+  background: rgba(139,90,26,0.18);
+  color: var(--arab-l);
+  border-color: rgba(139,90,26,0.38);
+}
+
+.s38-pill-blue {
+  background: rgba(36,64,122,0.16);
+  color: var(--blue-t);
+  border-color: rgba(96,144,224,0.26);
+}
+
+.s38-pill-gold {
+  background: rgba(201,151,58,0.14);
+  color: var(--gold-l);
+  border-color: rgba(201,151,58,0.28);
+}
+
+.s38-pill-green {
+  background: rgba(45,107,74,0.16);
+  color: var(--green-t);
+  border-color: rgba(80,200,120,0.24);
+}
+
+.s38-mini-block {
+  margin-top: 1rem;
+  padding-top: 0.95rem;
+  border-top: 1px solid rgba(139,90,26,0.22);
+}
+
+.s38-mini-h {
+  color: var(--gold-l);
+  margin-bottom: 0.55rem;
+}
+
+.s38-identity-list,
+.s38-work-points,
+.s38-inst-list,
+.s38-fact-list {
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.s38-identity-list li,
+.s38-work-points li,
+.s38-inst-list li,
+.s38-fact-list li,
+.s38-crown p,
+.s38-legacy p,
+.s38-legacy-quote {
+  color: var(--card-text);
+}
+
+.s38-identity-list li,
+.s38-work-points li,
+.s38-inst-list li {
+  position: relative;
+  padding-left: 1rem;
+  line-height: 1.55;
+  font-size: 0.9rem;
+}
+
+.s38-identity-list li::before,
+.s38-work-points li::before,
+.s38-inst-list li::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  color: var(--gold-l);
+  font-size: 0.62rem;
+}
+
+.s38-place {
+  padding: 0.22rem 0.58rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  color: var(--muted2);
+  font-size: 0.78rem;
+}
+
+.s38-crown {
+  padding: 1rem 1.1rem;
+  background: linear-gradient(135deg, rgba(36,64,122,0.12), rgba(139,90,26,0.08), var(--surface2));
+  border-left: 4px solid var(--latin);
+}
+
+.s38-box-h {
+  color: var(--latin-l);
+  margin-bottom: 0.6rem;
+}
+
+.s38-arabic-title {
+  display: block;
+  font-family: var(--font-h);
+  font-size: 1rem;
+  color: var(--cream);
+  margin-bottom: 0.2rem;
+}
+
+.s38-crown-note {
+  margin-top: 0.75rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: var(--r-sm);
+  background: rgba(201,151,58,0.08);
+  border: 1px solid rgba(201,151,58,0.18);
+  color: var(--muted2);
+  font-size: 0.86rem;
+}
+
+.s38-panel {
+  padding: 1.1rem 1.15rem 1.2rem;
+  background: linear-gradient(135deg, rgba(139,90,26,0.14), var(--surface2));
+  border-left: 4px solid var(--arab);
+}
+
+.s38-section-h {
+  color: var(--arab-l);
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid rgba(139,90,26,0.28);
+}
+
+.s38-opere {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.s38-work {
+  min-height: 100%;
+  padding: 1rem;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(139,90,26,0.1), var(--surface3));
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+}
+
+.s38-work:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.24);
+}
+
+.s38-work--medical {
+  border-left: 4px solid var(--green);
+  background: linear-gradient(135deg, rgba(45,107,74,0.18), rgba(139,90,26,0.08), var(--surface3));
+}
+
+.s38-work--philo {
+  border-left: 4px solid var(--arab);
+}
+
+.s38-work--synthetic {
+  border-left: 4px solid var(--gold);
+  background: linear-gradient(135deg, rgba(201,151,58,0.14), rgba(139,90,26,0.08), var(--surface3));
+}
+
+.s38-work-type {
+  display: inline-block;
+  margin-bottom: 0.55rem;
+  font-family: var(--font-h);
+  font-size: 0.67rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted2);
+}
+
+.s38-work h3 {
+  font-family: var(--font-h);
+  font-size: 1rem;
+  line-height: 1.25;
+  color: var(--cream);
+  margin-bottom: 0.65rem;
+}
+
+.s38-context-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1.2fr;
+  gap: 1rem;
+}
+
+.s38-context-card {
+  padding: 1.05rem;
+  background: linear-gradient(135deg, rgba(139,90,26,0.12), var(--surface2));
+  border-left: 4px solid var(--arab);
+}
+
+.s38-context-card--latin {
+  background: linear-gradient(135deg, rgba(36,64,122,0.12), rgba(139,90,26,0.06), var(--surface2));
+  border-left-color: var(--latin);
+}
+
+.s38-context-card--hybrid {
+  background: linear-gradient(135deg, rgba(90,58,138,0.12), rgba(139,90,26,0.08), var(--surface2));
+  border-left-color: var(--aristo);
+}
+
+.s38-dispute {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.s38-dispute-row {
+  display: grid;
+  grid-template-columns: 34px 1fr 34px 1fr;
+  gap: 0.55rem;
+  align-items: stretch;
+}
+
+.s38-dispute-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--r-sm);
+  background: rgba(201,151,58,0.14);
+  border: 1px solid rgba(201,151,58,0.24);
+  color: var(--gold-l);
+  font-family: var(--font-h);
+  font-weight: 700;
+}
+
+.s38-dispute-side {
+  padding: 0.72rem 0.8rem;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  font-size: 0.87rem;
+  line-height: 1.5;
+  color: var(--card-text);
+}
+
+.s38-dispute-side strong {
+  color: var(--cream);
+}
+
+.s38-dispute-side--aristo {
+  background: linear-gradient(135deg, rgba(90,58,138,0.16), var(--surface3));
+  border-left: 3px solid var(--aristo);
+}
+
+.s38-dispute-side--med {
+  background: linear-gradient(135deg, rgba(45,107,74,0.14), var(--surface3));
+  border-left: 3px solid var(--green);
+}
+
+.s38-dispute-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-l);
+  font-size: 1.05rem;
+  font-family: var(--font-h);
+}
+
+.s38-synthesis {
+  padding: 0.85rem 0.9rem;
+  background: rgba(201,151,58,0.08);
+  border-left: 4px solid var(--gold);
+}
+
+.s38-synthesis strong {
+  color: var(--gold-l);
+}
+
+.s38-tail {
+  display: grid;
+  grid-template-columns: 1.28fr 0.92fr;
+  gap: 1rem;
+}
+
+.s38-anecdote {
+  padding: 1.1rem;
+  background: linear-gradient(135deg, rgba(139,90,26,0.16), rgba(201,151,58,0.08), var(--surface2));
+  border-left: 4px solid var(--gold);
+}
+
+.s38-fact-list {
+  counter-reset: s38suq;
+}
+
+.s38-fact-list li {
+  counter-increment: s38suq;
+  position: relative;
+  padding-left: 2rem;
+  color: var(--card-text);
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+.s38-fact-list li::before {
+  content: counter(s38suq);
+  position: absolute;
+  left: 0;
+  top: 0.08rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(201,151,58,0.16);
+  border: 1px solid rgba(201,151,58,0.28);
+  color: var(--gold-l);
+  font-family: var(--font-h);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.s38-anecdote-note {
+  margin-top: 0.9rem;
+  padding: 0.8rem 0.9rem;
+  border-radius: var(--r-sm);
+  background: rgba(36,64,122,0.1);
+  border: 1px solid rgba(96,144,224,0.2);
+  color: var(--card-text);
+  font-size: 0.88rem;
+}
+
+.s38-legacy {
+  padding: 1.1rem;
+  background: linear-gradient(135deg, rgba(36,64,122,0.14), rgba(139,90,26,0.08), var(--surface2));
+  border-left: 4px solid var(--latin);
+}
+
+.s38-legacy-quote {
+  margin: 0.75rem 0 0.9rem;
+  padding: 0.85rem 0.9rem;
+  border-radius: var(--r-sm);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.s38-legacy-quote strong {
+  color: var(--gold-l);
+}
+
+.s38-scholar {
+  margin-top: 0.9rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(36,64,122,0.24);
+  color: var(--muted2);
+  font-size: 0.86rem;
+}
+
+.s38-scholar strong {
+  color: var(--latin-l);
+}
+
+/* S39: Avicenna e il soggetto della metafisica: dall'ente alle cause, fino a Dio */
+.s39-layout {
+  display: grid;
+  gap: 1.8rem;
+}
+
+.s39-panel {
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.15rem 1.2rem;
+  background: var(--surface2);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.16);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.s39-panel:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px rgba(0,0,0,0.22);
+}
+
+.s39-kicker {
+  font-family: var(--font-h);
+  font-size: 0.69rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  margin-bottom: 0.65rem;
+  font-weight: 700;
+}
+
+.s39-kicker-arab { color: var(--arab-l); }
+.s39-kicker-aristo { color: var(--aristo-l); }
+.s39-kicker-mixed { color: var(--gold-l); }
+.s39-kicker-gold { color: var(--gold-l); }
+.s39-kicker-latin { color: var(--latin-l); }
+
+.s39-subtitle,
+.s39-definition h3,
+.s39-grid-title,
+.s39-candidate h3,
+.s39-contrast-card h3,
+.s39-mini-hdr {
+  font-family: var(--font-h);
+}
+
+.s39-subtitle {
+  font-size: 1.12rem;
+  line-height: 1.25;
+  color: var(--cream);
+  margin-bottom: 0.75rem;
+}
+
+.s39-intro,
+.s39-source-note,
+.s39-definition p,
+.s39-gridcell p,
+.s39-connection p,
+.s39-pnc p,
+.s39-reasons li,
+.s39-formula p,
+.s39-example span,
+.s39-contrast-card p,
+.s39-verdict,
+.s39-echo-note p {
+  color: var(--card-text);
+}
+
+.s39-opening {
+  display: grid;
+  grid-template-columns: 1.02fr 1.58fr;
+  gap: 1.2rem;
+}
+
+.s39-problem {
+  background: linear-gradient(135deg, rgba(139,90,26,0.18), var(--surface2));
+  border-left: 4px solid var(--arab);
+}
+
+.s39-problem-list {
+  list-style: none;
+  display: grid;
+  gap: 0.68rem;
+}
+
+.s39-problem-list li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--card-text);
+}
+
+.s39-problem-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold-l);
+}
+
+.s39-source-note {
+  margin-top: 0.95rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: var(--r-sm);
+  background: rgba(19,23,37,0.35);
+  border: 1px dashed rgba(176,120,48,0.35);
+  font-size: 0.94rem;
+}
+
+.s39-definitions-panel {
+  background: linear-gradient(135deg, rgba(90,58,138,0.15), rgba(139,90,26,0.08) 55%, var(--surface2));
+  border-left: 4px solid var(--aristo);
+}
+
+.s39-definitions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.s39-definition {
+  border: 1px solid rgba(90,58,138,0.35);
+  border-radius: var(--r-sm);
+  padding: 0.9rem;
+  background: linear-gradient(135deg, rgba(90,58,138,0.14), rgba(27,32,53,0.92));
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.s39-definition:hover {
+  transform: translateY(-2px);
+  border-color: rgba(122,82,176,0.55);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+}
+
+.s39-book {
+  display: inline-block;
+  font-size: 0.67rem;
+  font-family: var(--font-h);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted2);
+  margin-bottom: 0.35rem;
+}
+
+.s39-definition h3 {
+  font-size: 0.98rem;
+  line-height: 1.28;
+  color: var(--cream);
+  margin-bottom: 0.28rem;
+}
+
+.s39-term {
+  font-size: 0.82rem;
+  color: var(--aristo-l);
+  font-style: italic;
+  margin-bottom: 0.45rem;
+}
+
+.s39-analytics {
+  background: linear-gradient(135deg, rgba(201,151,58,0.08), rgba(139,90,26,0.1) 42%, rgba(90,58,138,0.1) 100%);
+  border-left: 4px solid var(--gold);
+}
+
+.s39-section-note {
+  color: var(--muted2);
+  margin-bottom: 1rem;
+}
+
+.s39-gridboard {
+  display: grid;
+  grid-template-columns: 1fr 42px 1fr 42px 1fr;
+  gap: 0.65rem;
+  align-items: stretch;
+}
+
+.s39-gridcell {
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 0.95rem 0.9rem;
+  background: linear-gradient(135deg, rgba(201,151,58,0.12), var(--surface2));
+  min-height: 170px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.s39-gridcell:hover {
+  transform: translateY(-2px);
+  border-color: rgba(201,151,58,0.4);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.16);
+}
+
+.s39-grid-num {
+  width: 1.8rem;
+  height: 1.8rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(201,151,58,0.18);
+  color: var(--gold-l);
+  font-family: var(--font-h);
+  font-size: 0.82rem;
+  margin-bottom: 0.65rem;
+  border: 1px solid var(--gold-d);
+}
+
+.s39-grid-title {
+  font-size: 1rem;
+  color: var(--cream);
+  margin-bottom: 0.45rem;
+}
+
+.s39-flow {
+  display: grid;
+  place-items: center;
+  font-size: 1.45rem;
+  color: var(--gold-l);
+  font-family: var(--font-h);
+}
+
+.s39-analytics-foot {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 0.95rem;
+  margin-top: 1rem;
+}
+
+.s39-connection,
+.s39-pnc {
+  border-radius: var(--r-sm);
+  padding: 0.9rem;
+  border: 1px solid var(--border);
+}
+
+.s39-connection {
+  background: linear-gradient(135deg, rgba(139,90,26,0.12), rgba(90,58,138,0.1) 60%, var(--surface2));
+}
+
+.s39-pnc {
+  background: linear-gradient(135deg, rgba(201,151,58,0.12), var(--surface2));
+}
+
+.s39-mini-hdr {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-l);
+  margin-bottom: 0.45rem;
+}
+
+.s39-elimination {
+  background: linear-gradient(135deg, rgba(139,90,26,0.08), rgba(90,58,138,0.08) 62%, var(--surface2));
+  border-left: 4px solid var(--gold);
+}
+
+.s39-trials {
+  display: grid;
+  gap: 0.95rem;
+  margin-top: 1rem;
+}
+
+.s39-trial {
+  display: grid;
+  grid-template-columns: 58px minmax(180px, 0.72fr) 1.18fr 0.96fr;
+  gap: 0.95rem;
+  align-items: start;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 0.95rem;
+  background: rgba(19,23,37,0.32);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.s39-trial:hover {
+  transform: translateX(4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
+.s39-trial-reject {
+  border-left: 4px solid var(--danger);
+}
+
+.s39-trial-keep {
+  border-left: 4px solid var(--green);
+}
+
+.s39-stepnum {
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  font-family: var(--font-h);
+  font-size: 0.9rem;
+  background: rgba(201,151,58,0.16);
+  color: var(--gold-l);
+  border: 1px solid var(--gold-d);
+}
+
+.s39-candidate {
+  padding: 0.85rem;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+}
+
+.s39-trial-reject .s39-candidate {
+  background: linear-gradient(135deg, rgba(139,24,24,0.14), var(--surface2));
+}
+
+.s39-trial-keep .s39-candidate {
+  background: linear-gradient(135deg, rgba(45,107,74,0.16), var(--surface2));
+}
+
+.s39-candidate h3 {
+  font-size: 1.02rem;
+  color: var(--cream);
+  margin-bottom: 0.45rem;
+}
+
+.s39-pill {
+  display: inline-block;
+  padding: 0.16rem 0.48rem;
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-family: var(--font-h);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.s39-pill-reject {
+  background: rgba(139,24,24,0.18);
+  color: var(--danger-t);
+  border: 1px solid rgba(176,32,32,0.38);
+}
+
+.s39-pill-keep {
+  background: rgba(45,107,74,0.18);
+  color: var(--green-t);
+  border: 1px solid rgba(45,107,74,0.36);
+}
+
+.s39-pill-partial {
+  background: rgba(201,151,58,0.16);
+  color: var(--gold-l);
+  border: 1px solid var(--gold-d);
+}
+
+.s39-reasons {
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.s39-reasons li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.s39-reasons li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--gold-l);
+}
+
+.s39-formula {
+  border-radius: var(--r-sm);
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  background: rgba(27,32,53,0.76);
+}
+
+.s39-formula-lbl {
+  font-size: 0.66rem;
+  font-family: var(--font-h);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted2);
+  margin-bottom: 0.35rem;
+}
+
+.s39-example-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin-top: 0.8rem;
+}
+
+.s39-example {
+  padding: 0.65rem 0.7rem;
+  border-radius: var(--r-sm);
+  background: rgba(19,23,37,0.42);
+  border: 1px dashed var(--border);
+}
+
+.s39-example strong {
+  display: block;
+  color: var(--cream);
+  margin-bottom: 0.18rem;
+}
+
+.s39-closing {
+  display: grid;
+  grid-template-columns: 1.16fr 0.94fr;
+  gap: 1.2rem;
+}
+
+.s39-distinction {
+  background: linear-gradient(135deg, rgba(201,151,58,0.1), rgba(139,90,26,0.1) 45%, var(--surface2));
+  border-left: 4px solid var(--gold);
+}
+
+.s39-contrast {
+  display: grid;
+  grid-template-columns: 52px 1fr 40px 1fr;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.s39-contrast-label,
+.s39-contrast-arrow {
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-sm);
+  font-family: var(--font-h);
+}
+
+.s39-contrast-label {
+  background: rgba(201,151,58,0.16);
+  color: var(--gold-l);
+  border: 1px solid var(--gold-d);
+  font-size: 1rem;
+}
+
+.s39-contrast-arrow {
+  color: var(--gold-l);
+  font-size: 1.35rem;
+}
+
+.s39-contrast-card {
+  border-radius: var(--r-sm);
+  padding: 0.95rem;
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.s39-contrast-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.16);
+}
+
+.s39-contrast-card-a {
+  background: linear-gradient(135deg, rgba(139,24,24,0.12), var(--surface2));
+}
+
+.s39-contrast-card-b {
+  background: linear-gradient(135deg, rgba(45,107,74,0.14), var(--surface2));
+  border-color: rgba(45,107,74,0.42);
+}
+
+.s39-contrast-card h3 {
+  font-size: 0.98rem;
+  line-height: 1.28;
+  color: var(--cream);
+  margin-bottom: 0.4rem;
+}
+
+.s39-verdict {
+  margin-top: 0.95rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: var(--r-sm);
+  background: rgba(201,151,58,0.08);
+  border: 1px solid rgba(201,151,58,0.26);
+}
+
+.s39-legacy {
+  background: linear-gradient(135deg, rgba(36,64,122,0.14), rgba(90,58,138,0.1) 55%, var(--surface2));
+  border-left: 4px solid var(--latin);
+}
+
+.s39-chain {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.s39-chain-chip {
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-family: var(--font-h);
+  border: 1px solid var(--border);
+  color: var(--cream);
+}
+
+.s39-chain-chip-arab {
+  background: linear-gradient(135deg, rgba(139,90,26,0.18), var(--surface2));
+  border-color: rgba(139,90,26,0.35);
+}
+
+.s39-chain-chip-latin {
+  background: linear-gradient(135deg, rgba(36,64,122,0.18), var(--surface2));
+  border-color: rgba(36,64,122,0.35);
+}
+
+.s39-chain-arrow {
+  color: var(--gold-l);
+  font-size: 0.88rem;
+}
+
+.s39-echo-stack {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.s39-echo-note {
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 0.85rem;
+  background: rgba(19,23,37,0.36);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.s39-echo-note:hover {
+  transform: translateY(-2px);
+  border-color: rgba(45,84,160,0.42);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.16);
+}
+
+@media (max-width: 768px) {
+  .s38-layout,
+  .s38-opere,
+  .s38-context-grid,
+  .s38-tail,
+  .s38-dispute-row,
+  .s39-opening,
+  .s39-analytics-foot,
+  .s39-closing,
+  .s39-definitions,
+  .s39-gridboard,
+  .s39-trial,
+  .s39-contrast,
+  .s39-example-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .s38-layout {
+    gap: 1rem;
+  }
+
+  .s38-panel,
+  .s38-context-card,
+  .s38-anecdote,
+  .s38-legacy,
+  .s38-profile,
+  .s38-crown {
+    padding: 1rem;
+  }
+
+  .s38-dispute-arrow,
+  .s39-flow,
+  .s39-contrast-arrow {
+    min-height: 28px;
+    transform: rotate(90deg);
+  }
+
+  .s38-name {
+    font-size: 1.28rem;
+  }
+
+  .s38-work h3 {
+    font-size: 0.96rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -5034,7 +6094,7 @@ body {
 <div class="sb-logo">
 <div class="eyebrow">Università degli Studi di Milano</div>
 <div class="title">Filosofia Medievale<br/>Araba ed Ebraica</div>
-<div class="sub">Schemi delle lezioni 1–<span class="ultima-lezione-var">20</span></div>
+<div class="sub">Schemi delle lezioni 1–<span class="ultima-lezione-var">22</span></div>
 </div>
 <div class="theme-toggle-wrap">
 <button aria-label="Cambia tema" class="theme-toggle" id="theme-toggle">
@@ -5079,23 +6139,25 @@ body {
           <a href="#s34"><span class="nav-num">34</span>L'invenzione della volontà e il problema del male</a>
           <a href="#s35"><span class="nav-num">35</span>I cieli come strumenti e la frattura tra Dio e Prima Intelligenza</a>
           <a href="#s36"><span class="nav-num">36</span><em>Al-Madīna al-Fāḍila</em>: la dimensione politica dell'immortalità</a>
-          <a href="#s37"><span class="nav-num">37</span>Confronto sinottico: Al-Kindī vs. Al-Fārābī</a></li></ul>
+          <a href="#s37"><span class="nav-num">37</span>Confronto sinottico: Al-Kindī vs. Al-Fārābī</a>
+          <a href="#s38"><span class="nav-num">38</span>Avicenna: enciclopedia e anti-eurocentrismo</a>
+          <a href="#s39"><span class="nav-num">39</span>Avicenna e il soggetto della metafisica</a></li></ul>
 <div class="sb-footer">
     Corso: <em>Che cosa significa pensare?</em><br/>
-    Lezioni 1–21 · Al-Fārābī: politica e immortalità, il problema del male e i cieli come organi
+    Lezioni 1–22 · Da al-Fārābī ad Avicenna: enciclopedia del sapere, metafisica e primato dell'ente
   </div>
 </aside>
 <!-- ════ MAIN ════ -->
 <main class="main">
 <!-- ──── HERO ──── -->
 <div class="hero">
-<div class="hero-pill"><span class="schema-count-var">33</span> schemi del corso</div>
+<div class="hero-pill"><span class="schema-count-var">39</span> schemi del corso</div>
 <h1>Filosofia Medievale<br/><em>Araba ed Ebraica</em></h1>
-<div class="hero-sub">Schemi visivi per le lezioni 1–<span class="ultima-lezione-var">20</span> — dalla trasmissione aristotelica alla <em>Falsafa</em> araba, Al-Kindī e Al-Fārābī: intelletto agente, causalità circolare e felicità mentale</div>
+<div class="hero-sub">Schemi visivi per le lezioni 1–<span class="ultima-lezione-var">22</span> — dalla trasmissione aristotelica ad Avicenna: <em>falsafa</em>, enciclopedia del sapere, soggetto della metafisica e primato dell'ente</div>
 <div class="hero-meta">
 <span>Università degli Studi di Milano</span>
 <span>A.A. 2025–2026</span>
-<span><span class="ultima-lezione-var">20</span> lezioni · <span class="schema-count-var">33</span> schemi visivi</span>
+<span><span class="ultima-lezione-var">22</span> lezioni · <span class="schema-count-var">39</span> schemi visivi</span>
 </div>
 <div class="hero-line"></div>
 </div>
@@ -7871,15 +8933,6 @@ body {
 </div>
 </section>
 
-<!-- FOOTER -->
-<div style="padding:2rem 3.5rem;background:var(--surface);border-top:1px solid var(--border);font-size:0.78rem;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
-<div>
-<div style="font-family:var(--font-h);color:var(--cream);font-size:0.85rem;margin-bottom:0.2rem;">Filosofia Medievale Araba ed Ebraica</div>
-<div style="font-style:italic;"><span class="schema-count-var">33</span> schemi visivi · Lezioni 01–<span class="ultima-lezione-var">20</span> · Università degli Studi di Milano</div>
-</div>
-<div style="font-style:italic;color:var(--muted2);">davide.prando@studenti.unimi.it</div>
-</div>
-
 <!-- ════════════════════════════════════════════
   SCHEMA 34 — L'invenzione della volontà e il male
 ════════════════════════════════════════════════ -->
@@ -8082,6 +9135,394 @@ body {
 </div>
 </section>
 
+<section class="ds" id="s38">
+  <div class="sec-top">
+    <span class="badge-n">Schema 38</span>
+    <span class="badge-l">L. 22</span>
+  </div>
+  <h2>Avicenna: filosofo-medico, enciclopedia del sapere e svolta anti-eurocentrica</h2>
+  <p class="desc">La lezione introduce Ibn Sīnā come figura di cerniera: persiano ma autore in arabo, medico di corte senza università, costruttore di grandi enciclopedie e protagonista di una trasmissione filosofica che obbliga a ripensare i canoni eurocentrici della storia della filosofia.</p>
+
+  <div class="s38-layout">
+    <div class="s38-left">
+      <article class="s38-profile">
+        <div class="s38-kicker">👤 Profilo di snodo</div>
+        <h3 class="s38-name">Ibn Sīnā (Avicenna)</h3>
+        <div class="s38-dates">ca. 980–1037</div>
+        <p class="s38-summary">Figura di eccellenza duplice: <strong>filosofo</strong> e <strong>medico di corte</strong>, persiano per origine ma autore in arabo, dunque decisivo per capire che “filosofia araba” è prima di tutto una <strong>categoria linguistica</strong>, non etnica.</p>
+
+        <div class="s38-pill-row">
+          <span class="s38-pill s38-pill-arab">🗣️ autore in arabo</span>
+          <span class="s38-pill s38-pill-blue">🏛️ senza università</span>
+          <span class="s38-pill s38-pill-green">🩺 medico di corte</span>
+          <span class="s38-pill s38-pill-gold">📚 enciclopedista</span>
+        </div>
+
+        <div class="s38-mini-block">
+          <div class="s38-mini-h">🧭 Identità e funzione</div>
+          <ul class="s38-identity-list">
+            <li>Persiano per origine etnica, ma inserito in un orizzonte di scrittura e circolazione <strong>arabo</strong>.</li>
+            <li>Non è un maestro universitario: la sua autorità nasce dall’intreccio tra <strong>sapere filosofico</strong> e <strong>pratica medica</strong>.</li>
+            <li>La sua opera mostra che il baricentro del pensiero medievale non coincide con il solo asse latino-occidentale.</li>
+          </ul>
+        </div>
+
+        <div class="s38-mini-block">
+          <div class="s38-mini-h">📍 Geografia biografica</div>
+          <div class="s38-place-row">
+            <span class="s38-place">Afshana presso Bukhara</span>
+            <span class="s38-place">Hamadan</span>
+            <span class="s38-place">Isfahan</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="s38-crown">
+        <div class="s38-box-h">👑 L’equivoco della corona</div>
+        <span class="s38-arabic-title">Shaykh al-Raʾīs</span>
+        <p>Nei manoscritti latini Avicenna appare spesso <strong>coronato</strong> perché il titolo venne inteso come se designasse un sovrano. In realtà indica il suo <strong>primato sapienziale</strong> e il suo essere “principe dei medici”, non una nobiltà di sangue.</p>
+        <div class="s38-crown-note">Il fraintendimento iconografico è già una spia della trasmissione: il lessico arabo passa in latino, ma non sempre senza distorsioni.</div>
+      </article>
+    </div>
+
+    <div class="s38-right">
+      <section class="s38-panel">
+        <div class="s38-section-h">📚 Enciclopedia del sapere</div>
+        <div class="s38-opere">
+          <article class="s38-work s38-work--medical">
+            <div class="s38-work-type">medicina</div>
+            <h3><em>Kitāb al-Qānūn</em> (Canone di medicina)</h3>
+            <ul class="s38-work-points">
+              <li>Diventa testo universitario in Europa fino al <strong>XVII secolo</strong>.</li>
+              <li>Rivendica per la medicina la dignità di <strong>episteme</strong>, non di sola techne.</li>
+              <li>È organizzato in <strong>5 libri</strong>: fondamenti teorici, patologie, circa 800 terapeutici vegetali, traumi e ferite, malattie mentali e cataratta.</li>
+            </ul>
+          </article>
+
+          <article class="s38-work s38-work--philo">
+            <div class="s38-work-type">enciclopedia filosofica</div>
+            <h3><em>Kitāb al-Shifāʾ</em></h3>
+            <ul class="s38-work-points">
+              <li>“Guarigione” qui significa <strong>cura dell’ignoranza</strong>, non medicina.</li>
+              <li>Le 4 grandi sezioni sono: <strong>logica</strong>, filosofia naturale, matematiche, scienza divina/metafisica.</li>
+              <li>Avicenna non si limita a tradurre Aristotele: lo <strong>riorganizza creativamente</strong>.</li>
+              <li>Il <em>De Anima</em> avicenniano resta nella filosofia naturale ed è strutturato in <strong>5 libri</strong>.</li>
+            </ul>
+          </article>
+
+          <article class="s38-work s38-work--synthetic">
+            <div class="s38-work-type">enciclopedia sintetica</div>
+            <h3><em>Al-Najāt</em></h3>
+            <ul class="s38-work-points">
+              <li>È la seconda grande enciclopedia del corpus avicenniano.</li>
+              <li>Non documenta una “doppia ideologia” tra testi arabi e persiani.</li>
+              <li>La differenza sta nei <strong>destinatari</strong>, non in una filosofia diversa.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <div class="s38-context-grid">
+        <article class="s38-context-card s38-context-card--latin">
+          <div class="s38-section-h">🏛️ Assetto istituzionale</div>
+          <ul class="s38-inst-list">
+            <li>I <em>falāsifa</em> non dispongono di un’<strong>università</strong> analoga a quella latina.</li>
+            <li>Il medico-filosofo dipende dalla <strong>protezione politica</strong> del sultano o del califfo.</li>
+            <li>Con la nascita dell’università latina si capovolge il rapporto istituzionale tra <strong>mondo islamico</strong> e <strong>mondo latino</strong>.</li>
+          </ul>
+        </article>
+
+        <article class="s38-context-card s38-context-card--hybrid">
+          <div class="s38-section-h">⚖️ Medici e filosofi</div>
+          <div class="s38-dispute">
+            <div class="s38-dispute-row">
+              <div class="s38-dispute-num">1</div>
+              <div class="s38-dispute-side s38-dispute-side--aristo"><strong>Aristotele</strong><br/>Il cuore è l’organo egemone.</div>
+              <div class="s38-dispute-arrow">↔</div>
+              <div class="s38-dispute-side s38-dispute-side--med"><strong>Galeno e i medici</strong><br/>Esiste una pluralità di organi principali.</div>
+            </div>
+
+            <div class="s38-dispute-row">
+              <div class="s38-dispute-num">2</div>
+              <div class="s38-dispute-side s38-dispute-side--aristo"><strong>Aristotele</strong><br/>Riproduzione pensata secondo il modello attivo/passivo.</div>
+              <div class="s38-dispute-arrow">↔</div>
+              <div class="s38-dispute-side s38-dispute-side--med"><strong>Tradizione medica</strong><br/>La generazione è una cooperazione tra contributi diversi.</div>
+            </div>
+
+            <div class="s38-synthesis">⭐ <strong>Avicenna tenta una sintesi</strong> tra tradizione filosofica aristotelica e tradizione medica: non commenta semplicemente, ma ricompone saperi diversi in un nuovo quadro teorico.</div>
+          </div>
+        </article>
+      </div>
+
+      <div class="s38-tail">
+        <article class="s38-anecdote">
+          <div class="s38-section-h">🛍️ Il suq di Bukhara</div>
+          <ol class="s38-fact-list">
+            <li>Avicenna racconta di aver letto la <em>Metafisica</em> di Aristotele <strong>quaranta volte</strong> senza coglierne il fine.</li>
+            <li>Nel suq acquista per <strong>tre dirham</strong> un piccolo testo di al-Fārābī sull’utilità dei libri aristotelici.</li>
+            <li>Quel libretto gli permette di capire che la metafisica è scienza dell’<strong>ente in quanto ente</strong>.</li>
+          </ol>
+          <div class="s38-anecdote-note">L’episodio serve al docente per mostrare la <strong>densità culturale</strong> del mondo islamico: il mercato dei libri di Bukhara diventa un controcampo ai manuali eurocentrici.</div>
+        </article>
+
+        <article class="s38-legacy">
+          <div class="s38-box-h">🌍 Coda storiografica</div>
+          <p>La lezione propone una correzione netta del canone: Avicenna e Averroè non sono comparse del “passaggio” medievale, ma <strong>autori maggiori</strong> della storia della filosofia.</p>
+          <div class="s38-legacy-quote">Nei manuali dovrebbero avere <strong>lo stesso spazio</strong> di Platone, Aristotele, Cartesio o Kant: non un’appendice esotica, ma un <strong>laboratorio centrale</strong> della metafisica e della scienza.</div>
+          <div class="s38-legacy-tags">
+            <span class="s38-pill s38-pill-blue">📘 canone da ripensare</span>
+            <span class="s38-pill s38-pill-arab">🌐 anti-eurocentrismo</span>
+            <span class="s38-pill s38-pill-gold">🎓 Alberico di Reims</span>
+          </div>
+          <div class="s38-scholar" style="margin-top: 0.5rem; font-style: italic; border-top: none; padding-top: 0;">«"Uomo" è un termine equivoco: in senso proprio si dice solo del filosofo.»</div>
+          <div class="s38-scholar">Nome utile per approfondire: <strong>Dimitri Gutas</strong>.</div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-lbl">Punto chiave</div>
+    <p>La figura di Avicenna costringe a ripensare insieme <strong>geografia</strong>, <strong>istituzioni</strong> e <strong>canone</strong>: la “filosofia araba” non è un capitolo periferico, ma un laboratorio centrale dove medicina, metafisica e trasmissione aristotelica vengono rifondate.</p>
+  </div>
+</section>
+
+<section class="ds" id="s39">
+  <div class="sec-top">
+    <span class="badge-n">Schema 39</span>
+    <span class="badge-l">L. 22</span>
+  </div>
+  <h2>Avicenna e il soggetto della metafisica: dall'ente alle cause, fino a Dio</h2>
+  <p class="desc">Il cuore speculativo della lezione applica gli <em>Analitici Secondi</em> alla <em>Metafisica</em> di Aristotele: Avicenna separa soggetto, principi e conclusioni, esclude divino e cause dal ruolo di soggetto e stabilisce che la metafisica è scienza dell'ente in quanto ente.</p>
+
+  <div class="s39-layout">
+    <div class="s39-opening">
+      <article class="s39-panel s39-problem">
+        <div class="s39-kicker s39-kicker-arab">📘 Nodo iniziale</div>
+        <h3 class="s39-subtitle">Perché Avicenna non capiva la <em>Metafisica</em></h3>
+        <ul class="s39-problem-list">
+          <li><strong>La lesse 40 volte</strong> e la imparò a memoria.</li>
+          <li>Il problema non era il contenuto, ma lo <strong>scopo della scienza</strong>: di che cosa si occupa davvero?</li>
+          <li>Il libretto di <strong>al-Fārābī</strong> fornisce la chiave interpretativa decisiva.</li>
+        </ul>
+        <div class="s39-source-note">🧭 La difficoltà è <strong>metodologica</strong>, non semplicemente esegetica: prima di leggere le tesi, bisogna capire quale sia il soggetto della scienza.</div>
+      </article>
+
+      <article class="s39-panel s39-definitions-panel">
+        <div class="s39-kicker s39-kicker-aristo">🏛️ Quattro definizioni aristoteliche</div>
+        <p class="s39-intro">Aristotele presenta la metafisica in registri diversi: proprio questa pluralità genera l'impasse che Avicenna deve sciogliere.</p>
+        <div class="s39-definitions">
+          <div class="s39-definition">
+            <span class="s39-book">Alfa maggiore</span>
+            <h3>Sapienza come scienza delle cause prime</h3>
+            <div class="s39-term"><em>sophia</em></div>
+            <p>La metafisica sembra definita a partire dalle <strong>cause prime</strong>.</p>
+          </div>
+
+          <div class="s39-definition">
+            <span class="s39-book">Gamma (IV)</span>
+            <h3>Scienza dell'ente in quanto ente</h3>
+            <div class="s39-term"><em>on he on</em></div>
+            <p>Qui la scienza ha per oggetto l'<strong>ente nella sua massima universalità</strong>.</p>
+          </div>
+
+          <div class="s39-definition">
+            <span class="s39-book">Libri centrali</span>
+            <h3>Scienza della sostanza</h3>
+            <div class="s39-term"><em>ousia</em></div>
+            <p>Il fuoco si sposta sulla <strong>sostanza</strong> come significato principale dell'ente.</p>
+          </div>
+
+          <div class="s39-definition">
+            <span class="s39-book">Epsilon (VI)</span>
+            <h3>Scienza divina dell'immateriale e dell'immobile</h3>
+            <div class="s39-term"><em>theologike episteme</em></div>
+            <p>La metafisica appare come <strong>teologia</strong>, cioè scienza del divino.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <article class="s39-panel s39-analytics">
+      <div class="s39-kicker s39-kicker-mixed">🧪 Griglia degli Analitici Secondi</div>
+      <p class="s39-section-note">Per Avicenna ogni scienza va scomposta in tre livelli: ciò che assume, ciò che riceve e ciò che dimostra.</p>
+
+      <div class="s39-gridboard">
+        <div class="s39-gridcell">
+          <div class="s39-grid-num">1</div>
+          <h3 class="s39-grid-title">Soggetto</h3>
+          <p>È l'<strong>ambito assunto</strong> dalla scienza: non viene creato né dimostrato dalla scienza stessa.</p>
+        </div>
+
+        <div class="s39-flow">→</div>
+
+        <div class="s39-gridcell">
+          <div class="s39-grid-num">2</div>
+          <h3 class="s39-grid-title">Principi / premesse</h3>
+          <p>Sono gli assiomi che la scienza <strong>assume o riceve</strong> da un sapere superiore.</p>
+        </div>
+
+        <div class="s39-flow">→</div>
+
+        <div class="s39-gridcell">
+          <div class="s39-grid-num">3</div>
+          <h3 class="s39-grid-title">Conclusioni</h3>
+          <p>È ciò che la scienza <strong>dimostra</strong> a partire dal soggetto e dai principi.</p>
+        </div>
+      </div>
+
+      <div class="s39-analytics-foot">
+        <div class="s39-connection">
+          <div class="s39-mini-hdr">Regola operativa</div>
+          <p>Se <strong>Dio</strong> o le <strong>cause</strong> sono oggetti da ricercare e provare, allora non possono occupare il posto del <strong>soggetto primo</strong>. Il soggetto deve essere più evidente e anteriore rispetto a ciò che la scienza va a concludere.</p>
+        </div>
+
+        <div class="s39-pnc">
+          <div class="s39-mini-hdr">🔥 Principio di non contraddizione</div>
+          <p>Argomento pragmatico: chi lo nega ma <strong>non si getta nel fuoco</strong> mostra di usarlo già nell'azione.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="s39-panel s39-elimination">
+      <div class="s39-kicker s39-kicker-mixed">🚫 Procedura di eliminazione</div>
+      <p class="s39-intro">Avicenna vaglia i candidati uno per uno. Il criterio è rigoroso: ciò che deve essere dimostrato o chiarito non può essere il punto di partenza della metafisica.</p>
+
+      <div class="s39-trials">
+        <article class="s39-trial s39-trial-reject">
+          <div class="s39-stepnum">1</div>
+          <div class="s39-candidate">
+            <h3>Il divino</h3>
+            <span class="s39-pill s39-pill-reject">escluso come soggetto</span>
+          </div>
+          <ul class="s39-reasons">
+            <li>La sua <strong>esistenza non è evidente</strong>.</li>
+            <li>Non è dimostrata da una scienza superiore alla metafisica.</li>
+            <li>Se esistesse una scienza superiore che la dimostra, <strong>quella</strong> sarebbe la vera metafisica.</li>
+          </ul>
+          <div class="s39-formula">
+            <div class="s39-formula-lbl">Formula</div>
+            <p>Dio entra nella metafisica come ciò che essa <strong>ricerca e dimostra</strong>, non come presupposto immediato.</p>
+          </div>
+        </article>
+
+        <article class="s39-trial s39-trial-reject">
+          <div class="s39-stepnum">2</div>
+          <div class="s39-candidate">
+            <h3>Le cause</h3>
+            <span class="s39-pill s39-pill-reject">escluse come soggetto</span>
+          </div>
+          <ul class="s39-reasons">
+            <li>Il concetto di <strong>causa</strong> non è evidente in sé.</li>
+            <li>Noi vediamo anteriorità e posteriorità, <strong>non il nesso causale stesso</strong>.</li>
+            <li>Molte cause quotidiane sono solo <strong>accidentali o strumentali</strong>.</li>
+          </ul>
+          <div class="s39-formula">
+            <div class="s39-formula-lbl">Formula</div>
+            <p>La <strong>causa essenziale</strong> è concomitante all'effetto: per questo non coincide con i casi empirici più ovvi.</p>
+            <div class="s39-example-grid">
+              <div class="s39-example">
+                <strong>🏛️ Architetto / palazzo</strong>
+                <span>Il palazzo sopravvive all'architetto: dunque l'architetto non è causa essenziale nel senso forte.</span>
+              </div>
+              <div class="s39-example">
+                <strong>👪 Genitori / figli</strong>
+                <span>I figli sopravvivono ai genitori: anche qui la causalità osservabile non basta a definire l'essenza del nesso.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="s39-trial s39-trial-keep">
+          <div class="s39-stepnum">3</div>
+          <div class="s39-candidate">
+            <h3>L'ente in quanto ente</h3>
+            <span class="s39-pill s39-pill-keep">resta come soggetto primo</span>
+          </div>
+          <ul class="s39-reasons">
+            <li>È il concetto <strong>più evidente e primario</strong>.</li>
+            <li>Precede ogni divisione tra <strong>materiale</strong> e <strong>immateriale</strong>.</li>
+            <li>Permette di dimostrare in seguito anche il <strong>divino</strong>.</li>
+          </ul>
+          <div class="s39-formula">
+            <div class="s39-formula-lbl">Formula</div>
+            <p><strong>ens</strong> / essere in quanto essere: il fondamento comune da cui la metafisica prende avvio.</p>
+          </div>
+        </article>
+      </div>
+    </article>
+
+    <div class="s39-closing">
+      <article class="s39-panel s39-distinction">
+        <div class="s39-kicker s39-kicker-gold">⚖️ Distinzione decisiva</div>
+
+        <div class="s39-contrast">
+          <div class="s39-contrast-label">A</div>
+          <div class="s39-contrast-card s39-contrast-card-a">
+            <h3>Ente a condizione di non essere materiale</h3>
+            <p>È il <strong>divino</strong>: un ente già determinato come immateriale, dunque non il soggetto più universale.</p>
+            <span class="s39-pill s39-pill-partial">non è il soggetto</span>
+          </div>
+
+          <div class="s39-contrast-arrow">≠</div>
+
+          <div class="s39-contrast-card s39-contrast-card-b">
+            <h3>Ente non a condizione di essere materiale</h3>
+            <p>È l'<strong>ente preso nella sua generalità assoluta</strong>, prima di ogni specificazione ulteriore.</p>
+            <span class="s39-pill s39-pill-keep">soggetto della metafisica</span>
+          </div>
+        </div>
+
+        <div class="s39-verdict">La metafisica ha per soggetto <strong>b</strong>, non <strong>a</strong>: prima l'ente, poi le sue articolazioni, le cause e infine anche Dio.</div>
+      </article>
+
+      <article class="s39-panel s39-legacy">
+        <div class="s39-kicker s39-kicker-latin">🔗 Eco storica</div>
+
+        <div class="s39-chain">
+          <span class="s39-chain-chip s39-chain-chip-arab">Avicenna</span>
+          <span class="s39-chain-arrow">→</span>
+          <span class="s39-chain-chip s39-chain-chip-latin">Tommaso d'Aquino</span>
+          <span class="s39-chain-arrow">→</span>
+          <span class="s39-chain-chip s39-chain-chip-latin">Duns Scoto</span>
+          <span class="s39-chain-arrow">→</span>
+          <span class="s39-chain-chip s39-chain-chip-latin">Suarez</span>
+          <span class="s39-chain-arrow">→</span>
+          <span class="s39-chain-chip s39-chain-chip-latin">Wolff</span>
+          <span class="s39-chain-arrow">→</span>
+          <span class="s39-chain-chip s39-chain-chip-latin">Kant</span>
+        </div>
+
+        <div class="s39-echo-stack">
+          <div class="s39-echo-note">
+            <div class="s39-mini-hdr">Marion</div>
+            <p>La formula <strong>“Dio senza essere”</strong> riapre il problema: Dio è oltre l'essere o resta “prigioniero dell'essere”?</p>
+          </div>
+
+          <div class="s39-echo-note">
+            <div class="s39-mini-hdr">Heidegger</div>
+            <p>Qui si prepara la diagnosi della <strong>costituzione onto-teologica</strong> della metafisica occidentale.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-lbl">Punto chiave</div>
+    <p>La mossa decisiva di Avicenna non consiste nell'aggiungere <strong>Dio</strong> alla metafisica, ma nel sottrarlo al suo fondamento immediato: prima viene l'<strong>ente in quanto ente</strong>, poi le sue determinazioni. Così nasce una <strong>ontologia generale</strong> che segnerà per secoli il lessico della metafisica occidentale.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div style="padding:2rem 3.5rem;background:var(--surface);border-top:1px solid var(--border);font-size:0.78rem;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+<div>
+<div style="font-family:var(--font-h);color:var(--cream);font-size:0.85rem;margin-bottom:0.2rem;">Filosofia Medievale Araba ed Ebraica</div>
+<div style="font-style:italic;"><span class="schema-count-var">39</span> schemi visivi · Lezioni 01–<span class="ultima-lezione-var">22</span> · Università degli Studi di Milano</div>
+</div>
+<div style="font-style:italic;color:var(--muted2);">davide.prando@studenti.unimi.it</div>
+</div>
+
 </main>
 <!-- ════ JAVASCRIPT ════ -->
 <script>
@@ -8219,21 +9660,8 @@ if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
 // Mobile toggle
 const mobThemeBtn = document.getElementById('mob-theme-toggle');
 if (mobThemeBtn) mobThemeBtn.addEventListener('click', toggleTheme);
-</script>
-
-
-
-<script>
-// ==========================================
-// VARIABILE GLOBALE PER L'ULTIMA LEZIONE
-// ==========================================
-const ULTIMA_LEZIONE = 21;
-
-
-// ==========================================
-// VARIABILE GLOBALE PER IL NUMERO SCHEMI
-// ==========================================
-const TOTAL_SCHEMAS = 37;
+const ULTIMA_LEZIONE = 22;
+const TOTAL_SCHEMAS = 39;
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".ultima-lezione-var").forEach(el => {
@@ -8243,7 +9671,6 @@ document.addEventListener("DOMContentLoaded", () => {
         el.textContent = TOTAL_SCHEMAS;
     });
 });
-
 </script>
 
 
