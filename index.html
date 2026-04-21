@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Schemi — Filosofia Medievale Araba ed Ebraica (Lez. 1–22)</title>
+<title>Schemi — Filosofia Medievale Araba ed Ebraica (Lez. 1–23)</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -1977,7 +1977,12 @@ body {
 
 @media (max-width: 900px) {
   .s11-row { grid-template-columns: 28px 1fr; }
-  .s11-arrow-col, .s11-truth { display: none; }
+  .s11-header-row { display: none; }
+  .s11-row { grid-template-columns: 1fr; gap: 0.5rem; }
+  .s11-num-col { display: none; }
+  .s11-arrow-col { display: none; }
+  .s11-myth, .s11-truth { padding: 1rem; border-right: none; }
+  .s11-truth { border-top: 1px dashed rgba(201,151,58,0.3); }
   .s13-layout { grid-template-columns: 1fr; }
   .s13-avi-grid { grid-template-columns: 1fr; }
   .s13-four-intellects { grid-template-columns: 1fr; }
@@ -2381,10 +2386,7 @@ body {
 .mt-sm { margin-top: 0.5rem; }
 .mt-md { margin-top: 1rem; }
 
-@media (max-width: 900px) {
-  :root { --sidebar: 0px; }
-  .sidebar { display: none; }
-  .main { margin-left: 0; }
+@media (max-width: 768px) {
   .s1-grid, .s3-layout { grid-template-columns: 1fr; }
   .s4-grid { grid-template-columns: 1fr; }
   .s8-interp-grid { grid-template-columns: 1fr; }
@@ -4387,55 +4389,55 @@ body {
    SCHEMA 38 — La gerarchia ilemorfista dell'universo
    (bidirezionale, emanazione+risalita)
 ═════════════════════════════════════════════════════ */
-.s38-layout { display:grid; grid-template-columns:110px 1fr 110px; gap:.85rem; align-items:stretch; }
-.s38-direction { display:flex; flex-direction:column; align-items:center; justify-content:space-around; gap:.5rem; padding:.5rem 0; }
-.s38-dir-title { font-family:var(--font-h); font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; writing-mode:vertical-rl; transform:rotate(180deg); padding:.5rem 0; line-height:1.3; }
-.s38-dir-emanaz { color:var(--aristo-l); background:rgba(90,58,138,.08); border-radius:var(--r-sm); border:1px dashed var(--aristo); }
-.s38-dir-risal { color:var(--greek-l); background:rgba(61,107,80,.08); border-radius:var(--r-sm); border:1px dashed var(--greek); writing-mode:vertical-rl; transform:none; }
-.s38-dir-arr { font-size:1.5rem; line-height:1; }
+.s32-layout { display:grid; grid-template-columns:110px 1fr 110px; gap:.85rem; align-items:stretch; }
+.s32-direction { display:flex; flex-direction:column; align-items:center; justify-content:space-around; gap:.5rem; padding:.5rem 0; }
+.s32-dir-title { font-family:var(--font-h); font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; writing-mode:vertical-rl; transform:rotate(180deg); padding:.5rem 0; line-height:1.3; }
+.s32-dir-emanaz { color:var(--aristo-l); background:rgba(90,58,138,.08); border-radius:var(--r-sm); border:1px dashed var(--aristo); }
+.s32-dir-risal { color:var(--greek-l); background:rgba(61,107,80,.08); border-radius:var(--r-sm); border:1px dashed var(--greek); writing-mode:vertical-rl; transform:none; }
+.s32-dir-arr { font-size:1.5rem; line-height:1; }
 
-.s38-chain { display:flex; flex-direction:column; gap:.25rem; }
-.s38-level { display:grid; grid-template-columns:40px 1fr 200px; gap:.7rem; padding:.75rem .9rem; border-radius:var(--r-sm); background:var(--surface2); border:1px solid var(--border); align-items:center; transition:transform .18s; }
-.s38-level:hover { transform:translateX(4px); }
-.s38-lev-n { font-family:var(--font-h); font-size:1.1rem; font-weight:700; color:var(--gold); text-align:center; }
-.s38-lev-name { font-family:var(--font-h); font-size:.92rem; font-weight:600; color:var(--cream); line-height:1.25; }
-.s38-lev-desc { font-size:.72rem; color:var(--muted2); margin-top:.15rem; line-height:1.4; font-style:italic; }
-.s38-lev-role { display:flex; flex-direction:column; gap:.15rem; align-items:flex-end; font-size:.67rem; font-family:var(--font-h); text-transform:uppercase; letter-spacing:.06em; }
-.s38-role-f { color:var(--gold-l); }
-.s38-role-m { color:var(--greek-l); }
-.s38-role-both { color:var(--aristo-l); }
+.s32-chain { display:flex; flex-direction:column; gap:.25rem; }
+.s32-level { display:grid; grid-template-columns:40px 1fr 200px; gap:.7rem; padding:.75rem .9rem; border-radius:var(--r-sm); background:var(--surface2); border:1px solid var(--border); align-items:center; transition:transform .18s; }
+.s32-level:hover { transform:translateX(4px); }
+.s32-lev-n { font-family:var(--font-h); font-size:1.1rem; font-weight:700; color:var(--gold); text-align:center; }
+.s32-lev-name { font-family:var(--font-h); font-size:.92rem; font-weight:600; color:var(--cream); line-height:1.25; }
+.s32-lev-desc { font-size:.72rem; color:var(--muted2); margin-top:.15rem; line-height:1.4; font-style:italic; }
+.s32-lev-role { display:flex; flex-direction:column; gap:.15rem; align-items:flex-end; font-size:.67rem; font-family:var(--font-h); text-transform:uppercase; letter-spacing:.06em; }
+.s32-role-f { color:var(--gold-l); }
+.s32-role-m { color:var(--greek-l); }
+.s32-role-both { color:var(--aristo-l); }
 
 /* Level-specific colors */
-.s38-lv-god { background:linear-gradient(135deg, rgba(201,151,58,.2), var(--surface2)); border-left:4px solid var(--gold); }
-.s38-lv-god .s38-lev-n { color:var(--gold-l); font-size:1.3rem; }
-.s38-lv-god .s38-lev-name { color:var(--gold-l); }
-.s38-lv-intel { background:linear-gradient(135deg, rgba(90,58,138,.15), var(--surface2)); border-left:4px solid var(--aristo); }
-.s38-lv-intel .s38-lev-n { color:var(--aristo-l); }
-.s38-lv-acquis { background:linear-gradient(135deg, rgba(201,151,58,.1), rgba(61,107,80,.08)); border-left:4px solid var(--gold); border-right:4px solid var(--greek); position:relative; }
-.s38-lv-acquis .s38-lev-n { color:var(--gold); }
-.s38-liminare-badge { position:absolute; top:-10px; right:50%; transform:translateX(50%); font-size:.62rem; font-family:var(--font-h); color:var(--gold); background:var(--bg); border:1px solid var(--gold); padding:.15rem .55rem; border-radius:20px; text-transform:uppercase; letter-spacing:.08em; font-weight:700; white-space:nowrap; }
-.s38-lv-act { background:linear-gradient(135deg, rgba(61,107,80,.12), var(--surface2)); border-left:4px solid var(--greek-l); }
-.s38-lv-act .s38-lev-n { color:var(--greek-l); }
-.s38-lv-pot { background:linear-gradient(135deg, rgba(139,90,26,.1), var(--surface2)); border-left:4px solid var(--arab-l); }
-.s38-lv-pot .s38-lev-n { color:var(--arab-l); }
-.s38-lv-form { background:linear-gradient(135deg, rgba(36,64,122,.1), var(--surface2)); border-left:4px solid var(--latin-l); }
-.s38-lv-form .s38-lev-n { color:var(--latin-l); }
-.s38-lv-elem { background:linear-gradient(135deg, rgba(100,60,20,.1), var(--surface2)); border-left:4px solid var(--arab); }
-.s38-lv-elem .s38-lev-n { color:var(--arab); }
-.s38-lv-matter { background:linear-gradient(135deg, rgba(139,24,24,.08), var(--surface2)); border-left:4px solid var(--danger); }
-.s38-lv-matter .s38-lev-n { color:var(--danger-l); }
+.s32-lv-god { background:linear-gradient(135deg, rgba(201,151,58,.2), var(--surface2)); border-left:4px solid var(--gold); }
+.s32-lv-god .s32-lev-n { color:var(--gold-l); font-size:1.3rem; }
+.s32-lv-god .s32-lev-name { color:var(--gold-l); }
+.s32-lv-intel { background:linear-gradient(135deg, rgba(90,58,138,.15), var(--surface2)); border-left:4px solid var(--aristo); }
+.s32-lv-intel .s32-lev-n { color:var(--aristo-l); }
+.s32-lv-acquis { background:linear-gradient(135deg, rgba(201,151,58,.1), rgba(61,107,80,.08)); border-left:4px solid var(--gold); border-right:4px solid var(--greek); position:relative; }
+.s32-lv-acquis .s32-lev-n { color:var(--gold); }
+.s32-liminare-badge { position:absolute; top:-10px; right:50%; transform:translateX(50%); font-size:.62rem; font-family:var(--font-h); color:var(--gold); background:var(--bg); border:1px solid var(--gold); padding:.15rem .55rem; border-radius:20px; text-transform:uppercase; letter-spacing:.08em; font-weight:700; white-space:nowrap; }
+.s32-lv-act { background:linear-gradient(135deg, rgba(61,107,80,.12), var(--surface2)); border-left:4px solid var(--greek-l); }
+.s32-lv-act .s32-lev-n { color:var(--greek-l); }
+.s32-lv-pot { background:linear-gradient(135deg, rgba(139,90,26,.1), var(--surface2)); border-left:4px solid var(--arab-l); }
+.s32-lv-pot .s32-lev-n { color:var(--arab-l); }
+.s32-lv-form { background:linear-gradient(135deg, rgba(36,64,122,.1), var(--surface2)); border-left:4px solid var(--latin-l); }
+.s32-lv-form .s32-lev-n { color:var(--latin-l); }
+.s32-lv-elem { background:linear-gradient(135deg, rgba(100,60,20,.1), var(--surface2)); border-left:4px solid var(--arab); }
+.s32-lv-elem .s32-lev-n { color:var(--arab); }
+.s32-lv-matter { background:linear-gradient(135deg, rgba(139,24,24,.08), var(--surface2)); border-left:4px solid var(--danger); }
+.s32-lv-matter .s32-lev-n { color:var(--danger-l); }
 
 /* Side note about liminar */
-.s38-liminare { margin-top:1.5rem; display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
-.s38-lim-box { background:var(--surface2); border:1px solid var(--border); border-radius:var(--r-sm); padding:1rem 1.2rem; }
-.s38-lim-hdr { font-family:var(--font-h); font-size:.7rem; text-transform:uppercase; letter-spacing:.1em; margin-bottom:.5rem; }
-.s38-lim-up { border-left:3px solid var(--gold); }
-.s38-lim-up .s38-lim-hdr { color:var(--gold); }
-.s38-lim-dw { border-left:3px solid var(--aristo); }
-.s38-lim-dw .s38-lim-hdr { color:var(--aristo-l); }
-.s38-lim-body { font-size:.82rem; color:var(--card-text); line-height:1.6; }
-.s38-lim-body strong { color:var(--cream); font-family:var(--font-h); }
-.s38-lim-body em { color:var(--gold-l); font-style:italic; }
+.s32-liminare { margin-top:1.5rem; display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+.s32-lim-box { background:var(--surface2); border:1px solid var(--border); border-radius:var(--r-sm); padding:1rem 1.2rem; }
+.s32-lim-hdr { font-family:var(--font-h); font-size:.7rem; text-transform:uppercase; letter-spacing:.1em; margin-bottom:.5rem; }
+.s32-lim-up { border-left:3px solid var(--gold); }
+.s32-lim-up .s32-lim-hdr { color:var(--gold); }
+.s32-lim-dw { border-left:3px solid var(--aristo); }
+.s32-lim-dw .s32-lim-hdr { color:var(--aristo-l); }
+.s32-lim-body { font-size:.82rem; color:var(--card-text); line-height:1.6; }
+.s32-lim-body strong { color:var(--cream); font-family:var(--font-h); }
+.s32-lim-body em { color:var(--gold-l); font-style:italic; }
 
 /* ═════════════════════════════════════════════════════
    SCHEMA 39 — Al-Fārābī vs Alessandro: chi astrae?
@@ -4482,149 +4484,6 @@ body {
 .s39-par-body strong { color:var(--gold-l); font-family:var(--font-h); }
 .s39-par-body em { color:var(--aristo-l); font-style:italic; }
 
-
-/* ═════════════════════════════════════════════════════
-   SCHEMA 40 — Le dieci intelligenze celesti e l'intelletto agente cosmico
-   Tipo: hierarchy
-═════════════════════════════════════════════════════ */
-.s40-cosmo-hdr { font-family:var(--font-h); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--aristo-l); margin-bottom:.85rem; padding-bottom:.45rem; border-bottom:1px solid var(--aristo); display:flex; align-items:center; gap:.4rem; }
-.s40-cosmo-hdr::before { content:''; width:7px; height:7px; border-radius:50%; background:var(--aristo-l); flex-shrink:0; }
-.s40-chain { display:flex; flex-direction:column; gap:0; margin-bottom:1.5rem; }
-.s40-level { display:grid; grid-template-columns:55px 1fr 220px; gap:.6rem; padding:.7rem .9rem; border-radius:var(--r-sm); background:var(--surface2); border:1px solid var(--border); align-items:center; transition:transform .18s; }
-.s40-level:hover { transform:translateX(4px); }
-.s40-lev-n { font-family:var(--font-h); font-size:1rem; font-weight:700; text-align:center; }
-.s40-lev-name { font-family:var(--font-h); font-size:.88rem; font-weight:600; color:var(--cream); line-height:1.25; }
-.s40-lev-desc { font-size:.72rem; color:var(--muted2); margin-top:.1rem; line-height:1.4; font-style:italic; }
-.s40-lev-func { font-size:.7rem; font-family:var(--font-h); text-transform:uppercase; letter-spacing:.05em; text-align:right; }
-.s40-arrow { text-align:center; padding:.12rem 0; color:var(--aristo-l); font-size:.85rem; }
-/* Level colors */
-.s40-lv-god { background:linear-gradient(135deg, rgba(201,151,58,.2), var(--surface2)); border-left:4px solid var(--gold); }
-.s40-lv-god .s40-lev-n { color:var(--gold-l); font-size:1.2rem; }
-.s40-lv-god .s40-lev-name { color:var(--gold-l); }
-.s40-lv-god .s40-lev-func { color:var(--gold-l); }
-.s40-lv-intel { background:linear-gradient(135deg, rgba(90,58,138,.12), var(--surface2)); border-left:4px solid var(--aristo); }
-.s40-lv-intel .s40-lev-n { color:var(--aristo-l); }
-.s40-lv-intel .s40-lev-func { color:var(--aristo-l); }
-.s40-lv-agent { background:linear-gradient(135deg, rgba(139,90,26,.18), rgba(45,107,74,.08)); border-left:4px solid var(--arab-l); border-right:4px solid var(--green); box-shadow:0 0 0 1px rgba(139,90,26,.2); }
-.s40-lv-agent .s40-lev-n { color:var(--arab-l); font-size:1.1rem; }
-.s40-lv-agent .s40-lev-name { color:var(--arab-l); }
-.s40-lv-agent .s40-lev-func { color:var(--green-t); }
-.s40-agent-badge { position:absolute; top:-10px; right:50%; transform:translateX(50%); font-size:.6rem; font-family:var(--font-h); color:var(--gold); background:var(--bg); border:1px solid var(--gold); padding:.12rem .55rem; border-radius:20px; text-transform:uppercase; letter-spacing:.08em; font-weight:700; white-space:nowrap; }
-.s40-lv-sub { background:linear-gradient(135deg, rgba(61,107,80,.1), var(--surface2)); border-left:4px solid var(--greek-l); }
-.s40-lv-sub .s40-lev-n { color:var(--greek-l); }
-.s40-lv-sub .s40-lev-func { color:var(--greek-l); }
-/* three differences */
-.s40-diff-title { font-family:var(--font-h); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted2); margin-bottom:.85rem; }
-.s40-diffs { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; margin-bottom:1.5rem; }
-.s40-diff { background:var(--surface2); border:1px solid var(--border); border-radius:var(--r); padding:1.1rem; display:flex; flex-direction:column; gap:.4rem; transition:transform .18s; }
-.s40-diff:hover { transform:translateY(-2px); }
-.s40-diff-num { font-family:var(--font-h); font-size:1.4rem; font-weight:700; color:rgba(201,151,58,.2); line-height:1; }
-.s40-diff-name { font-family:var(--font-h); font-size:.88rem; font-weight:600; color:var(--cream); line-height:1.3; }
-.s40-diff-body { font-size:.8rem; color:var(--card-text); line-height:1.55; }
-.s40-diff-body strong { color:var(--gold-l); font-family:var(--font-h); }
-.s40-d1 { border-top:3px solid var(--arab-l); }
-.s40-d2 { border-top:3px solid var(--gold); }
-.s40-d3 { border-top:3px solid var(--green); }
-/* predecessors strip */
-.s40-pred-row { display:flex; gap:.8rem; align-items:stretch; flex-wrap:wrap; margin-bottom:1.5rem; }
-.s40-pred { flex:1; min-width:180px; background:var(--surface2); border:1px solid var(--border); border-radius:var(--r-sm); padding:.85rem 1rem; }
-.s40-pred-name { font-family:var(--font-h); font-size:.82rem; font-weight:600; margin-bottom:.3rem; }
-.s40-pred-pos { font-size:.78rem; color:var(--card-text); line-height:1.5; }
-.s40-pred.ng .s40-pred-name { color:var(--greek-l); }
-.s40-pred.nq .s40-pred-name { color:var(--arab-l); }
-.s40-pred-pos strong { color:var(--cream); font-family:var(--font-h); }
-
-/* ═════════════════════════════════════════════════════
-   SCHEMA 41 — L'analogia del diafano: luce, visione e intellezione
-   Tipo: composite (analogy + hierarchy)
-═════════════════════════════════════════════════════ */
-.s41-analogy-hdr { font-family:var(--font-h); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--gold-l); margin-bottom:.85rem; padding-bottom:.45rem; border-bottom:1px solid var(--gold-d); display:flex; align-items:center; gap:.4rem; }
-.s41-analogy-hdr::before { content:''; width:7px; height:7px; border-radius:50%; background:var(--gold-l); flex-shrink:0; }
-.s41-parallel { display:grid; grid-template-columns:1fr 60px 1fr; gap:0; border:1px solid var(--border); border-radius:var(--r); overflow:hidden; margin-bottom:1.5rem; }
-.s41-col { padding:1.3rem 1.2rem; display:flex; flex-direction:column; gap:.65rem; }
-.s41-vision { background:linear-gradient(135deg, rgba(201,151,58,.1), var(--surface2)); }
-.s41-thought { background:linear-gradient(135deg, rgba(90,58,138,.1), var(--surface2)); }
-.s41-center { display:flex; flex-direction:column; align-items:center; justify-content:center; background:var(--surface3); gap:.5rem; border-left:1px solid var(--border); border-right:1px solid var(--border); }
-.s41-eq { font-family:var(--font-h); font-size:2rem; font-weight:700; color:var(--gold); line-height:1; }
-.s41-eq-lbl { font-size:.6rem; font-family:var(--font-h); text-transform:uppercase; letter-spacing:.06em; color:var(--muted2); text-align:center; line-height:1.3; padding:0 .2rem; }
-.s41-col-hdr { font-family:var(--font-h); font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; font-weight:700; padding-bottom:.4rem; border-bottom:1px solid var(--border); }
-.s41-vision .s41-col-hdr { color:var(--gold-l); }
-.s41-thought .s41-col-hdr { color:var(--aristo-l); }
-.s41-row { display:flex; gap:.6rem; align-items:flex-start; }
-.s41-row-lbl { font-family:var(--font-h); font-size:.65rem; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; min-width:65px; padding-top:.15rem; flex-shrink:0; }
-.s41-row-val { font-size:.82rem; color:var(--cream); line-height:1.5; }
-.s41-row-val strong { color:var(--gold-l); font-family:var(--font-h); }
-/* Luogo delle forme */
-.s41-locus-hdr { font-family:var(--font-h); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--arab-l); margin-bottom:.85rem; padding-bottom:.45rem; border-bottom:1px solid var(--arab); display:flex; align-items:center; gap:.4rem; }
-.s41-locus-hdr::before { content:''; width:7px; height:7px; border-radius:50%; background:var(--arab-l); flex-shrink:0; }
-.s41-descent { display:flex; align-items:stretch; gap:0; border:1px solid var(--border); border-radius:var(--r); overflow:hidden; margin-bottom:1.5rem; }
-.s41-desc-step { flex:1; padding:1.1rem .95rem; border-right:1px solid var(--border); position:relative; transition:flex .3s; cursor:default; }
-.s41-desc-step:last-child { border-right:none; }
-.s41-desc-step:hover { flex:1.15; }
-.s41-desc-step::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; }
-.s41-ds-1::before { background:var(--gold-l); }
-.s41-ds-2::before { background:var(--aristo-l); }
-.s41-ds-3::before { background:var(--arab-l); }
-.s41-ds-era { font-family:var(--font-h); font-size:.65rem; text-transform:uppercase; letter-spacing:.08em; font-weight:700; margin-bottom:.35rem; }
-.s41-ds-1 .s41-ds-era { color:var(--gold-l); }
-.s41-ds-2 .s41-ds-era { color:var(--aristo-l); }
-.s41-ds-3 .s41-ds-era { color:var(--arab-l); }
-.s41-ds-name { font-family:var(--font-h); font-size:.88rem; font-weight:600; color:var(--cream); margin-bottom:.4rem; }
-.s41-ds-body { font-size:.78rem; color:var(--card-text); line-height:1.5; }
-.s41-ds-body em { color:var(--gold-l); font-style:italic; }
-/* Imitazione box */
-.s41-imit { background:rgba(139,90,26,.07); border:1px solid var(--arab); border-radius:var(--r); padding:1.1rem 1.3rem; display:grid; grid-template-columns:auto 1fr; gap:1rem; align-items:center; }
-.s41-imit-icon { font-size:2rem; color:var(--arab-l); line-height:1; }
-.s41-imit-body { font-size:.85rem; color:var(--card-text); line-height:1.6; }
-.s41-imit-body strong { color:var(--gold-l); font-family:var(--font-h); }
-.s41-imit-body em { color:var(--arab-l); font-style:italic; }
-
-/* ═════════════════════════════════════════════════════
-   SCHEMA 42 — La causalita circolare: prohodos ed epistrophe
-   Tipo: process/composite
-═════════════════════════════════════════════════════ */
-.s42-circle { display:grid; grid-template-columns:1fr 100px 1fr; gap:0; border:1px solid var(--border); border-radius:var(--r); overflow:hidden; margin-bottom:1.5rem; }
-.s42-side { padding:1.4rem 1.3rem; display:flex; flex-direction:column; gap:.7rem; }
-.s42-desc-side { background:linear-gradient(135deg, rgba(90,58,138,.12), var(--surface2)); }
-.s42-asc-side { background:linear-gradient(135deg, rgba(61,107,80,.12), var(--surface2)); }
-.s42-mid { display:flex; flex-direction:column; align-items:center; justify-content:center; background:var(--surface3); gap:.4rem; border-left:1px solid var(--border); border-right:1px solid var(--border); padding:.5rem; }
-.s42-mid-icon { font-size:2.5rem; color:var(--gold); line-height:1; }
-.s42-mid-lbl { font-size:.6rem; font-family:var(--font-h); text-transform:uppercase; letter-spacing:.06em; color:var(--muted2); text-align:center; line-height:1.3; }
-.s42-side-hdr { font-family:var(--font-h); font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; font-weight:700; padding-bottom:.4rem; border-bottom:1px solid var(--border); }
-.s42-desc-side .s42-side-hdr { color:var(--aristo-l); }
-.s42-asc-side .s42-side-hdr { color:var(--green-t); }
-.s42-side-name { font-family:var(--font-h); font-size:1rem; font-weight:700; margin-bottom:.15rem; }
-.s42-desc-side .s42-side-name { color:var(--aristo-l); }
-.s42-asc-side .s42-side-name { color:var(--green-t); }
-.s42-side-gr { font-size:.72rem; color:var(--muted2); font-style:italic; }
-.s42-side-body { font-size:.82rem; color:var(--card-text); line-height:1.6; }
-.s42-side-body strong { color:var(--cream); font-family:var(--font-h); }
-.s42-side-body em { color:var(--gold-l); font-style:italic; }
-.s42-side-who { font-size:.72rem; color:var(--muted); padding-top:.4rem; border-top:1px dashed var(--border); display:block; padding-left:1.2em; text-indent:-1.2em; margin-top:.4rem; }
-.s42-side-who::before { content:'→ '; color:var(--gold); }
-/* Bonum box */
-.s42-bonum-title { font-family:var(--font-h); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--gold-l); margin-bottom:.85rem; }
-.s42-bonum { background:linear-gradient(135deg, rgba(201,151,58,.1), rgba(90,58,138,.06)); border:1px solid var(--gold-d); border-left:4px solid var(--gold); border-radius:var(--r); padding:1.3rem 1.5rem; margin-bottom:1.5rem; }
-.s42-bonum-lat { font-family:var(--font-h); font-size:1.15rem; font-weight:700; color:var(--gold-l); font-style:italic; margin-bottom:.5rem; }
-.s42-bonum-body { font-size:.88rem; color:var(--card-text); line-height:1.65; }
-.s42-bonum-body strong { color:var(--gold-l); font-family:var(--font-h); }
-.s42-bonum-body em { color:var(--aristo-l); font-style:italic; }
-/* Copula mundi */
-.s42-copula { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem; }
-.s42-cop-card { background:var(--surface2); border:1px solid var(--border); border-radius:var(--r); padding:1.1rem 1.2rem; display:flex; flex-direction:column; gap:.45rem; }
-.s42-cop-scot { border-top:3px solid var(--latin-l); }
-.s42-cop-neopl { border-top:3px solid var(--aristo-l); }
-.s42-cop-name { font-family:var(--font-h); font-size:.88rem; font-weight:600; line-height:1.3; }
-.s42-cop-scot .s42-cop-name { color:var(--latin-l); }
-.s42-cop-neopl .s42-cop-name { color:var(--aristo-l); }
-.s42-cop-sub { font-size:.72rem; color:var(--muted2); font-style:italic; }
-.s42-cop-body { font-size:.82rem; color:var(--card-text); line-height:1.55; }
-.s42-cop-body strong { color:var(--cream); font-family:var(--font-h); }
-/* creation */
-.s42-creation { background:rgba(139,90,26,.07); border:1px solid var(--arab); border-radius:var(--r); padding:1.1rem 1.3rem; }
-.s42-crea-hdr { font-family:var(--font-h); font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--arab-l); margin-bottom:.6rem; padding-bottom:.35rem; border-bottom:1px solid rgba(139,90,26,.3); }
-.s42-crea-body { font-size:.85rem; color:var(--card-text); line-height:1.6; }
-.s42-crea-body strong { color:var(--gold-l); font-family:var(--font-h); }
 
 /* ═════════════════════════════════════════════════════
    SCHEMA 43 — La felicita mentale e l'errore filologico del De anima
@@ -4732,6 +4591,30 @@ body {
 .s44-pill-concord { background:rgba(201,151,58,.15); color:var(--gold-l); border:1px solid var(--gold-d); }
 .s44-pill-subord { background:rgba(36,64,122,.15); color:var(--cream); border:1px solid rgba(36,64,122,.3); }
 
+em; }
+.s32-bonum { background:linear-gradient(135deg, rgba(201,151,58,.1), rgba(90,58,138,.06)); border:1px solid var(--gold-d); border-left:4px solid var(--gold); border-radius:var(--r); padding:1.3rem 1.5rem; margin-bottom:1.5rem; }
+.s32-bonum-lat { font-family:var(--font-h); font-size:1.15rem; font-weight:700; color:var(--gold-l); font-style:italic; margin-bottom:.5rem; }
+.s32-bonum-body { font-size:.88rem; color:var(--card-text); line-height:1.65; }
+.s32-bonum-body strong { color:var(--gold-l); font-family:var(--font-h); }
+.s32-bonum-body em { color:var(--aristo-l); font-style:italic; }
+/* Copula mundi */
+.s32-copula { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem; }
+.s32-cop-card { background:var(--surface2); border:1px solid var(--border); border-radius:var(--r); padding:1.1rem 1.2rem; display:flex; flex-direction:column; gap:.45rem; }
+.s32-cop-scot { border-top:3px solid var(--latin-l); }
+.s32-cop-neopl { border-top:3px solid var(--aristo-l); }
+.s32-cop-name { font-family:var(--font-h); font-size:.88rem; font-weight:600; line-height:1.3; }
+.s32-cop-scot .s32-cop-name { color:var(--latin-l); }
+.s32-cop-neopl .s32-cop-name { color:var(--aristo-l); }
+.s32-cop-sub { font-size:.72rem; color:var(--muted2); font-style:italic; }
+.s32-cop-body { font-size:.82rem; color:var(--card-text); line-height:1.55; }
+.s32-cop-body strong { color:var(--cream); font-family:var(--font-h); }
+/* creation */
+.s32-creation { background:rgba(139,90,26,.07); border:1px solid var(--arab); border-radius:var(--r); padding:1.1rem 1.3rem; }
+.s32-crea-hdr { font-family:var(--font-h); font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--arab-l); margin-bottom:.6rem; padding-bottom:.35rem; border-bottom:1px solid rgba(139,90,26,.3); }
+.s32-crea-body { font-size:.85rem; color:var(--card-text); line-height:1.6; }
+.s32-crea-body strong { color:var(--gold-l); font-family:var(--font-h); }
+
+
 /* Responsive */
 @media (max-width:1000px) {
   .s36-intro { grid-template-columns:1fr; }
@@ -4744,20 +4627,18 @@ body {
   .s37-ident-eq { font-size:1.5rem; }
   .s37-regime { grid-template-columns:1fr; }
   .s37-reg-row > * { border-right:none !important; }
-  .s38-layout { grid-template-columns:1fr; }
-  .s38-direction { display:none; }
-  .s38-level { grid-template-columns:30px 1fr; }
-  .s38-lev-role { display:none; }
-  .s38-liminare { grid-template-columns:1fr; }
+  .s32-layout { grid-template-columns:1fr; }
+  .s32-direction { display:none; }
+  .s32-level { grid-template-columns:30px 1fr; }
+  .s32-lev-role { display:none; }
+  .s32-liminare { grid-template-columns:1fr; }
   .s39-vs { grid-template-columns:1fr; }
   .s39-ales { border-right:none; border-bottom:1px solid var(--border); }
   .s39-fara { border-left:none; border-top:1px solid var(--border); }
   .s39-sep { padding:.6rem; }
   .s39-auto { grid-template-columns:1fr; }
   .s39-paradox { grid-template-columns:1fr; text-align:center; }
-  .s40-level { grid-template-columns:40px 1fr; }
-  .s40-lev-func { display:none; }
-  .s40-diffs { grid-template-columns:1fr; }
+
   .s40-pred-row { flex-direction:column; }
   .s41-parallel { grid-template-columns:1fr; }
   .s41-vision { border-bottom:1px solid var(--border); }
@@ -6085,16 +5966,2051 @@ body {
     font-size: 0.96rem;
   }
 }
+
+
+/* ═════════════════════════════════════════════════════
+   SCHEMA 40 — Le dieci intelligenze celesti e l'intelletto agente cosmico
+   Tipo: hierarchy
+═════════════════════════════════════════════════════ */
+.s32a-cosmo-hdr { font-family:var(--font-h); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--aristo-l); margin-bottom:.85rem; padding-bottom:.45rem; border-bottom:1px solid var(--aristo); display:flex; align-items:center; gap:.4rem; }
+.s32a-cosmo-hdr::before { content:''; width:7px; height:7px; border-radius:50%; background:var(--aristo-l); flex-shrink:0; }
+.s32a-chain { display:flex; flex-direction:column; gap:0; margin-bottom:1.5rem; }
+.s32a-level { display:grid; grid-template-columns:55px 1fr 220px; gap:.6rem; padding:.7rem .9rem; border-radius:var(--r-sm); background:var(--surface2); border:1px solid var(--border); align-items:center; transition:transform .18s; }
+.s32a-level:hover { transform:translateX(4px); }
+.s32a-lev-n { font-family:var(--font-h); font-size:1rem; font-weight:700; text-align:center; }
+.s32a-lev-name { font-family:var(--font-h); font-size:.88rem; font-weight:600; color:var(--cream); line-height:1.25; }
+.s32a-lev-desc { font-size:.72rem; color:var(--muted2); margin-top:.1rem; line-height:1.4; font-style:italic; }
+.s32a-lev-func { font-size:.7rem; font-family:var(--font-h); text-transform:uppercase; letter-spacing:.05em; text-align:right; }
+.s32a-arrow { text-align:center; padding:.12rem 0; color:var(--aristo-l); font-size:.85rem; }
+/* Level colors */
+.s32a-lv-god { background:linear-gradient(135deg, rgba(201,151,58,.2), var(--surface2)); border-left:4px solid var(--gold); }
+.s32a-lv-god .s32a-lev-n { color:var(--gold-l); font-size:1.2rem; }
+.s32a-lv-god .s32a-lev-name { color:var(--gold-l); }
+.s32a-lv-god .s32a-lev-func { color:var(--gold-l); }
+.s32a-lv-intel { background:linear-gradient(135deg, rgba(90,58,138,.12), var(--surface2)); border-left:4px solid var(--aristo); }
+.s32a-lv-intel .s32a-lev-n { color:var(--aristo-l); }
+.s32a-lv-intel .s32a-lev-func { color:var(--aristo-l); }
+.s32a-lv-agent { background:linear-gradient(135deg, rgba(139,90,26,.18), rgba(45,107,74,.08)); border-left:4px solid var(--arab-l); border-right:4px solid var(--green); box-shadow:0 0 0 1px rgba(139,90,26,.2); }
+.s32a-lv-agent .s32a-lev-n { color:var(--arab-l); font-size:1.1rem; }
+.s32a-lv-agent .s32a-lev-name { color:var(--arab-l); }
+.s32a-lv-agent .s32a-lev-func { color:var(--green-t); }
+.s32a-agent-badge { position:absolute; top:-10px; right:50%; transform:translateX(50%); font-size:.6rem; font-family:var(--font-h); color:var(--gold); background:var(--bg); border:1px solid var(--gold); padding:.12rem .55rem; border-radius:20px; text-transform:uppercase; letter-spacing:.08em; font-weight:700; white-space:nowrap; }
+.s32a-lv-sub { background:linear-gradient(135deg, rgba(61,107,80,.1), var(--surface2)); border-left:4px solid var(--greek-l); }
+.s32a-lv-sub .s32a-lev-n { color:var(--greek-l); }
+.s32a-lv-sub .s32a-lev-func { color:var(--greek-l); }
+/* three differences */
+.s32a-diff-title { font-family:var(--font-h); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted2); margin-bottom:.85rem; }
+.s32a-diffs { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; margin-bottom:1.5rem; }
+.s32a-diff { background:var(--surface2); border:1px solid var(--border); border-radius:var(--r); padding:1.1rem; display:flex; flex-direction:column; gap:.4rem; transition:transform .18s; }
+.s32a-diff:hover { transform:translateY(-2px); }
+.s32a-diff-num { font-family:var(--font-h); font-size:1.4rem; font-weight:700; color:rgba(201,151,58,.2); line-height:1; }
+.s32a-diff-name { font-family:var(--font-h); font-size:.88rem; font-weight:600; color:var(--cream); line-height:1.3; }
+.s32a-diff-body { font-size:.8rem; color:var(--card-text); line-height:1.55; }
+.s32a-diff-body strong { color:var(--gold-l); font-family:var(--font-h); }
+.s32a-d1 { border-top:3px solid var(--arab-l); }
+.s32a-d2 { border-top:3px solid var(--gold); }
+.s32a-d3 { border-top:3px solid var(--green); }
+/* predecessors strip */
+.s32a-pred-row { display:flex; gap:.8rem; align-items:stretch; flex-wrap:wrap; margin-bottom:1.5rem; }
+.s32a-pred { flex:1; min-width:180px; background:var(--surface2); border:1px solid var(--border); border-radius:var(--r-sm); padding:.85rem 1rem; }
+.s32a-pred-name { font-family:var(--font-h); font-size:.82rem; font-weight:600; margin-bottom:.3rem; }
+.s32a-pred-pos { font-size:.78rem; color:var(--card-text); line-height:1.5; }
+.s32a-pred.ng .s32a-pred-name { color:var(--greek-l); }
+.s32a-pred.nq .s32a-pred-name { color:var(--arab-l); }
+.s32a-pred-pos strong { color:var(--cream); font-family:var(--font-h); }
+
+/* ═════════════════════════════════════════════════════
+   SCHEMA 41 — L'analogia del diafano: luce, visione e intellezione
+   Tipo: composite (analogy + hierarchy)
+═════════════════════════════════════════════════════ */
+.s32b-analogy-hdr { font-family:var(--font-h); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--gold-l); margin-bottom:.85rem; padding-bottom:.45rem; border-bottom:1px solid var(--gold-d); display:flex; align-items:center; gap:.4rem; }
+.s32b-analogy-hdr::before { content:''; width:7px; height:7px; border-radius:50%; background:var(--gold-l); flex-shrink:0; }
+.s32b-parallel { display:grid; grid-template-columns:1fr 60px 1fr; gap:0; border:1px solid var(--border); border-radius:var(--r); overflow:hidden; margin-bottom:1.5rem; }
+.s32b-col { padding:1.3rem 1.2rem; display:flex; flex-direction:column; gap:.65rem; }
+.s32b-vision { background:linear-gradient(135deg, rgba(201,151,58,.1), var(--surface2)); }
+.s32b-thought { background:linear-gradient(135deg, rgba(90,58,138,.1), var(--surface2)); }
+.s32b-center { display:flex; flex-direction:column; align-items:center; justify-content:center; background:var(--surface3); gap:.5rem; border-left:1px solid var(--border); border-right:1px solid var(--border); }
+.s32b-eq { font-family:var(--font-h); font-size:2rem; font-weight:700; color:var(--gold); line-height:1; }
+.s32b-eq-lbl { font-size:.6rem; font-family:var(--font-h); text-transform:uppercase; letter-spacing:.06em; color:var(--muted2); text-align:center; line-height:1.3; padding:0 .2rem; }
+.s32b-col-hdr { font-family:var(--font-h); font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; font-weight:700; padding-bottom:.4rem; border-bottom:1px solid var(--border); }
+.s32b-vision .s32b-col-hdr { color:var(--gold-l); }
+.s32b-thought .s32b-col-hdr { color:var(--aristo-l); }
+.s32b-row { display:flex; gap:.6rem; align-items:flex-start; }
+.s32b-row-lbl { font-family:var(--font-h); font-size:.65rem; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; min-width:65px; padding-top:.15rem; flex-shrink:0; }
+.s32b-row-val { font-size:.82rem; color:var(--cream); line-height:1.5; }
+.s32b-row-val strong { color:var(--gold-l); font-family:var(--font-h); }
+/* Luogo delle forme */
+.s32b-locus-hdr { font-family:var(--font-h); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--arab-l); margin-bottom:.85rem; padding-bottom:.45rem; border-bottom:1px solid var(--arab); display:flex; align-items:center; gap:.4rem; }
+.s32b-locus-hdr::before { content:''; width:7px; height:7px; border-radius:50%; background:var(--arab-l); flex-shrink:0; }
+.s32b-descent { display:flex; align-items:stretch; gap:0; border:1px solid var(--border); border-radius:var(--r); overflow:hidden; margin-bottom:1.5rem; }
+.s32b-desc-step { flex:1; padding:1.1rem .95rem; border-right:1px solid var(--border); position:relative; transition:flex .3s; cursor:default; }
+.s32b-desc-step:last-child { border-right:none; }
+.s32b-desc-step:hover { flex:1.15; }
+.s32b-desc-step::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; }
+.s32b-ds-1::before { background:var(--gold-l); }
+.s32b-ds-2::before { background:var(--aristo-l); }
+.s32b-ds-3::before { background:var(--arab-l); }
+.s32b-ds-era { font-family:var(--font-h); font-size:.65rem; text-transform:uppercase; letter-spacing:.08em; font-weight:700; margin-bottom:.35rem; }
+.s32b-ds-1 .s32b-ds-era { color:var(--gold-l); }
+.s32b-ds-2 .s32b-ds-era { color:var(--aristo-l); }
+.s32b-ds-3 .s32b-ds-era { color:var(--arab-l); }
+.s32b-ds-name { font-family:var(--font-h); font-size:.88rem; font-weight:600; color:var(--cream); margin-bottom:.4rem; }
+.s32b-ds-body { font-size:.78rem; color:var(--card-text); line-height:1.5; }
+.s32b-ds-body em { color:var(--gold-l); font-style:italic; }
+/* Imitazione box */
+.s32b-imit { background:rgba(139,90,26,.07); border:1px solid var(--arab); border-radius:var(--r); padding:1.1rem 1.3rem; display:grid; grid-template-columns:auto 1fr; gap:1rem; align-items:center; }
+.s32b-imit-icon { font-size:2rem; color:var(--arab-l); line-height:1; }
+.s32b-imit-body { font-size:.85rem; color:var(--card-text); line-height:1.6; }
+.s32b-imit-body strong { color:var(--gold-l); font-family:var(--font-h); }
+.s32b-imit-body em { color:var(--arab-l); font-style:italic; }
+
+/* ═════════════════════════════════════════════════════
+   SCHEMA 42 — La causalita circolare: prohodos ed epistrophe
+   Tipo: process/composite
+═════════════════════════════════════════════════════ */
+.s32c-circle { display:grid; grid-template-columns:1fr 100px 1fr; gap:0; border:1px solid var(--border); border-radius:var(--r); overflow:hidden; margin-bottom:1.5rem; }
+.s32c-side { padding:1.4rem 1.3rem; display:flex; flex-direction:column; gap:.7rem; }
+.s32c-desc-side { background:linear-gradient(135deg, rgba(90,58,138,.12), var(--surface2)); }
+.s32c-asc-side { background:linear-gradient(135deg, rgba(61,107,80,.12), var(--surface2)); }
+.s32c-mid { display:flex; flex-direction:column; align-items:center; justify-content:center; background:var(--surface3); gap:.4rem; border-left:1px solid var(--border); border-right:1px solid var(--border); padding:.5rem; }
+.s32c-mid-icon { font-size:2.5rem; color:var(--gold); line-height:1; }
+.s32c-mid-lbl { font-size:.6rem; font-family:var(--font-h); text-transform:uppercase; letter-spacing:.06em; color:var(--muted2); text-align:center; line-height:1.3; }
+.s32c-side-hdr { font-family:var(--font-h); font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; font-weight:700; padding-bottom:.4rem; border-bottom:1px solid var(--border); }
+.s32c-desc-side .s32c-side-hdr { color:var(--aristo-l); }
+.s32c-asc-side .s32c-side-hdr { color:var(--green-t); }
+.s32c-side-name { font-family:var(--font-h); font-size:1rem; font-weight:700; margin-bottom:.15rem; }
+.s32c-desc-side .s32c-side-name { color:var(--aristo-l); }
+.s32c-asc-side .s32c-side-name { color:var(--green-t); }
+.s32c-side-gr { font-size:.72rem; color:var(--muted2); font-style:italic; }
+.s32c-side-body { font-size:.82rem; color:var(--card-text); line-height:1.6; }
+.s32c-side-body strong { color:var(--cream); font-family:var(--font-h); }
+.s32c-side-body em { color:var(--gold-l); font-style:italic; }
+.s32c-side-who { font-size:.72rem; color:var(--muted); padding-top:.4rem; border-top:1px dashed var(--border); display:block; padding-left:1.2em; text-indent:-1.2em; margin-top:.4rem; }
+.s32c-side-who::before { content:'→ '; color:var(--gold); }
+/* Bonum box */
+.s32c-bonum-title { font-family:var(--font-h); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--gold-l); margin-bottom:.85rem; }
+.s32c-bonum { background:linear-gradient(135deg, rgba(201,151,58,.1), rgba(90,58,138,.06)); border:1px solid var(--gold-d); border-left:4px solid var(--gold); border-radius:var(--r); padding:1.3rem 1.5rem; margin-bottom:1.5rem; }
+.s32c-bonum-lat { font-family:var(--font-h); font-size:1.15rem; font-weight:700; color:var(--gold-l); font-style:italic; margin-bottom:.5rem; }
+.s32c-bonum-body { font-size:.88rem; color:var(--card-text); line-height:1.65; }
+.s32c-bonum-body strong { color:var(--gold-l); font-family:var(--font-h); }
+.s32c-bonum-body em { color:var(--aristo-l); font-style:italic; }
+/* Copula mundi */
+.s32c-copula { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem; }
+.s32c-cop-card { background:var(--surface2); border:1px solid var(--border); border-radius:var(--r); padding:1.1rem 1.2rem; display:flex; flex-direction:column; gap:.45rem; }
+.s32c-cop-scot { border-top:3px solid var(--latin-l); }
+.s32c-cop-neopl { border-top:3px solid var(--aristo-l); }
+.s32c-cop-name { font-family:var(--font-h); font-size:.88rem; font-weight:600; line-height:1.3; }
+.s32c-cop-scot .s32c-cop-name { color:var(--latin-l); }
+.s32c-cop-neopl .s32c-cop-name { color:var(--aristo-l); }
+.s32c-cop-sub { font-size:.72rem; color:var(--muted2); font-style:italic; }
+.s32c-cop-body { font-size:.82rem; color:var(--card-text); line-height:1.55; }
+.s32c-cop-body strong { color:var(--cream); font-family:var(--font-h); }
+/* creation */
+.s32c-creation { background:rgba(139,90,26,.07); border:1px solid var(--arab); border-radius:var(--r); padding:1.1rem 1.3rem; }
+.s32c-crea-hdr { font-family:var(--font-h); font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--arab-l); margin-bottom:.6rem; padding-bottom:.35rem; border-bottom:1px solid rgba(139,90,26,.3); }
+.s32c-crea-body { font-size:.85rem; color:var(--card-text); line-height:1.6; }
+.s32c-crea-body strong { color:var(--gold-l); font-family:var(--font-h); }
+
+
+/* S40: Avicenna: creazione eterna e dimostrazione modale del necessario per sé */
+.s40-layout {
+  display: grid;
+  gap: 1.35rem;
+}
+
+.s40-layout h3,
+.s40-layout h4 {
+  font-family: var(--font-h);
+  line-height: 1.22;
+}
+
+.s40-layout p,
+.s40-layout li {
+  color: var(--card-text);
+}
+
+.s40-logic {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.s40-logic-node {
+  position: relative;
+  padding: 0.95rem 1rem 1rem;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--arab);
+  border-radius: var(--r);
+  background: linear-gradient(135deg, rgba(139, 90, 26, 0.14), var(--surface2));
+  min-height: 112px;
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.s40-logic-node:nth-child(2) {
+  background: linear-gradient(135deg, rgba(139, 90, 26, 0.11), rgba(34, 40, 64, 0.96));
+}
+
+.s40-logic-node:nth-child(3) {
+  border-left-color: var(--aristo);
+  background: linear-gradient(135deg, rgba(90, 58, 138, 0.16), rgba(27, 32, 53, 0.96));
+}
+
+.s40-logic-node:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -0.72rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-h);
+  font-size: 1.15rem;
+  color: var(--gold-l);
+  z-index: 2;
+}
+
+.s40-logic-node:hover,
+.s40-stage:hover,
+.s40-case:hover,
+.s40-note-card:hover,
+.s40-level:hover,
+.s40-term:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+.s40-logic-k {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.64rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--gold-t);
+  font-family: var(--font-h);
+}
+
+.s40-logic-node strong {
+  display: block;
+  color: var(--cream);
+  font-size: 0.98rem;
+  margin-bottom: 0.22rem;
+}
+
+
+.s40-logic-node p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+
+.s40-stage {
+  padding: 1.15rem 1.15rem 1.2rem;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--arab);
+  border-radius: var(--r);
+  background: linear-gradient(135deg, rgba(139, 90, 26, 0.12), var(--surface2));
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.s40-stage--process {
+  background: linear-gradient(135deg, rgba(139, 90, 26, 0.1), rgba(34, 40, 64, 0.95));
+}
+
+.s40-stage--modal {
+  border-left-color: var(--aristo);
+  background: linear-gradient(135deg, rgba(90, 58, 138, 0.14), var(--surface2));
+}
+
+.s40-stage-k {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--arab-l);
+  font-family: var(--font-h);
+}
+
+.s40-stage--modal .s40-stage-k {
+  color: var(--aristo-l);
+}
+
+.s40-stage h3 {
+  font-size: 1.18rem;
+  color: var(--cream);
+  margin-bottom: 0.25rem;
+}
+
+.s40-stage-intro {
+  margin-bottom: 0.9rem;
+  color: var(--card-text);
+}
+
+.s40-stage-note {
+  padding: 0.8rem 0.95rem;
+  border: 1px dashed rgba(191, 165, 98, 0.35);
+  border-radius: var(--r-sm);
+  background: rgba(201, 151, 58, 0.06);
+  color: var(--card-text);
+  margin-bottom: 0.9rem;
+}
+
+.s40-formula {
+  margin-bottom: 1rem;
+  padding: 0.85rem 1rem;
+  border-left: 4px solid var(--green);
+  border-radius: var(--r-sm);
+  background: linear-gradient(135deg, rgba(45, 107, 74, 0.18), rgba(27, 32, 53, 0.98));
+}
+
+.s40-formula-lbl,
+.s40-terms-h,
+.s40-connection-lbl,
+.s40-deduction-lbl {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.64rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  font-family: var(--font-h);
+}
+
+.s40-formula-lbl {
+  color: var(--green-t);
+}
+
+.s40-formula strong {
+  color: var(--cream);
+}
+
+.s40-formula p {
+  color: var(--card-text);
+}
+
+.s40-compare {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.s40-compare-head,
+.s40-case {
+  display: grid;
+  grid-template-columns: 0.82fr 1.08fr 56px 1.24fr 0.9fr;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.s40-compare-head {
+  padding: 0 0.2rem;
+  font-size: 0.64rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  font-family: var(--font-h);
+}
+
+.s40-case {
+  padding: 0.88rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  background: linear-gradient(135deg, rgba(139, 90, 26, 0.1), rgba(34, 40, 64, 0.94));
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.s40-case:hover {
+  border-color: rgba(176, 120, 48, 0.55);
+}
+
+.s40-col p {
+  font-size: 0.92rem;
+}
+
+.s40-case-title {
+  font-family: var(--font-h);
+  color: var(--cream);
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.s40-mini-lbl {
+  display: none;
+  margin-bottom: 0.2rem;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  font-family: var(--font-h);
+}
+
+.s40-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  color: var(--gold-l);
+}
+
+.s40-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.35rem 0 0.4rem;
+}
+
+.s40-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.67rem;
+  line-height: 1.2;
+  font-family: var(--font-h);
+  border: 1px solid transparent;
+}
+
+.s40-pill--essential {
+  background: rgba(45, 107, 74, 0.18);
+  border-color: rgba(80, 200, 120, 0.35);
+  color: var(--green-t);
+}
+
+.s40-pill--partial {
+  background: rgba(201, 151, 58, 0.12);
+  border-color: rgba(201, 151, 58, 0.3);
+  color: var(--gold-l);
+}
+
+.s40-pill--unique {
+  background: rgba(96, 144, 224, 0.14);
+  border-color: rgba(96, 144, 224, 0.34);
+  color: var(--blue-t);
+}
+
+.s40-process-grid {
+  display: grid;
+  grid-template-columns: 1.45fr 0.95fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.s40-process-steps {
+  list-style: none;
+  position: relative;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.s40-process-steps::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 0.55rem;
+  bottom: 0.55rem;
+  width: 2px;
+  background: linear-gradient(180deg, var(--arab), var(--gold));
+}
+
+.s40-step {
+  position: relative;
+  padding: 0.86rem 0.95rem 0.86rem 3rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  background: linear-gradient(135deg, rgba(139, 90, 26, 0.08), rgba(34, 40, 64, 0.94));
+}
+
+.s40-step-no {
+  position: absolute;
+  left: 0.38rem;
+  top: 0.82rem;
+  width: 1.45rem;
+  height: 1.45rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--gold);
+  color: var(--bg);
+  font-size: 0.72rem;
+  font-family: var(--font-h);
+  font-weight: 700;
+}
+
+.s40-side-notes {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.s40-note-card {
+  padding: 0.9rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  background: linear-gradient(135deg, rgba(201, 151, 58, 0.1), rgba(27, 32, 53, 0.97));
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.s40-note-card--aristo {
+  background: linear-gradient(135deg, rgba(90, 58, 138, 0.14), rgba(27, 32, 53, 0.97));
+}
+
+.s40-note-card h4 {
+  font-size: 0.98rem;
+  color: var(--cream);
+  margin-bottom: 0.2rem;
+}
+
+.s40-note-card--aristo h4 {
+  color: var(--aristo-l);
+}
+
+.s40-note-card strong {
+  color: var(--gold-l);
+}
+
+.s40-modal-grid {
+  display: grid;
+  grid-template-columns: 1.12fr 0.98fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.s40-hierarchy {
+  display: grid;
+  gap: 1.18rem;
+}
+
+.s40-level {
+  position: relative;
+  padding: 0.92rem 1rem 0.95rem;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--r-sm);
+  background: linear-gradient(135deg, rgba(139, 90, 26, 0.09), rgba(34, 40, 64, 0.94));
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.s40-level:not(:last-child)::after {
+  content: "↓";
+  position: absolute;
+  left: 50%;
+  bottom: -0.95rem;
+  transform: translateX(-50%);
+  color: var(--gold-l);
+  font-size: 1.15rem;
+}
+
+.s40-level--received {
+  border-left-color: var(--arab);
+}
+
+.s40-level--necessary {
+  border-left-color: var(--blue-t);
+  background: linear-gradient(135deg, rgba(96, 144, 224, 0.15), rgba(90, 58, 138, 0.16), rgba(27, 32, 53, 0.95));
+}
+
+.s40-level-k {
+  display: block;
+  margin-bottom: 0.22rem;
+  font-size: 0.63rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  font-family: var(--font-h);
+}
+
+.s40-level-title {
+  font-family: var(--font-h);
+  font-size: 1.08rem;
+  color: var(--cream);
+  margin-bottom: 0.22rem;
+}
+
+.s40-level-origin {
+  display: block;
+  margin-bottom: 0.38rem;
+  font-style: italic;
+  color: var(--arab-l);
+}
+
+.s40-argument-side {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.s40-deduction {
+  padding: 0.95rem 1rem 1rem;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--aristo);
+  border-radius: var(--r-sm);
+  background: linear-gradient(135deg, rgba(90, 58, 138, 0.12), rgba(27, 32, 53, 0.97));
+}
+
+.s40-deduction-lbl {
+  color: var(--aristo-l);
+}
+
+.s40-deduction h4 {
+  color: var(--cream);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.s40-deduction ol {
+  list-style: none;
+  counter-reset: s40ded;
+  display: grid;
+  gap: 0.62rem;
+}
+
+.s40-deduction li {
+  counter-increment: s40ded;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.s40-deduction li::before {
+  content: counter(s40ded);
+  position: absolute;
+  left: 0;
+  top: 0.12rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(96, 144, 224, 0.16);
+  border: 1px solid rgba(96, 144, 224, 0.32);
+  color: var(--blue-t);
+  font-size: 0.68rem;
+  font-family: var(--font-h);
+  font-weight: 700;
+}
+
+.s40-connection {
+  padding: 0.95rem 1rem;
+  border-left: 4px solid var(--gold);
+  border-radius: var(--r-sm);
+  background: linear-gradient(135deg, rgba(201, 151, 58, 0.11), rgba(27, 32, 53, 0.98));
+}
+
+.s40-connection-lbl {
+  color: var(--gold-l);
+}
+
+.s40-connection strong {
+  color: var(--gold-l);
+}
+
+.s40-terms {
+  padding: 0.95rem 1rem;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--arab);
+  border-radius: var(--r);
+  background: linear-gradient(135deg, rgba(139, 90, 26, 0.1), rgba(27, 32, 53, 0.95));
+}
+
+.s40-terms-h {
+  color: var(--arab-l);
+}
+
+.s40-term-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.s40-term {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.26rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(139, 90, 26, 0.1);
+  border: 1px solid rgba(176, 120, 48, 0.34);
+  color: var(--muted2);
+  font-size: 0.76rem;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.s40-term--arab {
+  color: var(--arab-l);
+}
+
+.s40-term:hover {
+  background: rgba(139, 90, 26, 0.17);
+  border-color: rgba(176, 120, 48, 0.5);
+}
+
+
+.s40-level p {
+  color: var(--card-text);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin-top: 0.35rem;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .s40-logic,
+  .s40-process-grid,
+  .s40-modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .s40-logic-node:not(:last-child)::after {
+    content: "↓";
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: -0.82rem;
+    transform: translateX(-50%);
+  }
+
+  .s40-compare-head {
+    display: none;
+  }
+
+  .s40-case {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .s40-mini-lbl {
+    display: block;
+  }
+
+  .s40-arrow {
+    transform: rotate(90deg);
+    min-height: 26px;
+  }
+
+  .s40-level:not(:last-child)::after {
+    bottom: -0.9rem;
+  }
+
+  .s40-layout {
+    gap: 1rem;
+  }
+}
+
+/* S41: Avicenna: escatologia filosofica e tre destini dell’anima */
+.s41-layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.s41-block {
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.35rem;
+  background: linear-gradient(135deg, rgba(139,90,26,0.1), var(--surface2));
+  border-left: 4px solid var(--arab);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.18);
+}
+
+.s41-block-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid rgba(176,120,48,0.32);
+}
+
+.s41-kicker {
+  font-family: var(--font-h);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--arab-l);
+}
+
+.s41-block h3 {
+  font-family: var(--font-h);
+  font-size: 1.2rem;
+  line-height: 1.25;
+  color: var(--cream);
+}
+
+.s41-mini {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.s41-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-family: var(--font-h);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.s41-pill-imag {
+  background: rgba(201,151,58,0.14);
+  color: var(--gold-l);
+  border-color: rgba(201,151,58,0.32);
+}
+
+.s41-pill-regret {
+  background: rgba(176,32,32,0.14);
+  color: var(--danger-l);
+  border-color: rgba(176,32,32,0.34);
+}
+
+.s41-pill-beat {
+  background: rgba(45,107,74,0.18);
+  color: var(--green-t);
+  border-color: rgba(80,200,120,0.25);
+}
+
+.s41-pill-sep {
+  background: rgba(96,144,224,0.14);
+  color: var(--blue-t);
+  border-color: rgba(96,144,224,0.32);
+}
+
+.s41-pill-origin {
+  background: rgba(176,120,48,0.12);
+  color: var(--arab-l);
+  border-color: rgba(176,120,48,0.3);
+}
+
+.s41-destinies {
+  display: grid;
+  grid-template-columns: 0.95fr 1.8fr;
+  gap: 1.1rem;
+  align-items: start;
+}
+
+.s41-premise {
+  border: 1px solid rgba(176,120,48,0.3);
+  border-radius: var(--r);
+  padding: 1.1rem;
+  background: linear-gradient(160deg, rgba(139,90,26,0.16), rgba(27,32,53,0.94));
+  position: sticky;
+  top: 1rem;
+}
+
+.s41-premise h4,
+.s41-terms h4,
+.s41-sidebox h4 {
+  font-family: var(--font-h);
+  font-size: 0.95rem;
+  color: var(--cream);
+  margin-bottom: 0.45rem;
+}
+
+.s41-premise p,
+.s41-term-card p,
+.s41-sidebox p,
+.s41-fate p,
+.s41-table td,
+.s41-note,
+.s41-keyline {
+  color: var(--card-text);
+}
+
+.s41-premise p + p {
+  margin-top: 0.55rem;
+}
+
+.s41-premise strong {
+  color: var(--gold-l);
+}
+
+.s41-destiny-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.s41-fate {
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
+  min-height: 100%;
+}
+
+.s41-fate:hover,
+.s41-step:hover,
+.s41-term-card:hover,
+.s41-sidebox:hover,
+.s41-table tbody tr:hover {
+  transform: translateY(-3px);
+}
+
+.s41-fate:hover,
+.s41-step:hover,
+.s41-term-card:hover,
+.s41-sidebox:hover {
+  box-shadow: 0 12px 26px rgba(0,0,0,0.22);
+}
+
+.s41-fate--imag {
+  background: linear-gradient(135deg, rgba(201,151,58,0.16), var(--surface2));
+  border-left: 4px solid var(--gold);
+}
+
+.s41-fate--regret {
+  background: linear-gradient(135deg, rgba(139,24,24,0.18), var(--surface2));
+  border-left: 4px solid var(--danger);
+}
+
+.s41-fate--beat {
+  background: linear-gradient(135deg, rgba(45,107,74,0.2), rgba(139,90,26,0.08), var(--surface2));
+  border-left: 4px solid var(--green);
+}
+
+.s41-fate-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.s41-fate-ico {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.s41-fate h4 {
+  font-family: var(--font-h);
+  font-size: 1rem;
+  color: var(--cream);
+  line-height: 1.25;
+  margin-bottom: 0.2rem;
+}
+
+.s41-fate-sub {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.s41-keyline {
+  margin-top: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--r-sm);
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.s41-list {
+  margin-top: 0.7rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.s41-list li {
+  list-style: none;
+  position: relative;
+  padding-left: 1rem;
+  color: var(--card-text);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.s41-list li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold-t);
+  font-size: 0.6rem;
+}
+
+.s41-process-wrap {
+  display: grid;
+  grid-template-columns: 1.5fr 0.95fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.s41-flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+  align-items: stretch;
+}
+
+.s41-step {
+  position: relative;
+  padding: 1rem 0.9rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  background: linear-gradient(145deg, rgba(139,90,26,0.12), var(--surface3));
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.s41-step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -0.62rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  border: 1px solid rgba(201,151,58,0.28);
+  color: var(--gold-t);
+  font-size: 0.72rem;
+  z-index: 2;
+}
+
+.s41-step-num {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-h);
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 0.55rem;
+  color: var(--cream);
+  background: rgba(176,120,48,0.22);
+  border: 1px solid rgba(176,120,48,0.38);
+}
+
+.s41-step h4 {
+  font-family: var(--font-h);
+  font-size: 0.93rem;
+  line-height: 1.28;
+  color: var(--cream);
+  margin-bottom: 0.3rem;
+}
+
+.s41-step p {
+  font-size: 0.84rem;
+  line-height: 1.48;
+  color: var(--card-text);
+}
+
+.s41-terms {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.s41-term-card,
+.s41-sidebox {
+  border-radius: var(--r);
+  border: 1px solid rgba(176,120,48,0.28);
+  padding: 0.95rem 1rem;
+  background: linear-gradient(155deg, rgba(139,90,26,0.14), rgba(34,40,64,0.96));
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.s41-term-card strong,
+.s41-sidebox strong {
+  color: var(--gold-l);
+}
+
+.s41-term-ar {
+  display: block;
+  margin-top: 0.18rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--arab-l);
+}
+
+.s41-note {
+  margin-top: 0.45rem;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.s41-compare {
+  display: grid;
+  grid-template-columns: 1.7fr 0.9fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.s41-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+}
+
+.s41-table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+}
+
+.s41-table thead th {
+  padding: 0.8rem 0.95rem;
+  text-align: left;
+  font-family: var(--font-h);
+  font-size: 0.84rem;
+  color: var(--cream);
+  background: var(--surface3);
+  border-bottom: 1px solid var(--border);
+  vertical-align: bottom;
+}
+
+.s41-table thead th:nth-child(2) {
+  background: linear-gradient(135deg, rgba(139,90,26,0.18), var(--surface3));
+}
+
+.s41-table thead th:nth-child(3) {
+  background: linear-gradient(135deg, rgba(96,144,224,0.14), var(--surface3));
+}
+
+.s41-table td {
+  padding: 0.8rem 0.95rem;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.s41-table tbody tr {
+  transition: background 0.2s, transform 0.2s;
+}
+
+.s41-table tbody tr:hover {
+  background: rgba(201,151,58,0.05);
+}
+
+.s41-crit {
+  width: 24%;
+  font-family: var(--font-h);
+  color: var(--gold-t);
+}
+
+.s41-author {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-h);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.s41-author--avicenna {
+  color: var(--arab-l);
+}
+
+.s41-author--farabi {
+  color: var(--blue-t);
+}
+
+.s41-sidebox {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.s41-sidebox ul {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.s41-sidebox li {
+  list-style: none;
+  position: relative;
+  padding-left: 1rem;
+  color: var(--card-text);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.s41-sidebox li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold-l);
+  font-size: 0.68rem;
+}
+
+.s41-emphasis {
+  padding: 0.7rem 0.8rem;
+  border-radius: var(--r-sm);
+  background: rgba(96,144,224,0.1);
+  border: 1px solid rgba(96,144,224,0.22);
+  color: var(--card-text);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.s41-emphasis strong {
+  color: var(--blue-t);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .s41-destinies,
+  .s41-destiny-grid,
+  .s41-process-wrap,
+  .s41-flow,
+  .s41-compare {
+    grid-template-columns: 1fr;
+  }
+
+  .s41-premise {
+    position: static;
+  }
+
+  .s41-block {
+    padding: 1rem;
+  }
+
+  .s41-block-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .s41-step:not(:last-child)::after {
+    content: "↓";
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: -0.72rem;
+    transform: translateX(-50%);
+  }
+
+  .s41-table {
+    min-width: 640px;
+  }
+}
+
+/* S42: Equinitas est equinitas tantum: Avicenna, essenze e universali */
+.s42-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.s42-left,
+.s42-right {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.s42-panel,
+.s42-section,
+.s42-quote-box,
+.s42-fortuna {
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.2rem 1.25rem;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.s42-panel:hover,
+.s42-section:hover,
+.s42-quote-box:hover,
+.s42-fortuna:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.24);
+}
+
+.s42-section-arab,
+.s42-quote-box {
+  background: linear-gradient(135deg, rgba(139,90,26,0.16), var(--surface2));
+  border-left: 4px solid var(--arab);
+}
+
+.s42-section-neutral {
+  background: linear-gradient(135deg, rgba(201,151,58,0.08), var(--surface2));
+  border-left: 4px solid var(--gold);
+}
+
+.s42-section-latin,
+.s42-fortuna {
+  background: linear-gradient(135deg, rgba(36,64,122,0.14), var(--surface2));
+  border-left: 4px solid var(--latin);
+}
+
+.s42-overline,
+.s42-hdr,
+.s42-mini {
+  font-family: var(--font-h);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.s42-overline {
+  font-size: 0.68rem;
+  color: var(--arab-l);
+  margin-bottom: 0.45rem;
+}
+
+.s42-quote {
+  font-family: var(--font-h);
+  font-size: 1.7rem;
+  line-height: 1.15;
+  color: var(--cream);
+  margin-bottom: 0.55rem;
+}
+
+.s42-quote em {
+  color: var(--gold-l);
+  font-style: italic;
+}
+
+.s42-quote-desc {
+  color: var(--card-text);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.s42-pill-row,
+.s42-origin-list,
+.s42-example-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.8rem;
+}
+
+.s42-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  padding: 0.16rem 0.5rem;
+  border-radius: 999px;
+  font-family: var(--font-h);
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  border: 1px solid transparent;
+}
+
+.s42-pill-success {
+  background: rgba(45,107,74,0.18);
+  color: var(--green-t);
+  border-color: rgba(80,200,120,0.28);
+}
+
+.s42-pill-danger {
+  background: rgba(139,24,24,0.16);
+  color: var(--danger-t);
+  border-color: rgba(212,80,80,0.26);
+}
+
+.s42-pill-gold {
+  background: rgba(201,151,58,0.14);
+  color: var(--gold-l);
+  border-color: rgba(201,151,58,0.26);
+}
+
+.s42-pill-blue {
+  background: rgba(96,144,224,0.14);
+  color: var(--blue-t);
+  border-color: rgba(96,144,224,0.28);
+}
+
+.s42-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding-bottom: 0.55rem;
+  margin-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(201,151,58,0.18);
+  font-size: 0.74rem;
+}
+
+.s42-hdr-arab { color: var(--arab-l); }
+.s42-hdr-neutral { color: var(--gold-l); }
+.s42-hdr-latin { color: var(--latin-l); }
+
+.s42-subnote {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: normal;
+  font-family: var(--font-b);
+}
+
+.s42-hierarchy {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.s42-level {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 0.95rem 1rem;
+  transition: transform 0.18s, border-color 0.18s, background 0.18s;
+}
+
+.s42-level:hover {
+  transform: translateX(4px);
+  border-color: rgba(201,151,58,0.35);
+  background: rgba(255,255,255,0.04);
+}
+
+.s42-level-top {
+  box-shadow: inset 0 0 0 1px rgba(201,151,58,0.12);
+}
+
+.s42-level-h {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.45rem;
+}
+
+.s42-level-name {
+  font-family: var(--font-h);
+  font-size: 1.02rem;
+  color: var(--cream);
+  line-height: 1.2;
+}
+
+.s42-level-term {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  color: var(--gold-t);
+  font-style: italic;
+}
+
+.s42-level p {
+  color: var(--card-text);
+  font-size: 0.9rem;
+  line-height: 1.62;
+}
+
+.s42-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-t);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.s42-principle {
+  margin-top: 0.9rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--r-sm);
+  background: rgba(201,151,58,0.08);
+  border: 1px solid rgba(201,151,58,0.2);
+}
+
+.s42-principle strong {
+  color: var(--gold-l);
+  font-family: var(--font-h);
+}
+
+.s42-principle p {
+  color: var(--card-text);
+  font-size: 0.9rem;
+  line-height: 1.62;
+}
+
+
+/* CSS per la Bilancia dei Dilemmi (S42) */
+.s42-scale-wrap {
+  margin: 1.5rem 0 2rem;
+  padding-top: 1rem;
+}
+
+.s42-scale-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.s42-scale-beam {
+  position: absolute;
+  top: -12px;
+  left: 15%;
+  right: 15%;
+  height: 4px;
+  background: var(--gold-d);
+  border-radius: 2px;
+}
+
+.s42-scale-fulcrum {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid var(--gold);
+}
+
+.s42-scale-plate {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.s42-scale-plate::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 12px;
+  background: var(--gold-d);
+}
+
+.s42-plate-title {
+  text-align: center;
+  font-family: var(--font-h);
+  color: var(--cream);
+  font-size: 0.95rem;
+  padding: 0.4rem 0;
+  background: rgba(201,151,58,0.12);
+  border: 1px solid rgba(201,151,58,0.3);
+  border-radius: var(--r-sm);
+}
+
+.s42-plate-title strong {
+  color: var(--gold-l);
+}
+
+.s42-plate-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  background: rgba(255,255,255,0.02);
+}
+
+.s42-plate-row {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 0.5rem;
+  padding: 0.75rem 0.85rem;
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+.s42-plate-gain {
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(90deg, rgba(45,107,74,0.1), transparent);
+}
+
+.s42-plate-risk {
+  background: linear-gradient(90deg, rgba(139,24,24,0.1), transparent);
+}
+
+.s42-plate-ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: var(--font-h);
+}
+
+.s42-plate-gain .s42-plate-ico { color: var(--green-t); }
+.s42-plate-risk .s42-plate-ico { color: var(--danger-t); }
+
+.s42-plate-row strong {
+  color: var(--cream);
+  font-weight: 600;
+}
+
+.s42-plate-sub {
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-style: italic;
+  display: block;
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 768px) {
+  .s42-scale-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .s42-scale-beam, .s42-scale-fulcrum, .s42-scale-plate::before {
+    display: none;
+  }
+}
+.s42-origin-box {
+  margin-top: 0.85rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: var(--r-sm);
+  background: rgba(255,255,255,0.03);
+  border: 1px dashed rgba(201,151,58,0.28);
+}
+
+.s42-origin-box p {
+  color: var(--muted2);
+  font-size: 0.86rem;
+  margin-bottom: 0.55rem;
+}
+
+.s42-origin-tag {
+  padding: 0.16rem 0.48rem;
+  border-radius: 999px;
+  background: rgba(201,151,58,0.12);
+  color: var(--gold-t);
+  border: 1px solid rgba(201,151,58,0.22);
+  font-size: 0.72rem;
+  transition: transform 0.18s, background 0.18s;
+}
+
+.s42-origin-tag:hover {
+  transform: translateY(-2px);
+  background: rgba(201,151,58,0.18);
+}
+
+
+.s42-anti-plato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 1.25rem;
+}
+
+.s42-plato-box {
+  background: rgba(139,24,24,0.08);
+  border: 1px solid rgba(139,24,24,0.25);
+  border-radius: var(--r-sm);
+  padding: 0.95rem 1.1rem;
+  width: 100%;
+}
+
+.s42-avi-box {
+  background: rgba(201,151,58,0.1);
+  border: 1px solid rgba(201,151,58,0.3);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--r-sm);
+  padding: 0.95rem 1.1rem;
+  width: 100%;
+}
+
+.s42-plato-box p,
+.s42-avi-box p {
+  color: var(--card-text);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin-bottom: 0.35rem;
+}
+
+.s42-plato-box p:last-child,
+.s42-avi-box p:last-child {
+  margin-bottom: 0;
+}
+
+.s42-plato-prob {
+  color: var(--danger-l) !important;
+  font-style: italic;
+  font-size: 0.82rem !important;
+  border-top: 1px dashed rgba(139,24,24,0.25);
+  padding-top: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.s42-positions-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+.s42-pos-c {
+  font-size: 0.82rem;
+  color: var(--card-text);
+  line-height: 1.45;
+}
+
+.s42-pos-c strong {
+  color: var(--cream);
+  font-family: var(--font-h);
+}
+.s42-case-box {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.s42-question {
+  padding: 0.85rem 0.95rem;
+  border-radius: var(--r-sm);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+}
+
+.s42-question strong {
+  color: var(--cream);
+}
+
+.s42-question p {
+  color: var(--card-text);
+  font-size: 0.92rem;
+  line-height: 1.58;
+}
+
+.s42-case-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.s42-case-side {
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 0.9rem 0.95rem;
+  background: rgba(255,255,255,0.03);
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.s42-case-side:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.16);
+}
+
+.s42-mini {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  font-size: 0.64rem;
+  color: var(--latin-l);
+}
+
+.s42-case-side p {
+  color: var(--card-text);
+  font-size: 0.88rem;
+  line-height: 1.58;
+}
+
+.s42-examples {
+  margin-top: 0.2rem;
+}
+
+.s42-example-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+}
+
+.s42-example {
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 0.8rem 0.85rem;
+  background: rgba(255,255,255,0.03);
+  transition: transform 0.18s, border-color 0.18s;
+}
+
+.s42-example:hover {
+  transform: translateY(-2px);
+  border-color: rgba(201,151,58,0.3);
+}
+
+.s42-example h4 {
+  font-family: var(--font-h);
+  font-size: 0.9rem;
+  color: var(--cream);
+  margin-bottom: 0.28rem;
+}
+
+.s42-example p {
+  color: var(--card-text);
+  font-size: 0.84rem;
+  line-height: 1.52;
+}
+
+.s42-fortuna-list {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.2rem;
+}
+
+.s42-fortuna-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  padding-top: 0.6rem;
+  border-top: 1px solid rgba(96,144,224,0.18);
+}
+
+.s42-fortuna-item:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.s42-fortuna-name {
+  font-family: var(--font-h);
+  color: var(--latin-l);
+  font-size: 0.9rem;
+}
+
+.s42-fortuna-item p {
+  color: var(--card-text);
+  font-size: 0.86rem;
+  line-height: 1.54;
+}
+
+
+
+.s42-anti-plato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 1.25rem;
+}
+
+.s42-plato-box {
+  background: rgba(139,24,24,0.08);
+  border: 1px solid rgba(139,24,24,0.25);
+  border-radius: var(--r-sm);
+  padding: 0.95rem 1.1rem;
+  width: 100%;
+}
+
+.s42-avi-box {
+  background: rgba(201,151,58,0.1);
+  border: 1px solid rgba(201,151,58,0.3);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--r-sm);
+  padding: 0.95rem 1.1rem;
+  width: 100%;
+}
+
+.s42-plato-box p,
+.s42-avi-box p {
+  color: var(--card-text);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin-bottom: 0.35rem;
+}
+
+.s42-plato-box p:last-child,
+.s42-avi-box p:last-child {
+  margin-bottom: 0;
+}
+
+.s42-plato-prob {
+  color: var(--danger-l) !important;
+  font-style: italic;
+  font-size: 0.82rem !important;
+  border-top: 1px dashed rgba(139,24,24,0.25);
+  padding-top: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.s42-positions-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+.s42-pos-c {
+  font-size: 0.82rem;
+  color: var(--card-text);
+  line-height: 1.45;
+}
+
+.s42-pos-c strong {
+  color: var(--cream);
+  font-family: var(--font-h);
+}
+
+
+
+
+/* Responsive S42 */
+@media (max-width: 768px) {
+  .s42-layout,
+  .s42-case-grid,
+  .s42-example-grid {
+    grid-template-columns: 1fr;
+  }
+  .s42-fortuna-item {
+    grid-template-columns: 1fr;
+  }
+  .s42-level-h,
+  .s42-hdr {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .s42-quote {
+    font-size: 1.35rem;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .s32a-level { grid-template-columns:40px 1fr; }
+  .s32a-lev-func { display:none; }
+  .s32a-diffs { grid-template-columns:1fr; }
+  .s32a-pred-row { flex-direction:column; }
+  .s32b-parallel { grid-template-columns:1fr; }
+  .s32b-vision { border-bottom:1px solid var(--border); }
+  .s32b-thought { border-top:1px solid var(--border); }
+  .s32b-center { padding:.8rem; flex-direction:row; border-left:none; border-right:none; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+  .s32b-descent { flex-direction:column; }
+  .s32b-desc-step { border-right:none; border-bottom:1px solid var(--border); }
+  .s32b-desc-step:last-child { border-bottom:none; }
+  .s32b-imit { grid-template-columns:1fr; text-align:center; }
+  .s32c-circle { grid-template-columns:1fr; }
+  .s32c-desc-side { border-bottom:1px solid var(--border); }
+  .s32c-asc-side { border-top:1px solid var(--border); }
+  .s32c-mid { padding:.8rem; flex-direction:row; border-left:none; border-right:none; }
+  .s32c-copula { grid-template-columns:1fr; }
+}
+
+
+
+@media (max-width: 768px) {
+  .s18-novelties,
+  .s18-matrices,
+  .s18-god-grid {
+    grid-template-columns: 1fr;
+  }
+  .s18-sir-chain {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .s18-sir-arr {
+    transform: rotate(90deg);
+    text-align: center;
+  }
+}
+@media (max-width: 1024px) { :root { --sidebar: 220px; } }
+/* ── Global Mobile Navigation ── */
+.mob-nav-toggle {
+  display: none;
+  position: fixed;
+  top: 0.75rem; left: 0.75rem;
+  z-index: 300;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--cream);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  align-items: center;
+  justify-content: center;
+}
+.mob-nav-toggle:hover { background: var(--surface2); }
+
+.mob-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 150;
+  opacity: 0;
+  transition: opacity 0.28s;
+}
+.mob-overlay.visible { opacity: 1; pointer-events: auto; }
+
+@media (max-width: 768px) {
+  :root { --sidebar: 280px; }
+  .mob-nav-toggle, .mob-theme-toggle { display: flex !important; }
+  .mob-overlay { display: block; pointer-events: none; }
+  
+  .sidebar {
+    width: var(--sidebar);
+    left: calc(-1 * var(--sidebar));
+    transform: none;
+    transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: none;
+  }
+  .sidebar.open {
+    left: 0 !important;
+    transform: none !important;
+    z-index: 1000 !important;
+    display: flex !important;
+  }
+  .main { margin-left: 0 !important; }
+  
+  .hero { padding: 4rem 1.25rem 2rem; }
+  .hero::after { display: none; }
+  .hero h1 { font-size: 1.75rem; }
+  .hero-meta { flex-direction: column; gap: 0.75rem; }
+  .ds { padding: 2rem 1.25rem 1.75rem; }
+  .ds h2 { font-size: 1.35rem; }
+}
+
+
+/* ── Tablet Optimization for S40, S41, S42 ── */
+@media (max-width: 1100px) {
+  /* S40 */
+  .s40-compare-head { display: none; }
+  .s40-case { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .s40-case .s40-arrow { display: none; }
+  .s40-case .s40-mini-lbl { display: block; }
+  .s40-process-grid { grid-template-columns: 1fr; }
+  .s40-modal-grid { grid-template-columns: 1fr; }
+  
+  /* S41 */
+  .s41-destinies { grid-template-columns: 1fr; }
+  .s41-premise { position: static; margin-bottom: 1rem; }
+  .s41-flow { grid-template-columns: 1fr 1fr; }
+  .s41-compare { grid-template-columns: 1fr; }
+  
+  /* S42 */
+  .s42-layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+  /* S40 */
+  .s40-logic { grid-template-columns: 1fr; }
+  .s40-logic-node:not(:last-child)::after {
+    content: "↓";
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: -0.82rem;
+    transform: translateX(-50%);
+  }
+  .s40-case { grid-template-columns: 1fr; gap: 0.8rem; }
+  
+  /* S41 */
+  .s41-destiny-grid { grid-template-columns: 1fr; }
+  
+  /* S42 */
+  .s42-scale-container { grid-template-columns: 1fr; gap: 1.5rem; }
+  .s42-scale-beam, .s42-scale-fulcrum, .s42-scale-plate::before { display: none; }
+}
+
 </style>
 </head>
 <body>
+<button class="mob-nav-toggle" id="mob-toggle" aria-label="Apri menu">&#9776;</button>
 <button aria-label="Cambia tema" class="mob-theme-toggle" id="mob-theme-toggle">☼</button>
+<div class="mob-overlay" id="mob-overlay"></div>
 <!-- ════ SIDEBAR ════ -->
 <aside class="sidebar">
 <div class="sb-logo">
 <div class="eyebrow">Università degli Studi di Milano</div>
 <div class="title">Filosofia Medievale<br/>Araba ed Ebraica</div>
-<div class="sub">Schemi delle lezioni 1–<span class="ultima-lezione-var">22</span></div>
+<div class="sub">Schemi delle lezioni 1–<span class="ultima-lezione-var">23</span></div>
 </div>
 <div class="theme-toggle-wrap">
 <button aria-label="Cambia tema" class="theme-toggle" id="theme-toggle">
@@ -6103,61 +8019,64 @@ body {
 <span class="th-moon">☾</span>
 </button>
 </div>
-<ul class="nav-list"><li class="nav-item">          <a href="#s1"><span class="nav-num">1</span>I sei automatismi sul pensiero medievale</a>
-          <a href="#s2"><span class="nav-num">2</span>La filosofia antica come "Bios" e stile di vita</a>
-          <a href="#s3"><span class="nav-num">3</span>La catena di trasmissione filosofica</a>
-          <a href="#s4"><span class="nav-num">4</span>Morte e resurrezione della filosofia</a>
-          <a href="#s5"><span class="nav-num">5</span>L'impatto degli Ordini Mendicanti</a>
-          <a href="#s6"><span class="nav-num">6</span>Struttura dell'<em>Universitas</em> medievale</a>
-          <a href="#s7"><span class="nav-num">7</span>Il metodo universitario: <em>Quaestio</em> e <em>Disputatio</em></a>
-          <a href="#s8"><span class="nav-num">8</span>La stratificazione storica degli stereotipi sul Medioevo</a>
-          <a href="#s9"><span class="nav-num">9</span>Le peculiarità dello studio della filosofia medievale</a>
-          <a href="#s10"><span class="nav-num">10</span>Il Medioevo policentrico</a>
-          <a href="#s11"><span class="nav-num">11</span>L'antiriduzionismo di Aristotele</a>
-          <a href="#s12"><span class="nav-num">12</span>Trasmissione testuale del <em>De Anima</em></a>
-          <a href="#s13"><span class="nav-num">13</span>Aristotele: Ilomorfismo e Definizione di Anima</a>
-          <a href="#s14"><span class="nav-num">14</span>Aristotele: L'Intelletto Potenziale e i Due Problemi</a>
-          <a href="#s15"><span class="nav-num">15</span>L'Intelletto Produttivo (Agente) in Aristotele</a>
-          <a href="#s16"><span class="nav-num">16</span>I due modelli di astrazione: Eliminativismo vs Cumulativismo</a>
-          <a href="#s17"><span class="nav-num">17</span>La metafora della luce: Lettura Oggettiva vs Soggettiva</a>
-          <a href="#s18"><span class="nav-num">18</span>I sensi interni e la formazione dei Fantasmi (Temistio)</a>
-          <a href="#s19"><span class="nav-num">19</span>Alessandro di Afrodisia: il sistema degli intelletti</a>
-          <a href="#s20"><span class="nav-num">20</span>Processo della conoscenza intellettuale</a>
-          <a href="#s21"><span class="nav-num">21</span>L'epistemologia di Siriano: Saldatura tra Platone e Aristotele</a>
-          <a href="#s22"><span class="nav-num">22</span>Temistio: la gerarchia degli intelletti e il problema dell'identita</a>
-          <a href="#s23"><span class="nav-num">23</span>Confronto sinottico: l'intelletto in tre autori</a>
-          <a href="#s24"><span class="nav-num">24</span>Cosmologia medievale: Aristotele vs Tolomeo</a>
-          <a href="#s25"><span class="nav-num">25</span>La <em>Falsafa</em>: le tre matrici e la Causa Prima nella filosofia araba</a>
-          <a href="#s26"><span class="nav-num">26</span>L'emanazione delle intelligenze e l'escatologia secondo Avicenna</a>
-          <a href="#s27"><span class="nav-num">27</span>Al-Kindī: I quattro intelletti e la trasmissione neoplatonica</a>
-          <a href="#s28"><span class="nav-num">28</span>Al-Fārābī: Gerarchia della conoscenza — Filosofia, Kalam e Religione</a>
-          <a href="#s29"><span class="nav-num">29</span>Al-Fārābī: I sei significati di «Intelletto» ('Aql)</a>
-          <a href="#s30"><span class="nav-num">30</span>Al-Fārābī: Astrazione e i tre stadi dell'intelletto</a>
-          <a href="#s31"><span class="nav-num">31</span>Identità pensante/pensato · doppio regime delle essenze</a>
-          <a href="#s32"><span class="nav-num">32</span>Cosmologia ed Emanazione · le dieci intelligenze</a>
-                              <a href="#s33"><span class="nav-num">33</span>La felicità mentale e l\'errore filologico del <em>De anima</em></a>
-          <a href="#s34"><span class="nav-num">34</span>L'invenzione della volontà e il problema del male</a>
-          <a href="#s35"><span class="nav-num">35</span>I cieli come strumenti e la frattura tra Dio e Prima Intelligenza</a>
-          <a href="#s36"><span class="nav-num">36</span><em>Al-Madīna al-Fāḍila</em>: la dimensione politica dell'immortalità</a>
-          <a href="#s37"><span class="nav-num">37</span>Confronto sinottico: Al-Kindī vs. Al-Fārābī</a>
-          <a href="#s38"><span class="nav-num">38</span>Avicenna: enciclopedia e anti-eurocentrismo</a>
-          <a href="#s39"><span class="nav-num">39</span>Avicenna e il soggetto della metafisica</a></li></ul>
+<ul class="nav-list">          <li class="nav-item"><a href="#s1"><span class="nav-num">1</span>I sei automatismi sul pensiero medievale</a></li>
+          <li class="nav-item"><a href="#s2"><span class="nav-num">2</span>La filosofia antica come "Bios" e stile di vita</a></li>
+          <li class="nav-item"><a href="#s3"><span class="nav-num">3</span>La catena di trasmissione filosofica</a></li>
+          <li class="nav-item"><a href="#s4"><span class="nav-num">4</span>Morte e resurrezione della filosofia</a></li>
+          <li class="nav-item"><a href="#s5"><span class="nav-num">5</span>L'impatto degli Ordini Mendicanti</a></li>
+          <li class="nav-item"><a href="#s6"><span class="nav-num">6</span>Struttura dell'<em>Universitas</em> medievale</a></li>
+          <li class="nav-item"><a href="#s7"><span class="nav-num">7</span>Il metodo universitario: <em>Quaestio</em> e <em>Disputatio</em></a></li>
+          <li class="nav-item"><a href="#s8"><span class="nav-num">8</span>La stratificazione storica degli stereotipi sul Medioevo</a></li>
+          <li class="nav-item"><a href="#s9"><span class="nav-num">9</span>Le peculiarità dello studio della filosofia medievale</a></li>
+          <li class="nav-item"><a href="#s10"><span class="nav-num">10</span>Il Medioevo policentrico</a></li>
+          <li class="nav-item"><a href="#s11"><span class="nav-num">11</span>L'antiriduzionismo di Aristotele</a></li>
+          <li class="nav-item"><a href="#s12"><span class="nav-num">12</span>Trasmissione testuale del <em>De Anima</em></a></li>
+          <li class="nav-item"><a href="#s13"><span class="nav-num">13</span>Aristotele: Ilomorfismo e Definizione di Anima</a></li>
+          <li class="nav-item"><a href="#s14"><span class="nav-num">14</span>Aristotele: L'Intelletto Potenziale e i Due Problemi</a></li>
+          <li class="nav-item"><a href="#s15"><span class="nav-num">15</span>L'Intelletto Produttivo (Agente) in Aristotele</a></li>
+          <li class="nav-item"><a href="#s16"><span class="nav-num">16</span>I due modelli di astrazione: Eliminativismo vs Cumulativismo</a></li>
+          <li class="nav-item"><a href="#s17"><span class="nav-num">17</span>La metafora della luce: Lettura Oggettiva vs Soggettiva</a></li>
+          <li class="nav-item"><a href="#s18"><span class="nav-num">18</span>I sensi interni e la formazione dei Fantasmi (Temistio)</a></li>
+          <li class="nav-item"><a href="#s19"><span class="nav-num">19</span>Alessandro di Afrodisia: il sistema degli intelletti</a></li>
+          <li class="nav-item"><a href="#s20"><span class="nav-num">20</span>Processo della conoscenza intellettuale</a></li>
+          <li class="nav-item"><a href="#s21"><span class="nav-num">21</span>L'epistemologia di Siriano: Saldatura tra Platone e Aristotele</a></li>
+          <li class="nav-item"><a href="#s22"><span class="nav-num">22</span>Temistio: la gerarchia degli intelletti e il problema dell'identita</a></li>
+          <li class="nav-item"><a href="#s23"><span class="nav-num">23</span>Confronto sinottico: l'intelletto in tre autori</a></li>
+          <li class="nav-item"><a href="#s24"><span class="nav-num">24</span>Cosmologia medievale: Aristotele vs Tolomeo</a></li>
+          <li class="nav-item"><a href="#s25"><span class="nav-num">25</span>La <em>Falsafa</em>: le tre matrici e la Causa Prima nella filosofia araba</a></li>
+          <li class="nav-item"><a href="#s26"><span class="nav-num">26</span>L'emanazione delle intelligenze e l'escatologia secondo Avicenna</a></li>
+          <li class="nav-item"><a href="#s27"><span class="nav-num">27</span>Al-Kindī: I quattro intelletti e la trasmissione neoplatonica</a></li>
+          <li class="nav-item"><a href="#s28"><span class="nav-num">28</span>Al-Fārābī: Gerarchia della conoscenza — Filosofia, Kalam e Religione</a></li>
+          <li class="nav-item"><a href="#s29"><span class="nav-num">29</span>Al-Fārābī: I sei significati di «Intelletto» ('Aql)</a></li>
+          <li class="nav-item"><a href="#s30"><span class="nav-num">30</span>Al-Fārābī: Astrazione e i tre stadi dell'intelletto</a></li>
+          <li class="nav-item"><a href="#s31"><span class="nav-num">31</span>Identità pensante/pensato · doppio regime delle essenze</a></li>
+          <li class="nav-item"><a href="#s32"><span class="nav-num">32</span>Cosmologia ed Emanazione · le dieci intelligenze</a></li>
+                              <li class="nav-item"><a href="#s33"><span class="nav-num">33</span>La felicità mentale e l\'errore filologico del <em>De anima</em></a></li>
+          <li class="nav-item"><a href="#s34"><span class="nav-num">34</span>L'invenzione della volontà e il problema del male</a></li>
+          <li class="nav-item"><a href="#s35"><span class="nav-num">35</span>I cieli come strumenti e la frattura tra Dio e Prima Intelligenza</a></li>
+          <li class="nav-item"><a href="#s36"><span class="nav-num">36</span><em>Al-Madīna al-Fāḍila</em>: la dimensione politica dell'immortalità</a></li>
+          <li class="nav-item"><a href="#s37"><span class="nav-num">37</span>Confronto sinottico: Al-Kindī vs. Al-Fārābī</a></li>
+          <li class="nav-item"><a href="#s38"><span class="nav-num">38</span>Avicenna: enciclopedia, nomi e anti-eurocentrismo</a></li>
+          <li class="nav-item"><a href="#s39"><span class="nav-num">39</span>Avicenna: soggetto della metafisica</a></li>
+          <li class="nav-item"><a href="#s40"><span class="nav-num">40</span>Avicenna: creazione eterna e necessario per sé</a></li>
+          <li class="nav-item"><a href="#s41"><span class="nav-num">41</span>Tre destini dell’anima in Avicenna</a></li>
+          <li class="nav-item"><a href="#s42"><span class="nav-num">42</span>Avicenna: essenze e universali</a></li></ul>
 <div class="sb-footer">
     Corso: <em>Che cosa significa pensare?</em><br/>
-    Lezioni 1–22 · Da al-Fārābī ad Avicenna: enciclopedia del sapere, metafisica e primato dell'ente
+    Lezioni 1–23 · Da al-Fārābī ad Avicenna: metafisica, creazione eterna, escatologia filosofica, essenze e universali
   </div>
 </aside>
 <!-- ════ MAIN ════ -->
 <main class="main">
 <!-- ──── HERO ──── -->
 <div class="hero">
-<div class="hero-pill"><span class="schema-count-var">39</span> schemi del corso</div>
+<div class="hero-pill"><span class="schema-count-var">42</span> schemi del corso</div>
 <h1>Filosofia Medievale<br/><em>Araba ed Ebraica</em></h1>
-<div class="hero-sub">Schemi visivi per le lezioni 1–<span class="ultima-lezione-var">22</span> — dalla trasmissione aristotelica ad Avicenna: <em>falsafa</em>, enciclopedia del sapere, soggetto della metafisica e primato dell'ente</div>
+  <div class="hero-sub">Schemi visivi per le lezioni 1–<span class="ultima-lezione-var">23</span> — dalla trasmissione aristotelica ad Avicenna: <em>falsafa</em>, metafisica, creazione eterna, escatologia filosofica, essenze e universali</div>
 <div class="hero-meta">
 <span>Università degli Studi di Milano</span>
 <span>A.A. 2025–2026</span>
-<span><span class="ultima-lezione-var">22</span> lezioni · <span class="schema-count-var">39</span> schemi visivi</span>
+<span><span class="ultima-lezione-var">23</span> lezioni · <span class="schema-count-var">42</span> schemi visivi</span>
 </div>
 <div class="hero-line"></div>
 </div>
@@ -8589,260 +10508,260 @@ body {
 <h2>Cosmologia ed Emanazione: le dieci intelligenze e la causalità circolare</h2>
 <p class="desc">Il sistema farabiano integra la cosmologia tolemaica e l'emanatismo neoplatonico, assegnando all'intelletto agente aristotelico la funzione di decima intelligenza. È una gerarchia ilemorfista (ogni livello è <em>forma</em> rispetto a ciò che sta sotto e <em>materia</em> rispetto a ciò che sta sopra) attraversata da un doppio movimento: la processione (discesa delle forme) e l'astrazione (risalita).</p>
 
-<div class="s38-layout">
+<div class="s32-layout">
 
   <!-- emanazione colonna -->
-  <div class="s38-direction">
-    <div class="s38-dir-title s38-dir-emanaz">Emanazione · Processione (dall'alto)</div>
-    <div class="s38-dir-arr" style="color:var(--aristo-l);">▼</div>
-    <div class="s38-dir-arr" style="color:var(--aristo-l);">▼</div>
-    <div class="s38-dir-arr" style="color:var(--aristo-l);">▼</div>
+  <div class="s32-direction">
+    <div class="s32-dir-title s32-dir-emanaz">Emanazione · Processione (dall'alto)</div>
+    <div class="s32-dir-arr" style="color:var(--aristo-l);">▼</div>
+    <div class="s32-dir-arr" style="color:var(--aristo-l);">▼</div>
+    <div class="s32-dir-arr" style="color:var(--aristo-l);">▼</div>
   </div>
 
   <!-- catena gerarchica -->
-  <div class="s38-chain">
-    <div class="s38-level s38-lv-god">
-      <div class="s38-lev-n">★</div>
+  <div class="s32-chain">
+    <div class="s32-level s32-lv-god">
+      <div class="s32-lev-n">★</div>
       <div>
-        <div class="s38-lev-name">Dio · Causa prima</div>
-        <div class="s38-lev-desc">Tenuto per il momento sullo sfondo; oggetto specifico della cosmologia farabiana.</div>
+        <div class="s32-lev-name">Dio · Causa prima</div>
+        <div class="s32-lev-desc">Tenuto per il momento sullo sfondo; oggetto specifico della cosmologia farabiana.</div>
       </div>
-      <div class="s38-lev-role"><span class="s38-role-f">Solo forma</span><span style="color:var(--muted);font-size:.65rem;">(al di là di tutto)</span></div>
+      <div class="s32-lev-role"><span class="s32-role-f">Solo forma</span><span style="color:var(--muted);font-size:.65rem;">(al di là di tutto)</span></div>
     </div>
-    <div class="s38-level s38-lv-intel">
-      <div class="s38-lev-n">I–X</div>
+    <div class="s32-level s32-lv-intel">
+      <div class="s32-lev-n">I–X</div>
       <div>
-        <div class="s38-lev-name">Le intelligenze separate · i motori dei cieli</div>
-        <div class="s38-lev-desc">Dalla prima intelligenza (motore del primo cielo) all'ultima (motore della sfera della Luna). «Angeli filosofici»: forme pure mai state nella materia, massimamente intelligibili <em>in sé</em>.</div>
+        <div class="s32-lev-name">Le intelligenze separate · i motori dei cieli</div>
+        <div class="s32-lev-desc">Dalla prima intelligenza (motore del primo cielo) all'ultima (motore della sfera della Luna). «Angeli filosofici»: forme pure mai state nella materia, massimamente intelligibili <em>in sé</em>.</div>
       </div>
-      <div class="s38-lev-role"><span class="s38-role-f">Solo forma</span><span style="color:var(--muted);font-size:.65rem;">(ridotte a 9–10)</span></div>
+      <div class="s32-lev-role"><span class="s32-role-f">Solo forma</span><span style="color:var(--muted);font-size:.65rem;">(ridotte a 9–10)</span></div>
     </div>
-    <div class="s38-level s38-lv-acquis">
-      <div class="s38-liminare-badge">✦ Animale liminare</div>
-      <div class="s38-lev-n">✧</div>
+    <div class="s32-level s32-lv-acquis">
+      <div class="s32-liminare-badge">✦ Animale liminare</div>
+      <div class="s32-lev-n">✧</div>
       <div>
-        <div class="s38-lev-name">Intelletto acquisito umano</div>
-        <div class="s38-lev-desc">Gradino più basso del mondo intelligibile · gradino più alto del mondo sensibile. Cerniera fra due regioni dell'essere — la matrice della dignità rinascimentale (Ficino, Pico).</div>
+        <div class="s32-lev-name">Intelletto acquisito umano</div>
+        <div class="s32-lev-desc">Gradino più basso del mondo intelligibile · gradino più alto del mondo sensibile. Cerniera fra due regioni dell'essere — la matrice della dignità rinascimentale (Ficino, Pico).</div>
       </div>
-      <div class="s38-lev-role"><span class="s38-role-both">Forma ↑ · Materia ↓</span></div>
+      <div class="s32-lev-role"><span class="s32-role-both">Forma ↑ · Materia ↓</span></div>
     </div>
-    <div class="s38-level s38-lv-act">
-      <div class="s38-lev-n">act</div>
+    <div class="s32-level s32-lv-act">
+      <div class="s32-lev-n">act</div>
       <div>
-        <div class="s38-lev-name">Intelletto in atto</div>
-        <div class="s38-lev-desc">Il momento puntuale in cui si pensa qualcosa. Forma rispetto all'intelletto potenziale.</div>
+        <div class="s32-lev-name">Intelletto in atto</div>
+        <div class="s32-lev-desc">Il momento puntuale in cui si pensa qualcosa. Forma rispetto all'intelletto potenziale.</div>
       </div>
-      <div class="s38-lev-role"><span class="s38-role-both">Forma ↑ · Materia ↓</span></div>
+      <div class="s32-lev-role"><span class="s32-role-both">Forma ↑ · Materia ↓</span></div>
     </div>
-    <div class="s38-level s38-lv-pot">
-      <div class="s38-lev-n">pot</div>
+    <div class="s32-level s32-lv-pot">
+      <div class="s32-lev-n">pot</div>
       <div>
-        <div class="s38-lev-name">Intelletto potenziale</div>
-        <div class="s38-lev-desc">Sostrato ricettivo: forma rispetto alle forme immanenti nel mondo sensibile, quasi-materia per gli intelligibili in atto.</div>
+        <div class="s32-lev-name">Intelletto potenziale</div>
+        <div class="s32-lev-desc">Sostrato ricettivo: forma rispetto alle forme immanenti nel mondo sensibile, quasi-materia per gli intelligibili in atto.</div>
       </div>
-      <div class="s38-lev-role"><span class="s38-role-both">Forma ↑ · Materia ↓</span></div>
+      <div class="s32-lev-role"><span class="s32-role-both">Forma ↑ · Materia ↓</span></div>
     </div>
-    <div class="s38-level s38-lv-form">
-      <div class="s38-lev-n">F</div>
+    <div class="s32-level s32-lv-form">
+      <div class="s32-lev-n">F</div>
       <div>
-        <div class="s38-lev-name">Forme immanenti nel mondo sensibile</div>
-        <div class="s38-lev-desc">Le forme dei corpi naturali (l'uomo, il gatto, il triangolo incarnato) — intelligibili in potenza, da astrarre.</div>
+        <div class="s32-lev-name">Forme immanenti nel mondo sensibile</div>
+        <div class="s32-lev-desc">Le forme dei corpi naturali (l'uomo, il gatto, il triangolo incarnato) — intelligibili in potenza, da astrarre.</div>
       </div>
-      <div class="s38-lev-role"><span class="s38-role-both">Forma ↑ · Materia ↓</span></div>
+      <div class="s32-lev-role"><span class="s32-role-both">Forma ↑ · Materia ↓</span></div>
     </div>
-    <div class="s38-level s38-lv-elem">
-      <div class="s38-lev-n">4</div>
+    <div class="s32-level s32-lv-elem">
+      <div class="s32-lev-n">4</div>
       <div>
-        <div class="s38-lev-name">Le forme dei quattro elementi</div>
-        <div class="s38-lev-desc">Fuoco, aria, acqua, terra — il livello minimo di determinazione formale nel mondo sublunare.</div>
+        <div class="s32-lev-name">Le forme dei quattro elementi</div>
+        <div class="s32-lev-desc">Fuoco, aria, acqua, terra — il livello minimo di determinazione formale nel mondo sublunare.</div>
       </div>
-      <div class="s38-lev-role"><span class="s38-role-both">Forma ↑ · Materia ↓</span></div>
+      <div class="s32-lev-role"><span class="s32-role-both">Forma ↑ · Materia ↓</span></div>
     </div>
-    <div class="s38-level s38-lv-matter">
-      <div class="s38-lev-n">◌</div>
+    <div class="s32-level s32-lv-matter">
+      <div class="s32-lev-n">◌</div>
       <div>
-        <div class="s38-lev-name">Materia prima</div>
-        <div class="s38-lev-desc">Concetto limite: mai incontrata pura nella realtà. Sola materia, nessuna forma — il fondo privativo della processione.</div>
+        <div class="s32-lev-name">Materia prima</div>
+        <div class="s32-lev-desc">Concetto limite: mai incontrata pura nella realtà. Sola materia, nessuna forma — il fondo privativo della processione.</div>
       </div>
-      <div class="s38-lev-role"><span class="s38-role-m">Solo materia</span><span style="color:var(--muted);font-size:.65rem;">(limite)</span></div>
+      <div class="s32-lev-role"><span class="s32-role-m">Solo materia</span><span style="color:var(--muted);font-size:.65rem;">(limite)</span></div>
     </div>
   </div>
 
   <!-- risalita colonna -->
-  <div class="s38-direction">
-    <div class="s38-dir-arr" style="color:var(--greek-l);">▲</div>
-    <div class="s38-dir-arr" style="color:var(--greek-l);">▲</div>
-    <div class="s38-dir-arr" style="color:var(--greek-l);">▲</div>
-    <div class="s38-dir-title s38-dir-risal">Risalita · Ritorno · Astrazione (dal basso)</div>
+  <div class="s32-direction">
+    <div class="s32-dir-arr" style="color:var(--greek-l);">▲</div>
+    <div class="s32-dir-arr" style="color:var(--greek-l);">▲</div>
+    <div class="s32-dir-arr" style="color:var(--greek-l);">▲</div>
+    <div class="s32-dir-title s32-dir-risal">Risalita · Ritorno · Astrazione (dal basso)</div>
   </div>
 
 </div>
 
-<div class="s38-liminare">
-  <div class="s38-lim-box s38-lim-up">
-    <div class="s38-lim-hdr">↑ L'uomo guarda in alto</div>
-    <div class="s38-lim-body">Quando l'intelletto acquisito si è costituito come sostanza parzialmente immateriale, <strong>riconosce l'esistenza di intelletti totalmente immateriali</strong>: le intelligenze separate. È la <em>conquista escatologica</em>: «quando siamo immortali? Quando pensiamo cose immortali, perché le cose immortali diventano la forma del nostro intelletto». L'immortalità non è donata, è guadagnata.</div>
+<div class="s32-liminare">
+  <div class="s32-lim-box s32-lim-up">
+    <div class="s32-lim-hdr">↑ L'uomo guarda in alto</div>
+    <div class="s32-lim-body">Quando l'intelletto acquisito si è costituito come sostanza parzialmente immateriale, <strong>riconosce l'esistenza di intelletti totalmente immateriali</strong>: le intelligenze separate. È la <em>conquista escatologica</em>: «quando siamo immortali? Quando pensiamo cose immortali, perché le cose immortali diventano la forma del nostro intelletto». L'immortalità non è donata, è guadagnata.</div>
   </div>
-  <div class="s38-lim-box s38-lim-dw">
-    <div class="s38-lim-hdr">↓ L'uomo è ancorato in basso</div>
-    <div class="s38-lim-body">L'essere umano parte sempre dai sensi: non c'è illuminazione immediata delle intelligenze, contro il modello di Al-Kindī. La <strong>massima aristotelica</strong>: «ciò che è massimamente intelligibile in sé non è ciò che viene inteso per primo da noi». Le intelligenze sono ontologicamente prime, epistemicamente ultime — come la punta dell'iceberg raggiunta solo dopo anni di studio.</div>
-  </div>
-</div>
-
-<div class="s42-circle" style="margin-top:1.25rem;">
-  <div class="s42-side s42-desc-side">
-    <div class="s42-side-hdr">Discesa · Processione</div>
-    <div class="s42-side-name"><em>Prohodos</em></div>
-    <div class="s42-side-gr">descensus, emanatio</div>
-    <div class="s42-side-body">Le forme intelligibili si propagano <strong>dall'intelletto agente nella materia</strong>. La materia prima viene in-formata e il mondo naturale acquista struttura e intelligibilità.</div>
-    <div class="s42-side-who">Chi compie la discesa: l'<strong>intelletto agente</strong> (decima intelligenza), potenza attiva che introduce le forme nella materia.</div>
-  </div>
-  <div class="s42-mid">
-    <div class="s42-mid-icon">⟲</div>
-    <div class="s42-mid-lbl">Causalità circolare</div>
-  </div>
-  <div class="s42-side s42-asc-side">
-    <div class="s42-side-hdr">Risalita · Conversione</div>
-    <div class="s42-side-name"><em>Epistrophe</em></div>
-    <div class="s42-side-gr">reditus, conversio</div>
-    <div class="s42-side-body">Le forme vengono <strong>estratte dalla materia e ricondotte all'intelligibile</strong>. L'intelletto potenziale umano le spoglia dagli accidenti e forma così l'intelletto acquisito.</div>
-    <div class="s42-side-who">Chi compie la risalita: solo l'<strong>intelletto potenziale umano</strong>. Nessun altro livello del cosmo può estrarre le forme dalla materia.</div>
+  <div class="s32-lim-box s32-lim-dw">
+    <div class="s32-lim-hdr">↓ L'uomo è ancorato in basso</div>
+    <div class="s32-lim-body">L'essere umano parte sempre dai sensi: non c'è illuminazione immediata delle intelligenze, contro il modello di Al-Kindī. La <strong>massima aristotelica</strong>: «ciò che è massimamente intelligibile in sé non è ciò che viene inteso per primo da noi». Le intelligenze sono ontologicamente prime, epistemicamente ultime — come la punta dell'iceberg raggiunta solo dopo anni di studio.</div>
   </div>
 </div>
 
-<div class="s42-bonum" style="margin-top:1rem;">
-  <div class="s42-bonum-lat">Bonum est diffusivum sui</div>
-  <div class="s42-bonum-body">Il bene tende a diffondersi: per questo l'intelligibile discende nella materia. Il mondo sensibile non è un favore concesso alle cose, ma il luogo in cui il ritorno all'intelligibile diventa possibile. L'intelletto acquisito umano chiude il cerchio come <em>copula mundi</em>.</div>
+<div class="s32c-circle" style="margin-top:1.25rem;">
+  <div class="s32c-side s32c-desc-side">
+    <div class="s32c-side-hdr">Discesa · Processione</div>
+    <div class="s32c-side-name"><em>Prohodos</em></div>
+    <div class="s32c-side-gr">descensus, emanatio</div>
+    <div class="s32c-side-body">Le forme intelligibili si propagano <strong>dall'intelletto agente nella materia</strong>. La materia prima viene in-formata e il mondo naturale acquista struttura e intelligibilità.</div>
+    <div class="s32c-side-who">Chi compie la discesa: l'<strong>intelletto agente</strong> (decima intelligenza), potenza attiva che introduce le forme nella materia.</div>
+  </div>
+  <div class="s32c-mid">
+    <div class="s32c-mid-icon">⟲</div>
+    <div class="s32c-mid-lbl">Causalità circolare</div>
+  </div>
+  <div class="s32c-side s32c-asc-side">
+    <div class="s32c-side-hdr">Risalita · Conversione</div>
+    <div class="s32c-side-name"><em>Epistrophe</em></div>
+    <div class="s32c-side-gr">reditus, conversio</div>
+    <div class="s32c-side-body">Le forme vengono <strong>estratte dalla materia e ricondotte all'intelligibile</strong>. L'intelletto potenziale umano le spoglia dagli accidenti e forma così l'intelletto acquisito.</div>
+    <div class="s32c-side-who">Chi compie la risalita: solo l'<strong>intelletto potenziale umano</strong>. Nessun altro livello del cosmo può estrarre le forme dalla materia.</div>
+  </div>
 </div>
 
-<div class="s42-creation" style="margin-top:1rem;">
-  <div class="s42-crea-hdr">La creazione come in-formazione eterna</div>
-  <div class="s42-crea-body">Per al-Farabi la materia è eterna: non c'è creazione dal nulla in senso temporale. Dio produce direttamente solo la prima intelligenza; tutto il resto avviene per catena mediata. Conseguenza epistemica: il mondo è conoscibile perché l'intelligibile è già stato diffuso in esso.</div>
+<div class="s32c-bonum" style="margin-top:1rem;">
+  <div class="s32c-bonum-lat">Bonum est diffusivum sui</div>
+  <div class="s32c-bonum-body">Il bene tende a diffondersi: per questo l'intelligibile discende nella materia. Il mondo sensibile non è un favore concesso alle cose, ma il luogo in cui il ritorno all'intelligibile diventa possibile. L'intelletto acquisito umano chiude il cerchio come <em>copula mundi</em>.</div>
+</div>
+
+<div class="s32c-creation" style="margin-top:1rem;">
+  <div class="s32c-crea-hdr">La creazione come in-formazione eterna</div>
+  <div class="s32c-crea-body">Per al-Farabi la materia è eterna: non c'è creazione dal nulla in senso temporale. Dio produce direttamente solo la prima intelligenza; tutto il resto avviene per catena mediata. Conseguenza epistemica: il mondo è conoscibile perché l'intelligibile è già stato diffuso in esso.</div>
 </div>
 
 <div style="background:rgba(201,151,58,0.12);border:1px solid var(--gold-d);border-radius:var(--r-sm);padding:0.85rem 1rem;margin-bottom:1.2rem;font-size:0.82rem;color:var(--card-text);">
 <strong style="color:var(--gold-l);">Formula secca:</strong> l'intelletto agente <strong>non è Dio</strong>, non è la Causa Prima e non è un <em>Nous</em> generico: è la <strong>decima intelligenza</strong>, quella del cielo della Luna, che opera sul mondo sublunare.
 </div>
 
-<div class="s40-cosmo-hdr">La gerarchia delle intelligenze celesti (sistema tolemaico)</div>
-<div class="s40-chain">
-  <div class="s40-level s40-lv-god">
-    <div class="s40-lev-n">&#9733;</div>
-    <div><div class="s40-lev-name">Dio &middot; Causa prima</div><div class="s40-lev-desc">Essere necessario, crea direttamente solo la prima intelligenza. Non interagisce con la materia.</div></div>
-    <div class="s40-lev-func" style="color:var(--gold-l);">Solo forma &middot; Oltre tutto</div>
+<div class="s32a-cosmo-hdr">La gerarchia delle intelligenze celesti (sistema tolemaico)</div>
+<div class="s32a-chain">
+  <div class="s32a-level s32a-lv-god">
+    <div class="s32a-lev-n">&#9733;</div>
+    <div><div class="s32a-lev-name">Dio &middot; Causa prima</div><div class="s32a-lev-desc">Essere necessario, crea direttamente solo la prima intelligenza. Non interagisce con la materia.</div></div>
+    <div class="s32a-lev-func" style="color:var(--gold-l);">Solo forma &middot; Oltre tutto</div>
   </div>
-  <div class="s40-arrow">&darr;</div>
-  <div class="s40-level s40-lv-intel">
-    <div class="s40-lev-n">I</div>
-    <div><div class="s40-lev-name">Prima intelligenza</div><div class="s40-lev-desc">Muove il primo cielo (cielo delle stelle fisse). Pensa se stessa e il principio che l'ha creata.</div></div>
-    <div class="s40-lev-func" style="color:var(--aristo-l);">Motore immobile</div>
+  <div class="s32a-arrow">&darr;</div>
+  <div class="s32a-level s32a-lv-intel">
+    <div class="s32a-lev-n">I</div>
+    <div><div class="s32a-lev-name">Prima intelligenza</div><div class="s32a-lev-desc">Muove il primo cielo (cielo delle stelle fisse). Pensa se stessa e il principio che l'ha creata.</div></div>
+    <div class="s32a-lev-func" style="color:var(--aristo-l);">Motore immobile</div>
   </div>
-  <div class="s40-arrow">&darr;</div>
-  <div class="s40-level s40-lv-intel">
-    <div class="s40-lev-n">II</div>
-    <div><div class="s40-lev-name">Seconda intelligenza</div><div class="s40-lev-desc">Muove il cielo delle stelle fisse. Ogni intelligenza genera la successiva per processione necessaria.</div></div>
-    <div class="s40-lev-func" style="color:var(--aristo-l);">Motore immobile</div>
+  <div class="s32a-arrow">&darr;</div>
+  <div class="s32a-level s32a-lv-intel">
+    <div class="s32a-lev-n">II</div>
+    <div><div class="s32a-lev-name">Seconda intelligenza</div><div class="s32a-lev-desc">Muove il cielo delle stelle fisse. Ogni intelligenza genera la successiva per processione necessaria.</div></div>
+    <div class="s32a-lev-func" style="color:var(--aristo-l);">Motore immobile</div>
   </div>
-  <div class="s40-arrow">&darr;</div>
-  <div class="s40-level s40-lv-intel">
-    <div class="s40-lev-n">III&ndash;IX</div>
-    <div><div class="s40-lev-name">Intelligenze planetarie</div><div class="s40-lev-desc">Saturno, Giove, Marte, Sole, Venere, Mercurio, Luna &mdash; ciascuna muove il proprio cielo tolemaico.</div></div>
-    <div class="s40-lev-func" style="color:var(--aristo-l);">7 motori immobili</div>
+  <div class="s32a-arrow">&darr;</div>
+  <div class="s32a-level s32a-lv-intel">
+    <div class="s32a-lev-n">III&ndash;IX</div>
+    <div><div class="s32a-lev-name">Intelligenze planetarie</div><div class="s32a-lev-desc">Saturno, Giove, Marte, Sole, Venere, Mercurio, Luna &mdash; ciascuna muove il proprio cielo tolemaico.</div></div>
+    <div class="s32a-lev-func" style="color:var(--aristo-l);">7 motori immobili</div>
   </div>
-  <div class="s40-arrow" style="font-size:1.1rem;color:var(--gold);">&darr; &darr; &darr;</div>
-  <div class="s40-level s40-lv-agent" style="position:relative;">
-    <div class="s40-agent-badge">&#10022; Intelletto agente = Decima intelligenza</div>
-    <div class="s40-lev-n">X</div>
-    <div><div class="s40-lev-name">Decima intelligenza &middot; Intelletto agente</div><div class="s40-lev-desc">Presiede al mondo sublunare. In-forma eternamente la materia prima. Contiene le forme pure allo stato separato. &Egrave; il <em>luogo delle forme</em>.</div></div>
-    <div class="s40-lev-func" style="color:var(--green-t);">In-forma la Terra &middot; Diafano intelligibile</div>
+  <div class="s32a-arrow" style="font-size:1.1rem;color:var(--gold);">&darr; &darr; &darr;</div>
+  <div class="s32a-level s32a-lv-agent" style="position:relative;">
+    <div class="s32a-agent-badge">&#10022; Intelletto agente = Decima intelligenza</div>
+    <div class="s32a-lev-n">X</div>
+    <div><div class="s32a-lev-name">Decima intelligenza &middot; Intelletto agente</div><div class="s32a-lev-desc">Presiede al mondo sublunare. In-forma eternamente la materia prima. Contiene le forme pure allo stato separato. &Egrave; il <em>luogo delle forme</em>.</div></div>
+    <div class="s32a-lev-func" style="color:var(--green-t);">In-forma la Terra &middot; Diafano intelligibile</div>
   </div>
-  <div class="s40-arrow" style="color:var(--green-t);">&darr;</div>
-  <div class="s40-level s40-lv-sub">
-    <div class="s40-lev-n">&#9675;</div>
-    <div><div class="s40-lev-name">Mondo sublunare</div><div class="s40-lev-desc">La materia prima in-formata dall'intelletto agente. I quattro elementi, le forme immanenti nelle cose, gli esseri umani con il loro intelletto potenziale.</div></div>
-    <div class="s40-lev-func" style="color:var(--greek-l);">Materia + Forme immanenti</div>
-  </div>
-</div>
-
-<div class="s40-diff-title">Tre differenze rispetto ai predecessori</div>
-<div class="s40-diffs">
-  <div class="s40-diff s40-d1">
-    <div class="s40-diff-num">I</div>
-    <div class="s40-diff-name">Non inizio ma fine</div>
-    <div class="s40-diff-body">Per al-Kindi e Alessandro, l'intelligenza separata interviene <strong>all'inizio</strong> del processo per attivare l'intelletto potenziale. Per al-Farabi, il contatto con le intelligenze separate e il <strong>culmine</strong>, il fine del pensiero.</div>
-  </div>
-  <div class="s40-diff s40-d2">
-    <div class="s40-diff-num">II</div>
-    <div class="s40-diff-name">Funzione cosmologica precisa</div>
-    <div class="s40-diff-body">Primo ad assegnare all'intelletto agente una <strong>funzione cosmologica specifica</strong>: e la decima intelligenza, non Dio (Alessandro) ne un <em>Nous</em> generico (Temistio, al-Kindi).</div>
-  </div>
-  <div class="s40-diff s40-d3">
-    <div class="s40-diff-num">III</div>
-    <div class="s40-diff-name">Dall'unita alla molteplicita</div>
-    <div class="s40-diff-body">Primo a elaborare sistematicamente la teoria per cui dalla <strong>singolarita dell'intelletto agente</strong> emerge la <strong>molteplicita degli intelletti acquisiti</strong> umani. Piu intelletti potenziali, piu in atto, piu acquisiti, ma un solo agente.</div>
+  <div class="s32a-arrow" style="color:var(--green-t);">&darr;</div>
+  <div class="s32a-level s32a-lv-sub">
+    <div class="s32a-lev-n">&#9675;</div>
+    <div><div class="s32a-lev-name">Mondo sublunare</div><div class="s32a-lev-desc">La materia prima in-formata dall'intelletto agente. I quattro elementi, le forme immanenti nelle cose, gli esseri umani con il loro intelletto potenziale.</div></div>
+    <div class="s32a-lev-func" style="color:var(--greek-l);">Materia + Forme immanenti</div>
   </div>
 </div>
 
-<div class="s40-pred-row">
-  <div class="s40-pred ng">
-    <div class="s40-pred-name">Alessandro di Afrodisia</div>
-    <div class="s40-pred-pos">Intelletto agente = <strong>Dio</strong> (Causa prima). Interveniva all'inizio.</div>
+<div class="s32a-diff-title">Tre differenze rispetto ai predecessori</div>
+<div class="s32a-diffs">
+  <div class="s32a-diff s32a-d1">
+    <div class="s32a-diff-num">I</div>
+    <div class="s32a-diff-name">Non inizio ma fine</div>
+    <div class="s32a-diff-body">Per al-Kindi e Alessandro, l'intelligenza separata interviene <strong>all'inizio</strong> del processo per attivare l'intelletto potenziale. Per al-Farabi, il contatto con le intelligenze separate e il <strong>culmine</strong>, il fine del pensiero.</div>
   </div>
-  <div class="s40-pred nq">
-    <div class="s40-pred-name">Temistio / al-Kindi</div>
-    <div class="s40-pred-pos">Intelletto agente = <strong>sostanza separata generica</strong>, simile al Nous neoplatonico. Non associata a un cielo specifico.</div>
+  <div class="s32a-diff s32a-d2">
+    <div class="s32a-diff-num">II</div>
+    <div class="s32a-diff-name">Funzione cosmologica precisa</div>
+    <div class="s32a-diff-body">Primo ad assegnare all'intelletto agente una <strong>funzione cosmologica specifica</strong>: e la decima intelligenza, non Dio (Alessandro) ne un <em>Nous</em> generico (Temistio, al-Kindi).</div>
   </div>
-  <div class="s40-pred nq" style="border-left:3px solid var(--gold);">
-    <div class="s40-pred-name" style="color:var(--gold-l);">Al-Farabi (novita)</div>
-    <div class="s40-pred-pos">Intelletto agente = <strong>decima intelligenza celeste</strong>, quella che presiede al mondo sublunare. Identificazione precisa e localizzata.</div>
-  </div>
-</div>
-
-<div class="s41-analogy-hdr" style="margin-top:1.35rem;">L'analogia del diafano: vedere e pensare</div>
-<div class="s41-parallel">
-  <div class="s41-col s41-vision">
-    <div class="s41-col-hdr">Visione sensibile</div>
-    <div class="s41-row"><div class="s41-row-lbl">Agente</div><div class="s41-row-val"><strong>Il Sole</strong> — fonte di luce</div></div>
-    <div class="s41-row"><div class="s41-row-lbl">Medium</div><div class="s41-row-val">L'aria come <strong>diafano</strong>: deve essere trasparente in atto</div></div>
-    <div class="s41-row"><div class="s41-row-lbl">Oggetto</div><div class="s41-row-val">I colori — visibili in potenza, visibili in atto quando il mezzo è illuminato</div></div>
-    <div class="s41-row"><div class="s41-row-lbl">Soggetto</div><div class="s41-row-val">L'occhio — vista in potenza finché resta al buio</div></div>
-  </div>
-  <div class="s41-center">
-    <div class="s41-eq">↔</div>
-    <div class="s41-eq-lbl">Analoghi strutturali</div>
-  </div>
-  <div class="s41-col s41-thought">
-    <div class="s41-col-hdr">Intellezione</div>
-    <div class="s41-row"><div class="s41-row-lbl">Agente</div><div class="s41-row-val"><strong>L'intelletto agente</strong> — fonte di diafaneità intelligibile</div></div>
-    <div class="s41-row"><div class="s41-row-lbl">Medium</div><div class="s41-row-val">La <strong>diafaneità intelligibile</strong>: rende possibile cogliere le forme immanenti</div></div>
-    <div class="s41-row"><div class="s41-row-lbl">Oggetto</div><div class="s41-row-val">Le forme nelle cose — intelligibili in potenza, opacizzate dalla materia</div></div>
-    <div class="s41-row"><div class="s41-row-lbl">Soggetto</div><div class="s41-row-val">L'intelletto potenziale — in potenza finché resta «al buio»</div></div>
+  <div class="s32a-diff s32a-d3">
+    <div class="s32a-diff-num">III</div>
+    <div class="s32a-diff-name">Dall'unita alla molteplicita</div>
+    <div class="s32a-diff-body">Primo a elaborare sistematicamente la teoria per cui dalla <strong>singolarita dell'intelletto agente</strong> emerge la <strong>molteplicita degli intelletti acquisiti</strong> umani. Piu intelletti potenziali, piu in atto, piu acquisiti, ma un solo agente.</div>
   </div>
 </div>
 
-<div class="s41-locus-hdr">L'intelletto agente come luogo delle forme</div>
-<div class="s41-descent">
-  <div class="s41-desc-step s41-ds-1">
-    <div class="s41-ds-era">Platonismo</div>
-    <div class="s41-ds-name">Le idee al vertice</div>
-    <div class="s41-ds-body">Le idee occupano il livello ontologico più alto.</div>
+<div class="s32a-pred-row">
+  <div class="s32a-pred ng">
+    <div class="s32a-pred-name">Alessandro di Afrodisia</div>
+    <div class="s32a-pred-pos">Intelletto agente = <strong>Dio</strong> (Causa prima). Interveniva all'inizio.</div>
   </div>
-  <div class="s41-desc-step s41-ds-2">
-    <div class="s41-ds-era">Neoplatonismo</div>
-    <div class="s41-ds-name">Le idee nel <em>Nous</em></div>
-    <div class="s41-ds-body">Scivolano sotto l'Uno e vengono raccolte nell'intelletto divino.</div>
+  <div class="s32a-pred nq">
+    <div class="s32a-pred-name">Temistio / al-Kindi</div>
+    <div class="s32a-pred-pos">Intelletto agente = <strong>sostanza separata generica</strong>, simile al Nous neoplatonico. Non associata a un cielo specifico.</div>
   </div>
-  <div class="s41-desc-step s41-ds-3">
-    <div class="s41-ds-era">Al-Farabi</div>
-    <div class="s41-ds-name">Le idee nella X intelligenza</div>
-    <div class="s41-ds-body">Le forme pure diventano il contenuto intelligibile della <em>decima intelligenza</em>, che le possiede già allo stato puro.</div>
+  <div class="s32a-pred nq" style="border-left:3px solid var(--gold);">
+    <div class="s32a-pred-name" style="color:var(--gold-l);">Al-Farabi (novita)</div>
+    <div class="s32a-pred-pos">Intelletto agente = <strong>decima intelligenza celeste</strong>, quella che presiede al mondo sublunare. Identificazione precisa e localizzata.</div>
   </div>
 </div>
 
-<div class="s41-imit">
-  <div class="s41-imit-icon">✦</div>
+<div class="s32b-analogy-hdr" style="margin-top:1.35rem;">L'analogia del diafano: vedere e pensare</div>
+<div class="s32b-parallel">
+  <div class="s32b-col s32b-vision">
+    <div class="s32b-col-hdr">Visione sensibile</div>
+    <div class="s32b-row"><div class="s32b-row-lbl">Agente</div><div class="s32b-row-val"><strong>Il Sole</strong> — fonte di luce</div></div>
+    <div class="s32b-row"><div class="s32b-row-lbl">Medium</div><div class="s32b-row-val">L'aria come <strong>diafano</strong>: deve essere trasparente in atto</div></div>
+    <div class="s32b-row"><div class="s32b-row-lbl">Oggetto</div><div class="s32b-row-val">I colori — visibili in potenza, visibili in atto quando il mezzo è illuminato</div></div>
+    <div class="s32b-row"><div class="s32b-row-lbl">Soggetto</div><div class="s32b-row-val">L'occhio — vista in potenza finché resta al buio</div></div>
+  </div>
+  <div class="s32b-center">
+    <div class="s32b-eq">↔</div>
+    <div class="s32b-eq-lbl">Analoghi strutturali</div>
+  </div>
+  <div class="s32b-col s32b-thought">
+    <div class="s32b-col-hdr">Intellezione</div>
+    <div class="s32b-row"><div class="s32b-row-lbl">Agente</div><div class="s32b-row-val"><strong>L'intelletto agente</strong> — fonte di diafaneità intelligibile</div></div>
+    <div class="s32b-row"><div class="s32b-row-lbl">Medium</div><div class="s32b-row-val">La <strong>diafaneità intelligibile</strong>: rende possibile cogliere le forme immanenti</div></div>
+    <div class="s32b-row"><div class="s32b-row-lbl">Oggetto</div><div class="s32b-row-val">Le forme nelle cose — intelligibili in potenza, opacizzate dalla materia</div></div>
+    <div class="s32b-row"><div class="s32b-row-lbl">Soggetto</div><div class="s32b-row-val">L'intelletto potenziale — in potenza finché resta «al buio»</div></div>
+  </div>
+</div>
+
+<div class="s32b-locus-hdr">L'intelletto agente come luogo delle forme</div>
+<div class="s32b-descent">
+  <div class="s32b-desc-step s32b-ds-1">
+    <div class="s32b-ds-era">Platonismo</div>
+    <div class="s32b-ds-name">Le idee al vertice</div>
+    <div class="s32b-ds-body">Le idee occupano il livello ontologico più alto.</div>
+  </div>
+  <div class="s32b-desc-step s32b-ds-2">
+    <div class="s32b-ds-era">Neoplatonismo</div>
+    <div class="s32b-ds-name">Le idee nel <em>Nous</em></div>
+    <div class="s32b-ds-body">Scivolano sotto l'Uno e vengono raccolte nell'intelletto divino.</div>
+  </div>
+  <div class="s32b-desc-step s32b-ds-3">
+    <div class="s32b-ds-era">Al-Farabi</div>
+    <div class="s32b-ds-name">Le idee nella X intelligenza</div>
+    <div class="s32b-ds-body">Le forme pure diventano il contenuto intelligibile della <em>decima intelligenza</em>, che le possiede già allo stato puro.</div>
+  </div>
+</div>
+
+<div class="s32b-imit">
+  <div class="s32b-imit-icon">✦</div>
   <div>
-    <div class="s41-imit-body">Nell'intelletto agente le forme sono già presenti come forme astratte: non devono essere ricavate da materie esterne, ma vengono possedute da sempre allo stato puro. Il mondo sensibile ne è, in questo senso, <em>imitazione</em> o traduzione materiale.</div>
+    <div class="s32b-imit-body">Nell'intelletto agente le forme sono già presenti come forme astratte: non devono essere ricavate da materie esterne, ma vengono possedute da sempre allo stato puro. Il mondo sensibile ne è, in questo senso, <em>imitazione</em> o traduzione materiale.</div>
   </div>
 </div>
 
@@ -9138,10 +11057,10 @@ body {
 <section class="ds" id="s38">
   <div class="sec-top">
     <span class="badge-n">Schema 38</span>
-    <span class="badge-l">L. 22</span>
+    <span class="badge-l">LL. 22–23</span>
   </div>
   <h2>Avicenna: filosofo-medico, enciclopedia del sapere e svolta anti-eurocentrica</h2>
-  <p class="desc">La lezione introduce Ibn Sīnā come figura di cerniera: persiano ma autore in arabo, medico di corte senza università, costruttore di grandi enciclopedie e protagonista di una trasmissione filosofica che obbliga a ripensare i canoni eurocentrici della storia della filosofia.</p>
+  <p class="desc">Tra la presentazione della lezione 22 e il recap iniziale della 23, Ibn Sīnā emerge come figura di cerniera: persiano ma autore in arabo, medico di corte senza università, costruttore di grandi enciclopedie e protagonista di una trasmissione filosofica che obbliga a ripensare i canoni eurocentrici della storia della filosofia.</p>
 
   <div class="s38-layout">
     <div class="s38-left">
@@ -9174,6 +11093,14 @@ body {
             <span class="s38-place">Hamadan</span>
             <span class="s38-place">Isfahan</span>
           </div>
+        </div>
+
+        <div class="s38-mini-block">
+          <div class="s38-mini-h">🗣️ Nomi e trasmissione</div>
+          <ul class="s38-identity-list">
+            <li><strong>Avicenna</strong> e <strong>Averroè</strong> non sono calchi diretti dall’arabo: passano attraverso il <strong>volgare iberico</strong>.</li>
+            <li>La latinizzazione dei nomi rende visibile la mediazione linguistica e culturale con cui la filosofia araba entra nell’Occidente latino.</li>
+          </ul>
         </div>
       </article>
 
@@ -9290,10 +11217,10 @@ body {
 <section class="ds" id="s39">
   <div class="sec-top">
     <span class="badge-n">Schema 39</span>
-    <span class="badge-l">L. 22</span>
+    <span class="badge-l">LL. 22–23</span>
   </div>
   <h2>Avicenna e il soggetto della metafisica: dall'ente alle cause, fino a Dio</h2>
-  <p class="desc">Il cuore speculativo della lezione applica gli <em>Analitici Secondi</em> alla <em>Metafisica</em> di Aristotele: Avicenna separa soggetto, principi e conclusioni, esclude divino e cause dal ruolo di soggetto e stabilisce che la metafisica è scienza dell'ente in quanto ente.</p>
+  <p class="desc">La lezione 22 imposta il problema del soggetto della metafisica e la 23 lo riprende portandolo a compimento: Avicenna applica gli <em>Analitici Secondi</em>, separa soggetto, principi e conclusioni, esclude divino e cause dal ruolo di soggetto e stabilisce che la metafisica è scienza dell'ente in quanto ente.</p>
 
   <div class="s39-layout">
     <div class="s39-opening">
@@ -9305,7 +11232,7 @@ body {
           <li>Il problema non era il contenuto, ma lo <strong>scopo della scienza</strong>: di che cosa si occupa davvero?</li>
           <li>Il libretto di <strong>al-Fārābī</strong> fornisce la chiave interpretativa decisiva.</li>
         </ul>
-        <div class="s39-source-note">🧭 La difficoltà è <strong>metodologica</strong>, non semplicemente esegetica: prima di leggere le tesi, bisogna capire quale sia il soggetto della scienza.</div>
+        <div class="s39-source-note">🧭 La difficoltà è <strong>metodologica</strong>, non semplicemente esegetica: la lezione 22 apre il problema e la 23 lo riprende per chiudere davvero la questione del soggetto della scienza.</div>
       </article>
 
       <article class="s39-panel s39-definitions-panel">
@@ -9514,11 +11441,568 @@ body {
   </div>
 </section>
 
+<section class="ds" id="s40">
+  <div class="sec-top">
+    <span class="badge-n">Schema 40</span>
+    <span class="badge-l">L. 23</span>
+  </div>
+  <h2>Avicenna: creazione eterna e dimostrazione modale del necessario per sé</h2>
+  <p class="desc">Dopo il recap iniziale e una volta chiarito che Dio e le cause non sono il soggetto della metafisica, la lezione 23 sviluppa due nuclei propri: la tesi della creazione eterna come effetto della causa prima e l’argomento modale che definisce Dio come essere necessario per sé.</p>
+
+  <div class="s40-layout">
+    <div class="s40-logic">
+      <div class="s40-logic-node">
+        <span class="s40-logic-k">1 · Premessa</span>
+        <strong>La causa prima non resta inattiva</strong>
+        <p>Una volta chiarito il quadro metafisico, la causa prima va pensata come <strong>sempre produttiva</strong>: non può esserci un tempo in cui sia causa senza causare.</p>
+      </div>
+      <div class="s40-logic-node">
+        <span class="s40-logic-k">2 · Creazione</span>
+        <strong>L’effetto è eterno quanto la causa</strong>
+        <p>Se la causa prima è davvero causa, il suo effetto non può comparire in ritardo: il mondo è quindi <strong>creato eternamente</strong>.</p>
+      </div>
+      <div class="s40-logic-node">
+        <span class="s40-logic-k">3 · Esito modale</span>
+        <strong>Dal possibile al necessario per sé</strong>
+        <p>I contingenti ricevono l’essere: per evitare circolo o regressus occorre un <strong>necessario per sé</strong>.</p>
+      </div>
+    </div>
+
+    <div class="s40-stage s40-stage--process">
+      <span class="s40-stage-k">Sezione 1 · Conseguenza cosmologica</span>
+      <h3>Dal concetto di causa all’eternità del mondo</h3>
+      <div class="s40-process-grid">
+        <ol class="s40-process-steps">
+          <li class="s40-step">
+            <span class="s40-step-no">1</span>
+            <p>Se esiste una <strong>causa prima</strong>, non può esistere senza produrre il suo effetto.</p>
+          </li>
+          <li class="s40-step">
+            <span class="s40-step-no">2</span>
+            <p>Una causa che per un certo tempo <strong>non produce</strong> non è ancora pienamente causa.</p>
+          </li>
+          <li class="s40-step">
+            <span class="s40-step-no">3</span>
+            <p>L’effetto della causa prima deve quindi essere <strong>eterno quanto la causa</strong>.</p>
+          </li>
+          <li class="s40-step">
+            <span class="s40-step-no">4</span>
+            <p><strong>Creazione eterna</strong> non nega la creazione: <strong>ex nihilo</strong> significa che le cose sarebbero nulla senza la causa che le mantiene nell’essere.</p>
+          </li>
+        </ol>
+
+        <div class="s40-side-notes">
+          <div class="s40-note-card">
+            <h4>⚖ Nota filosofica</h4>
+            <p>Per Avicenna la <strong>creazione temporale</strong> è razionalmente più debole della creazione eterna, perché introdurrebbe un prima in cui la causa prima non agisce ancora come causa.</p>
+          </div>
+          <div class="s40-note-card s40-note-card--aristo">
+            <h4>📚 Ricezione latina</h4>
+            <p>Tommaso d’Aquino riconoscerà la <strong>forza razionale</strong> di questo argomento, pur scegliendo la temporalità della creazione per ragioni esegetiche.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="s40-stage s40-stage--modal">
+      <span class="s40-stage-k">Sezione 2 · Argomento modale</span>
+      <h3>Dal possibile per sé al necessario per sé</h3>
+      <div class="s40-modal-grid">
+        <div class="s40-hierarchy">
+          <div class="s40-level">
+            <span class="s40-level-k">Livello 1</span>
+            <div class="s40-level-title">Contingente / possibile per sé</div>
+            <div class="s40-pill-row">
+              <span class="s40-pill s40-pill--partial">dipende da altro</span>
+            </div>
+            <p>Ciò che esiste ma non possiede in sé la ragione del proprio esistere.</p>
+          </div>
+
+          <div class="s40-level s40-level--received">
+            <span class="s40-level-k">Livello 2</span>
+            <div class="s40-level-title">Necessario per altro</div>
+            <div class="s40-pill-row">
+              <span class="s40-pill s40-pill--partial">necessità ricevuta</span>
+            </div>
+            <p>Ciò che è necessario, ma solo perché una causa gli comunica la necessità di essere.</p>
+          </div>
+
+          <div class="s40-level s40-level--necessary">
+            <span class="s40-level-k">Livello 3</span>
+            <div class="s40-level-title">Necessario per sé</div>
+            <span class="s40-level-origin">wājib al-wujūd bi-dhātihi</span>
+            <div class="s40-pill-row">
+              <span class="s40-pill s40-pill--unique">unico</span>
+              <span class="s40-pill s40-pill--essential">primo</span>
+            </div>
+            <p>L’essere che non riceve da altro la necessità di essere: è la definizione filosofica di Dio.</p>
+          </div>
+        </div>
+
+        <div class="s40-argument-side">
+          <div class="s40-deduction">
+            <span class="s40-deduction-lbl">Deduzione</span>
+            <h4>Perché serve un necessario per sé</h4>
+            <ol>
+              <li>Se tutto fosse contingente, si avrebbe <strong>regressus all’infinito</strong> oppure circolarità.</li>
+              <li>I contingenti non possono conferire da sé la <strong>necessità</strong> che non possiedono.</li>
+              <li>Occorre dunque un essere <strong>necessario per sé</strong>, non ricevuto da altro.</li>
+            </ol>
+          </div>
+
+          <div class="s40-connection">
+            <span class="s40-connection-lbl">Connessione metafisica</span>
+            <p>La scienza prima non parte da Dio come premessa immediata, ma dall’<strong>ente in quanto ente</strong>: è l’analisi dell’essere che conduce a Dio come <strong>esito necessario</strong>, non come punto di partenza causale.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="insight">
+    <div class="insight-lbl">Punto chiave</div>
+    <p>La mossa avicenniana non è solo teologica: una volta escluso Dio come soggetto immediato della metafisica, la lezione 23 mostra che il <strong>necessario per sé</strong> emerge come esito di una doppia via, cosmologica e modale, che passa per la <strong>creazione eterna</strong> e per l’analisi dell’essere.</p>
+  </div>
+</section>
+
+<section class="ds" id="s41">
+  <div class="sec-top">
+    <span class="badge-n">Schema 41</span>
+    <span class="badge-l">L. 23</span>
+  </div>
+  <h2>Avicenna: escatologia filosofica e tre destini dell’anima</h2>
+  <p class="desc">L’aldilà avicenniano dipende dal grado di sviluppo intellettuale raggiunto in vita: la filosofia rilegge il Corano distinguendo destino dei semplici, inferno del rimpianto per chi non ha usato le proprie possibilità e beatitudine intelligibile dei filosofi uniti all’intelletto agente.</p>
+
+  <div class="s41-layout">
+    <div class="s41-block">
+      <div class="s41-block-head">
+        <div>
+          <div class="s41-kicker">Sezione 1 · catalogo escatologico</div>
+          <h3>Tre destini post-mortali, a partire da una stessa anima razionale</h3>
+        </div>
+        <span class="s41-pill s41-pill-origin">🜂 tradizione araba</span>
+      </div>
+
+      <div class="s41-destinies">
+        <aside class="s41-premise">
+          <h4>Premessa teologica-filosofica</h4>
+          <p>Per Avicenna <strong>ogni essere umano</strong> riceve da Dio un’<strong>anima razionale</strong>: nessuno è escluso dall’immortalità.</p>
+          <p>Ciò che cambia non è il fatto del sopravvivere, ma il <strong>modo della fruizione post-mortale</strong>: immaginativa, dolorosa o propriamente intelligibile.</p>
+        </aside>
+
+        <div class="s41-destiny-grid">
+          <article class="s41-fate s41-fate--imag">
+            <div class="s41-fate-top">
+              <div>
+                <h4><span class="s41-fate-ico">🌊</span> I semplici / non istruiti</h4>
+                <div class="s41-fate-sub">Anima razionale ricevuta, ma non concettualmente sviluppata</div>
+              </div>
+              <span class="s41-pill s41-pill-imag">immaginativa</span>
+            </div>
+            <p><strong>Destino:</strong> paradiso e inferno appaiono attraverso <strong>immagini sensibili</strong>, non come piena contemplazione intellettuale.</p>
+            <ul class="s41-list">
+              <li>Paradiso figurato: <strong>fiumi di latte e miele</strong>.</li>
+              <li>Pena figurata: incubi, paure, immagini interiori proprie.</li>
+            </ul>
+            <div class="s41-keyline">⭐ Chiave: sopravvivono, ma la loro beatitudine resta <strong>immaginativa</strong>, non filosofico-intelligibile.</div>
+          </article>
+
+          <article class="s41-fate s41-fate--regret">
+            <div class="s41-fate-top">
+              <div>
+                <h4><span class="s41-fate-ico">⚠️</span> Chi poteva svilupparsi e non l’ha fatto</h4>
+                <div class="s41-fate-sub">Possibilità intellettuali presenti, ma lasciate inattive</div>
+              </div>
+              <span class="s41-pill s41-pill-regret">rimpianto</span>
+            </div>
+            <p><strong>Destino:</strong> non un fuoco materiale, ma un <strong>inferno del rimpianto eterno</strong>.</p>
+            <ul class="s41-list">
+              <li>Senza corpo non si apprendono più nuovi intelligibili.</li>
+              <li>L’anima comprende troppo tardi ciò che avrebbe potuto diventare.</li>
+            </ul>
+            <div class="s41-keyline">⚠️ Chiave: il dolore è <strong>irreparabile</strong>, perché dopo la morte manca il mezzo corporeo attraverso cui si formavano i contenuti intelligibili.</div>
+          </article>
+
+          <article class="s41-fate s41-fate--beat">
+            <div class="s41-fate-top">
+              <div>
+                <h4><span class="s41-fate-ico">✨</span> Filosofi e scienziati</h4>
+                <div class="s41-fate-sub">Attività intellettuale portata al massimo grado</div>
+              </div>
+              <span class="s41-pill s41-pill-beat">immortalità</span>
+            </div>
+            <p><strong>Destino:</strong> paradiso come <strong>beatitudine intelligibile</strong>, non come godimento sensibile.</p>
+            <ul class="s41-list">
+              <li><strong>Unione con l’intelletto agente</strong>.</li>
+              <li><strong>Riverbero reciproco</strong> delle anime che contemplano la verità.</li>
+            </ul>
+            <div class="s41-keyline">✦ Chiave: la felicità perfetta è lo <strong>specchio intelligibile</strong> in cui l’anima vede la verità e vi si riflette.</div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="s41-block">
+      <div class="s41-block-head">
+        <div>
+          <div class="s41-kicker">Sezione 2 · processo della beatitudine</div>
+          <h3>Come funziona la beatitudine del filosofo</h3>
+        </div>
+        <span class="s41-pill s41-pill-sep">🔹 unione separata</span>
+      </div>
+
+      <div class="s41-process-wrap">
+        <div class="s41-flow">
+          <article class="s41-step">
+            <div class="s41-step-num">1</div>
+            <h4>In vita si sviluppa l’attività intellettuale</h4>
+            <p>L’anima acquisisce abiti di pensiero e si dispone alla contemplazione delle forme intelligibili.</p>
+          </article>
+
+          <article class="s41-step">
+            <div class="s41-step-num">2</div>
+            <h4>Dopo la morte l’anima si separa dal corpo</h4>
+            <p>Viene meno il supporto sensibile, ma resta ciò che l’intelletto ha realmente costruito durante la vita.</p>
+          </article>
+
+          <article class="s41-step">
+            <div class="s41-step-num">3</div>
+            <h4>Unione con l’intelletto agente</h4>
+            <p>L’anima si volge al principio che illumina le forme e le rende pensabili in atto.</p>
+          </article>
+
+          <article class="s41-step">
+            <div class="s41-step-num">4</div>
+            <h4>Specchio intelligibile rivolto alla verità</h4>
+            <p>La beatitudine consiste nella contemplazione reciproca tra anima, verità e intelligenze separate.</p>
+          </article>
+        </div>
+
+        <aside class="s41-terms">
+          <div class="s41-term-card">
+            <h4>📘 Termine decisivo</h4>
+            <p><strong>Donatore di forme</strong></p>
+            <span class="s41-term-ar">wāhib al-ṣuwar</span>
+            <p class="s41-note">È il nome avicenniano dell’<strong>intelletto agente</strong>: ciò che rende disponibili le forme intelligibili e fonda la felicità del filosofo dopo la separazione dal corpo.</p>
+          </div>
+
+          <div class="s41-term-card">
+            <h4>🪞 Formula chiave</h4>
+            <p><strong>Specchio intelligibile</strong></p>
+            <p class="s41-note">La beatitudine non è possesso di immagini corporee, ma una condizione di <strong>riflessione conoscitiva</strong>: l’anima illuminata vede la verità e, vedendola, si compie.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="s41-block">
+      <div class="s41-block-head">
+        <div>
+          <div class="s41-kicker">Sezione 3 · confronto dottrinale</div>
+          <h3>Avicenna vs al-Fārābī</h3>
+        </div>
+        <span class="s41-pill s41-pill-imag">↔ confronto</span>
+      </div>
+
+      <div class="s41-compare">
+        <div class="s41-table-wrap">
+          <table class="s41-table">
+            <thead>
+              <tr>
+                <th>Criterio</th>
+                <th>Avicenna</th>
+                <th>al-Fārābī</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="s41-crit">Anima razionale all’origine</td>
+                <td>
+                  <div class="s41-author s41-author--avicenna">🟤 Avicenna</div>
+                  Ogni essere umano riceve da Dio un’<strong>anima razionale fin dalla nascita</strong>.
+                </td>
+                <td>
+                  <div class="s41-author s41-author--farabi">🔵 al-Fārābī</div>
+                  L’anima razionale va <strong>costruita</strong> mediante atti ripetuti di intellezione.
+                </td>
+              </tr>
+              <tr>
+                <td class="s41-crit">Destino dei non sviluppati</td>
+                <td>
+                  Nessuno si dissolve semplicemente: esistono forme diverse di sopravvivenza, anche se inferiori o dolorose.
+                </td>
+                <td>
+                  Chi non costruisce davvero l’intelletto razionale <strong>si dissolve negli elementi</strong>.
+                </td>
+              </tr>
+              <tr>
+                <td class="s41-crit">Struttura dell’aldilà</td>
+                <td>
+                  Escatologia <strong>stratificata</strong>: immagini sensibili, rimpianto eterno, beatitudine intelligibile.
+                </td>
+                <td>
+                  Sopravvive propriamente solo l’<strong>intelletto acquisito</strong>.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="s41-sidebox">
+          <div>
+            <h4>Box di connessione</h4>
+            <p>Il confronto chiarisce perché l’escatologia avicenniana sia più ampia: non riduce il post-mortem a un’alternativa secca tra sopravvivenza filosofica e dissoluzione.</p>
+          </div>
+
+          <ul>
+            <li><strong>Inclusione ontologica:</strong> tutti hanno un destino, perché tutti hanno un’anima razionale.</li>
+            <li><strong>Differenziazione qualitativa:</strong> i destini divergono secondo il lavoro intellettuale compiuto in vita.</li>
+            <li><strong>Rilettura del Corano:</strong> le immagini religiose diventano linguaggio adeguato ai diversi livelli delle anime.</li>
+          </ul>
+
+          <div class="s41-emphasis">
+            <strong>Nodo decisivo:</strong> Avicenna è più inclusivo di al-Fārābī sul piano dell’<strong>immortalità</strong>, ma resta rigoroso sul piano della <strong>qualità della felicità</strong>.
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-lbl">Punto chiave</div>
+    <p>Avicenna rende l’escatologia più <strong>inclusiva</strong> di quella farabiana: nessuno è escluso dall’<strong>immortalità</strong>, ma ciascuno gode o soffre secondo il livello di <strong>vita intellettuale</strong> che ha costruito e secondo il rapporto che può avere con il <strong>wāhib al-ṣuwar</strong>, il donatore di forme.</p>
+  </div>
+</section>
+
+<section class="ds" id="s42">
+  <div class="sec-top">
+    <span class="badge-n">Schema 42</span>
+    <span class="badge-l">L. 23</span>
+  </div>
+  <h2>Equinitas est equinitas tantum: Avicenna, essenze e universali</h2>
+  <p class="desc">Il problema degli universali trova in Avicenna una soluzione anti-platonica originale: l’essenza non è né universale né particolare in sé, ma indifferente al tipo di esistenza che l’accompagna. La “cavallinità” resta soltanto cavallinità, sia negli individui sia nella mente.</p>
+
+  <div class="s42-layout">
+    <div class="s42-left">
+      <div class="s42-quote-box">
+        <div class="s42-overline">🧠 Tesi avicenniana</div>
+        <div class="s42-quote"><em>equinitas est equinitas tantum</em></div>
+        <p class="s42-quote-desc">La natura comune non è un’idea separata né un puro nome: presa <strong>in sé</strong>, l’essenza non porta ancora i tratti della universalità o della particolarità. Questi arrivano solo con il <strong>modo di esistere</strong>.</p>
+        <div class="s42-pill-row">
+          <span class="s42-pill s42-pill-gold">⭐ essenza in sé</span>
+          <span class="s42-pill s42-pill-blue">né universale</span>
+          <span class="s42-pill s42-pill-blue">né particolare</span>
+          <span class="s42-pill s42-pill-success">anti-platonica</span>
+        </div>
+      </div>
+
+      <div class="s42-section s42-section-arab">
+        <div class="s42-hdr s42-hdr-arab">
+          <span>La soluzione avicenniana</span>
+          <span class="s42-subnote">indifferenza delle essenze</span>
+        </div>
+
+        <div class="s42-hierarchy">
+          <div class="s42-level s42-level-top">
+            <div class="s42-level-h">
+              <div>
+                <div class="s42-level-name">1. Essenza in sé</div>
+                <span class="s42-level-term">equinitas est equinitas tantum</span>
+              </div>
+              <span class="s42-pill s42-pill-gold">🔸 quid puro</span>
+            </div>
+            <p>La cavallinità è soltanto cavallinità: <strong>né una né molteplice</strong>, <strong>né universale né particolare</strong>, né mentale né extra-mentale in quanto tale.</p>
+          </div>
+
+          <div class="s42-arrow">↓</div>
+
+          <div class="s42-level">
+            <div class="s42-level-h">
+              <div class="s42-level-name">2. Esistenza mentale</div>
+              <span class="s42-pill s42-pill-blue">predicabile di molti</span>
+            </div>
+            <p>L’essenza riceve l’<strong>accidente dell’universalità</strong>: nella mente diventa ciò che può essere detto di più individui senza mutare il suo contenuto essenziale.</p>
+          </div>
+
+          <div class="s42-arrow">↓</div>
+
+          <div class="s42-level">
+            <div class="s42-level-h">
+              <div class="s42-level-name">3. Esistenza reale / fisica</div>
+              <span class="s42-pill s42-pill-success">individuo concreto</span>
+            </div>
+            <p>L’essenza riceve <strong>accidenti individuanti</strong> e diventa questo cavallo, questa persona, questo triangolo tracciato qui e ora.</p>
+          </div>
+        </div>
+
+        <div class="s42-principle">
+          <p><strong>🔗 Principio decisivo.</strong> L’<strong>esistenza è estrinseca all’essenza</strong>: è l’atto di esistere, mentale o reale, a renderla universale o particolare; non il suo contenuto quidditativo.</p>
+        </div>
+      </div>
+
+      <div class="s42-section s42-section-arab s42-examples">
+        <div class="s42-hdr s42-hdr-arab">
+          <span>🧪 Esempi guida</span>
+          <span class="s42-subnote">stesso quid, esistenze diverse</span>
+        </div>
+
+        <div class="s42-example-grid">
+          <div class="s42-example">
+            <h4>🐎 Cavallo</h4>
+            <p>L’<strong>equinità</strong> non cambia passando dai cavalli singoli al concetto mentale di cavallo.</p>
+          </div>
+          <div class="s42-example">
+            <h4>△ Triangolo</h4>
+            <p>L’essenza del triangolo resta identica, anche se nella mente è universale e nel disegno è questo triangolo qui.</p>
+          </div>
+          <div class="s42-example">
+            <h4>💰 Cento talleri / cento euro</h4>
+            <p>Il concetto non guadagna nuovo contenuto per il solo fatto di esistere: cambia l’<strong>esistenza</strong>, non il quid.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="s42-right">
+      <div class="s42-section s42-section-neutral">
+        <div class="s42-hdr s42-hdr-neutral">
+          <span>La posta in gioco del problema</span>
+          <span class="s42-subnote">scienza vs individualità</span>
+        </div>
+
+        <div class="s42-scale-wrap">
+          <div class="s42-scale-container">
+            <!-- Asse orizzontale della bilancia -->
+            <div class="s42-scale-beam"></div>
+            <!-- Fulcro centrale -->
+            <div class="s42-scale-fulcrum"></div>
+
+            <!-- Piatto Sinistro -->
+            <div class="s42-scale-plate s42-plate-left">
+              <div class="s42-plate-title">Se gli universali <strong>ESISTONO</strong></div>
+              <div class="s42-plate-box">
+                <div class="s42-plate-row s42-plate-gain">
+                  <span class="s42-plate-ico">✓</span>
+                  <div>Si salva la <strong>scienza</strong><br><span class="s42-plate-sub">Si può conoscere il comune</span></div>
+                </div>
+                <div class="s42-plate-row s42-plate-risk">
+                  <span class="s42-plate-ico">✗</span>
+                  <div>Scompaiono <strong>individuo</strong> e <strong>libertà</strong><br><span class="s42-plate-sub">Siamo solo "copie" di un'idea</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Piatto Destro -->
+            <div class="s42-scale-plate s42-plate-right">
+              <div class="s42-plate-title">Se gli universali <strong>NON ESISTONO</strong></div>
+              <div class="s42-plate-box">
+                <div class="s42-plate-row s42-plate-gain">
+                  <span class="s42-plate-ico">✓</span>
+                  <div>Si salva l'<strong>individuo</strong><br><span class="s42-plate-sub">Realtà concreta e irripetibile</span></div>
+                </div>
+                <div class="s42-plate-row s42-plate-risk">
+                  <span class="s42-plate-ico">✗</span>
+                  <div>Muore la <strong>scienza</strong><br><span class="s42-plate-sub">Si riduce tutto a nomi/abitudini</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="s42-section s42-section-neutral">
+        <div class="s42-hdr s42-hdr-neutral">
+          <span>La mossa anti-platonica</span>
+          <span class="s42-subnote">Il rifiuto delle Idee separate</span>
+        </div>
+        
+        <div class="s42-anti-plato">
+          <div class="s42-plato-box">
+            <span class="s42-mini">Modello Platonico (Realismo estremo)</span>
+            <p>Le essenze (es. l'Uomo, il Cavallo) <strong>esistono già in atto</strong> in un mondo superiore (l'Iperuranio). Esse sono già <em>universali</em> di per sé. Gli individui fisici "partecipano" di queste Idee perfette e separate.</p>
+            <p class="s42-plato-prob"><strong>Problema:</strong> Come fa un'Idea unica a "calarsi" in milioni di individui fisici senza dividersi? E come può l'individuo essere reale se è solo un'ombra di un'Idea?</p>
+          </div>
+          
+          <div class="s42-arrow" style="transform: rotate(90deg); margin: 0.5rem 0;">→</div>
+
+          <div class="s42-avi-box">
+            <span class="s42-mini" style="color:var(--gold-l);">La soluzione di Avicenna</span>
+            <p>L'essenza in sé <strong>non ha un'esistenza incorporata</strong>. Non esiste in un Iperuranio, né nella mente, né nelle cose fisiche <em>in quanto tale</em>. È una pura <strong>"quiddità neutra"</strong> (il puro contenuto definitorio, es. triangolo = figura a 3 lati).</p>
+            <p style="margin-top:0.4rem;">L'esistenza è un <strong>accidente estrinseco</strong> che si aggiunge dopo, portando con sé l'accidente della "particolarità" (nel mondo fisico) o dell'"universalità" (nella mente umana).</p>
+          </div>
+        </div>
+
+        <div class="s42-positions-compact">
+          <div class="s42-pos-c"><span style="color:var(--muted2);">Le altre 3 posizioni:</span></div>
+          <div class="s42-pos-c"><strong>Realismo moderato:</strong> gli universali stanno <em>dentro</em> le cose come forme immanenti.</div>
+          <div class="s42-pos-c"><strong>Concettualismo:</strong> gli universali esistono solo <em>nella mente</em> come costrutti.</div>
+          <div class="s42-pos-c"><strong>Nominalismo:</strong> gli universali sono solo nomi/convenzioni (<em>flatus vocis</em>), esistono solo individui concreti irriducibili.</div>
+        </div>
+      </div>
+
+      <div class="s42-section s42-section-neutral">
+        <div class="s42-hdr s42-hdr-neutral">
+          <span>Il problema di Davide e Ines</span>
+          <span class="s42-subnote">stessa umanità? sì e no, secondo il piano considerato</span>
+        </div>
+
+        <div class="s42-case-box">
+          <div class="s42-question">
+            <p><strong>❓ Domanda.</strong> L’umanità in Davide e in Ines è la stessa?</p>
+          </div>
+
+          <div class="s42-case-grid">
+            <div class="s42-case-side">
+              <span class="s42-mini">In quanto tale</span>
+              <p>Se si considera l’<strong>umanità in sé</strong>, sì: la menzione dei due individui diventa superflua, perché si guarda al medesimo contenuto essenziale.</p>
+            </div>
+            <div class="s42-case-side">
+              <span class="s42-mini">Con esistenza individuale</span>
+              <p>Se si dice <strong>“l’umanità di Davide”</strong> e <strong>“l’umanità di Ines”</strong>, allora sono distinte: la stessa essenza è accompagnata da <strong>esistenze individuali diverse</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="s42-fortuna">
+        <div class="s42-hdr s42-hdr-latin">
+          <span>🧭 Fortuna storica</span>
+          <span class="s42-subnote">dal medioevo latino alla modernità</span>
+        </div>
+
+        <div class="s42-fortuna-list">
+          <div class="s42-fortuna-item">
+            <div class="s42-fortuna-name">Duns Scoto</div>
+            <p>Raccoglie il problema della <strong>natura comune</strong> e lo rilancia attraverso la <strong>distinctio formalis</strong> per rispondere alla sfida avicenniana.</p>
+          </div>
+          <div class="s42-fortuna-item">
+            <div class="s42-fortuna-name">Ockham</div>
+            <p>Nominalista rigoroso, ma in un certo senso <strong>avicenniano</strong>: le essenze restano diverse tra loro, anche se senza statuto ontologico reale.</p>
+          </div>
+          <div class="s42-fortuna-item">
+            <div class="s42-fortuna-name">Kant</div>
+            <p>Risuona qui l’idea che l’<strong>esistenza non aggiunge contenuto al concetto</strong>, come nel celebre esempio dei cento talleri.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-lbl">Punto chiave</div>
+    <p>La strategia di Avicenna salva insieme <strong>scienza</strong> e <strong>individualità</strong>: l’essenza mantiene un contenuto oggettivo senza trasformarsi in un’idea separata, perché <strong>universalità e particolarità dipendono dal modo di esistere</strong>, non dal quid della cosa.</p>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <div style="padding:2rem 3.5rem;background:var(--surface);border-top:1px solid var(--border);font-size:0.78rem;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
 <div>
 <div style="font-family:var(--font-h);color:var(--cream);font-size:0.85rem;margin-bottom:0.2rem;">Filosofia Medievale Araba ed Ebraica</div>
-<div style="font-style:italic;"><span class="schema-count-var">39</span> schemi visivi · Lezioni 01–<span class="ultima-lezione-var">22</span> · Università degli Studi di Milano</div>
+<div style="font-style:italic;"><span class="schema-count-var">42</span> schemi visivi · Lezioni 01–<span class="ultima-lezione-var">23</span> · Università degli Studi di Milano</div>
 </div>
 <div style="font-style:italic;color:var(--muted2);">davide.prando@studenti.unimi.it</div>
 </div>
@@ -9526,6 +12010,38 @@ body {
 </main>
 <!-- ════ JAVASCRIPT ════ -->
 <script>
+/* ── Mobile Nav Toggle ── */
+const toggle = document.getElementById('mob-toggle');
+const sidebar = document.querySelector('.sidebar');
+const overlay = document.getElementById('mob-overlay');
+
+function openNav() {
+  sidebar.classList.add('open');
+  overlay.classList.add('visible');
+  toggle.innerHTML = '\u2715';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeNav() {
+  sidebar.classList.remove('open');
+  overlay.classList.remove('visible');
+  toggle.innerHTML = '\u2630';
+  document.body.style.overflow = '';
+}
+
+if (toggle && sidebar && overlay) {
+  toggle.addEventListener('click', () =>
+    sidebar.classList.contains('open') ? closeNav() : openNav()
+  );
+  overlay.addEventListener('click', closeNav);
+
+  document.querySelectorAll('.nav-item a').forEach(a => {
+    a.addEventListener('click', () => {
+      if (window.innerWidth <= 768) closeNav();
+    });
+  });
+}
+
 /* ── Intersection Observer per animazioni ── */
 const sections = document.querySelectorAll('.ds');
 const io = new IntersectionObserver(entries => {
@@ -9616,9 +12132,19 @@ function initDiagrams() {
 }
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => setTimeout(initDiagrams, 300));
+  document.addEventListener('DOMContentLoaded', () => {
+    if (document.fonts) {
+      document.fonts.ready.then(() => setTimeout(initDiagrams, 100));
+    } else {
+      setTimeout(initDiagrams, 300);
+    }
+  });
 } else {
-  setTimeout(initDiagrams, 300);
+  if (document.fonts) {
+    document.fonts.ready.then(() => setTimeout(initDiagrams, 100));
+  } else {
+    setTimeout(initDiagrams, 300);
+  }
 }
 
 let resizeTimer;
@@ -9660,8 +12186,8 @@ if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
 // Mobile toggle
 const mobThemeBtn = document.getElementById('mob-theme-toggle');
 if (mobThemeBtn) mobThemeBtn.addEventListener('click', toggleTheme);
-const ULTIMA_LEZIONE = 22;
-const TOTAL_SCHEMAS = 39;
+const ULTIMA_LEZIONE = 23;
+const TOTAL_SCHEMAS = 42;
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".ultima-lezione-var").forEach(el => {
