@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Schemi — Filosofia Medievale Araba ed Ebraica (Lez. 1–23)</title>
+<title>Schemi — Filosofia Medievale Araba ed Ebraica (Lez. 1–24)</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -7999,6 +7999,1282 @@ em; }
   .s42-scale-beam, .s42-scale-fulcrum, .s42-scale-plate::before { display: none; }
 }
 
+/* S45: Al-Fārābī L24 — intelletto, città, specchi intelligibili */
+.s45-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1.35rem;
+  align-items: start;
+}
+
+.s45-triad {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+}
+
+.s45-triad-card,
+.s45-panel,
+.s45-step,
+.s45-city-main,
+.s45-city-outcome,
+.s45-route-node,
+.s45-tail-card,
+.s45-quote-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.s45-triad-card {
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+  padding: 0.95rem 1rem;
+  min-height: 100%;
+}
+
+.s45-triad-card:hover,
+.s45-panel:hover,
+.s45-step:hover,
+.s45-city-main:hover,
+.s45-city-outcome:hover,
+.s45-route-node:hover,
+.s45-tail-card:hover,
+.s45-quote-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+}
+
+.s45-triad-card--anth {
+  background: linear-gradient(135deg, rgba(139, 90, 26, 0.16), var(--surface2));
+  border-left: 4px solid var(--arab);
+}
+
+.s45-triad-card--pol {
+  background: linear-gradient(135deg, rgba(90, 58, 138, 0.15), var(--surface2));
+  border-left: 4px solid var(--aristo);
+}
+
+.s45-triad-card--esc {
+  background: linear-gradient(135deg, rgba(36, 64, 122, 0.16), var(--surface2));
+  border-left: 4px solid var(--latin);
+}
+
+.s45-triad-k {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-family: var(--font-h);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+}
+
+.s45-triad-card--anth .s45-triad-k { color: var(--arab-l); }
+.s45-triad-card--pol .s45-triad-k { color: var(--aristo-l); }
+.s45-triad-card--esc .s45-triad-k { color: var(--latin-l); }
+
+.s45-triad-title {
+  font-family: var(--font-h);
+  font-size: 1rem;
+  color: var(--cream);
+  margin-bottom: 0.2rem;
+}
+
+.s45-triad-card p {
+  color: var(--card-text);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.s45-panel {
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+  padding: 1.2rem 1.2rem 1.15rem;
+  position: relative;
+}
+
+.s45-panel--process {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(139, 90, 26, 0.15), rgba(90, 58, 138, 0.08) 58%, var(--surface2));
+  border-left: 4px solid var(--arab);
+}
+
+.s45-panel--cities {
+  background: linear-gradient(135deg, rgba(90, 58, 138, 0.13), var(--surface2));
+  border-left: 4px solid var(--aristo);
+}
+
+.s45-panel--network {
+  background: linear-gradient(135deg, rgba(36, 64, 122, 0.13), rgba(139, 90, 26, 0.07) 62%, var(--surface2));
+  border-left: 4px solid var(--latin);
+}
+
+.s45-subhdr {
+  margin-bottom: 0.55rem;
+  font-family: var(--font-h);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.s45-subhdr--anth { color: var(--arab-l); }
+.s45-subhdr--pol { color: var(--aristo-l); }
+.s45-subhdr--esc { color: var(--latin-l); }
+
+.s45-panel-title {
+  font-family: var(--font-h);
+  font-size: 1.2rem;
+  color: var(--cream);
+  line-height: 1.25;
+  margin-bottom: 0.35rem;
+}
+
+.s45-panel-lead {
+  color: var(--muted2);
+  font-size: 0.92rem;
+  margin-bottom: 1rem;
+}
+
+.s45-process-flow {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.25fr) 34px minmax(150px, 1fr) 34px minmax(150px, 1fr) 34px minmax(220px, 1.15fr);
+  gap: 0.6rem;
+  align-items: stretch;
+}
+
+.s45-step {
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  padding: 0.9rem 0.95rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.s45-step--origin {
+  background: linear-gradient(135deg, rgba(139, 90, 26, 0.2), rgba(27, 32, 53, 0.9));
+}
+
+.s45-step--arrival {
+  background: linear-gradient(135deg, rgba(45, 107, 74, 0.16), rgba(27, 32, 53, 0.92));
+  border-color: rgba(80, 200, 120, 0.22);
+}
+
+.s45-step-num {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 151, 58, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-h);
+  font-size: 0.92rem;
+  color: var(--gold-l);
+  margin-bottom: 0.55rem;
+}
+
+.s45-step-title {
+  font-family: var(--font-h);
+  font-size: 0.96rem;
+  color: var(--cream);
+  margin-bottom: 0.28rem;
+}
+
+.s45-step p {
+  color: var(--card-text);
+  font-size: 0.87rem;
+  line-height: 1.58;
+}
+
+.s45-metaphor {
+  margin-top: 0.65rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--r-sm);
+  background: rgba(201, 151, 58, 0.08);
+  border-left: 3px solid var(--gold);
+}
+
+.s45-metaphor-lbl {
+  display: block;
+  margin-bottom: 0.18rem;
+  font-family: var(--font-h);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--gold-l);
+}
+
+.s45-metaphor q {
+  color: var(--cream);
+  font-style: italic;
+}
+
+.s45-flow-arrow,
+.s45-city-arrow,
+.s45-route-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-t);
+  font-family: var(--font-h);
+}
+
+.s45-flow-arrow {
+  font-size: 1.3rem;
+}
+
+.s45-process-notes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.s45-note {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 0.7rem;
+  align-items: start;
+  padding: 0.8rem 0.9rem;
+  border-radius: var(--r-sm);
+  font-size: 0.84rem;
+  line-height: 1.45;
+  border: 1px solid rgba(201, 151, 58, 0.22);
+  background: rgba(201, 151, 58, 0.08);
+  color: var(--card-text);
+}
+
+.s45-note-ico {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.86rem;
+  font-family: var(--font-h);
+  border: 1px solid rgba(201,151,58,0.25);
+  background: rgba(255,255,255,0.03);
+}
+
+.s45-note-copy strong {
+  display: block;
+  font-family: var(--font-h);
+  font-size: 0.78rem;
+  line-height: 1.25;
+  margin-bottom: 0.18rem;
+  letter-spacing: 0.01em;
+}
+
+.s45-note-copy span {
+  color: var(--card-text);
+  font-size: 0.8rem;
+}
+
+.s45-note--deny {
+  background: rgba(139, 24, 24, 0.12);
+  border-color: rgba(139, 24, 24, 0.28);
+}
+
+.s45-note--deny .s45-note-ico,
+.s45-note--deny .s45-note-copy strong {
+  color: var(--danger-t);
+}
+
+.s45-note--task {
+  background: rgba(45, 107, 74, 0.12);
+  border-color: rgba(45, 107, 74, 0.28);
+}
+
+.s45-note--task .s45-note-ico,
+.s45-note--task .s45-note-copy strong {
+  color: var(--green-t);
+}
+
+.s45-cities {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.s45-city-row {
+  display: grid;
+  grid-template-columns: 42px 1.45fr 38px 1fr;
+  gap: 0.7rem;
+  align-items: stretch;
+}
+
+.s45-city-num {
+  border-radius: 999px;
+  align-self: start;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-h);
+  font-size: 0.95rem;
+  border: 1px solid var(--border);
+  color: var(--cream);
+}
+
+.s45-city-main,
+.s45-city-outcome {
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  padding: 0.82rem 0.9rem;
+}
+
+.s45-city-main p,
+.s45-city-outcome p,
+.s45-connection p,
+.s45-route-node p,
+.s45-tail-card p,
+.s45-quote-card p {
+  color: var(--card-text);
+  font-size: 0.86rem;
+  line-height: 1.58;
+}
+
+.s45-city-title,
+.s45-route-title,
+.s45-tail-title {
+  font-family: var(--font-h);
+  font-size: 0.94rem;
+  color: var(--cream);
+  margin-bottom: 0.25rem;
+}
+
+.s45-city-row--virt .s45-city-num,
+.s45-city-row--virt .s45-city-main,
+.s45-city-row--virt .s45-city-outcome {
+  background: linear-gradient(135deg, rgba(45, 107, 74, 0.16), var(--surface2));
+  border-color: rgba(45, 107, 74, 0.34);
+}
+
+.s45-city-row--ign .s45-city-num,
+.s45-city-row--ign .s45-city-main,
+.s45-city-row--ign .s45-city-outcome {
+  background: linear-gradient(135deg, rgba(201, 151, 58, 0.13), var(--surface2));
+  border-color: rgba(201, 151, 58, 0.28);
+}
+
+.s45-city-row--corr .s45-city-num,
+.s45-city-row--corr .s45-city-main,
+.s45-city-row--corr .s45-city-outcome {
+  background: linear-gradient(135deg, rgba(139, 24, 24, 0.16), var(--surface2));
+  border-color: rgba(139, 24, 24, 0.3);
+}
+
+.s45-pill {
+  display: inline-block;
+  margin-bottom: 0.38rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  font-family: var(--font-h);
+  font-size: 0.64rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.s45-pill--imm {
+  background: rgba(45, 107, 74, 0.16);
+  border: 1px solid rgba(45, 107, 74, 0.32);
+  color: var(--green-t);
+}
+
+.s45-pill--mort {
+  background: rgba(139, 24, 24, 0.16);
+  border: 1px solid rgba(139, 24, 24, 0.32);
+  color: var(--danger-t);
+}
+
+.s45-pill--task {
+  background: rgba(201, 151, 58, 0.15);
+  border: 1px solid rgba(201, 151, 58, 0.3);
+  color: var(--gold-l);
+}
+
+.s45-pill--sep {
+  background: rgba(96, 144, 224, 0.14);
+  border: 1px solid rgba(96, 144, 224, 0.28);
+  color: var(--blue-t);
+}
+
+.s45-connection {
+  margin-top: 1rem;
+  padding: 0.95rem 1rem;
+  border-radius: var(--r);
+  background: rgba(36, 64, 122, 0.08);
+  border: 1px solid rgba(36, 64, 122, 0.34);
+  border-left: 4px solid var(--latin);
+}
+
+.s45-connection-h {
+  font-family: var(--font-h);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: var(--latin-l);
+  margin-bottom: 0.35rem;
+}
+
+.s45-network-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 0.95rem;
+  align-items: start;
+}
+
+.s45-route {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.s45-route-node {
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  padding: 0.82rem 0.88rem;
+}
+
+.s45-route-node--arab {
+  background: linear-gradient(135deg, rgba(139, 90, 26, 0.17), var(--surface2));
+  border-left: 4px solid var(--arab);
+}
+
+.s45-route-node--gold {
+  background: linear-gradient(135deg, rgba(201, 151, 58, 0.15), var(--surface2));
+  border-left: 4px solid var(--gold);
+}
+
+.s45-route-node--latin {
+  background: linear-gradient(135deg, rgba(36, 64, 122, 0.16), var(--surface2));
+  border-left: 4px solid var(--latin);
+}
+
+.s45-route-link {
+  font-size: 0.78rem;
+  text-align: center;
+  line-height: 1.35;
+  padding: 0.15rem 0.3rem;
+}
+
+.s45-mirror-echoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.55rem;
+}
+
+.s45-mirror-echo {
+  padding: 0.14rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  background: rgba(96, 144, 224, 0.12);
+  border: 1px solid rgba(96, 144, 224, 0.26);
+  color: var(--blue-t);
+}
+
+.s45-tail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.s45-tail-h {
+  font-family: var(--font-h);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: var(--latin-l);
+}
+
+.s45-tail-card {
+  border-radius: var(--r-sm);
+  border: 1px solid rgba(36, 64, 122, 0.28);
+  border-left: 4px solid var(--latin);
+  padding: 0.82rem 0.88rem;
+  background: linear-gradient(135deg, rgba(36, 64, 122, 0.16), var(--surface2));
+}
+
+.s45-tail-meta {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-style: italic;
+}
+
+.s45-quote-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  margin-top: 0.9rem;
+}
+
+.s45-quote-card {
+  border-radius: var(--r-sm);
+  border: 1px solid rgba(201, 151, 58, 0.22);
+  background: rgba(201, 151, 58, 0.07);
+  padding: 0.8rem 0.88rem;
+}
+
+.s45-quote-card strong {
+  display: block;
+  margin-bottom: 0.22rem;
+  font-family: var(--font-h);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--gold-l);
+}
+
+.s45-quote-card q {
+  color: var(--cream);
+  font-style: italic;
+}
+
+.s45-emph {
+  color: var(--gold-l);
+}
+
+.s45-connection strong,
+.s45-tail-card strong,
+.s45-route-node strong {
+  color: var(--gold-l);
+}
+
+/* S46: Avicenna L24 — dal suq di Bukhara all'ontologia generale */
+.s46-layout {
+  display: grid;
+  grid-template-columns: 0.98fr 1.12fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.s46-panel {
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.2rem 1.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s, background 0.22s;
+}
+
+.s46-panel:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.28);
+}
+
+.s46-panel p,
+.s46-panel li {
+  color: var(--card-text);
+}
+
+.s46-panel-suq {
+  background: linear-gradient(135deg, rgba(139,90,26,0.16), var(--surface2));
+  border-left: 4px solid var(--arab);
+}
+
+.s46-panel-defs {
+  background: linear-gradient(135deg, rgba(90,58,138,0.16), var(--surface2));
+  border-left: 4px solid var(--aristo);
+}
+
+.s46-panel-analytics {
+  grid-column: 1 / span 2;
+  background: linear-gradient(135deg, rgba(201,151,58,0.12), var(--surface2));
+  border-left: 4px solid var(--gold);
+}
+
+.s46-panel-language {
+  grid-column: 1 / span 2;
+  background: linear-gradient(135deg, rgba(36,64,122,0.13), var(--surface2));
+  border-left: 4px solid var(--latin);
+}
+
+.s46-panel-history {
+  grid-column: 1 / span 2;
+  background: linear-gradient(135deg, rgba(201,151,58,0.08), var(--surface2));
+  border-left: 4px solid var(--gold);
+}
+
+.s46-sec-hdr {
+  font-family: var(--font-h);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid;
+}
+
+.s46-hdr-arab {
+  color: var(--arab-l);
+  border-color: rgba(139,90,26,0.45);
+}
+
+.s46-hdr-aristo {
+  color: var(--aristo-l);
+  border-color: rgba(90,58,138,0.45);
+}
+
+.s46-hdr-gold {
+  color: var(--gold-l);
+  border-color: rgba(201,151,58,0.42);
+}
+
+.s46-hdr-latin {
+  color: var(--latin-l);
+  border-color: rgba(36,64,122,0.45);
+}
+
+.s46-panel-intro {
+  color: var(--muted2);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.s46-steps {
+  display: grid;
+  gap: 0.95rem;
+  position: relative;
+  padding-left: 0.1rem;
+}
+
+.s46-steps::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(201,151,58,0.18), rgba(201,151,58,0.6), rgba(201,151,58,0.18));
+}
+
+.s46-step {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  position: relative;
+}
+
+.s46-step-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,151,58,0.4);
+  background: var(--surface3);
+  color: var(--gold-l);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-h);
+  font-size: 0.92rem;
+  font-weight: 700;
+  z-index: 1;
+  transition: transform 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.s46-step:hover .s46-step-num {
+  transform: scale(1.05);
+  border-color: var(--gold);
+}
+
+.s46-step-copy {
+  padding-top: 0.2rem;
+  color: var(--card-text);
+}
+
+.s46-step-copy strong {
+  color: var(--gold-l);
+}
+
+.s46-turn {
+  margin-top: 1rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: var(--r-sm);
+  background: rgba(201,151,58,0.08);
+  border: 1px solid rgba(201,151,58,0.22);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.s46-turn:hover {
+  transform: translateX(3px);
+  background: rgba(201,151,58,0.11);
+}
+
+.s46-turn-lbl {
+  font-family: var(--font-h);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 0.2rem;
+}
+
+.s46-def-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  position: relative;
+  margin-top: 0.85rem;
+}
+
+.s46-editorial-badge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 122px;
+  height: 122px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(201,151,58,0.18), var(--surface3));
+  border: 1px solid rgba(201,151,58,0.35);
+  box-shadow: 0 0 0 8px rgba(11,14,23,0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.85rem;
+  font-family: var(--font-h);
+  font-size: 0.68rem;
+  line-height: 1.2;
+  color: var(--gold-l);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.s46-def-card {
+  min-height: 124px;
+  padding: 1rem 1rem 0.95rem;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(90,58,138,0.12), rgba(34,40,64,0.95));
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.s46-def-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.24);
+  border-color: rgba(122,82,176,0.45);
+}
+
+.s46-def-book {
+  font-family: var(--font-h);
+  font-size: 0.86rem;
+  color: var(--aristo-l);
+  margin-bottom: 0.35rem;
+}
+
+.s46-def-thesis {
+  color: var(--card-text);
+  line-height: 1.5;
+}
+
+.s46-editorial-note {
+  margin-top: 1rem;
+  padding: 0.7rem 0.85rem;
+  border-left: 3px solid var(--aristo);
+  background: rgba(90,58,138,0.08);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  color: var(--muted2);
+}
+
+.s46-axioms {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.s46-axiom {
+  padding: 0.8rem 0.85rem;
+  border-radius: var(--r-sm);
+  border: 1px solid rgba(201,151,58,0.2);
+  background: linear-gradient(135deg, rgba(201,151,58,0.1), rgba(34,40,64,0.92));
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.s46-axiom:hover {
+  transform: translateY(-2px);
+  border-color: rgba(201,151,58,0.36);
+}
+
+.s46-axiom-lbl {
+  display: inline-block;
+  font-family: var(--font-h);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-l);
+  margin-bottom: 0.2rem;
+}
+
+.s46-axiom p {
+  color: var(--card-text);
+  line-height: 1.45;
+}
+
+.s46-filter {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.s46-row {
+  display: grid;
+  grid-template-columns: 40px 1fr 28px 1.15fr auto;
+  gap: 0.7rem;
+  align-items: center;
+  padding: 0.8rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  background: rgba(19,23,37,0.38);
+  transition: transform 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.s46-row:hover {
+  transform: translateX(4px);
+}
+
+.s46-row-rule {
+  border-left: 4px solid var(--gold);
+}
+
+.s46-row-exclude {
+  border-left: 4px solid var(--danger);
+}
+
+.s46-row-valid {
+  border-left: 4px solid var(--green);
+  background: rgba(45,107,74,0.08);
+}
+
+.s46-row-num {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--surface3);
+  color: var(--gold-l);
+  border: 1px solid rgba(201,151,58,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-h);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.s46-row-label {
+  font-family: var(--font-h);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted2);
+  margin-bottom: 0.08rem;
+}
+
+.s46-row-side p {
+  color: var(--card-text);
+  line-height: 1.45;
+}
+
+.s46-row-side strong {
+  color: var(--cream);
+}
+
+.s46-row-arrow {
+  color: var(--gold-t);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.s46-pill {
+  display: inline-block;
+  padding: 0.16rem 0.5rem;
+  border-radius: 999px;
+  font-family: var(--font-h);
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.s46-pill-danger {
+  background: rgba(139,24,24,0.18);
+  color: var(--danger-t);
+  border: 1px solid rgba(139,24,24,0.38);
+}
+
+.s46-pill-success {
+  background: rgba(45,107,74,0.18);
+  color: var(--green-t);
+  border: 1px solid rgba(45,107,74,0.34);
+}
+
+.s46-pill-gold {
+  background: rgba(201,151,58,0.16);
+  color: var(--gold-l);
+  border: 1px solid rgba(201,151,58,0.34);
+}
+
+.s46-example-box {
+  margin-top: 1rem;
+  padding: 0.9rem 0.95rem;
+  border-radius: var(--r-sm);
+  background: rgba(36,64,122,0.08);
+  border: 1px solid rgba(36,64,122,0.28);
+}
+
+.s46-example-title {
+  font-family: var(--font-h);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--latin-l);
+  margin-bottom: 0.55rem;
+}
+
+.s46-example-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+}
+
+.s46-example {
+  padding: 0.7rem 0.75rem;
+  border-radius: var(--r-sm);
+  background: rgba(27,32,53,0.9);
+  border: 1px solid var(--border);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.s46-example:hover {
+  transform: translateY(-2px);
+  border-color: rgba(96,144,224,0.36);
+}
+
+.s46-example strong {
+  display: block;
+  color: var(--cream);
+  margin-bottom: 0.12rem;
+}
+
+.s46-example span {
+  color: var(--card-text);
+  line-height: 1.45;
+}
+
+.s46-language-grid {
+  display: grid;
+  grid-template-columns: 1fr 110px 1fr;
+  gap: 1rem;
+  align-items: stretch;
+  margin-top: 1rem;
+}
+
+.s46-formula {
+  border-radius: var(--r);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.s46-formula:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.22);
+}
+
+.s46-formula-a {
+  background: linear-gradient(135deg, rgba(139,24,24,0.12), var(--surface2));
+  border: 1px solid rgba(139,24,24,0.32);
+  border-left: 4px solid var(--danger);
+}
+
+.s46-formula-b {
+  background: linear-gradient(135deg, rgba(45,107,74,0.14), var(--surface2));
+  border: 1px solid rgba(45,107,74,0.3);
+  border-left: 4px solid var(--green);
+}
+
+.s46-formula-kicker {
+  font-family: var(--font-h);
+  font-size: 0.67rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+  color: var(--muted2);
+}
+
+.s46-formula-text {
+  font-family: var(--font-h);
+  font-size: 1.08rem;
+  line-height: 1.35;
+  color: var(--cream);
+  margin-bottom: 0.6rem;
+}
+
+.s46-formula-text span {
+  color: var(--gold-l);
+  font-style: italic;
+}
+
+.s46-formula-meta {
+  margin-top: 0.45rem;
+  color: var(--card-text);
+}
+
+.s46-formula-meta strong {
+  color: var(--cream);
+}
+
+.s46-formula-outcome {
+  margin-top: auto;
+  padding-top: 0.8rem;
+}
+
+.s46-neg-pivot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.s46-neg-pivot:hover {
+  transform: scale(1.03);
+}
+
+.s46-neg-word {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(201,151,58,0.22), var(--surface3));
+  border: 1px solid rgba(201,151,58,0.4);
+  color: var(--gold-l);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-h);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.s46-neg-caption {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.s46-history-line {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.85rem;
+  position: relative;
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+}
+
+.s46-history-line::before {
+  content: "";
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  top: 1.48rem;
+  height: 2px;
+  background: linear-gradient(to right, rgba(176,120,48,0.45), rgba(45,84,160,0.5), rgba(201,151,58,0.45));
+}
+
+.s46-history-node {
+  position: relative;
+  z-index: 1;
+  padding: 1rem 0.9rem 0.85rem;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.s46-history-node::before {
+  content: "";
+  position: absolute;
+  top: -0.36rem;
+  left: 1rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 4px var(--bg);
+}
+
+.s46-history-node:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+}
+
+.s46-history-node h3 {
+  font-family: var(--font-h);
+  font-size: 0.9rem;
+  line-height: 1.25;
+  color: var(--cream);
+  margin-bottom: 0.28rem;
+}
+
+.s46-history-node p {
+  color: var(--card-text);
+  line-height: 1.48;
+  font-size: 0.92rem;
+}
+
+.s46-history-step {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  padding: 0.14rem 0.42rem;
+  border-radius: 999px;
+  font-family: var(--font-h);
+  font-size: 0.64rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.s46-history-node-arab {
+  background: linear-gradient(135deg, rgba(139,90,26,0.15), var(--surface2));
+  border-left: 4px solid var(--arab);
+}
+
+.s46-history-node-arab::before {
+  background: var(--arab-l);
+}
+
+.s46-history-node-arab .s46-history-step {
+  background: rgba(139,90,26,0.16);
+  color: var(--arab-l);
+}
+
+.s46-history-node-latin {
+  background: linear-gradient(135deg, rgba(36,64,122,0.14), var(--surface2));
+  border-left: 4px solid var(--latin);
+}
+
+.s46-history-node-latin::before {
+  background: var(--latin-l);
+}
+
+.s46-history-node-latin .s46-history-step {
+  background: rgba(36,64,122,0.16);
+  color: var(--latin-l);
+}
+
+.s46-history-node-gold {
+  background: linear-gradient(135deg, rgba(201,151,58,0.13), var(--surface2));
+  border-left: 4px solid var(--gold);
+}
+
+.s46-history-node-gold::before {
+  background: var(--gold-l);
+}
+
+.s46-history-node-gold .s46-history-step {
+  background: rgba(201,151,58,0.16);
+  color: var(--gold-l);
+}
+
+.s46-history-node-blue {
+  background: linear-gradient(135deg, rgba(96,144,224,0.12), var(--surface2));
+  border-left: 4px solid var(--latin);
+}
+
+.s46-history-node-blue::before {
+  background: var(--blue-t);
+}
+
+.s46-history-node-blue .s46-history-step {
+  background: rgba(96,144,224,0.14);
+  color: var(--blue-t);
+}
+
+.s46-history-node-danger {
+  background: linear-gradient(135deg, rgba(176,32,32,0.1), var(--surface2));
+  border-left: 4px solid var(--danger);
+}
+
+.s46-history-node-danger::before {
+  background: var(--danger-t);
+}
+
+.s46-history-node-danger .s46-history-step {
+  background: rgba(176,32,32,0.14);
+  color: var(--danger-t);
+}
+
+@media (max-width: 768px) {
+  .s45-layout,
+  .s45-triad,
+  .s45-network-grid,
+  .s45-quote-strip,
+  .s45-city-row,
+  .s45-process-flow,
+  .s46-layout,
+  .s46-def-grid,
+  .s46-axioms,
+  .s46-example-grid,
+  .s46-history-line,
+  .s46-language-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .s45-panel--process,
+  .s46-panel-analytics,
+  .s46-panel-language,
+  .s46-panel-history {
+    grid-column: auto;
+  }
+
+  .s45-flow-arrow,
+  .s45-city-arrow,
+  .s46-row-arrow {
+    transform: rotate(90deg);
+    min-height: 20px;
+    text-align: left;
+  }
+
+  .s45-triad-card,
+  .s45-panel {
+    padding: 1rem;
+  }
+
+  .s45-process-notes {
+    grid-template-columns: 1fr;
+  }
+
+  .s46-editorial-badge,
+  .s46-history-line::before {
+    display: none;
+  }
+
+  .s46-row {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .s46-neg-pivot {
+    order: -1;
+    padding: 0.35rem 0 0.7rem;
+  }
+
+  .s46-history-line {
+    padding-top: 0;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -8010,7 +9286,7 @@ em; }
 <div class="sb-logo">
 <div class="eyebrow">Università degli Studi di Milano</div>
 <div class="title">Filosofia Medievale<br/>Araba ed Ebraica</div>
-<div class="sub">Schemi delle lezioni 1–<span class="ultima-lezione-var">23</span></div>
+<div class="sub">Schemi delle lezioni 1–<span class="ultima-lezione-var">24</span></div>
 </div>
 <div class="theme-toggle-wrap">
 <button aria-label="Cambia tema" class="theme-toggle" id="theme-toggle">
@@ -8060,23 +9336,25 @@ em; }
           <li class="nav-item"><a href="#s39"><span class="nav-num">39</span>Avicenna: soggetto della metafisica</a></li>
           <li class="nav-item"><a href="#s40"><span class="nav-num">40</span>Avicenna: creazione eterna e necessario per sé</a></li>
           <li class="nav-item"><a href="#s41"><span class="nav-num">41</span>Tre destini dell’anima in Avicenna</a></li>
-          <li class="nav-item"><a href="#s42"><span class="nav-num">42</span>Avicenna: essenze e universali</a></li></ul>
+          <li class="nav-item"><a href="#s42"><span class="nav-num">42</span>Avicenna: essenze e universali</a></li>
+          <li class="nav-item"><a href="#s45"><span class="nav-num">43</span>Al-Fārābī: intelletto, città e specchi intelligibili</a></li>
+          <li class="nav-item"><a href="#s46"><span class="nav-num">44</span>Avicenna e l'ontologia generale</a></li></ul>
 <div class="sb-footer">
     Corso: <em>Che cosa significa pensare?</em><br/>
-    Lezioni 1–23 · Da al-Fārābī ad Avicenna: metafisica, creazione eterna, escatologia filosofica, essenze e universali
+    Lezioni 1–24 · Chiusura di al-Fārābī e apertura avicenniana: intelletto acquisito, città virtuosa, metafisica e ontologia generale
   </div>
 </aside>
 <!-- ════ MAIN ════ -->
 <main class="main">
 <!-- ──── HERO ──── -->
 <div class="hero">
-<div class="hero-pill"><span class="schema-count-var">42</span> schemi del corso</div>
+<div class="hero-pill"><span class="schema-count-var">44</span> schemi del corso</div>
 <h1>Filosofia Medievale<br/><em>Araba ed Ebraica</em></h1>
-  <div class="hero-sub">Schemi visivi per le lezioni 1–<span class="ultima-lezione-var">23</span> — dalla trasmissione aristotelica ad Avicenna: <em>falsafa</em>, metafisica, creazione eterna, escatologia filosofica, essenze e universali</div>
+  <div class="hero-sub">Schemi visivi per le lezioni 1–<span class="ultima-lezione-var">24</span> — dalla trasmissione aristotelica alla chiusura farabiana e all'apertura avicenniana: <em>falsafa</em>, intelletto acquisito, metafisica, ontologia generale, essenze e universali</div>
 <div class="hero-meta">
 <span>Università degli Studi di Milano</span>
 <span>A.A. 2025–2026</span>
-<span><span class="ultima-lezione-var">23</span> lezioni · <span class="schema-count-var">42</span> schemi visivi</span>
+<span><span class="ultima-lezione-var">24</span> lezioni · <span class="schema-count-var">44</span> schemi visivi</span>
 </div>
 <div class="hero-line"></div>
 </div>
@@ -11998,11 +13276,459 @@ em; }
   </div>
 </section>
 
+<section class="ds" id="s45">
+  <div class="sec-top">
+    <span class="badge-n">Schema 43</span>
+    <span class="badge-l">L. 24</span>
+  </div>
+  <h2>Al-Fārābī: l'intelletto come compito, la città virtuosa e la comunità degli specchi intelligibili</h2>
+  <p class="desc">Il ciclo farabiano si chiude mostrando le tre implicazioni della teoria dell'intelletto acquisito: l'umanità come compito non biologico, la dipendenza politica della felicità intellettuale e la sopravvivenza delle anime razionali come comunità di specchi intelligibili che riverbera fino a Dante.</p>
+
+  <div class="s45-layout">
+    <div class="s45-triad">
+      <div class="s45-triad-card s45-triad-card--anth">
+        <span class="s45-triad-k">🧠 antropologia</span>
+        <div class="s45-triad-title">L'uomo è un compito</div>
+        <p>L'umanità in senso proprio non coincide con il semplice nascere uomo: emerge quando si costruisce l'<strong class="s45-emph">anima razionale</strong>.</p>
+      </div>
+      <div class="s45-triad-card s45-triad-card--pol">
+        <span class="s45-triad-k">🏛️ politica</span>
+        <div class="s45-triad-title">La filosofia ha bisogno di città</div>
+        <p>La felicità intellettuale non è privata: dipende da una forma politica capace di garantire <strong class="s45-emph">pace</strong>, educazione e orientamento al fine umano.</p>
+      </div>
+      <div class="s45-triad-card s45-triad-card--esc">
+        <span class="s45-triad-k">🪞 escatologia</span>
+        <div class="s45-triad-title">La beatitudine cresce per riflesso</div>
+        <p>Gli intelletti acquisiti non restano isolati: formano una <strong class="s45-emph">comunità di specchi intelligibili</strong> che accresce reciprocamente la propria felicità.</p>
+      </div>
+    </div>
+
+    <div class="s45-panel s45-panel--process">
+      <div class="s45-subhdr s45-subhdr--anth">🧠 Dalla disposizione alla forma acquisita</div>
+      <h3 class="s45-panel-title">Dalla pura disposizione all'intelletto acquisito</h3>
+      <p class="s45-panel-lead">Il processo è graduale: non c'è né automatismo biologico né infusione esterna, ma una lenta costruzione della sostanza razionale.</p>
+
+      <div class="s45-process-flow">
+        <div class="s45-step s45-step--origin">
+          <div class="s45-step-num">1</div>
+          <div class="s45-step-title">Intelletto potenziale</div>
+          <p>Pura disponibilità a ricevere le forme intelligibili: il soggetto umano non possiede ancora stabilmente ciò che lo definisce.</p>
+          <div class="s45-metaphor">
+            <span class="s45-metaphor-lbl">Metafora chiave</span>
+            <q>non-essere-scritto di una tavoletta</q>
+          </div>
+        </div>
+
+        <div class="s45-flow-arrow">➜</div>
+
+        <div class="s45-step">
+          <div class="s45-step-num">2</div>
+          <div class="s45-step-title">Atti ripetuti di intellezione</div>
+          <p>Ogni comprensione effettiva sedimenta: l'intelligere non è un episodio isolato, ma una pratica che lascia forma.</p>
+        </div>
+
+        <div class="s45-flow-arrow">➜</div>
+
+        <div class="s45-step">
+          <div class="s45-step-num">3</div>
+          <div class="s45-step-title">Sostanzializzazione progressiva</div>
+          <p>Le forme pensate diventano sempre più costitutive del soggetto, che si trasforma interiormente in ciò che conosce.</p>
+        </div>
+
+        <div class="s45-flow-arrow">➜</div>
+
+        <div class="s45-step s45-step--arrival">
+          <div class="s45-step-num">4</div>
+          <div class="s45-step-title">Intelletto acquisito</div>
+          <p><strong>Anima razionale costruita</strong>: il culmine del processo in cui l'umanità diventa possesso reale e non solo possibilità naturale.</p>
+          <span class="s45-pill s45-pill--task">umanità compiuta</span>
+        </div>
+      </div>
+
+      <div class="s45-process-notes">
+        <div class="s45-note s45-note--deny">
+          <div class="s45-note-ico">⚠</div>
+          <div class="s45-note-copy">
+            <strong>Non è un dato biologico</strong>
+            <span>L'anima razionale non coincide con il semplice appartenere alla specie umana.</span>
+          </div>
+        </div>
+        <div class="s45-note s45-note--deny">
+          <div class="s45-note-ico">⚠</div>
+          <div class="s45-note-copy">
+            <strong>Non è un'infusione divina</strong>
+            <span>Non viene consegnata già pronta: prende forma solo attraverso atti ripetuti di intellezione.</span>
+          </div>
+        </div>
+        <div class="s45-note s45-note--task">
+          <div class="s45-note-ico">★</div>
+          <div class="s45-note-copy">
+            <strong>L'umanità in senso proprio è un compito</strong>
+            <span>Si diventa veramente uomini costruendo l'intelletto acquisito nel corso della vita filosofica.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="s45-panel s45-panel--cities">
+      <div class="s45-subhdr s45-subhdr--pol">🏛️ Politica della felicità</div>
+      <h3 class="s45-panel-title">Tipologia politica delle città</h3>
+      <p class="s45-panel-lead">La forma della città decide se l'esercizio filosofico trova condizioni storiche o viene soffocato.</p>
+
+      <div class="s45-cities">
+        <div class="s45-city-row s45-city-row--virt">
+          <div class="s45-city-num">1</div>
+          <div class="s45-city-main">
+            <div class="s45-city-title">Città virtuosa</div>
+            <p>Governanti filosofi o almeno aperti alla filosofia; i cittadini possono, se vogliono, costruirsi l'anima razionale.</p>
+          </div>
+          <div class="s45-city-arrow">➜</div>
+          <div class="s45-city-outcome">
+            <span class="s45-pill s45-pill--imm">felicità intellettuale</span>
+            <p>Qui si apre la <strong>possibile immortalità</strong>, perché l'intelletto acquisito può realmente formarsi.</p>
+          </div>
+        </div>
+
+        <div class="s45-city-row s45-city-row--ign">
+          <div class="s45-city-num">2</div>
+          <div class="s45-city-main">
+            <div class="s45-city-title">Città ignorante</div>
+            <p>I governanti ignorano il fine umano; nessuno dispone davvero delle condizioni necessarie a realizzare la propria umanità.</p>
+          </div>
+          <div class="s45-city-arrow">➜</div>
+          <div class="s45-city-outcome">
+            <span class="s45-pill s45-pill--mort">mortalità</span>
+            <p>Esito di <strong>corruzione intellettuale</strong>: la vita resta inferiore al proprio fine e non si sostanzializza.</p>
+          </div>
+        </div>
+
+        <div class="s45-city-row s45-city-row--corr">
+          <div class="s45-city-num">3</div>
+          <div class="s45-city-main">
+            <div class="s45-city-title">Città perversa / corrotta</div>
+            <p>Il governante conosce il fine umano ma lo tradisce deliberatamente: è la versione in malafede del fallimento politico.</p>
+          </div>
+          <div class="s45-city-arrow">➜</div>
+          <div class="s45-city-outcome">
+            <span class="s45-pill s45-pill--mort">stesso destino mortale</span>
+            <p>I cittadini condividono il medesimo esito della città ignorante: nessuna felicità stabile, nessuna sopravvivenza razionale.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="s45-connection">
+        <div class="s45-connection-h">Connessione imperiale</div>
+        <p>La coda latina traduce questo nesso in termini storici: il compito dell'impero è garantire <strong>pace</strong> e <strong>philosophica documenta</strong>, cioè le condizioni esterne grazie a cui l'intelletto può maturare.</p>
+      </div>
+    </div>
+
+    <div class="s45-panel s45-panel--network">
+      <div class="s45-subhdr s45-subhdr--esc">🪞 Escatologia e trasmissione</div>
+      <h3 class="s45-panel-title">Filiera di trasmissione e felicità condivisa</h3>
+      <p class="s45-panel-lead">L'idea farabiana passa dalla costruzione dell'intelletto alla sopravvivenza reciproca e poi alla ricezione latina.</p>
+
+      <div class="s45-network-grid">
+        <div class="s45-route">
+          <div class="s45-route-node s45-route-node--arab">
+            <div class="s45-route-title">Al-Fārābī</div>
+            <p>Formula il punto di partenza: <strong>l'anima razionale si costruisce</strong> e l'umanità piena non è presupposta.</p>
+          </div>
+
+          <div class="s45-route-link">l'anima razionale si costruisce ⬇</div>
+
+          <div class="s45-route-node s45-route-node--gold">
+            <div class="s45-route-title">Intelletto acquisito</div>
+            <p>Esito della sostanzializzazione: ciò che era solo disposizione diventa forma stabile del soggetto filosofico.</p>
+            <span class="s45-pill s45-pill--task">compito riuscito</span>
+          </div>
+
+          <div class="s45-route-link">la felicità si riverbera ⬇</div>
+
+          <div class="s45-route-node s45-route-node--latin">
+            <div class="s45-route-title">Comunità di specchi intelligibili</div>
+            <p>Le anime razionali sopravvivono non come monadi chiuse, ma come <strong>comunità</strong> in cui ciascun intelletto riflette e accresce gli altri.</p>
+            <div class="s45-mirror-echoes">
+              <span class="s45-mirror-echo">🪞 riverbero</span>
+              <span class="s45-mirror-echo">✨ crescita reciproca</span>
+              <span class="s45-mirror-echo">♾️ felicità condivisa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="s45-tail">
+          <div class="s45-tail-h">📘 Coda latina</div>
+
+          <div class="s45-tail-card">
+            <div class="s45-tail-title">Alberto Magno</div>
+            <p>Riceve la radicalità antropologica farabiana: <strong>“uomo” in senso proprio</strong> si dice di chi realizza compiutamente la vita intellettuale.</p>
+            <span class="s45-tail-meta">trasmissione araba → latina</span>
+          </div>
+
+          <div class="s45-tail-card">
+            <div class="s45-tail-title">Dante, <em>Monarchia</em> / <em>Convivio</em></div>
+            <p>Traduce la tesi sul piano politico: il governante deve assicurare <strong>pace e studio</strong>, così che molti possano elevarsi <em>per philosophica documenta</em>.</p>
+            <span class="s45-pill s45-pill--sep">politica come condizione esterna</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="s45-quote-strip">
+        <div class="s45-quote-card">
+          <strong>Citazione chiave</strong>
+          <p><q>“Uomo” è un termine equivoco</q>: la definizione biologica non basta, conta il grado di effettiva razionalizzazione.</p>
+        </div>
+        <div class="s45-quote-card">
+          <strong>Formula di passaggio</strong>
+          <p><q>per philosophica documenta</q>: la cultura politica è giustificata perché crea il contesto in cui il compito umano diventa praticabile.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-lbl">Punto chiave</div>
+    <p>Per al-Fārābī l'intelletto definisce un <strong>programma di umanizzazione</strong>: senza la <strong>città virtuosa</strong> il compito resta incompiuto, mentre nella beatitudine finale gli intelletti acquisiti crescono come una <strong>comunità di specchi intelligibili</strong>.</p>
+  </div>
+</section>
+
+<section class="ds" id="s46">
+  <div class="sec-top">
+    <span class="badge-n">Schema 44</span>
+    <span class="badge-l">L. 24</span>
+  </div>
+  <h2>Avicenna: la riscrittura della <em>Metafisica</em> e il primato dell'ente</h2>
+  <p class="desc">Il passaggio decisivo per fondare l'ontologia generale passa attraverso la presa d'atto che la <em>Metafisica</em> aristotelica è un testo composito. Questo richiede una risistemazione epistemologica capace di individuare il vero soggetto della scienza prima.</p>
+
+  <div class="s46-layout">
+    <article class="s46-panel s46-panel-suq">
+      <div class="s46-sec-hdr s46-hdr-arab">📚 Perché la <em>Metafisica</em> è un problema</div>
+      <p class="s46-panel-intro">Il problema centrale è metodologico: Avicenna affronta un testo aristotelico che non è unitario e deve quindi ricostruirne il vero soggetto mediante un criterio rigoroso.</p>
+
+      <div class="s46-steps">
+        <div class="s46-step">
+          <div class="s46-step-num">1</div>
+          <div class="s46-step-copy">Aristotele <strong>non ha mai saputo di aver scritto una “Metafisica”</strong>: il testo è il risultato di un assemblaggio editoriale di <em>logoi</em> distinti.</div>
+        </div>
+        <div class="s46-step">
+          <div class="s46-step-num">2</div>
+          <div class="s46-step-copy">Per questo nel corpus emergono <strong>quattro definizioni concorrenti</strong> della scienza prima, non immediatamente armonizzabili.</div>
+        </div>
+        <div class="s46-step">
+          <div class="s46-step-num">3</div>
+          <div class="s46-step-copy">Il libretto di al-Fārābī e la griglia degli <strong>Analitici Secondi</strong> insegnano ad Avicenna che bisogna cercare prima di tutto il <strong>soggetto della scienza</strong>.</div>
+        </div>
+        <div class="s46-step">
+          <div class="s46-step-num">4</div>
+          <div class="s46-step-copy">La soluzione sarà una vera <strong>riscrittura di Aristotele</strong>: la metafisica diventa ontologia generale e non teologia come punto di partenza.</div>
+        </div>
+      </div>
+
+      <div class="s46-turn">
+        <div class="s46-turn-lbl">Svolta teorica</div>
+        <p>L'episodio non è un semplice aneddoto biografico: mostra la necessità di fondare una lettura sistematica di un testo aristotelico composito a partire dalla determinazione del suo scopo.</p>
+      </div>
+    </article>
+
+    <article class="s46-panel s46-panel-defs">
+      <div class="s46-sec-hdr s46-hdr-aristo">📚 Quattro definizioni aristoteliche in concorrenza</div>
+      <p class="s46-panel-intro">Le quattro definizioni aristoteliche non si lasciano semplicemente sommare: Avicenna deve decidere quale tra queste possa davvero funzionare come soggetto della scienza prima.</p>
+
+      <div class="s46-def-grid">
+        <div class="s46-editorial-badge">testo<br/>composito</div>
+
+        <div class="s46-def-card">
+          <div class="s46-def-book">Alfa maggiore</div>
+          <div class="s46-def-thesis">La metafisica appare come <strong>sapienza delle cause e dei principi</strong>.</div>
+        </div>
+
+        <div class="s46-def-card">
+          <div class="s46-def-book">Gamma</div>
+          <div class="s46-def-thesis">La scienza viene definita come studio dell'<strong>ente in quanto ente</strong>.</div>
+        </div>
+
+        <div class="s46-def-card">
+          <div class="s46-def-book">Libri centrali</div>
+          <div class="s46-def-thesis">L'accento cade sulla <strong>sostanza</strong> come nucleo del discorso metafisico.</div>
+        </div>
+
+        <div class="s46-def-card">
+          <div class="s46-def-book">Epsilon</div>
+          <div class="s46-def-thesis">Si profila una <strong>scienza divina dell'immateriale</strong>.</div>
+        </div>
+      </div>
+
+      <div class="s46-editorial-note">⭐ Il nodo non è scegliere il tema “più alto”, ma stabilire <strong>quale definizione soddisfi le condizioni epistemologiche di una scienza</strong>.</div>
+    </article>
+
+    <article class="s46-panel s46-panel-analytics">
+      <div class="s46-sec-hdr s46-hdr-gold">🔍 Applicazione degli Analitici Secondi</div>
+
+      <div class="s46-axioms">
+        <div class="s46-axiom">
+          <div class="s46-axiom-lbl">Soggetto</div>
+          <p>Ogni scienza ha un <strong>soggetto proprio</strong> di cui tratta.</p>
+        </div>
+        <div class="s46-axiom">
+          <div class="s46-axiom-lbl">Principi</div>
+          <p>Opera a partire da <strong>principi presupposti</strong>, non prodotti da sé.</p>
+        </div>
+        <div class="s46-axiom">
+          <div class="s46-axiom-lbl">Conclusioni</div>
+          <p>Da questi elementi ricava <strong>dimostrazioni e conclusioni</strong>.</p>
+        </div>
+      </div>
+
+      <div class="s46-filter">
+        <div class="s46-row s46-row-rule">
+          <div class="s46-row-num">1</div>
+          <div class="s46-row-side">
+            <div class="s46-row-label">Regola epistemologica</div>
+            <p>Il soggetto deve essere <strong>già dato</strong> alla scienza.</p>
+          </div>
+          <div class="s46-row-arrow">→</div>
+          <div class="s46-row-side">
+            <p>Non può essere qualcosa che la scienza <strong>deve ancora dimostrare</strong>.</p>
+          </div>
+          <div><span class="s46-pill s46-pill-gold">criterio</span></div>
+        </div>
+
+        <div class="s46-row s46-row-exclude">
+          <div class="s46-row-num">2</div>
+          <div class="s46-row-side">
+            <div class="s46-row-label">Candidato escluso</div>
+            <p><strong>Dio</strong> sembrerebbe il vertice della metafisica.</p>
+          </div>
+          <div class="s46-row-arrow">→</div>
+          <div class="s46-row-side">
+            <p>Ma Dio è <strong>da dimostrare</strong>: dunque non può essere il soggetto della scienza.</p>
+          </div>
+          <div><span class="s46-pill s46-pill-danger">non soggetto</span></div>
+        </div>
+
+        <div class="s46-row s46-row-exclude">
+          <div class="s46-row-num">3</div>
+          <div class="s46-row-side">
+            <div class="s46-row-label">Secondo escluso</div>
+            <p><strong>Le cause e i principi</strong> sembrano fornire il centro della sapienza.</p>
+          </div>
+          <div class="s46-row-arrow">→</div>
+          <div class="s46-row-side">
+            <p>Ma non sono immediatamente evidenti: ne cogliamo spesso solo <strong>concomitanze ed effetti</strong>.</p>
+          </div>
+          <div><span class="s46-pill s46-pill-danger">non evidenti</span></div>
+        </div>
+
+        <div class="s46-row s46-row-valid">
+          <div class="s46-row-num">4</div>
+          <div class="s46-row-side">
+            <div class="s46-row-label">Esito</div>
+            <p>Resta l'<strong>ente in quanto ente</strong>, il più generale dei campi possibili.</p>
+          </div>
+          <div class="s46-row-arrow">→</div>
+          <div class="s46-row-side">
+            <p>È ciò che la metafisica può assumere come soggetto universale, entro cui anche Dio entra come <strong>conclusione dimostrabile</strong>.</p>
+          </div>
+          <div><span class="s46-pill s46-pill-success">soggetto valido</span></div>
+        </div>
+      </div>
+
+      <div class="s46-example-box">
+        <div class="s46-example-title">Due letture milanesi e la scelta avicenniana</div>
+        <div class="s46-example-grid">
+          <div class="s46-example">
+            <strong>Giovanni Reale</strong>
+            <span>Tende a leggere le quattro definizioni in continuità: cause → ente → sostanza → divino.</span>
+          </div>
+          <div class="s46-example">
+            <strong>Pierluigi Donini</strong>
+            <span>Insiste sul carattere composito del testo e sulla necessità di non forzarlo in una continuità artificiale.</span>
+          </div>
+          <div class="s46-example">
+            <strong>Scelta di Avicenna</strong>
+            <span>Usa Aristotele contro Aristotele: applica gli <em>Analitici Secondi</em> e fonda la metafisica sull'<strong>ente in quanto ente</strong>.</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="s46-panel s46-panel-language">
+      <div class="s46-sec-hdr s46-hdr-latin">⚖️ Distinzione linguistica decisiva</div>
+      <p class="s46-panel-intro">Una minima differenza linguistica basta a produrre conseguenze teoriche massime, separando una teologia dell'immateriale da una vera ontologia generale.</p>
+
+      <div class="s46-language-grid">
+        <div class="s46-formula s46-formula-a">
+          <div class="s46-formula-kicker">Lato A</div>
+          <div class="s46-formula-text">ente <span>a condizione di non essere materiale</span></div>
+          <div class="s46-formula-meta">Designa <strong>solo il divino e le sostanze separate</strong>: il campo è già ristretto all'immateriale.</div>
+          <div class="s46-formula-outcome">
+            <span class="s46-pill s46-pill-danger">esito: teologia</span>
+          </div>
+        </div>
+
+        <div class="s46-neg-pivot">
+          <div class="s46-neg-word">non</div>
+          <div class="s46-neg-caption">cambia posizione,<br/>cambia dominio</div>
+        </div>
+
+        <div class="s46-formula s46-formula-b">
+          <div class="s46-formula-kicker">Lato B</div>
+          <div class="s46-formula-text">ente <span>non a condizione di essere materiale</span></div>
+          <div class="s46-formula-meta">Designa l'<strong>ente prima della divisione</strong> tra materiale e immateriale: il campo resta il più generale possibile.</div>
+          <div class="s46-formula-outcome">
+            <span class="s46-pill s46-pill-success">esito: ontologia generale</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="s46-panel s46-panel-history">
+      <div class="s46-sec-hdr s46-hdr-gold">🧭 Traiettoria storica</div>
+
+      <div class="s46-history-line">
+        <div class="s46-history-node s46-history-node-arab">
+          <div class="s46-history-step">1 · araba</div>
+          <h3>Avicenna</h3>
+          <p>Ridefinisce la metafisica a partire dall'<strong>ente in quanto ente</strong> e assorbe la teologia come questione interna.</p>
+        </div>
+
+        <div class="s46-history-node s46-history-node-latin">
+          <div class="s46-history-step">2 · latina</div>
+          <h3>Suárez</h3>
+          <p>Trasmette e struttura la linea della <strong>metafisica generale</strong> nella scolastica tarda.</p>
+        </div>
+
+        <div class="s46-history-node s46-history-node-gold">
+          <div class="s46-history-step">3 · moderna</div>
+          <h3>Wolff</h3>
+          <p>Sistematizza l'idea di <strong>ontologia</strong> come disciplina distinta e generale.</p>
+        </div>
+
+        <div class="s46-history-node s46-history-node-blue">
+          <div class="s46-history-step">4 · moderna</div>
+          <h3>Kant</h3>
+          <p>Ne mette in questione i limiti, riaprendo il problema delle condizioni del conoscere.</p>
+        </div>
+
+        <div class="s46-history-node s46-history-node-danger">
+          <div class="s46-history-step">5 · critica</div>
+          <h3>Marion</h3>
+          <p>Ritorna sul rischio di un Dio <strong>“prigioniero dell'essere”</strong>.</p>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="insight">
+    <div class="insight-lbl">Punto chiave</div>
+    <p>La mossa di Avicenna ha una formidabile <strong>funzione architettonica</strong>: usando il problema editoriale della <em>Metafisica</em>, trasforma la scienza prima in <strong>ontologia generale</strong>, da cui la teologia deriva come questione dimostrabile e non come inizio immediato.</p>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <div style="padding:2rem 3.5rem;background:var(--surface);border-top:1px solid var(--border);font-size:0.78rem;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
 <div>
 <div style="font-family:var(--font-h);color:var(--cream);font-size:0.85rem;margin-bottom:0.2rem;">Filosofia Medievale Araba ed Ebraica</div>
-<div style="font-style:italic;"><span class="schema-count-var">42</span> schemi visivi · Lezioni 01–<span class="ultima-lezione-var">23</span> · Università degli Studi di Milano</div>
+<div style="font-style:italic;"><span class="schema-count-var">44</span> schemi visivi · Lezioni 01–<span class="ultima-lezione-var">24</span> · Università degli Studi di Milano</div>
 </div>
 <div style="font-style:italic;color:var(--muted2);">davide.prando@studenti.unimi.it</div>
 </div>
@@ -12186,8 +13912,8 @@ if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
 // Mobile toggle
 const mobThemeBtn = document.getElementById('mob-theme-toggle');
 if (mobThemeBtn) mobThemeBtn.addEventListener('click', toggleTheme);
-const ULTIMA_LEZIONE = 23;
-const TOTAL_SCHEMAS = 42;
+const ULTIMA_LEZIONE = 24;
+const TOTAL_SCHEMAS = 44;
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".ultima-lezione-var").forEach(el => {
