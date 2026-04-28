@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Schemi — Filosofia Medievale Araba ed Ebraica (Lez. 1–24)</title>
+<title>Schemi — Filosofia Medievale Araba ed Ebraica (Lez. 1–25)</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -9286,6 +9286,349 @@ em; }
 [data-theme="light"] .s46-example { background: var(--surface2); }
 [data-theme="light"] .s46-editorial-badge { box-shadow: 0 0 0 8px rgba(0,0,0,0.05); }
 
+
+
+
+
+
+/* S47 slide map v2: connettori espliciti */
+.s47-map2 {
+  border: 1px solid rgba(201,151,58,0.38);
+  border-radius: var(--r);
+  background: radial-gradient(circle at 50% 10%, rgba(201,151,58,0.10), transparent 35%), linear-gradient(135deg, rgba(139,90,26,0.10), var(--surface2));
+  padding: 1.15rem;
+  overflow: hidden;
+}
+.s47-map2-title {
+  font-family: var(--font-h);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: var(--gold-l);
+  border-bottom: 1px solid rgba(201,151,58,0.28);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+.s47-map2-canvas {
+  position: relative;
+  min-height: 520px;
+  border-radius: var(--r-sm);
+  background: rgba(0,0,0,0.10);
+}
+.s47-map2-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.s47-map2-node {
+  position: absolute;
+  z-index: 2;
+  width: 235px;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  background: linear-gradient(135deg, rgba(34,40,64,0.98), rgba(27,32,53,0.98));
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+}
+.s47-map2-node strong {
+  display: block;
+  font-family: var(--font-h);
+  font-size: 0.96rem;
+  line-height: 1.2;
+  color: var(--cream);
+}
+.s47-map2-node span {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.76rem;
+  line-height: 1.35;
+  color: var(--muted2);
+  font-style: italic;
+}
+.s47-map2-forme { left: 3%; top: 72%; border-left: 4px solid var(--latin-l); }
+.s47-map2-fantasia { left: 6%; top: 49%; border-left: 4px solid var(--gold); }
+.s47-map2-immaginazione { left: 8%; top: 25%; border-left: 4px solid var(--arab-l); }
+.s47-map2-cogitativa { left: 39%; top: 4%; width: 260px; border-left: 4px solid var(--gold); background: linear-gradient(135deg, rgba(201,151,58,0.16), rgba(27,32,53,0.98)); }
+.s47-map2-intenzioni { right: 4%; top: 72%; border-left: 4px solid var(--greek-l); }
+.s47-map2-estimativa { right: 14%; top: 49%; border-left: 4px solid var(--greek-l); }
+.s47-map2-rammemorativa { right: 5%; top: 25%; width: 270px; border-left: 4px solid var(--aristo-l); }
+.s47-map2-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(201,151,58,0.22);
+  font-size: 0.8rem;
+  color: var(--card-text);
+}
+.s47-map2-leg { display: inline-flex; align-items: center; gap: 0.4rem; }
+.s47-map2-line { width: 32px; height: 2px; background: var(--gold-l); display: inline-block; }
+.s47-map2-line.dashed { background: transparent; border-top: 2px dashed var(--gold-l); }
+.s47-map2-caption {
+  margin-top: 0.85rem;
+  padding: 0.65rem 0.8rem;
+  border-radius: var(--r-sm);
+  background: rgba(201,151,58,0.07);
+  border: 1px solid rgba(201,151,58,0.22);
+  color: var(--card-text);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+.s47-map2-caption strong { color: var(--gold-l); }
+@media (max-width: 768px) {
+  .s47-map2-canvas { min-height: 0; display: grid; gap: 0.6rem; background: transparent; }
+  .s47-map2-svg { display: none; }
+  .s47-map2-node { position: static; width: auto; }
+  .s47-map2-node::before { content: '↓ '; color: var(--gold-l); font-family: var(--font-h); }
+  .s47-map2-cogitativa::before { content: '↗ '; }
+  .s47-map2-rammemorativa::before { content: '↑ '; }
+}
+
+/* S47 slide map v2 marker */
+.s47-slide-map { border: 1px solid rgba(201,151,58,0.35); border-radius: var(--r); background: radial-gradient(circle at 50% 18%, rgba(201,151,58,0.10), transparent 38%), linear-gradient(135deg, rgba(139,90,26,0.10), var(--surface2)); padding: 1.15rem; }
+.s47-slide-title { font-family: var(--font-h); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.11em; color: var(--gold-l); border-bottom: 1px solid rgba(201,151,58,0.28); padding-bottom: 0.5rem; margin-bottom: 1rem; }
+.s47-slide-grid { display: grid; grid-template-columns: minmax(0, 1fr) 110px minmax(0, 1fr); gap: 1rem; align-items: stretch; }
+.s47-slide-channel { display: grid; gap: 0.55rem; }
+.s47-slide-node { border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--surface3); padding: 0.72rem 0.85rem; color: var(--card-text); line-height: 1.45; transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.s47-slide-node:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0,0,0,0.28); }
+.s47-slide-node strong { display: block; font-family: var(--font-h); color: var(--cream); font-size: 0.9rem; line-height: 1.25; }
+.s47-slide-node span { display: block; margin-top: 0.18rem; font-size: 0.76rem; color: var(--muted2); font-style: italic; }
+.s47-slide-forme { border-left: 4px solid var(--latin); background: linear-gradient(135deg, rgba(36,64,122,0.12), var(--surface3)); }
+.s47-slide-intenzioni { border-left: 4px solid var(--greek); background: linear-gradient(135deg, rgba(61,107,80,0.14), var(--surface3)); }
+.s47-slide-cog { border-left: 4px solid var(--gold); background: linear-gradient(135deg, rgba(201,151,58,0.13), var(--surface3)); }
+.s47-slide-arrow { display: flex; align-items: center; justify-content: center; min-height: 22px; color: var(--gold-t); font-family: var(--font-h); font-size: 1rem; line-height: 1; }
+.s47-slide-arrow.s47-up { transform: rotate(-90deg); }
+.s47-slide-bridge { display: grid; grid-template-rows: 1fr auto 1fr; align-items: center; justify-items: center; color: var(--gold-l); font-family: var(--font-h); font-size: 0.78rem; text-align: center; }
+.s47-slide-dashed { width: 2px; height: 120px; background: repeating-linear-gradient(to bottom, var(--gold-t), var(--gold-t) 8px, transparent 8px, transparent 15px); transform: rotate(-28deg); position: relative; }
+.s47-slide-dashed::after { content: '▲'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%) rotate(28deg); color: var(--gold-l); font-size: 0.72rem; }
+.s47-slide-caption { margin-top: 0.85rem; padding: 0.65rem 0.8rem; border-radius: var(--r-sm); background: rgba(201,151,58,0.07); border: 1px solid rgba(201,151,58,0.22); color: var(--card-text); font-size: 0.84rem; line-height: 1.55; }
+.s47-slide-caption strong { color: var(--gold-l); }
+@media (max-width: 768px) { .s47-slide-grid { grid-template-columns: 1fr; } .s47-slide-bridge { display: none; } .s47-slide-arrow.s47-up { transform: rotate(0deg); } }
+
+/* S47: Avicenna: i sensi interni come mappa cerebrale della conoscenza */
+.s47-layout { display: grid; gap: 1.4rem; }
+.s47-context-strip { display: grid; grid-template-columns: 1.15fr 1fr 1.25fr; gap: 0.9rem; }
+.s47-context-card { padding: 0.9rem 1rem; border: 1px solid var(--border); border-left: 4px solid var(--arab); border-radius: var(--r); background: linear-gradient(135deg, rgba(139, 90, 26, 0.16), var(--surface2)); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.s47-context-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
+.s47-context-card.s47-context-aristo { border-left-color: var(--aristo); background: linear-gradient(135deg, rgba(90, 58, 138, 0.15), var(--surface2)); }
+.s47-context-card.s47-context-med { border-left-color: var(--greek); background: linear-gradient(135deg, rgba(61, 107, 80, 0.15), var(--surface2)); }
+.s47-context-kicker { display: block; margin-bottom: 0.25rem; font-family: var(--font-h); font-size: 0.67rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-t); }
+.s47-context-card.s47-context-aristo .s47-context-kicker { color: var(--aristo-l); }
+.s47-context-card.s47-context-med .s47-context-kicker { color: var(--greek-l); }
+.s47-context-card p { color: var(--card-text); font-size: 0.88rem; line-height: 1.55; }
+.s47-main-grid { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.9fr); gap: 1.25rem; align-items: stretch; }
+.s47-brain-panel, .s47-side-panel, .s47-implication-box { border: 1px solid var(--border); border-radius: var(--r); background: linear-gradient(135deg, rgba(139,90,26,0.1), var(--surface2)); }
+.s47-brain-panel { padding: 1.15rem; overflow: hidden; }
+.s47-section-hdr { display: flex; align-items: center; gap: 0.45rem; padding-bottom: 0.55rem; margin-bottom: 0.9rem; border-bottom: 1px solid rgba(201,151,58,0.28); font-family: var(--font-h); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--arab-l); }
+.s47-section-hdr::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--arab-l); flex-shrink: 0; }
+.s47-brain-axis { display: grid; grid-template-columns: 0.7fr 5fr 0.7fr; align-items: center; gap: 0.55rem; margin-bottom: 0.85rem; }
+.s47-axis-label { font-family: var(--font-h); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); white-space: nowrap; }
+.s47-axis-label.s47-axis-post { text-align: right; }
+.s47-axis-line { height: 6px; border-radius: 999px; background: linear-gradient(90deg, var(--gold), var(--arab-l), var(--greek-l)); position: relative; }
+.s47-axis-line::after { content: "▶"; position: absolute; top: 50%; right: -0.15rem; transform: translateY(-50%); color: var(--greek-l); font-size: 0.7rem; }
+.s47-stations { display: grid; grid-template-columns: repeat(5, minmax(132px, 1fr)); gap: 0.75rem; align-items: stretch; }
+.s47-station { position: relative; min-height: 250px; padding: 0.9rem 0.75rem 0.85rem; border: 1px solid var(--border); border-top: 4px solid var(--arab); border-radius: var(--r); background: linear-gradient(180deg, rgba(139,90,26,0.14), var(--surface3)); transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+.s47-station:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,0.38); border-color: rgba(201,151,58,0.55); }
+.s47-station.s47-active { border-top-color: var(--gold); background: linear-gradient(180deg, rgba(201,151,58,0.15), var(--surface3)); }
+.s47-station.s47-intentional { border-top-color: var(--greek); background: linear-gradient(180deg, rgba(61,107,80,0.15), var(--surface3)); }
+.s47-station-num { position: absolute; top: 0.55rem; right: 0.65rem; width: 1.55rem; height: 1.55rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-family: var(--font-h); font-size: 0.75rem; font-weight: 700; color: var(--bg); background: var(--gold); }
+.s47-location { display: inline-block; margin-bottom: 0.55rem; padding: 0.13rem 0.42rem; border: 1px solid rgba(201,151,58,0.32); border-radius: 999px; font-family: var(--font-h); font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold-l); background: rgba(201,151,58,0.1); }
+.s47-name { padding-right: 1.7rem; font-family: var(--font-h); font-size: 0.92rem; line-height: 1.25; font-weight: 700; color: var(--cream); }
+.s47-alt { margin-top: 0.12rem; font-size: 0.76rem; font-style: italic; line-height: 1.35; color: var(--muted2); }
+.s47-station p { margin-top: 0.55rem; color: var(--card-text); font-size: 0.82rem; line-height: 1.48; }
+.s47-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.65rem; }
+.s47-pill, .s49-pill { display: inline-flex; align-items: center; gap: 0.22rem; padding: 0.12rem 0.42rem; border-radius: 999px; font-family: var(--font-h); font-size: 0.61rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+.s47-pill-passive { color: var(--blue-t); background: rgba(45,84,160,0.16); border: 1px solid rgba(45,84,160,0.34); }
+.s47-pill-active { color: var(--gold-l); background: rgba(201,151,58,0.15); border: 1px solid rgba(201,151,58,0.34); }
+.s47-pill-intention { color: var(--green-t); background: rgba(45,107,74,0.16); border: 1px solid rgba(45,107,74,0.34); }
+.s47-side-panel { display: flex; flex-direction: column; gap: 1rem; padding: 1.05rem; background: linear-gradient(135deg, rgba(90,58,138,0.12), var(--surface2)); border-left: 4px solid var(--aristo); }
+.s47-compare-block { display: grid; gap: 0.75rem; }
+.s47-compare-card { padding: 0.85rem; border: 1px solid var(--border); border-radius: var(--r-sm); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.s47-compare-card:hover { transform: translateX(3px); box-shadow: 0 8px 22px rgba(0,0,0,0.32); }
+.s47-compare-card.s47-forme { border-left: 4px solid var(--latin); background: linear-gradient(135deg, rgba(36,64,122,0.14), var(--surface3)); }
+.s47-compare-card.s47-intenzioni { border-left: 4px solid var(--greek); background: linear-gradient(135deg, rgba(61,107,80,0.16), var(--surface3)); }
+.s47-compare-title { font-family: var(--font-h); font-size: 0.86rem; font-weight: 700; color: var(--cream); }
+.s47-compare-term { display: block; margin-top: 0.08rem; font-size: 0.75rem; font-style: italic; color: var(--muted2); }
+.s47-compare-card p { margin-top: 0.45rem; color: var(--card-text); font-size: 0.82rem; line-height: 1.5; }
+.s47-examples { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.55rem; }
+.s47-example { padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(201,151,58,0.1); border: 1px solid rgba(201,151,58,0.25); color: var(--gold-l); font-size: 0.68rem; font-family: var(--font-h); }
+.s47-function-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; }
+.s47-function-card { padding: 0.7rem; border: 1px solid var(--border); border-radius: var(--r-sm); background: linear-gradient(135deg, rgba(201,151,58,0.1), var(--surface3)); transition: transform 0.2s ease, border-color 0.2s ease; }
+.s47-function-card:hover { transform: translateY(-2px); border-color: rgba(201,151,58,0.5); }
+.s47-function-card h4 { font-family: var(--font-h); font-size: 0.78rem; color: var(--cream); margin-bottom: 0.25rem; }
+.s47-function-card p { color: var(--card-text); font-size: 0.78rem; line-height: 1.45; }
+.s47-implication-box { padding: 1rem 1.15rem; border-left: 4px solid var(--gold); background: linear-gradient(135deg, rgba(201,151,58,0.12), var(--surface2)); }
+.s47-implication-title { font-family: var(--font-h); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--gold-l); margin-bottom: 0.45rem; }
+.s47-implication-box p { color: var(--card-text); font-size: 0.9rem; line-height: 1.55; }
+.s47-implication-box strong { color: var(--gold-l); }
+
+/* S48: Non si pensa senza immagini */
+.s48-layout { display: grid; grid-template-columns: 1.35fr 1fr; gap: 1.5rem; align-items: start; }
+.s48-panel { border: 1px solid var(--border); border-radius: var(--r); background: linear-gradient(135deg, rgba(139,90,26,0.12), var(--surface2)); border-left: 4px solid var(--arab); padding: 1.35rem; }
+.s48-panel--modern { background: linear-gradient(135deg, rgba(36,64,122,0.12), var(--surface2)); border-left-color: var(--latin); }
+.s48-section-hdr { font-family: var(--font-h); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.11em; color: var(--arab-l); border-bottom: 1px solid rgba(176,120,48,0.35); padding-bottom: 0.45rem; margin-bottom: 1rem; }
+.s48-panel--modern .s48-section-hdr { color: var(--latin-l); border-bottom-color: rgba(45,84,160,0.35); }
+.s48-principle { display: grid; grid-template-columns: auto 1fr; gap: 0.85rem; align-items: center; padding: 0.95rem 1rem; margin-bottom: 1.15rem; border-radius: var(--r-sm); background: rgba(201,151,58,0.08); border: 1px solid rgba(201,151,58,0.28); }
+.s48-principle-icon { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(201,151,58,0.14); border: 1px solid rgba(201,151,58,0.35); font-size: 1.2rem; }
+.s48-principle-title { font-family: var(--font-h); font-size: 1rem; color: var(--cream); font-weight: 700; line-height: 1.25; }
+.s48-principle p { color: var(--card-text); font-size: 0.88rem; line-height: 1.55; margin-top: 0.15rem; }
+.s48-pipeline { display: flex; flex-direction: column; gap: 0.65rem; }
+.s48-step { display: grid; grid-template-columns: 46px 1fr; gap: 0.8rem; align-items: stretch; position: relative; transition: transform 0.2s ease; }
+.s48-step:hover { transform: translateX(4px); }
+.s48-step:not(:last-child)::after { content: ''; position: absolute; left: 22px; top: calc(100% - 0.1rem); width: 2px; height: 0.75rem; background: linear-gradient(to bottom, var(--gold-t), transparent); }
+.s48-step-num { width: 46px; min-height: 46px; border-radius: 999px; background: var(--surface3); border: 2px solid rgba(201,151,58,0.45); color: var(--gold-l); font-family: var(--font-h); font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.s48-step-card { border-radius: var(--r-sm); border: 1px solid var(--border); padding: 0.75rem 0.9rem; background: linear-gradient(135deg, rgba(90,58,138,0.11), rgba(139,90,26,0.08), var(--surface2)); border-left: 3px solid var(--aristo); }
+.s48-step-title { font-family: var(--font-h); color: var(--cream); font-size: 0.92rem; font-weight: 700; line-height: 1.25; }
+.s48-step-role { display: inline-block; margin-top: 0.2rem; font-family: var(--font-h); font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--aristo-l); }
+.s48-step p { color: var(--card-text); font-size: 0.84rem; line-height: 1.55; margin-top: 0.35rem; }
+.s48-step--arab .s48-step-card { background: linear-gradient(135deg, rgba(139,90,26,0.14), var(--surface2)); border-left-color: var(--arab); }
+.s48-step--arab .s48-step-role { color: var(--arab-l); }
+.s48-side { display: flex; flex-direction: column; gap: 1rem; }
+.s48-compare { border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; background: var(--surface2); }
+.s48-compare-hdr { padding: 0.7rem 0.9rem; font-family: var(--font-h); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.09em; color: var(--gold-l); background: rgba(201,151,58,0.08); border-bottom: 1px solid rgba(201,151,58,0.25); }
+.s48-compare-row { display: grid; grid-template-columns: 1fr 46px 1fr; }
+.s48-compare-cell { padding: 0.9rem; }
+.s48-compare-cell:first-child { border-right: 1px solid var(--border); }
+.s48-compare-arrow { display: flex; align-items: center; justify-content: center; color: var(--gold-l); font-family: var(--font-h); font-size: 1.2rem; background: rgba(201,151,58,0.05); }
+.s48-cell-kicker { font-size: 0.66rem; font-family: var(--font-h); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.25rem; }
+.s48-cell-title { font-family: var(--font-h); color: var(--cream); font-weight: 700; font-size: 0.9rem; line-height: 1.25; }
+.s48-compare-cell p { color: var(--card-text); font-size: 0.82rem; line-height: 1.52; margin-top: 0.35rem; }
+.s48-pill { display: inline-block; margin-top: 0.45rem; font-family: var(--font-h); font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.12rem 0.45rem; border-radius: 999px; }
+.s48-pill--image { color: var(--gold-l); background: rgba(201,151,58,0.14); border: 1px solid rgba(201,151,58,0.32); }
+.s48-pill--concept { color: var(--green-t); background: rgba(45,107,74,0.16); border: 1px solid rgba(80,200,120,0.28); }
+.s48-modern-grid { display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
+.s48-modern-card { border-radius: var(--r-sm); border: 1px solid var(--border); border-left: 3px solid var(--latin); background: linear-gradient(135deg, rgba(36,64,122,0.14), var(--surface2)); padding: 0.85rem 0.95rem; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.s48-modern-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.28); }
+.s48-modern-name { font-family: var(--font-h); color: var(--latin-l); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem; }
+.s48-modern-card p { color: var(--card-text); font-size: 0.83rem; line-height: 1.55; margin-top: 0.35rem; }
+.s48-warning { margin-top: 0.95rem; padding: 0.85rem 0.95rem; border-radius: var(--r-sm); background: rgba(201,151,58,0.08); border: 1px solid rgba(201,151,58,0.26); border-left: 3px solid var(--gold); }
+.s48-warning-title { font-family: var(--font-h); color: var(--gold-l); font-weight: 700; font-size: 0.86rem; }
+.s48-warning p { color: var(--card-text); font-size: 0.84rem; line-height: 1.55; margin-top: 0.25rem; }
+.s48-transition { grid-column: 1 / -1; margin-top: 0.2rem; padding: 1rem 1.15rem; border-radius: var(--r); border: 1px solid rgba(176,120,48,0.35); border-left: 4px solid var(--arab); background: linear-gradient(135deg, rgba(139,90,26,0.13), var(--surface2)); }
+.s48-transition-title { font-family: var(--font-h); color: var(--arab-l); font-size: 0.86rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem; }
+.s48-transition p { color: var(--card-text); font-size: 0.9rem; line-height: 1.6; }
+.s48-transition strong { color: var(--gold-l); }
+
+/* S49: Avicenna: gradi dell'intelletto e sintonizzazione col dator formarum */
+.s49-layout { display: grid; grid-template-columns: minmax(280px, 0.95fr) minmax(420px, 1.55fr); gap: 1.6rem; align-items: stretch; }
+.s49-panel { border: 1px solid var(--border); border-radius: var(--r); background: linear-gradient(135deg, rgba(139,90,26,0.12), var(--surface2)); padding: 1.1rem; position: relative; overflow: hidden; }
+.s49-panel:hover { box-shadow: 0 12px 34px rgba(0,0,0,0.28); transition: box-shadow 0.22s ease; }
+.s49-section-hdr { font-family: var(--font-h); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--arab-l); border-bottom: 1px solid rgba(139,90,26,0.45); padding-bottom: 0.45rem; margin-bottom: 0.9rem; display: flex; align-items: center; gap: 0.45rem; }
+.s49-section-hdr::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--arab-l); flex-shrink: 0; }
+.s49-ladder { display: flex; flex-direction: column; gap: 0; }
+.s49-degree { background: linear-gradient(135deg, rgba(90,58,138,0.13), var(--surface2)); border: 1px solid var(--border); border-left: 4px solid var(--aristo); border-radius: var(--r-sm); padding: 0.85rem 0.9rem; transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+.s49-degree:hover { transform: translateX(4px); box-shadow: 0 8px 22px rgba(0,0,0,0.32); border-color: rgba(122,82,176,0.55); }
+.s49-degree-top { display: flex; align-items: flex-start; gap: 0.65rem; margin-bottom: 0.35rem; }
+.s49-degree-num { width: 1.7rem; height: 1.7rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: var(--font-h); font-weight: 700; font-size: 0.8rem; color: var(--gold-l); background: rgba(201,151,58,0.12); border: 1px solid rgba(201,151,58,0.4); }
+.s49-degree-title { font-family: var(--font-h); color: var(--cream); font-size: 0.95rem; font-weight: 700; line-height: 1.25; }
+.s49-degree-sub { font-size: 0.74rem; color: var(--muted); font-style: italic; margin-top: 0.08rem; }
+.s49-degree p { color: var(--card-text); font-size: 0.84rem; line-height: 1.55; }
+.s49-arrow { width: 2px; height: 24px; background: linear-gradient(to bottom, var(--gold-t), rgba(201,151,58,0.2)); margin: 0.1rem auto; position: relative; }
+.s49-arrow::after { content: '▼'; position: absolute; left: 50%; bottom: -0.45rem; transform: translateX(-50%); color: var(--gold-l); font-size: 0.58rem; }
+.s49-acquired { margin-top: 0.9rem; padding: 1rem; border-radius: var(--r); background: linear-gradient(135deg, rgba(201,151,58,0.18), rgba(139,90,26,0.08)); border: 1px solid rgba(201,151,58,0.42); border-left: 4px solid var(--gold); transition: transform 0.22s ease, box-shadow 0.22s ease; }
+.s49-acquired:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,0.34); }
+.s49-acquired-kicker { font-size: 0.66rem; font-family: var(--font-h); text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold-l); margin-bottom: 0.25rem; }
+.s49-acquired-title { font-family: var(--font-h); color: var(--cream); font-size: 1.05rem; font-weight: 700; line-height: 1.25; }
+.s49-acquired-term { color: var(--muted2); font-style: italic; font-size: 0.8rem; margin: 0.15rem 0 0.55rem; }
+.s49-acquired p { color: var(--card-text); font-size: 0.86rem; line-height: 1.6; }
+.s49-pill-row { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.65rem; }
+.s49-pill-gold { color: var(--gold-l); background: rgba(201,151,58,0.14); border: 1px solid rgba(201,151,58,0.36); }
+.s49-pill-blue { color: var(--blue-t); background: rgba(45,84,160,0.14); border: 1px solid rgba(45,84,160,0.32); }
+.s49-pill-green { color: var(--green-t); background: rgba(45,107,74,0.16); border: 1px solid rgba(45,107,74,0.35); }
+.s49-right { display: grid; grid-template-rows: auto auto 1fr; gap: 1rem; }
+.s49-agent-wrap { position: relative; border: 1px solid rgba(139,90,26,0.5); border-radius: var(--r); background: radial-gradient(circle at 50% 20%, rgba(201,151,58,0.22), transparent 38%), linear-gradient(135deg, rgba(139,90,26,0.16), var(--surface2)); padding: 1.25rem; overflow: hidden; }
+.s49-agent-wrap::before, .s49-agent-wrap::after { content: ''; position: absolute; left: 50%; top: 4.4rem; width: 42%; height: 2px; background: linear-gradient(to right, rgba(201,151,58,0.75), transparent); transform-origin: left center; pointer-events: none; }
+.s49-agent-wrap::before { transform: rotate(24deg); }
+.s49-agent-wrap::after { transform: rotate(132deg); }
+.s49-agent-node { width: min(100%, 440px); margin: 0 auto 1.25rem; text-align: center; border-radius: 999px; border: 1px solid rgba(201,151,58,0.48); background: linear-gradient(135deg, rgba(201,151,58,0.22), rgba(139,90,26,0.12)); padding: 1rem 1.25rem; position: relative; z-index: 2; transition: transform 0.22s ease, box-shadow 0.22s ease; }
+.s49-agent-node:hover { transform: scale(1.015); box-shadow: 0 0 34px rgba(201,151,58,0.18); }
+.s49-agent-icon { font-size: 1.35rem; line-height: 1; margin-bottom: 0.25rem; }
+.s49-agent-title { font-family: var(--font-h); color: var(--cream); font-size: 1.15rem; font-weight: 700; line-height: 1.25; }
+.s49-agent-term { color: var(--arab-l); font-style: italic; font-size: 0.84rem; margin-top: 0.2rem; }
+.s49-agent-desc { color: var(--card-text); font-size: 0.86rem; line-height: 1.55; max-width: 560px; margin: 0.45rem auto 0; }
+.s49-reception-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; position: relative; z-index: 2; }
+.s49-reception { border-radius: var(--r-sm); padding: 0.9rem; border: 1px solid var(--border); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.s49-reception:hover { transform: translateY(-3px); box-shadow: 0 9px 24px rgba(0,0,0,0.3); }
+.s49-reception-matter { background: linear-gradient(135deg, rgba(61,107,80,0.13), var(--surface2)); border-left: 4px solid var(--greek); }
+.s49-reception-intellect { background: linear-gradient(135deg, rgba(90,58,138,0.15), var(--surface2)); border-left: 4px solid var(--aristo); }
+.s49-reception-label { font-family: var(--font-h); font-size: 0.82rem; color: var(--cream); font-weight: 700; display: flex; gap: 0.4rem; align-items: center; margin-bottom: 0.25rem; }
+.s49-reception p { color: var(--card-text); font-size: 0.82rem; line-height: 1.52; }
+.s49-metaphors { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+.s49-metaphor { border: 1px dashed rgba(201,151,58,0.45); border-radius: var(--r-sm); background: rgba(201,151,58,0.055); padding: 0.75rem 0.85rem; transition: background 0.2s ease, transform 0.2s ease; }
+.s49-metaphor:hover { background: rgba(201,151,58,0.09); transform: translateY(-2px); }
+.s49-metaphor-title { font-family: var(--font-h); color: var(--gold-l); font-size: 0.78rem; font-weight: 700; margin-bottom: 0.2rem; }
+.s49-metaphor p { color: var(--card-text); font-size: 0.8rem; line-height: 1.48; }
+.s49-tuning { border: 1px solid rgba(45,84,160,0.42); border-radius: var(--r); background: linear-gradient(135deg, rgba(45,84,160,0.11), var(--surface2)); padding: 1rem; }
+.s49-tuning-hdr { font-family: var(--font-h); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--blue-t); border-bottom: 1px solid rgba(45,84,160,0.32); padding-bottom: 0.45rem; margin-bottom: 0.85rem; }
+.s49-tuning-flow { display: flex; align-items: stretch; gap: 0.55rem; }
+.s49-stage { flex: 1; border-radius: var(--r-sm); border: 1px solid var(--border); background: rgba(255,255,255,0.025); padding: 0.7rem; transition: transform 0.2s ease, background 0.2s ease; }
+.s49-stage:hover { transform: translateY(-3px); background: rgba(201,151,58,0.055); }
+.s49-stage-num { font-family: var(--font-h); color: var(--gold-l); font-weight: 700; font-size: 0.72rem; margin-bottom: 0.18rem; }
+.s49-stage-title { font-family: var(--font-h); color: var(--cream); font-weight: 700; font-size: 0.82rem; line-height: 1.25; }
+.s49-stage p { color: var(--card-text); font-size: 0.78rem; line-height: 1.42; margin-top: 0.25rem; }
+.s49-flow-arrow { display: flex; align-items: center; color: var(--gold-t); font-size: 1.05rem; flex: 0 0 auto; }
+.s49-connection { margin-top: 1rem; border-radius: var(--r); border: 1px solid rgba(139,90,26,0.42); border-left: 4px solid var(--arab); background: linear-gradient(135deg, rgba(139,90,26,0.12), rgba(201,151,58,0.04)); padding: 0.85rem 1rem; }
+.s49-connection-title { font-family: var(--font-h); color: var(--arab-l); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem; }
+.s49-connection p { color: var(--card-text); font-size: 0.86rem; line-height: 1.58; }
+
+@media (max-width: 768px) {
+  .s47-context-strip, .s47-main-grid, .s47-stations, .s47-function-grid, .s48-layout, .s49-layout, .s49-reception-grid, .s49-metaphors { grid-template-columns: 1fr; }
+  .s47-brain-axis { grid-template-columns: 1fr; gap: 0.35rem; }
+  .s47-axis-label, .s47-axis-label.s47-axis-post { text-align: left; }
+  .s47-axis-line { height: 4px; }
+  .s47-station { min-height: auto; }
+  .s47-side-panel { border-left-width: 3px; }
+  .s48-panel { padding: 1rem; }
+  .s48-principle { grid-template-columns: 1fr; text-align: left; }
+  .s48-principle-icon { width: 38px; height: 38px; }
+  .s48-step { grid-template-columns: 40px 1fr; gap: 0.65rem; }
+  .s48-step-num { width: 40px; min-height: 40px; font-size: 0.85rem; }
+  .s48-step:not(:last-child)::after { left: 19px; }
+  .s48-compare-row { grid-template-columns: 1fr; }
+  .s48-compare-cell:first-child { border-right: 0; border-bottom: 1px solid var(--border); }
+  .s48-compare-arrow, .s49-flow-arrow { min-height: 36px; transform: rotate(90deg); justify-content: center; }
+  .s48-transition { grid-column: auto; }
+  .s49-right { grid-template-rows: auto; }
+  .s49-agent-wrap::before, .s49-agent-wrap::after { display: none; }
+  .s49-agent-node { border-radius: var(--r); }
+  .s49-tuning-flow { flex-direction: column; }
+  .s49-degree:hover, .s49-acquired:hover, .s49-reception:hover, .s49-stage:hover { transform: none; }
+}
+
+
+/* S47 map3: versione leggibile della slide con connettori HTML */
+.s47-map3 { border:1px solid rgba(201,151,58,0.38); border-radius:var(--r); background:linear-gradient(135deg, rgba(139,90,26,0.10), var(--surface2)); padding:1.15rem; }
+.s47-map3-title { font-family:var(--font-h); font-size:0.76rem; text-transform:uppercase; letter-spacing:0.11em; color:var(--gold-l); border-bottom:1px solid rgba(201,151,58,0.28); padding-bottom:0.5rem; margin-bottom:1rem; }
+.s47-map3-top { max-width:420px; margin:0 auto 0.9rem; }
+.s47-map3-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; align-items:start; }
+.s47-map3-col { display:flex; flex-direction:column; gap:0.35rem; }
+.s47-map3-col-title { font-family:var(--font-h); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.09em; padding:0.35rem 0.55rem; border-radius:999px; text-align:center; }
+.s47-map3-left .s47-map3-col-title { color:var(--gold-l); background:rgba(201,151,58,0.10); border:1px solid rgba(201,151,58,0.28); }
+.s47-map3-right .s47-map3-col-title { color:var(--green-t); background:rgba(45,107,74,0.14); border:1px solid rgba(80,200,120,0.24); }
+.s47-map3-node { border:1px solid var(--border); border-radius:var(--r-sm); background:var(--surface3); padding:0.7rem 0.85rem; color:var(--card-text); }
+.s47-map3-node strong { display:block; font-family:var(--font-h); color:var(--cream); font-size:0.92rem; line-height:1.25; }
+.s47-map3-node span { display:block; margin-top:0.18rem; color:var(--muted2); font-size:0.76rem; font-style:italic; line-height:1.35; }
+.s47-map3-forme { border-left:4px solid var(--latin-l); }
+.s47-map3-intenzioni { border-left:4px solid var(--green-t); }
+.s47-map3-process { border-left:4px solid var(--gold); }
+.s47-map3-memory { border-left:4px solid var(--aristo-l); }
+.s47-map3-cog { border-left:4px solid var(--gold); background:linear-gradient(135deg, rgba(201,151,58,0.13), var(--surface3)); }
+.s47-map3-arrow { display:flex; align-items:center; justify-content:center; gap:0.45rem; min-height:30px; color:var(--gold-l); font-family:var(--font-h); font-size:0.78rem; }
+.s47-map3-right .s47-map3-arrow { color:var(--green-t); }
+.s47-map3-arrow::before, .s47-map3-arrow::after { content:''; height:1px; flex:1; max-width:70px; background:currentColor; opacity:0.55; }
+.s47-map3-arrow b { font-size:1.05rem; line-height:1; }
+.s47-map3-bridge { margin:1rem auto 0; max-width:620px; display:grid; grid-template-columns:1fr auto 1fr; gap:0.75rem; align-items:center; padding:0.75rem 0.9rem; border:1px dashed rgba(201,151,58,0.55); border-radius:var(--r-sm); background:rgba(201,151,58,0.06); }
+.s47-map3-bridge-source, .s47-map3-bridge-target { font-size:0.82rem; color:var(--card-text); line-height:1.45; }
+.s47-map3-bridge-source strong, .s47-map3-bridge-target strong { font-family:var(--font-h); color:var(--cream); }
+.s47-map3-bridge-arrow { color:var(--gold-l); font-family:var(--font-h); font-size:1.3rem; white-space:nowrap; }
+.s47-map3-caption { margin-top:0.85rem; padding:0.65rem 0.8rem; border-radius:var(--r-sm); background:rgba(201,151,58,0.07); border:1px solid rgba(201,151,58,0.22); color:var(--card-text); font-size:0.84rem; line-height:1.55; }
+.s47-map3-caption strong { color:var(--gold-l); }
+@media (max-width:768px) { .s47-map3-grid, .s47-map3-bridge { grid-template-columns:1fr; } .s47-map3-bridge-arrow { text-align:center; transform:rotate(90deg); } }
+
 </style>
 </head>
 <body>
@@ -9297,7 +9640,7 @@ em; }
 <div class="sb-logo">
 <div class="eyebrow">Università degli Studi di Milano</div>
 <div class="title">Filosofia Medievale<br/>Araba ed Ebraica</div>
-<div class="sub">Schemi delle lezioni 1–<span class="ultima-lezione-var">24</span></div>
+<div class="sub">Schemi delle lezioni 1–<span class="ultima-lezione-var">25</span></div>
 </div>
 <div class="theme-toggle-wrap">
 <button aria-label="Cambia tema" class="theme-toggle" id="theme-toggle">
@@ -9338,7 +9681,7 @@ em; }
           <li class="nav-item"><a href="#s30"><span class="nav-num">30</span>Al-Fārābī: Astrazione e i tre stadi dell'intelletto</a></li>
           <li class="nav-item"><a href="#s31"><span class="nav-num">31</span>Identità pensante/pensato · doppio regime delle essenze</a></li>
           <li class="nav-item"><a href="#s32"><span class="nav-num">32</span>Cosmologia ed Emanazione · le dieci intelligenze</a></li>
-                              <li class="nav-item"><a href="#s33"><span class="nav-num">33</span>La felicità mentale e l\'errore filologico del <em>De anima</em></a></li>
+                              <li class="nav-item"><a href="#s33"><span class="nav-num">33</span>La felicità mentale e l'errore filologico del <em>De anima</em></a></li>
           <li class="nav-item"><a href="#s34"><span class="nav-num">34</span>L'invenzione della volontà e il problema del male</a></li>
           <li class="nav-item"><a href="#s35"><span class="nav-num">35</span>I cieli come strumenti e la frattura tra Dio e Prima Intelligenza</a></li>
           <li class="nav-item"><a href="#s36"><span class="nav-num">36</span><em>Al-Madīna al-Fāḍila</em>: la dimensione politica dell'immortalità</a></li>
@@ -9349,23 +9692,26 @@ em; }
           <li class="nav-item"><a href="#s41"><span class="nav-num">41</span>Tre destini dell’anima in Avicenna</a></li>
           <li class="nav-item"><a href="#s42"><span class="nav-num">42</span>Avicenna: essenze e universali</a></li>
           <li class="nav-item"><a href="#s45"><span class="nav-num">43</span>Al-Fārābī: intelletto, città e specchi intelligibili</a></li>
-          <li class="nav-item"><a href="#s46"><span class="nav-num">44</span>Avicenna e l'ontologia generale</a></li></ul>
+          <li class="nav-item"><a href="#s46"><span class="nav-num">44</span>Avicenna e l'ontologia generale</a></li>
+          <li class="nav-item"><a href="#s47"><span class="nav-num">45</span>Avicenna: sensi interni e cervello</a></li>
+          <li class="nav-item"><a href="#s48"><span class="nav-num">46</span>Non si pensa senza immagini</a></li>
+          <li class="nav-item"><a href="#s49"><span class="nav-num">47</span>Avicenna: gradi dell’intelletto</a></li></ul>
 <div class="sb-footer">
     Corso: <em>Che cosa significa pensare?</em><br/>
-    Lezioni 1–24 · Chiusura di al-Fārābī e apertura avicenniana: intelletto acquisito, città virtuosa, metafisica e ontologia generale
+    Lezioni 1–25 · Da al-Fārābī ad Avicenna: intelletto acquisito, ontologia generale, sensi interni e dator formarum
   </div>
 </aside>
 <!-- ════ MAIN ════ -->
 <main class="main">
 <!-- ──── HERO ──── -->
 <div class="hero">
-<div class="hero-pill"><span class="schema-count-var">44</span> schemi del corso</div>
+<div class="hero-pill"><span class="schema-count-var">47</span> schemi del corso</div>
 <h1>Filosofia Medievale<br/><em>Araba ed Ebraica</em></h1>
-  <div class="hero-sub">Schemi visivi per le lezioni 1–<span class="ultima-lezione-var">24</span> — dalla trasmissione aristotelica alla chiusura farabiana e all'apertura avicenniana: <em>falsafa</em>, intelletto acquisito, metafisica, ontologia generale, essenze e universali</div>
+  <div class="hero-sub">Schemi visivi per le lezioni 1–<span class="ultima-lezione-var">25</span> — dalla trasmissione aristotelica alla psicologia avicenniana: <em>falsafa</em>, intelletto acquisito, metafisica, ontologia generale, sensi interni e <em>dator formarum</em></div>
 <div class="hero-meta">
 <span>Università degli Studi di Milano</span>
 <span>A.A. 2025–2026</span>
-<span><span class="ultima-lezione-var">24</span> lezioni · <span class="schema-count-var">44</span> schemi visivi</span>
+<span><span class="ultima-lezione-var">25</span> lezioni · <span class="schema-count-var">47</span> schemi visivi</span>
 </div>
 <div class="hero-line"></div>
 </div>
@@ -13735,11 +14081,101 @@ em; }
   </div>
 </section>
 
+
+<section class="ds" id="s47">
+  <div class="sec-top"><span class="badge-n">Schema 45</span><span class="badge-l">L. 25</span></div>
+  <h2>Avicenna: i sensi interni come mappa cerebrale della conoscenza</h2>
+  <p class="desc">Nel <em>De Anima</em> avicenniano la conoscenza non nasce da un salto immediato all'intelletto: passa attraverso facoltà interne localizzate nelle cavità cerebrali, dove forme sensibili e intenzioni sensibili vengono ricevute, conservate e rielaborate.</p>
+  <div class="s47-layout">
+    <div class="s47-context-strip">
+      <div class="s47-context-card"><span class="s47-context-kicker">📚 Opera</span><p><strong>De Anima</strong> nel <em>Kitab al-Shifa</em>: Avicenna non si limita a commentare Aristotele, ma riorganizza il materiale psicologico.</p></div>
+      <div class="s47-context-card s47-context-aristo"><span class="s47-context-kicker">↔ Svolta teorica</span><p>La mappa è <strong>encefalocentrica</strong>: sposta le funzioni cognitive superiori nel cervello contro il cardiocentrismo aristotelico.</p></div>
+      <div class="s47-context-card s47-context-med"><span class="s47-context-kicker">⚕ Base medica</span><p>La localizzazione nelle cavità cerebrali si appoggia alla tradizione galenica, a Nemesio e all'osservazione clinica.</p></div>
+    </div>
+
+    <div class="s47-map3">
+      <div class="s47-map3-title">Schema della slide: due circuiti interni nella sistemazione avicenniana</div>
+
+      <div class="s47-map3-top">
+        <div class="s47-map3-node s47-map3-cog"><strong>Immaginativa / cogitativa</strong><span>punto alto di rielaborazione: compone, scompone e lavora sui fantasmi</span></div>
+      </div>
+
+      <div class="s47-map3-grid">
+        <div class="s47-map3-col s47-map3-left">
+          <div class="s47-map3-col-title">Via delle forme sensibili</div>
+          <div class="s47-map3-node s47-map3-process"><strong>Immaginazione o potenza formatrice</strong><span>forma e conserva immagini / fantasmi</span></div>
+          <div class="s47-map3-arrow"><b>↑</b> dalla fantasia</div>
+          <div class="s47-map3-node s47-map3-process"><strong>Fantasia o senso comune</strong><span>integra e salda il dato sensibile</span></div>
+          <div class="s47-map3-arrow"><b>↑</b> dai sensi esterni</div>
+          <div class="s47-map3-node s47-map3-forme"><strong>Forme sensibili</strong><span>colte prima dai sensi esterni, poi dai sensi interni</span></div>
+          <div class="s47-map3-arrow"><b>↑</b> verso la cogitativa</div>
+        </div>
+
+        <div class="s47-map3-col s47-map3-right">
+          <div class="s47-map3-col-title">Via delle intenzioni sensibili</div>
+          <div class="s47-map3-node s47-map3-memory"><strong>Potenza conservatrice o rammemorativa</strong><span>conserva le intenzioni sensibili</span></div>
+          <div class="s47-map3-arrow"><b>↑</b> dall'estimativa</div>
+          <div class="s47-map3-node s47-map3-process"><strong>Estimativa</strong><span>coglie intenzioni come pericolo, ostilità, attrattiva</span></div>
+          <div class="s47-map3-arrow"><b>↑</b> dalle intenzioni</div>
+          <div class="s47-map3-node s47-map3-intenzioni"><strong>Intenzioni sensibili</strong><span>colte solo dai sensi interni</span></div>
+        </div>
+      </div>
+
+      <div class="s47-map3-bridge">
+        <div class="s47-map3-bridge-source"><strong>Estimativa</strong><br>non si limita a registrare: valuta i <em>ma'ānī</em></div>
+        <div class="s47-map3-bridge-arrow">⋯⋯⋯▶</div>
+        <div class="s47-map3-bridge-target"><strong>Cogitativa</strong><br>riceve questo contributo e lo integra nel lavoro sui fantasmi</div>
+      </div>
+
+      <div class="s47-map3-caption"><strong>Correzione dalla slide:</strong> ci sono due circuiti distinti. Le <em>forme sensibili</em> salgono da senso comune e immaginazione verso la cogitativa; le <em>intenzioni sensibili</em> sono colte dall'estimativa, conservate dalla rammemorativa e collegate alla cogitativa tramite un rapporto attivo e discontinuo.</div>
+    </div>
+    <div class="s47-main-grid">
+      <div class="s47-brain-panel">
+        <div class="s47-section-hdr">Mappa antero-posteriore delle facoltà interne</div>
+        <div class="s47-brain-axis" aria-hidden="true"><span class="s47-axis-label">Anteriore</span><span class="s47-axis-line"></span><span class="s47-axis-label s47-axis-post">Posteriore</span></div>
+        <div class="s47-stations">
+          <div class="s47-station"><div class="s47-station-num">1</div><span class="s47-location">Prima cavità</span><div class="s47-name">Fantasia / senso comune</div><div class="s47-alt">saldatura delle percezioni esterne</div><p>Riceve e unifica i dati provenienti dai sensi esterni, trasformando percezioni discontinue in un <strong>flusso continuo</strong>.</p><div class="s47-tags"><span class="s47-pill s47-pill-passive">Percettivo-passivo</span><span class="s47-pill s47-pill-intention">Forme sensibili</span></div></div>
+          <div class="s47-station"><div class="s47-station-num">2</div><span class="s47-location">Estremità anteriore</span><div class="s47-name">Immaginazione / potenza formatrice</div><div class="s47-alt">memoria sensibile delle immagini</div><p>Conserva le immagini sensibili quando l'oggetto non è più presente: è il deposito delle <strong>forme sensibili</strong>.</p><div class="s47-tags"><span class="s47-pill s47-pill-passive">Conservazione</span><span class="s47-pill s47-pill-intention">Immagini</span></div></div>
+          <div class="s47-station s47-active"><div class="s47-station-num">3</div><span class="s47-location">Cavità mediana / pineale</span><div class="s47-name">Cogitativa nell'uomo</div><div class="s47-alt">immaginativa negli animali</div><p>Compone e scompone i fantasmi: è la <strong>cerniera sensibile-intelletto</strong>, perché prepara il materiale alla conoscenza superiore.</p><div class="s47-tags"><span class="s47-pill s47-pill-active">Percettivo-attivo</span><span class="s47-pill s47-pill-passive">Cerniera</span></div></div>
+          <div class="s47-station s47-intentional"><div class="s47-station-num">4</div><span class="s47-location">Termine cavità mediana</span><div class="s47-name">Estimativa</div><div class="s47-alt">coglie le intenzioni sensibili</div><p>Riconosce significati non dati dai sensi esterni: ad esempio il <strong>lupo da fuggire</strong>, il pericolo, l'ostilità o l'attrattiva.</p><div class="s47-tags"><span class="s47-pill s47-pill-intention">ma'na</span><span class="s47-pill s47-pill-active">Valutazione</span></div></div>
+          <div class="s47-station s47-intentional"><div class="s47-station-num">5</div><span class="s47-location">Cavità posteriore</span><div class="s47-name">Memoria reminiscente</div><div class="s47-alt">recupero delle intenzioni</div><p>Conserva e recupera le <strong>intenzioni sensibili</strong>, rendendo disponibili i significati colti dall'estimativa.</p><div class="s47-tags"><span class="s47-pill s47-pill-intention">Memoria dei ma'na</span><span class="s47-pill s47-pill-passive">Recupero</span></div></div>
+        </div>
+      </div>
+      <aside class="s47-side-panel"><div><div class="s47-section-hdr">Due oggetti della percezione interna</div><div class="s47-compare-block"><div class="s47-compare-card s47-forme"><div class="s47-compare-title">Forme sensibili</div><span class="s47-compare-term">dati qualitativi colti dai sensi esterni</span><p>Sono ciò che i sensi esterni offrono direttamente alla fantasia e all'immaginazione.</p><div class="s47-examples"><span class="s47-example">colori</span><span class="s47-example">suoni</span><span class="s47-example">qualità sensibili</span></div></div><div class="s47-compare-card s47-intenzioni"><div class="s47-compare-title">Intenzioni sensibili</div><span class="s47-compare-term">ma'na: significati non colti dai sensi esterni</span><p>Sono riconosciute dai sensi interni: non sono colori o suoni, ma valori pratici e affettivi della cosa percepita.</p><div class="s47-examples"><span class="s47-example">ostilità del lupo</span><span class="s47-example">pericolo</span><span class="s47-example">attrattiva</span><span class="s47-example">tenerezza</span></div></div></div></div><div><div class="s47-section-hdr">Passivo e attivo</div><div class="s47-function-grid"><div class="s47-function-card"><h4>📥 Percettivi-passivi</h4><p>Ricevono, saldano e conservano dati sensibili o intenzioni già colte.</p></div><div class="s47-function-card"><h4>⚙ Percettivi-attivi</h4><p>Compongono, scompongono e valutano: rendono il sensibile disponibile alla rielaborazione.</p></div></div></div></aside>
+    </div>
+    <div class="s47-implication-box"><div class="s47-implication-title">Connessione epistemologica</div><p>La conoscenza intellettuale non emerge da un salto improvviso: prima passa per una <strong>preparazione cerebrale</strong> delle immagini e delle intenzioni sensibili.</p></div>
+  </div>
+  <div class="insight"><div class="insight-lbl">Punto chiave</div><p>La novità decisiva non è solo anatomica: spostando le funzioni cognitive superiori nel cervello, Avicenna rende la <strong>preparazione sensibile del pensiero</strong> un processo strutturato e non un semplice residuo corporeo.</p></div>
+</section>
+
+<section class="ds" id="s48">
+  <div class="sec-top"><span class="badge-n">Schema 46</span><span class="badge-l">L. 25</span></div>
+  <h2>Non si pensa senza immagini: dalla percezione al concetto</h2>
+  <p class="desc">Il principio avicenniano secondo cui non si pensa senza immagini mostra che il pensiero puro richiede una lunga preparazione sensibile: i fantasmi non sono ostacoli, ma la condizione affinché l'intelletto riceva l'intelligibile.</p>
+  <div class="s48-layout">
+    <div class="s48-panel"><div class="s48-section-hdr">Scala del conoscere · preparazione del fantasma</div><div class="s48-principle"><div class="s48-principle-icon">🖼️</div><div><div class="s48-principle-title">«Non si pensa senza immagini»</div><p>Il pensare va oltre l'immagine, ma non comincia senza di essa: l'intelligibile richiede un fantasma già lavorato.</p></div></div><div class="s48-pipeline"><div class="s48-step"><div class="s48-step-num">01</div><div class="s48-step-card"><div class="s48-step-title">Sensi esterni</div><span class="s48-step-role">hic et nunc</span><p>Percepiscono il dato sensibile in modo puntiforme: questo oggetto, qui e ora.</p></div></div><div class="s48-step"><div class="s48-step-num">02</div><div class="s48-step-card"><div class="s48-step-title">Fantasia / senso comune</div><span class="s48-step-role">saldatura percettiva</span><p>Unifica e salda ciò che i sensi esterni consegnano separatamente.</p></div></div><div class="s48-step"><div class="s48-step-num">03</div><div class="s48-step-card"><div class="s48-step-title">Immaginazione</div><span class="s48-step-role">conservazione</span><p>Custodisce l'immagine sensibile anche quando l'oggetto non è più presente.</p></div></div><div class="s48-step s48-step--arab"><div class="s48-step-num">04</div><div class="s48-step-card"><div class="s48-step-title">Cogitativa</div><span class="s48-step-role">mediazione decisiva</span><p>Compone, scompone e smaterializza il fantasma: non produce il concetto, ma prepara ciò che l'intelletto può ricevere.</p></div></div><div class="s48-step s48-step--arab"><div class="s48-step-num">05</div><div class="s48-step-card"><div class="s48-step-title">Intelletto</div><span class="s48-step-role">ricezione dell'universale</span><p>Riceve forme universali astratte dalla materia: il fantasma è superato, non cancellato.</p></div></div></div></div>
+    <div class="s48-side"><div class="s48-compare"><div class="s48-compare-hdr">Immagine sensibile vs concetto</div><div class="s48-compare-row"><div class="s48-compare-cell"><div class="s48-cell-kicker">Rappresentazione iconica</div><div class="s48-cell-title">La migliore immagine dell'uomo</div><p>Resta ancora pittorica: raffigura un uomo determinato, con tratti sensibili e particolari.</p><span class="s48-pill s48-pill--image">sensibile</span></div><div class="s48-compare-arrow">→</div><div class="s48-compare-cell"><div class="s48-cell-kicker">Eliminazione della pittoricità</div><div class="s48-cell-title">«Animale razionale»</div><p>Non è un'immagine più precisa: è un concetto universale che lascia cadere la rappresentatività iconica.</p><span class="s48-pill s48-pill--concept">intelligibile</span></div></div></div><div class="s48-panel s48-panel--modern"><div class="s48-section-hdr">Paralleli didattici moderni</div><div class="s48-modern-grid"><div class="s48-modern-card"><div class="s48-modern-name">📍 Cartesio · ghiandola pineale</div><p>Il docente la richiama come punto di contatto problematico tra <em>res cogitans</em> e <em>res extensa</em>: serve un luogo di mediazione tra ordini diversi.</p></div><div class="s48-modern-card"><div class="s48-modern-name">🌉 Kant · schematismo trascendentale</div><p>Lo schema media tra categorie e intuizioni: anche qui il pensiero non opera nel vuoto, ma attraverso un intermediario.</p></div></div><div class="s48-warning"><div class="s48-warning-title">🕊️ La colomba kantiana</div><p>Credere di pensare meglio senza il sensibile è come immaginare che la colomba voli meglio senza aria: togliendo il mezzo, cade il movimento stesso.</p></div></div></div>
+    <div class="s48-transition"><div class="s48-transition-title">Transizione</div><p>La potenza speculativa non fabbrica da sola l'universale: <strong>riceve forme universali astratte dalla materia</strong>, dopo che il percorso sensibile ha reso il fantasma disponibile all'intelligibile.</p></div>
+  </div>
+  <div class="insight"><div class="insight-lbl">Punto chiave</div><p>La <strong>cogitativa</strong> è il luogo filosofico della mediazione: non produce il concetto, ma prepara il fantasma abbastanza smaterializzato perché l'intelligibile possa essere ricevuto.</p></div>
+</section>
+
+<section class="ds" id="s49">
+  <div class="sec-top"><span class="badge-n">Schema 47</span><span class="badge-l">L. 25</span></div>
+  <h2>Avicenna: gradi dell'intelletto e sintonizzazione col <em>dator formarum</em></h2>
+  <p class="desc">La teoria avicenniana dell'intelletto ordina la potenza umana in gradi successivi fino all'intelletto acquisito, dove il pensiero in atto si connette con l'intelletto agente, ultima intelligenza celeste e datore delle forme.</p>
+  <div class="s49-layout">
+    <div class="s49-panel"><div class="s49-section-hdr">Scala della potenza umana</div><div class="s49-ladder"><div class="s49-degree"><div class="s49-degree-top"><span class="s49-degree-num">1</span><div><div class="s49-degree-title">Intelletto materiale</div><div class="s49-degree-sub">preparazione assoluta</div></div></div><p>È vuoto come il neonato rispetto alla scrittura o come una tavoletta non ancora scritta: in ogni individuo della specie c'è la potenza razionale, ma non si nasce già razionali in atto.</p></div><div class="s49-arrow"></div><div class="s49-degree"><div class="s49-degree-top"><span class="s49-degree-num">2</span><div><div class="s49-degree-title">Intelletto in <em>habitu</em></div><div class="s49-degree-sub">primi intelligibili</div></div></div><p>Possiede principi come “il tutto è maggiore della parte”, “ente”, “cosa”: è già in atto rispetto al neonato, ma resta in potenza verso il sapere compiuto del sapiente.</p></div><div class="s49-arrow"></div><div class="s49-degree"><div class="s49-degree-top"><span class="s49-degree-num">3</span><div><div class="s49-degree-title">Intelletto nella perfezione della potenza</div><div class="s49-degree-sub">intelletto in atto · scriba perfetto</div></div></div><p>Possiede conclusioni scientifiche e può richiamarle quando vuole: non sta sempre pensando, ma ha la forma del sapere pronta all'uso.</p></div></div><div class="s49-acquired"><div class="s49-acquired-kicker">Vertice dell'umanità</div><div class="s49-acquired-title">Intelletto acquisito</div><div class="s49-acquired-term"><em>nous epiktetos</em></div><p>La forma intelligibile è presente e considerata in atto: l'intelletto si accorge di pensare e, nel pensiero in atto, pensante e pensato coincidono. In questo senso, “quando pensiamo siamo divini”.</p><div class="s49-pill-row"><span class="s49-pill s49-pill-gold">pensiero in atto</span><span class="s49-pill s49-pill-blue">coincidenza pensante/pensato</span><span class="s49-pill s49-pill-green">vertice umano</span></div></div></div>
+    <div class="s49-right"><div class="s49-agent-wrap"><div class="s49-section-hdr">Rete emanativa e ricezione delle forme</div><div class="s49-agent-node"><div class="s49-agent-icon">☀️</div><div class="s49-agent-title">Intelletto agente</div><div class="s49-agent-term"><em>wahib al-suwar</em> · <em>dator formarum</em></div><p class="s49-agent-desc">È l'ultima intelligenza celeste, non una facoltà individuale: emana forme intelligibili come una stazione radio o come il sole che rende visibile ciò che era solo preparato.</p></div><div class="s49-reception-grid"><div class="s49-reception s49-reception-matter"><div class="s49-reception-label">🌱 Forme nella materia</div><p>Quando la materia è disposta, riceve forme immanenti: è la generazione nel mondo sublunare.</p></div><div class="s49-reception s49-reception-intellect"><div class="s49-reception-label">🧠 Forme nell'intelletto</div><p>Quando il fantasma è preparato dalla cogitativa, il nostro intelletto potenziale riceve la forma intelligibile.</p></div></div></div><div class="s49-metaphors"><div class="s49-metaphor"><div class="s49-metaphor-title">📻 Metafora della stazione radio</div><p>L'intelletto agente trasmette sempre; l'intelletto umano deve essere sintonizzato per ricevere l'intelligibile.</p></div><div class="s49-metaphor"><div class="s49-metaphor-title">☀️ Metafora del sole</div><p>La forma non è prodotta dal singolo intelletto: viene illuminata e resa ricevibile dall'alto.</p></div></div><div class="s49-tuning"><div class="s49-tuning-hdr">Pipeline della sintonizzazione</div><div class="s49-tuning-flow"><div class="s49-stage"><div class="s49-stage-num">01</div><div class="s49-stage-title">Cogitativa</div><p>Elabora il miglior fantasma possibile a partire dal lavoro sensibile.</p></div><div class="s49-flow-arrow">→</div><div class="s49-stage"><div class="s49-stage-num">02</div><div class="s49-stage-title">Preparazione</div><p>L'intelletto umano si dispone: non crea la forma, ma diventa capace di riceverla.</p></div><div class="s49-flow-arrow">→</div><div class="s49-stage"><div class="s49-stage-num">03</div><div class="s49-stage-title">Ricezione</div><p>L'intelligibile viene ricevuto dall'intelletto agente, datore delle forme.</p></div></div><div class="s49-connection"><div class="s49-connection-title">Preparazione dal basso + illuminazione dall'alto</div><p>La conoscenza nasce dall'incrocio fra il lavoro inferiore della cogitativa e l'emanazione superiore dell'intelletto agente.</p></div></div></div>
+  </div>
+  <div class="insight"><div class="insight-lbl">Punto chiave</div><p>Avicenna combina <strong>preparazione dal basso</strong> e <strong>illuminazione dall'alto</strong>: l'intelligibile viene dall'intelletto agente, ma non arriva se il lavoro sensibile della cogitativa non ha predisposto il fantasma adeguato.</p></div>
+</section>
+
 <!-- FOOTER -->
 <div style="padding:2rem 3.5rem;background:var(--surface);border-top:1px solid var(--border);font-size:0.78rem;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
 <div>
 <div style="font-family:var(--font-h);color:var(--cream);font-size:0.85rem;margin-bottom:0.2rem;">Filosofia Medievale Araba ed Ebraica</div>
-<div style="font-style:italic;"><span class="schema-count-var">44</span> schemi visivi · Lezioni 01–<span class="ultima-lezione-var">24</span> · Università degli Studi di Milano</div>
+<div style="font-style:italic;"><span class="schema-count-var">47</span> schemi visivi · Lezioni 01–<span class="ultima-lezione-var">25</span> · Università degli Studi di Milano</div>
 </div>
 <div style="font-style:italic;color:var(--muted2);">davide.prando@studenti.unimi.it</div>
 </div>
@@ -13923,8 +14359,8 @@ if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
 // Mobile toggle
 const mobThemeBtn = document.getElementById('mob-theme-toggle');
 if (mobThemeBtn) mobThemeBtn.addEventListener('click', toggleTheme);
-const ULTIMA_LEZIONE = 24;
-const TOTAL_SCHEMAS = 44;
+const ULTIMA_LEZIONE = 25;
+const TOTAL_SCHEMAS = 47;
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".ultima-lezione-var").forEach(el => {
