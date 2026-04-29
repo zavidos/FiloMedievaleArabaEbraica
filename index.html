@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Schemi — Filosofia Medievale Araba ed Ebraica (Lez. 1–25)</title>
+<title>Schemi — Filosofia Medievale Araba ed Ebraica (Lez. 1–26)</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -9629,6 +9629,117 @@ em; }
 .s47-map3-caption strong { color:var(--gold-l); }
 @media (max-width:768px) { .s47-map3-grid, .s47-map3-bridge { grid-template-columns:1fr; } .s47-map3-bridge-arrow { text-align:center; transform:rotate(90deg); } }
 
+
+
+/* S50: Al-Farabi vs Avicenna — sostanza, intelletto e destino */
+.s50-layout { display: grid; grid-template-columns: 1fr; gap: 1.4rem; }
+.s50-fork { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; align-items: stretch; }
+.s50-branch { border-radius: var(--r); border: 1px solid var(--border); padding: 1.25rem; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; position: relative; overflow: hidden; }
+.s50-branch:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,0.35); }
+.s50-branch-farabi { background: linear-gradient(135deg, rgba(61,107,80,0.16), var(--surface2)); border-left: 4px solid var(--greek); }
+.s50-branch-avicenna { background: linear-gradient(135deg, rgba(139,90,26,0.18), var(--surface2)); border-left: 4px solid var(--arab); }
+.s50-branch-kicker { font-family: var(--font-h); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted2); margin-bottom: 0.25rem; }
+.s50-branch-title { font-family: var(--font-h); font-size: 1.15rem; color: var(--cream); line-height: 1.25; margin-bottom: 0.35rem; }
+.s50-lineage { font-size: 0.82rem; color: var(--card-text); line-height: 1.55; margin-bottom: 0.85rem; }
+.s50-thesis { padding: 0.75rem 0.9rem; border-radius: var(--r-sm); background: rgba(0,0,0,0.13); border: 1px solid var(--border); color: var(--card-text); font-size: 0.9rem; line-height: 1.55; }
+.s50-pill-row { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.85rem; }
+.s50-pill { display: inline-flex; align-items: center; gap: 0.25rem; font-family: var(--font-h); font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.06em; border-radius: 999px; padding: 0.16rem 0.52rem; }
+.s50-pill-danger { background: rgba(139,24,24,0.18); color: var(--danger-l); border: 1px solid rgba(139,24,24,0.38); }
+.s50-pill-success { background: rgba(45,107,74,0.18); color: var(--green-t); border: 1px solid rgba(45,107,74,0.42); }
+.s50-pill-gold { background: rgba(201,151,58,0.14); color: var(--gold-l); border: 1px solid rgba(201,151,58,0.42); }
+.s50-pill-blue { background: rgba(45,84,160,0.15); color: var(--blue-t); border: 1px solid rgba(45,84,160,0.42); }
+.s50-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--r); border: 1px solid var(--border); }
+.s50-table { width: 100%; min-width: 760px; border-collapse: collapse; background: var(--surface2); }
+.s50-table th { font-family: var(--font-h); font-size: 0.78rem; text-align: left; padding: 0.7rem 0.85rem; border-bottom: 2px solid var(--border); background: var(--surface3); color: var(--cream); }
+.s50-table th:nth-child(2) { color: var(--greek-l); }
+.s50-table th:nth-child(3) { color: var(--arab-l); }
+.s50-table td { padding: 0.72rem 0.85rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.86rem; color: var(--card-text); line-height: 1.5; }
+.s50-table tr:hover { background: rgba(201,151,58,0.05); transition: background 0.18s; }
+.s50-aspect { font-family: var(--font-h); color: var(--gold-l); font-weight: 600; white-space: nowrap; }
+.s50-consequences { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+.s50-consequence-box { border-radius: var(--r); padding: 1rem 1.1rem; border: 1px solid var(--border); transition: transform 0.2s, box-shadow 0.2s; }
+.s50-consequence-box:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,0.28); }
+.s50-consequence-task { background: linear-gradient(135deg, rgba(61,107,80,0.12), var(--surface2)); border-left: 4px solid var(--greek); }
+.s50-consequence-given { background: linear-gradient(135deg, rgba(139,90,26,0.14), var(--surface2)); border-left: 4px solid var(--arab); }
+.s50-consequence-h { font-family: var(--font-h); color: var(--cream); font-size: 0.95rem; margin-bottom: 0.35rem; }
+.s50-consequence-box p { color: var(--card-text); font-size: 0.88rem; line-height: 1.55; }
+
+/* S51: Datore delle forme, intelletto santo e profezia */
+.s51-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 1.35rem; align-items: start; }
+.s51-process-panel, .s51-side-panel { border-radius: var(--r); border: 1px solid var(--border); background: var(--surface2); padding: 1.15rem; }
+.s51-process-panel { background: linear-gradient(135deg, rgba(139,90,26,0.14), var(--surface2)); border-left: 4px solid var(--arab); }
+.s51-section-h { font-family: var(--font-h); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--arab-l); border-bottom: 1px solid rgba(139,90,26,0.45); padding-bottom: 0.45rem; margin-bottom: 0.9rem; }
+.s51-flow { display: flex; flex-direction: column; gap: 0.5rem; }
+.s51-step { display: grid; grid-template-columns: 46px 1fr; gap: 0.85rem; align-items: start; padding: 0.85rem; border-radius: var(--r-sm); border: 1px solid var(--border); background: rgba(0,0,0,0.1); transition: transform 0.2s, border-color 0.2s, background 0.2s; }
+.s51-step:hover { transform: translateX(4px); border-color: rgba(201,151,58,0.45); background: rgba(201,151,58,0.06); }
+.s51-step-icon { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(201,151,58,0.13); border: 1px solid rgba(201,151,58,0.35); font-size: 1.1rem; }
+.s51-step-title { font-family: var(--font-h); font-size: 0.96rem; color: var(--cream); line-height: 1.25; margin-bottom: 0.15rem; }
+.s51-step-term { color: var(--gold-l); font-style: italic; font-size: 0.82rem; }
+.s51-step p { color: var(--card-text); font-size: 0.86rem; line-height: 1.52; margin-top: 0.2rem; }
+.s51-arrow { text-align: center; color: var(--gold-t); font-family: var(--font-h); font-size: 1rem; line-height: 1; }
+.s51-hads-box { border-radius: var(--r); padding: 1rem; border: 1px solid rgba(201,151,58,0.38); background: rgba(201,151,58,0.07); margin-bottom: 1rem; }
+.s51-hads-title { font-family: var(--font-h); color: var(--cream); font-size: 0.98rem; margin-bottom: 0.45rem; }
+.s51-continuum { display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 0.45rem; align-items: stretch; }
+.s51-continuum-item { border-radius: var(--r-sm); padding: 0.65rem; text-align: center; border: 1px solid var(--border); background: var(--surface3); transition: transform 0.2s, box-shadow 0.2s; }
+.s51-continuum-item:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.24); }
+.s51-continuum-low { background: linear-gradient(135deg, rgba(139,24,24,0.12), var(--surface3)); }
+.s51-continuum-mid { background: linear-gradient(135deg, rgba(201,151,58,0.12), var(--surface3)); }
+.s51-continuum-high { background: linear-gradient(135deg, rgba(45,107,74,0.16), var(--surface3)); }
+.s51-continuum-lbl { font-family: var(--font-h); font-size: 0.72rem; color: var(--cream); line-height: 1.25; }
+.s51-continuum-desc { font-size: 0.74rem; color: var(--card-text); line-height: 1.35; margin-top: 0.25rem; }
+.s51-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.s51-culture-card { border-radius: var(--r-sm); padding: 0.85rem; border: 1px solid var(--border); transition: transform 0.2s, box-shadow 0.2s; }
+.s51-culture-card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.25); }
+.s51-culture-islam { background: linear-gradient(135deg, rgba(139,90,26,0.16), var(--surface3)); border-left: 4px solid var(--arab); }
+.s51-culture-latin { background: linear-gradient(135deg, rgba(36,64,122,0.16), var(--surface3)); border-left: 4px solid var(--latin); }
+.s51-culture-title { font-family: var(--font-h); color: var(--cream); font-size: 0.9rem; margin-bottom: 0.3rem; }
+.s51-culture-card p { color: var(--card-text); font-size: 0.82rem; line-height: 1.48; }
+.s51-guarantees { margin-top: 1rem; display: grid; grid-template-columns: 1fr; gap: 0.55rem; }
+.s51-guarantee { border-radius: var(--r-sm); padding: 0.72rem 0.85rem; background: rgba(45,84,160,0.11); border: 1px solid rgba(45,84,160,0.35); color: var(--card-text); font-size: 0.84rem; line-height: 1.48; transition: transform 0.2s, background 0.2s; }
+.s51-guarantee:hover { transform: translateX(3px); background: rgba(45,84,160,0.16); }
+.s51-guarantee strong { color: var(--blue-t); font-family: var(--font-h); }
+
+/* S52: Uomo sospeso, verità unica e ricezione latina */
+.s52-layout { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 1.35rem; align-items: start; }
+.s52-argument { border-radius: var(--r); border: 1px solid var(--border); background: linear-gradient(135deg, rgba(139,90,26,0.14), var(--surface2)); border-left: 4px solid var(--arab); padding: 1.15rem; }
+.s52-section-h { font-family: var(--font-h); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--arab-l); border-bottom: 1px solid rgba(139,90,26,0.45); padding-bottom: 0.45rem; margin-bottom: 0.9rem; }
+.s52-scenario { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.55rem; margin-bottom: 1rem; }
+.s52-condition { border-radius: var(--r-sm); padding: 0.72rem 0.55rem; text-align: center; background: rgba(0,0,0,0.12); border: 1px solid var(--border); transition: transform 0.2s, border-color 0.2s; }
+.s52-condition:hover { transform: translateY(-2px); border-color: rgba(201,151,58,0.45); }
+.s52-condition-icon { font-size: 1.05rem; margin-bottom: 0.2rem; }
+.s52-condition-lbl { font-family: var(--font-h); color: var(--cream); font-size: 0.76rem; line-height: 1.25; }
+.s52-map { display: flex; flex-direction: column; gap: 0.55rem; }
+.s52-map-row { display: grid; grid-template-columns: 34px 1fr; gap: 0.75rem; align-items: start; padding: 0.78rem 0.85rem; border-radius: var(--r-sm); border: 1px solid var(--border); background: var(--surface3); transition: transform 0.2s, background 0.2s; }
+.s52-map-row:hover { transform: translateX(4px); background: rgba(201,151,58,0.06); }
+.s52-map-num { width: 30px; height: 30px; border-radius: 50%; font-family: var(--font-h); font-size: 0.8rem; color: var(--gold-l); border: 1px solid rgba(201,151,58,0.5); display: flex; align-items: center; justify-content: center; background: rgba(201,151,58,0.1); }
+.s52-map-title { font-family: var(--font-h); color: var(--cream); font-size: 0.9rem; line-height: 1.25; }
+.s52-map-row p { color: var(--card-text); font-size: 0.84rem; line-height: 1.48; margin-top: 0.15rem; }
+.s52-side { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.s52-distinction, .s52-truth, .s52-latin { border-radius: var(--r); padding: 1rem; border: 1px solid var(--border); transition: transform 0.2s, box-shadow 0.2s; }
+.s52-distinction:hover, .s52-truth:hover, .s52-latin:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,0.28); }
+.s52-distinction { background: linear-gradient(135deg, rgba(90,58,138,0.14), var(--surface2)); border-left: 4px solid var(--aristo); }
+.s52-truth { background: linear-gradient(135deg, rgba(139,90,26,0.13), var(--surface2)); border-left: 4px solid var(--arab); }
+.s52-latin { background: linear-gradient(135deg, rgba(36,64,122,0.14), var(--surface2)); border-left: 4px solid var(--latin); }
+.s52-box-title { font-family: var(--font-h); color: var(--cream); font-size: 0.95rem; margin-bottom: 0.4rem; }
+.s52-box-text { color: var(--card-text); font-size: 0.85rem; line-height: 1.52; }
+.s52-two-col { display: grid; grid-template-columns: 1fr 34px 1fr; gap: 0.45rem; align-items: stretch; margin-top: 0.75rem; }
+.s52-mini { border-radius: var(--r-sm); padding: 0.65rem; background: rgba(0,0,0,0.12); border: 1px solid var(--border); }
+.s52-mini-title { font-family: var(--font-h); font-size: 0.78rem; color: var(--gold-l); margin-bottom: 0.15rem; }
+.s52-mini p { color: var(--card-text); font-size: 0.78rem; line-height: 1.4; }
+.s52-vs { display: flex; align-items: center; justify-content: center; font-family: var(--font-h); color: var(--gold-t); }
+.s52-truth-row { display: grid; grid-template-columns: 1fr 32px 1fr; gap: 0.45rem; align-items: center; margin-top: 0.7rem; }
+.s52-truth-cell { border-radius: var(--r-sm); padding: 0.62rem; background: rgba(0,0,0,0.12); border: 1px solid var(--border); color: var(--card-text); font-size: 0.8rem; line-height: 1.38; }
+.s52-truth-arrow { text-align: center; color: var(--gold-t); font-family: var(--font-h); }
+.s52-latin-pill { display: inline-block; margin-top: 0.55rem; font-family: var(--font-h); font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--blue-t); background: rgba(45,84,160,0.15); border: 1px solid rgba(45,84,160,0.42); border-radius: 999px; padding: 0.16rem 0.52rem; }
+@media (max-width: 768px) {
+  .s50-fork, .s50-consequences, .s51-layout, .s51-compare, .s52-layout, .s52-scenario, .s52-two-col, .s52-truth-row { grid-template-columns: 1fr; }
+  .s50-table-wrap { overflow-x: auto; }
+  .s50-table { min-width: 760px; }
+  .s51-step { grid-template-columns: 40px 1fr; }
+  .s51-continuum { grid-template-columns: 1fr; }
+  .s52-vs, .s52-truth-arrow { padding: 0.15rem 0; }
+}
+
 </style>
 </head>
 <body>
@@ -9640,7 +9751,7 @@ em; }
 <div class="sb-logo">
 <div class="eyebrow">Università degli Studi di Milano</div>
 <div class="title">Filosofia Medievale<br/>Araba ed Ebraica</div>
-<div class="sub">Schemi delle lezioni 1–<span class="ultima-lezione-var">25</span></div>
+<div class="sub">Schemi delle lezioni 1–<span class="ultima-lezione-var">26</span></div>
 </div>
 <div class="theme-toggle-wrap">
 <button aria-label="Cambia tema" class="theme-toggle" id="theme-toggle">
@@ -9695,23 +9806,26 @@ em; }
           <li class="nav-item"><a href="#s46"><span class="nav-num">44</span>Avicenna e l'ontologia generale</a></li>
           <li class="nav-item"><a href="#s47"><span class="nav-num">45</span>Avicenna: sensi interni e cervello</a></li>
           <li class="nav-item"><a href="#s48"><span class="nav-num">46</span>Non si pensa senza immagini</a></li>
-          <li class="nav-item"><a href="#s49"><span class="nav-num">47</span>Avicenna: gradi dell’intelletto</a></li></ul>
+          <li class="nav-item"><a href="#s49"><span class="nav-num">47</span>Avicenna: gradi dell’intelletto</a></li>
+          <li class="nav-item"><a href="#s50"><span class="nav-num">48</span>Al-Farabi vs Avicenna</a></li>
+          <li class="nav-item"><a href="#s51"><span class="nav-num">49</span>Datore delle forme e profezia</a></li>
+          <li class="nav-item"><a href="#s52"><span class="nav-num">50</span>Uomo sospeso e verità unica</a></li></ul>
 <div class="sb-footer">
     Corso: <em>Che cosa significa pensare?</em><br/>
-    Lezioni 1–25 · Da al-Fārābī ad Avicenna: intelletto acquisito, ontologia generale, sensi interni e dator formarum
+    Lezioni 1–26 · Avicenna: intelletto, datore delle forme, profezia e sostanzialità dell’anima
   </div>
 </aside>
 <!-- ════ MAIN ════ -->
 <main class="main">
 <!-- ──── HERO ──── -->
 <div class="hero">
-<div class="hero-pill"><span class="schema-count-var">47</span> schemi del corso</div>
+<div class="hero-pill"><span class="schema-count-var">50</span> schemi del corso</div>
 <h1>Filosofia Medievale<br/><em>Araba ed Ebraica</em></h1>
-  <div class="hero-sub">Schemi visivi per le lezioni 1–<span class="ultima-lezione-var">25</span> — dalla trasmissione aristotelica alla psicologia avicenniana: <em>falsafa</em>, intelletto acquisito, metafisica, ontologia generale, sensi interni e <em>dator formarum</em></div>
+  <div class="hero-sub">Schemi visivi per le lezioni 1–<span class="ultima-lezione-var">26</span> — dalla trasmissione aristotelica alla psicologia avicenniana: <em>falsafa</em>, intelletto acquisito, datore delle forme, profezia e <em>homo volans</em></div>
 <div class="hero-meta">
 <span>Università degli Studi di Milano</span>
 <span>A.A. 2025–2026</span>
-<span><span class="ultima-lezione-var">25</span> lezioni · <span class="schema-count-var">47</span> schemi visivi</span>
+<span><span class="ultima-lezione-var">26</span> lezioni · <span class="schema-count-var">50</span> schemi visivi</span>
 </div>
 <div class="hero-line"></div>
 </div>
@@ -14171,11 +14285,49 @@ em; }
   <div class="insight"><div class="insight-lbl">Punto chiave</div><p>Avicenna combina <strong>preparazione dal basso</strong> e <strong>illuminazione dall'alto</strong>: l'intelligibile viene dall'intelletto agente, ma non arriva se il lavoro sensibile della cogitativa non ha predisposto il fantasma adeguato.</p></div>
 </section>
 
+
+<section class="ds" id="s50">
+  <div class="sec-top"><span class="badge-n">Schema 48</span><span class="badge-l">L. 26</span></div>
+  <h2>Al-Farabi vs Avicenna: l’anima è già sostanza?</h2>
+  <p class="desc">Due linee della psicologia aristotelica araba divergono sullo statuto dell’intelletto potenziale: compito da conquistare o dato sostanziale dalla nascita.</p>
+  <div class="s50-layout">
+    <div class="s50-fork">
+      <div class="s50-branch s50-branch-farabi"><div class="s50-branch-kicker">Linea antisostanzialista</div><div class="s50-branch-title">Alessandro → Al-Farabi</div><p class="s50-lineage">L’intelletto potenziale non è ancora pienamente sostanza: può diventarlo solo giungendo all’intelletto acquisito.</p><div class="s50-thesis">🧭 La razionalità è un <strong>compito</strong>: se non si compie il percorso speculativo, alla morte l’intelletto individuale scompare.</div><div class="s50-pill-row"><span class="s50-pill s50-pill-danger">mortalità possibile</span><span class="s50-pill s50-pill-gold">immortalità condizionata</span></div></div>
+      <div class="s50-branch s50-branch-avicenna"><div class="s50-branch-kicker">Linea sostanzialista</div><div class="s50-branch-title">Avicenna</div><p class="s50-lineage">L’intelletto potenziale è già sostanza dalla nascita: è la tavoletta non ancora scritta, non il puro non-essere-scritto.</p><div class="s50-thesis">📜 La razionalità è un <strong>dato costitutivo</strong>: ogni anima umana sopravvive, anche se non tutte godono della stessa beatitudine.</div><div class="s50-pill-row"><span class="s50-pill s50-pill-success">sopravvivenza universale</span><span class="s50-pill s50-pill-blue">anima sostanza</span></div></div>
+    </div>
+    <div class="s50-table-wrap"><table class="s50-table"><thead><tr><th>Asse</th><th>Al-Farabi</th><th>Avicenna</th></tr></thead><tbody><tr><td class="s50-aspect">Intelletto potenziale</td><td>Non è ancora sostanza in senso pieno; deve attualizzarsi attraverso il sapere.</td><td>È già sostanza: potenza assoluta, come una tavoletta vuota ma reale e incorporea.</td></tr><tr><td class="s50-aspect">Intelletto acquisito</td><td>È la soglia che rende possibile la permanenza post mortem.</td><td>È il grado in cui l’intelligibile è pensato in atto nella congiunzione con l’intelletto agente.</td></tr><tr><td class="s50-aspect">Immortalità</td><td><span class="s50-pill s50-pill-gold">condizionata</span> al perfezionamento speculativo.</td><td><span class="s50-pill s50-pill-success">garantita</span> dalla sostanzialità originaria dell’anima.</td></tr><tr><td class="s50-aspect">Destino dei semplici</td><td>Chi non raggiunge il compimento intellettuale non sopravvive come sostanza separata.</td><td>Sopravvive comunque: paradiso e inferno sono vissuti in forma immaginativa.</td></tr><tr><td class="s50-aspect">Destino dei filosofi</td><td>Sopravvivono se realizzano l’intelletto acquisito.</td><td>Godono della beatitudine propriamente intellettuale.</td></tr></tbody></table></div>
+    <div class="s50-consequences"><div class="s50-consequence-box s50-consequence-task"><div class="s50-consequence-h">⚖️ Razionalità come compito</div><p>In Al-Farabi l’uomo deve diventare pienamente intellettuale: l’esito escatologico dipende dalla riuscita del percorso speculativo.</p></div><div class="s50-consequence-box s50-consequence-given"><div class="s50-consequence-h">🧬 Razionalità come natura</div><p>In Avicenna l’anima razionale è già sostanza: il problema non è se sopravviva, ma quale forma di felicità o pena riceva.</p></div></div>
+  </div>
+  <div class="insight"><div class="insight-lbl">Punto chiave</div><p>La posta in gioco non è solo psicologica: decidere se l’intelletto potenziale sia già sostanza significa decidere se l’immortalità sia <strong>premio filosofico</strong> o <strong>struttura universale dell’umano</strong>.</p></div>
+</section>
+
+<section class="ds" id="s51">
+  <div class="sec-top"><span class="badge-n">Schema 49</span><span class="badge-l">L. 26</span></div>
+  <h2>Dal datore delle forme alla profezia</h2>
+  <p class="desc">La profezia avicenniana è naturalistica: nasce dalla massima preparazione dell’intelletto umano alla ricezione dall’intelletto agente.</p>
+  <div class="s51-layout">
+    <div class="s51-process-panel"><div class="s51-section-h">Processo epistemologico-profetico</div><div class="s51-flow"><div class="s51-step"><div class="s51-step-icon">📡</div><div><div class="s51-step-title">Datore delle forme</div><div class="s51-step-term">wahib al-suwar / Dator formarum</div><p>La decima intelligenza emana forme verso la natura e verso gli intelletti umani quando vi è preparazione.</p></div></div><div class="s51-arrow">↓</div><div class="s51-step"><div class="s51-step-icon">🧲</div><div><div class="s51-step-title">Preparazione</div><div class="s51-step-term">isti‘dad</div><p>L’intelletto umano non produce da sé gli intelligibili: pensare significa connettersi all’intelletto agente, come a un cloud sempre disponibile.</p></div></div><div class="s51-arrow">↓</div><div class="s51-step"><div class="s51-step-icon">⚡</div><div><div class="s51-step-title">Intelletto santo</div><div class="s51-step-term">al-‘aql al-qudsi</div><p>È il grado supremo della preparazione: appartiene al genere dell’intelletto in habitu, ma in forma sublime e non comune.</p></div></div><div class="s51-arrow">↓</div><div class="s51-step"><div class="s51-step-icon">🔆</div><div><div class="s51-step-title">Profezia</div><div class="s51-step-term">ricezione quasi d’un colpo</div><p>Il profeta riceve dall’intelletto agente una certezza dimostrativa senza percorrere discorsivamente tutti i passaggi.</p></div></div><div class="s51-arrow">↓</div><div class="s51-step"><div class="s51-step-icon">🗣️</div><div><div class="s51-step-title">Mediazione immaginativa</div><div class="s51-step-term">verità in immagini verbali e sensibili</div><p>Maometto traduce verità intelligibili in forme udibili, visive e persuasive: chi ha visto la luce torna nella caverna.</p></div></div></div></div>
+    <div class="s51-side-panel"><div class="s51-section-h">Intuizione, garanzie e retorica</div><div class="s51-hads-box"><div class="s51-hads-title">Continuum dello <em>hads</em>: intuire il termine medio</div><div class="s51-continuum"><div class="s51-continuum-item s51-continuum-low"><div class="s51-continuum-lbl">Nessuna intuizione</div><div class="s51-continuum-desc">Il soggetto non coglie direttamente i nessi dimostrativi.</div></div><div class="s51-continuum-item s51-continuum-mid"><div class="s51-continuum-lbl">Scienziato</div><div class="s51-continuum-desc">Coglie alcuni termini medi con rapidità e competenza.</div></div><div class="s51-continuum-item s51-continuum-high"><div class="s51-continuum-lbl">Profeta</div><div class="s51-continuum-desc">Riceve quasi d’un colpo l’ordine intelligibile.</div></div></div></div><div class="s51-compare"><div class="s51-culture-card s51-culture-islam"><div class="s51-culture-title">🌙 Mondo islamico</div><p>Retorica e poetica sono inglobate nell’Organon: servono a persuadere e mediare la verità per chi non accede alla dimostrazione pura.</p></div><div class="s51-culture-card s51-culture-latin"><div class="s51-culture-title">⛪ Mondo latino</div><p>Sigieri e Tommaso diffidano delle immagini in filosofia e teologia, perché l’immagine è ambigua rispetto al concetto.</p></div></div><div class="s51-guarantees"><div class="s51-guarantee"><strong>Garanzia antidualistica:</strong> le stesse forme ordinano natura e intelletto; non c’è frattura tra pensiero e mondo.</div><div class="s51-guarantee"><strong>Garanzia intersoggettiva:</strong> gli intelligibili sono gli stessi per tutti; Averroè radicalizzerà questa linea con l’intelletto possibile unico.</div><div class="s51-guarantee"><strong>Paralleli:</strong> Agostino, Frege, Kant, Campanella e Leibniz aiutano a chiarire il modello, ma in Avicenna il principio è una mente eterna creata, non Dio.</div></div></div>
+  </div>
+  <div class="insight"><div class="insight-lbl">Punto chiave</div><p>La profezia non interrompe la natura: è il vertice della natura intellettuale. Il profeta non possiede un sapere irrazionale, ma una <strong>rapidità intuitiva suprema</strong> e la capacità di tradurla in immagini efficaci.</p></div>
+</section>
+
+<section class="ds" id="s52">
+  <div class="sec-top"><span class="badge-n">Schema 50</span><span class="badge-l">L. 26</span></div>
+  <h2>Uomo sospeso: sostanzialità dell’anima e verità unica</h2>
+  <p class="desc">L’esperimento dell’homo volans mostra che il sé resta affermabile anche sopprimendo ogni condizione corporea; la ricezione latina dovrà integrare questa tesi con l’anima forma del corpo.</p>
+  <div class="s52-layout">
+    <div class="s52-argument"><div class="s52-section-h">Argomento di soppressione</div><div class="s52-scenario"><div class="s52-condition"><div class="s52-condition-icon">✨</div><div class="s52-condition-lbl">Creato istantaneamente</div></div><div class="s52-condition"><div class="s52-condition-icon">🙈</div><div class="s52-condition-lbl">Occhi velati</div></div><div class="s52-condition"><div class="s52-condition-icon">🪶</div><div class="s52-condition-lbl">Sospeso nel vuoto</div></div><div class="s52-condition"><div class="s52-condition-icon">✋</div><div class="s52-condition-lbl">Membra senza contatto</div></div></div><div class="s52-map"><div class="s52-map-row"><div class="s52-map-num">1</div><div><div class="s52-map-title">Soppressione del corpo esperito</div><p>Si eliminano vista, tatto, contatto tra membra e orientamento corporeo: l’individuo non afferma il proprio corpo.</p></div></div><div class="s52-map-row"><div class="s52-map-num">2</div><div><div class="s52-map-title">Certezza immediata del sé</div><p>L’uomo sospeso afferma senza dubbio la propria esistenza: “io sono”, anche senza percepire alcun organo.</p></div></div><div class="s52-map-row"><div class="s52-map-num">3</div><div><div class="s52-map-title">Differenza tra affermato e non affermato</div><p>Ciò che è affermato con certezza è diverso da ciò che non è affermato: il sé non coincide con corpo e membra.</p></div></div><div class="s52-map-row"><div class="s52-map-num">4</div><div><div class="s52-map-title">Conclusione avicenniana</div><p>L’anima è sostanza incorporea: non è riducibile alla struttura organica, contro Aristotele, Alessandro e Al-Farabi.</p></div></div></div></div>
+    <div class="s52-side"><div class="s52-distinction"><div class="s52-box-title">🧠 Non è il cogito cartesiano</div><p class="s52-box-text">Cartesio cerca la certezza del soggetto pensante; Avicenna vuole mostrare la sostanzialità incorporea dell’anima.</p><div class="s52-two-col"><div class="s52-mini"><div class="s52-mini-title">Cartesio</div><p>Certezza del pensiero come fondamento.</p></div><div class="s52-vs">≠</div><div class="s52-mini"><div class="s52-mini-title">Avicenna</div><p>Distinzione reale tra anima e corpo.</p></div></div></div><div class="s52-truth"><div class="s52-box-title">📖 Verità unica, non doppia verità</div><p class="s52-box-text">Nessun medievale sostiene davvero due verità contraddittorie. Il problema è chi deve cedere quando dimostrazione e testo sacro sembrano urtare.</p><div class="s52-truth-row"><div class="s52-truth-cell"><strong>Latini:</strong> nel paradigma Galilei-Bellarmino cede la pretesa realista della filosofia naturale.</div><div class="s52-truth-arrow">↔</div><div class="s52-truth-cell"><strong>Arabi:</strong> in Avicenna e poi in Averroè l’ermeneutica del testo si adatta alla dimostrazione.</div></div></div><div class="s52-latin"><div class="s52-box-title">⛪ Ricezione latina</div><p class="s52-box-text">L’homo volans è problematico per i cristiani: Tommaso mantiene l’anima come forma del corpo, ma le riconosce la capacità di sussistere separata.</p><span class="s52-latin-pill">debito verso la falsafa</span></div></div>
+  </div>
+  <div class="insight"><div class="insight-lbl">Punto chiave</div><p>L’uomo sospeso non dimostra semplicemente che “penso”: mostra che il sé è afferrato anche senza corpo percepito. Per Avicenna questo basta a indicare la <strong>sostanzialità incorporea dell’anima</strong>.</p></div>
+</section>
+
 <!-- FOOTER -->
 <div style="padding:2rem 3.5rem;background:var(--surface);border-top:1px solid var(--border);font-size:0.78rem;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
 <div>
 <div style="font-family:var(--font-h);color:var(--cream);font-size:0.85rem;margin-bottom:0.2rem;">Filosofia Medievale Araba ed Ebraica</div>
-<div style="font-style:italic;"><span class="schema-count-var">47</span> schemi visivi · Lezioni 01–<span class="ultima-lezione-var">25</span> · Università degli Studi di Milano</div>
+<div style="font-style:italic;"><span class="schema-count-var">50</span> schemi visivi · Lezioni 01–<span class="ultima-lezione-var">26</span> · Università degli Studi di Milano</div>
 </div>
 <div style="font-style:italic;color:var(--muted2);">davide.prando@studenti.unimi.it</div>
 </div>
@@ -14359,8 +14511,8 @@ if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
 // Mobile toggle
 const mobThemeBtn = document.getElementById('mob-theme-toggle');
 if (mobThemeBtn) mobThemeBtn.addEventListener('click', toggleTheme);
-const ULTIMA_LEZIONE = 25;
-const TOTAL_SCHEMAS = 47;
+const ULTIMA_LEZIONE = 26;
+const TOTAL_SCHEMAS = 50;
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".ultima-lezione-var").forEach(el => {
