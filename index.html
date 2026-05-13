@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Schemi — Filosofia Medievale Araba ed Ebraica (Lez. 1–26)</title>
+<title>Schemi — Filosofia Medievale Araba ed Ebraica (Lez. 1–28)</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -355,6 +355,14 @@ body {
 
 .hero h1 em { color: var(--gold-l); font-style: italic; }
 
+.hero-prof {
+  font-family: var(--font-h);
+  font-size: 0.98rem;
+  color: var(--gold-t);
+  margin: -0.15rem 0 0.85rem;
+  letter-spacing: 0.02em;
+}
+
 .hero-sub {
   font-size: 1.08rem;
   color: var(--muted2);
@@ -437,7 +445,8 @@ body {
 .insight {
   margin-top: 2rem;
   padding: 0.9rem 1.25rem;
-  background: rgba(201,151,58,0.06);
+  background: var(--surface2);
+  border: 1px solid var(--border);
   border-left: 3px solid var(--gold);
   border-radius: 0 var(--r-sm) var(--r-sm) 0;
 }
@@ -9644,10 +9653,10 @@ em; }
 .s50-thesis { padding: 0.75rem 0.9rem; border-radius: var(--r-sm); background: rgba(0,0,0,0.13); border: 1px solid var(--border); color: var(--card-text); font-size: 0.9rem; line-height: 1.55; }
 .s50-pill-row { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.85rem; }
 .s50-pill { display: inline-flex; align-items: center; gap: 0.25rem; font-family: var(--font-h); font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.06em; border-radius: 999px; padding: 0.16rem 0.52rem; }
-.s50-pill-danger { background: rgba(139,24,24,0.18); color: var(--danger-l); border: 1px solid rgba(139,24,24,0.38); }
-.s50-pill-success { background: rgba(45,107,74,0.18); color: var(--green-t); border: 1px solid rgba(45,107,74,0.42); }
-.s50-pill-gold { background: rgba(201,151,58,0.14); color: var(--gold-l); border: 1px solid rgba(201,151,58,0.42); }
-.s50-pill-blue { background: rgba(45,84,160,0.15); color: var(--blue-t); border: 1px solid rgba(45,84,160,0.42); }
+.s50-pill-danger { background: var(--surface3); color: var(--card-text); border: 1px solid var(--danger-l); }
+.s50-pill-success { background: var(--surface3); color: var(--card-text); border: 1px solid var(--green-t); }
+.s50-pill-gold { background: var(--surface3); color: var(--card-text); border: 1px solid var(--gold-l); }
+.s50-pill-blue { background: var(--surface3); color: var(--card-text); border: 1px solid var(--blue-t); }
 .s50-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--r); border: 1px solid var(--border); }
 .s50-table { width: 100%; min-width: 760px; border-collapse: collapse; background: var(--surface2); }
 .s50-table th { font-family: var(--font-h); font-size: 0.78rem; text-align: left; padding: 0.7rem 0.85rem; border-bottom: 2px solid var(--border); background: var(--surface3); color: var(--cream); }
@@ -9740,6 +9749,93 @@ em; }
   .s52-vs, .s52-truth-arrow { padding: 0.15rem 0; }
 }
 
+
+  /* === S51 === */
+  .snew51-layout { display: flex; flex-direction: column; gap: 2rem; margin-bottom: 1.5rem; }
+  .snew51-flow { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+  .snew51-step { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); padding: 1.5rem; text-align: center; width: 45%; }
+  .snew51-step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--gold); color: var(--bg); font-weight: bold; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem; font-family: var(--font-h); }
+  .snew51-step-label { font-family: var(--font-h); font-weight: bold; color: var(--cream); font-size: 1.1rem; margin-bottom: 0.5rem; }
+  .snew51-step-desc { font-size: 0.85rem; color: var(--muted2); }
+  .snew51-arrow { color: var(--gold); font-size: 2rem; }
+  .snew51-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .snew51-card { background: rgba(139, 90, 26, 0.1); border: 1px solid var(--arab); border-radius: var(--r); padding: 1.5rem; }
+  .snew51-card-title { font-family: var(--font-h); font-weight: bold; color: var(--arab-l); margin-bottom: 0.5rem; font-size: 1.1rem; }
+  .snew51-card-text { font-size: 0.9rem; color: var(--muted2); }
+
+  /* === S52 === */
+  .snew52-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem; margin-bottom: 1.5rem; }
+  .snew52-era-hdr { font-family: var(--font-h); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; color: var(--arab-l); border-bottom: 1px solid var(--arab); padding-bottom: 0.5rem; }
+  .snew52-grid { display: flex; flex-direction: column; gap: 1rem; }
+  .snew52-card { display: flex; align-items: stretch; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; }
+  .snew52-card.nd { border-left: 4px solid var(--danger); }
+  .snew52-card-num { background: rgba(139, 24, 24, 0.15); color: var(--danger-l); font-family: var(--font-h); font-size: 1.5rem; font-weight: bold; padding: 1rem; display: flex; align-items: center; justify-content: center; width: 60px; }
+  .snew52-card-content { padding: 1rem; flex: 1; }
+  .snew52-card-title { font-family: var(--font-h); font-size: 1.1rem; color: var(--cream); margin-bottom: 0.5rem; font-weight: bold; }
+  .snew52-card-pos, .snew52-card-crit { font-size: 0.85rem; color: var(--muted2); margin-bottom: 0.2rem; }
+  .snew52-conn-box { background: var(--surface2); border: 1px solid var(--gold-t); border-left: 4px solid var(--gold); border-radius: var(--r); padding: 1.5rem; height: 100%; }
+  .snew52-conn-hdr { font-family: var(--font-h); font-weight: bold; color: var(--gold-l); margin-bottom: 1rem; font-size: 1.2rem; text-align: center; border-bottom: 1px solid var(--gold-d); padding-bottom: 0.5rem; }
+  .snew52-conn-text { font-size: 0.95rem; color: var(--card-text); line-height: 1.6; }
+
+  /* === S53 === */
+  .snew53-hierarchy { display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem; }
+  .snew53-level { width: 100%; max-width: 600px; padding: 1.5rem; border: 1px solid var(--border); border-radius: var(--r); background: linear-gradient(135deg, rgba(45, 84, 160, 0.1), var(--surface2)); text-align: center; border-left: 4px solid var(--latin-l); }
+  .snew53-level-title { font-family: var(--font-h); font-size: 1.2rem; color: var(--cream); font-weight: bold; margin-bottom: 0.5rem; }
+  .snew53-level-desc { font-size: 0.9rem; color: var(--muted2); }
+  .snew53-arrow-down { width: 2px; height: 30px; background: var(--latin-l); position: relative; }
+  .snew53-arrow-down::after { content: '▼'; position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%); color: var(--latin-l); font-size: 0.8rem; }
+
+  /* === S54 === */
+  .snew54-layout { display: flex; flex-direction: column; gap: 2rem; margin-bottom: 1.5rem; }
+  .snew54-axiom { text-align: center; font-family: var(--font-h); font-size: 1.3rem; color: var(--gold-l); padding: 1rem; border: 1px solid var(--gold-d); background: rgba(201, 151, 58, 0.1); border-radius: var(--r); font-weight: bold; }
+  .snew54-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; }
+  .snew54-card { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); padding: 1.5rem; text-align: center; }
+  .snew54-card-cond { font-family: var(--font-h); font-size: 1.1rem; color: var(--cream); margin-bottom: 0.8rem; font-weight: bold; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+  .snew54-card-act { font-size: 0.9rem; color: var(--muted2); }
+  .snew54-tawil { background: var(--surface2); border: 1px solid var(--latin-l); border-left: 4px solid var(--latin-l); border-radius: var(--r); padding: 1.5rem; text-align: center; }
+  .snew54-tawil-title { font-family: var(--font-h); font-size: 1.2rem; color: var(--latin-l); font-weight: bold; margin-bottom: 0.5rem; }
+  .snew54-tawil-desc { font-size: 0.95rem; color: var(--card-text); }
+
+  /* === S55 === */
+  .snew55-cardgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-bottom: 1.5rem; }
+  .snew55-card { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); padding: 1.15rem; border-top: 4px solid var(--gold-t); }
+  .snew55-card-masse { border-top-color: var(--muted2); }
+  .snew55-card-teologi { border-top-color: var(--danger-l); }
+  .snew55-card-filosofi { border-top-color: var(--gold-l); }
+  .snew55-class { font-family: var(--font-h); font-size: 1.08rem; color: var(--cream); font-weight: 700; line-height: 1.2; }
+  .snew55-sub { font-size: 0.78rem; color: var(--muted2); font-style: italic; margin: 0.15rem 0 0.9rem; }
+  .snew55-row { display: grid; grid-template-columns: 68px 1fr; gap: 0.55rem; padding: 0.45rem 0; border-top: 1px solid var(--border); align-items: start; }
+  .snew55-row span { font-family: var(--font-h); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold-t); }
+  .snew55-row strong { color: var(--card-text); font-size: 0.88rem; line-height: 1.35; font-weight: 600; }
+  .snew55-access { margin-top: 0.85rem; padding: 0.65rem; border-radius: var(--r-sm); background: var(--surface3); color: var(--card-text); font-size: 0.86rem; line-height: 1.45; }
+
+  /* === S56 === */
+  .snew56-timeline { display: flex; gap: 0; border-radius: var(--r); overflow: hidden; border: 1px solid var(--border); margin-bottom: 1.5rem; }
+  .snew56-phase { flex: 1; padding: 1.75rem 1.5rem; transition: flex 0.3s; cursor: default; position: relative; background: var(--surface2); }
+  .snew56-phase:hover { flex: 1.1; background: var(--surface3); }
+  .phase-1::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--muted); }
+  .phase-2::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--latin); }
+  .phase-3::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gold-l); }
+  .snew56-phase-title { font-family: var(--font-h); font-size: 1.1rem; color: var(--cream); font-weight: bold; margin-bottom: 0.5rem; }
+  .snew56-phase-pos { font-size: 0.95rem; color: var(--gold-t); margin-bottom: 0.8rem; font-weight: bold; }
+  .snew56-phase-desc { font-size: 0.85rem; color: var(--muted2); }
+
+  /* === S57 === */
+  .snew57-layout { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 1.5rem; }
+  .snew57-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .snew57-card { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); padding: 1.5rem; border-top: 4px solid var(--gold-t); }
+  .snew57-card-title { font-family: var(--font-h); font-size: 1.1rem; color: var(--cream); font-weight: bold; margin-bottom: 0.8rem; }
+  .snew57-card-text { font-size: 0.9rem; color: var(--muted2); line-height: 1.5; }
+  .snew57-doppio-sogg { background: var(--surface2); border: 1px solid var(--gold-t); border-left: 4px solid var(--gold); border-radius: var(--r); padding: 1.5rem; text-align: center; }
+  .snew57-ds-title { font-family: var(--font-h); font-size: 1.2rem; color: var(--gold-l); font-weight: bold; margin-bottom: 0.8rem; }
+  .snew57-ds-desc { font-size: 0.95rem; color: var(--card-text); max-width: 800px; margin: 0 auto; }
+
+  @media (max-width: 768px) {
+    .snew51-flow, .snew51-grid, .snew52-layout, .snew54-grid, .snew55-cardgrid, .snew56-timeline, .snew57-grid { flex-direction: column; grid-template-columns: 1fr; }
+    .snew51-step { width: 100%; }
+    .snew51-arrow { transform: rotate(90deg); }
+  }
+
 </style>
 </head>
 <body>
@@ -9751,7 +9847,7 @@ em; }
 <div class="sb-logo">
 <div class="eyebrow">Università degli Studi di Milano</div>
 <div class="title">Filosofia Medievale<br/>Araba ed Ebraica</div>
-<div class="sub">Schemi delle lezioni 1–<span class="ultima-lezione-var">26</span></div>
+<div class="sub">Schemi delle lezioni 1–<span class="ultima-lezione-var">28</span></div>
 </div>
 <div class="theme-toggle-wrap">
 <button aria-label="Cambia tema" class="theme-toggle" id="theme-toggle">
@@ -9809,23 +9905,32 @@ em; }
           <li class="nav-item"><a href="#s49"><span class="nav-num">47</span>Avicenna: gradi dell’intelletto</a></li>
           <li class="nav-item"><a href="#s50"><span class="nav-num">48</span>Al-Farabi vs Avicenna</a></li>
           <li class="nav-item"><a href="#s51"><span class="nav-num">49</span>Datore delle forme e profezia</a></li>
-          <li class="nav-item"><a href="#s52"><span class="nav-num">50</span>Uomo sospeso e verità unica</a></li></ul>
+          <li class="nav-item"><a href="#s52"><span class="nav-num">50</span>Uomo sospeso e verità unica</a></li>
+    <li class="nav-item"><a href="#snew52"><span class="nav-num">51</span>La critica di Al-Ghazali ai Falasifa</a></li>
+    <li class="nav-item"><a href="#snew53"><span class="nav-num">52</span>Il Trattato decisivo (Fasl al-Maqal)</a></li>
+    <li class="nav-item"><a href="#snew54"><span class="nav-num">53</span>Il rifiuto della doppia verità</a></li>
+    <li class="nav-item"><a href="#snew55"><span class="nav-num">54</span>La tripartizione epistemologica</a></li>
+    <li class="nav-item"><a href="#snew56"><span class="nav-num">55</span>L'evoluzione dell'Intelletto Potenziale in Averroè</a></li>
+    <li class="nav-item"><a href="#snew57"><span class="nav-num">56</span>Gli argomenti per il Monopsichismo</a></li>
+
+</ul>
 <div class="sb-footer">
     Corso: <em>Che cosa significa pensare?</em><br/>
-    Lezioni 1–26 · Avicenna: intelletto, datore delle forme, profezia e sostanzialità dell’anima
+    Lezioni 1–28 · Avicenna, Al-Ghazali e Averroè: intelletto, profezia, filosofia e religione
   </div>
 </aside>
 <!-- ════ MAIN ════ -->
 <main class="main">
 <!-- ──── HERO ──── -->
 <div class="hero">
-<div class="hero-pill"><span class="schema-count-var">50</span> schemi del corso</div>
+<div class="hero-pill"><span class="schema-count-var">56</span> schemi del corso</div>
 <h1>Filosofia Medievale<br/><em>Araba ed Ebraica</em></h1>
-  <div class="hero-sub">Schemi visivi per le lezioni 1–<span class="ultima-lezione-var">26</span> — dalla trasmissione aristotelica alla psicologia avicenniana: <em>falsafa</em>, intelletto acquisito, datore delle forme, profezia e <em>homo volans</em></div>
+<p class="hero-prof">Corso del Prof. Pasquale Porro</p>
+  <div class="hero-sub">Schemi visivi per le lezioni 1–<span class="ultima-lezione-var">28</span> — dalla trasmissione aristotelica alla filosofia araba: <em>falsafa</em>, Avicenna, Al-Ghazali, Averroè, intelletto e rapporto tra dimostrazione e rivelazione</div>
 <div class="hero-meta">
 <span>Università degli Studi di Milano</span>
 <span>A.A. 2025–2026</span>
-<span><span class="ultima-lezione-var">26</span> lezioni · <span class="schema-count-var">50</span> schemi visivi</span>
+<span><span class="ultima-lezione-var">28</span> lezioni · <span class="schema-count-var">56</span> schemi visivi</span>
 </div>
 <div class="hero-line"></div>
 </div>
@@ -10761,8 +10866,8 @@ em; }
 <p class="desc">Nel capitolo 5 del Libro III del De Anima, Aristotele tratteggia rapidamente, in modo enigmatico, le caratteristiche dell'intelletto produttivo (o agente), in netta opposizione all'intelletto potenziale.</p>
 
 <div class="s2-versus">
-  <div class="s2-col">
-    <div class="s2-col-hdr bios">Intelletto Potenziale<br><span style="font-size:0.72rem;font-weight:400;">Passivo · Materiale</span></div>
+    <div class="s2-col">
+      <div class="s2-col-hdr bios">Intelletto Potenziale<br><span style="font-size:0.72rem;font-weight:400;">Ricettivo · Materiale</span></div>
     <div class="s2-rows">
       <div class="s2-row">
         <div class="s2-row-lbl">Causalità</div>
@@ -10778,7 +10883,7 @@ em; }
       </div>
       <div class="s2-row">
         <div class="s2-row-lbl">Natura</div>
-        <div class="s2-row-val">Corruttibile — legato all'individuo biologico e alla materia</div>
+        <div class="s2-row-val">Impassibile e non mescolato: ricettivo rispetto a tutti gli intelligibili, senza natura corporea determinata</div>
       </div>
     </div>
   </div>
@@ -10961,7 +11066,7 @@ em; }
 <div class="s12-level s12-level-divine">
 <div class="s12-level-name">Intelletto produttivo / agente</div>
 <div class="s12-level-greek">nous poietikos / nous thyrathen</div>
-<div class="s12-level-desc">Identificato con <strong>DIO</strong> (Causa Prima, Motore Immobile). Sostanza separata, unica, sempre in atto. Illumina dall'esterno gli intelletti materiali.</div>
+<div class="s12-level-desc">Identificato con <strong>DIO</strong> (Causa Prima, Motore Immobile). Sostanza separata, unica, sempre in atto. Nel <em>De Intellectu</em> attualizza dall'esterno l'intelletto materiale/potenziale; nel <em>De Anima</em> maturo diventa soprattutto il fine divino pensato.</div>
 <div class="s12-pills">
 <span class="s12-pill s12-pill-green">Separato</span>
 <span class="s12-pill s12-pill-blue">Unico</span>
@@ -11012,7 +11117,7 @@ em; }
 <div class="s12-metaphor-card">
 <span class="s12-metaphor-icon">☀️</span>
 <div class="s12-metaphor-name">Luce solare</div>
-<div class="s12-metaphor-text">L'intelletto agente (Dio) è come il sole: <strong>illumina dall'esterno</strong> i phantasmata nell'immaginazione, rendendo intelligibile ciò che era solo potenzialmente tale.</div>
+<div class="s12-metaphor-text">L'intelletto agente (Dio) è come il sole: per Alessandro non illumina direttamente i <em>phantasmata</em>, ma nel <em>De Intellectu</em> rende capace l'intelletto potenziale, come la luce rende attiva la vista.</div>
 </div>
 </div>
 <!-- ── Sezione 3: Conseguenze per l'immortalita ── -->
@@ -11073,8 +11178,8 @@ em; }
 <div class="s8-step">
 <div class="s8-step-icon">📋</div>
 <div class="s8-step-name">Intelletto in Potenza</div>
-<div class="s8-step-lat">= i colori nel buio</div>
-<div class="s8-step-note">attualizzato dall'IA</div>
+<div class="s8-step-lat">= la vista / l'occhio</div>
+<div class="s8-step-note">soggetto ricettivo attualizzato; non l'oggetto illuminato</div>
 </div>
 <div class="s8-arrow-cell">→</div>
 <div class="s8-step">
@@ -11090,7 +11195,7 @@ em; }
 </div>
 </div>
 <div class="s8-luce-label">
-<span class="s8-luce-badge">⚡ L'analogia della luce — Aristotele, De Anima III.5: «come la luce rende in atto i colori che sono in potenza»</span>
+<span class="s8-luce-badge">⚡ L'analogia della luce — colori = oggetti intelligibili in potenza; vista/occhio = intelletto potenziale; luce = intelletto agente</span>
 </div>
 <!-- INTERPRETAZIONI -->
 <div class="s8-interp-hdr mt-md">Le quattro interpretazioni dell'intelletto agente</div>
@@ -11098,8 +11203,8 @@ em; }
 <div class="s8-interp-card s8-greek">
 <div class="s8-ia-name">Alessandro di Afrodisia</div>
 <div class="s8-ia-pos">
-        L'IA = <strong>Dio stesso</strong>, il Primo Motore Immobile. Unica sostanza separata per tutto l'universo.<br/>
-        L'intelletto materiale = solo una disposizione corporea (<em>epitēdeiotes</em>), non una sostanza.
+        L'IA = <strong>Dio stesso</strong>, il Primo Motore Immobile. Nel <em>De Intellectu</em> attualizza l'intelletto materiale/potenziale, non direttamente i <em>phantasmata</em>.<br/>
+        Nel <em>De Anima</em> maturo l'intelletto produttivo diventa soprattutto l'intelligibile divino pensato, fine della conoscenza.
       </div>
 <div class="s8-ia-cons">Nessuna immortalità individuale. «Divinizzazione a tempo»: siamo immortali solo mentre pensiamo forme immortali.</div>
 </div>
@@ -11113,7 +11218,7 @@ em; }
 <div class="s8-interp-card s8-arab2">
 <div class="s8-ia-name">Avicenna (e, sul piano cosmologico, anche Al-Fārābī)</div>
 <div class="s8-ia-pos">
-        L'IA = <strong>Decima Intelligenza separata</strong>, «Dator Formarum» (Donatore di Forme). Ultima delle gerarchie celesti neoplatoniche, governa il mondo sublunare. Questa identificazione è pienamente avicenniana; in Al-Fārābī il quadro cosmologico è vicino, ma le lezioni 18–19 complicano il ruolo dell'agente nel processo conoscitivo.
+        L'IA = <strong>Decima Intelligenza separata</strong>. L'identificazione cosmologica è formulata esplicitamente già da Al-Fārābī; Avicenna la sistematizza come «Dator Formarum» (Donatore di Forme). Ultima delle gerarchie celesti neoplatoniche, governa il mondo sublunare.
       </div>
 <div class="s8-ia-cons">Sintesi aristotelico-neoplatonica: le intelligenze procedono per emanazione necessaria dal Primo Principio.</div>
 </div>
@@ -11209,7 +11314,7 @@ em; }
 <div class="s14-level s14-level-2">
 <div class="s14-level-name">Intelletto potenziale / come abito</div>
 <div class="s14-level-greek">nous dynamei / kath'hexin</div>
-<div class="s14-level-desc">Una <strong>forma</strong> con realta ontologica propria (non puro nulla come in Alessandro). Proprieta essenziale: ricettivita universale. Non mescolato col corpo, senza organo corporeo. Deposito dei <em>phantasmata</em>. Puo passare allo stato abituale quando riceve le forme intelligibili.</div>
+<div class="s14-level-desc">Una <strong>forma</strong> con realta ontologica propria (non puro nulla come in Alessandro). Proprieta essenziale: ricettivita universale. Non mescolato col corpo, senza organo corporeo. Riceve le forme intelligibili rese attuali a partire dal materiale sensibile elaborato nei <em>phantasmata</em>. Puo passare allo stato abituale quando riceve le forme intelligibili.</div>
 <div class="s14-pills">
 <span class="s14-pill s14-pill-gold">Forma attiva</span>
 <span class="s14-pill s14-pill-blue">Ricettivita universale</span>
@@ -11233,7 +11338,7 @@ em; }
 <div class="s14-metaphor-box">
 <span class="s14-metaphor-icon">🏺</span>
 <div class="s14-metaphor-name">La cantina (deposito)</div>
-<div class="s14-metaphor-text">L'intelletto potenziale e una cantina che conserva le materie prime (<em>phantasmata</em>). L'intelletto agente «scende nella cantina», prende cio che serve e forma l'intelligibile.</div>
+<div class="s14-metaphor-text">La metafora del deposito indica il materiale sensibile come materia del pensiero: le immagini sensibili sono potenzialmente intelligibili, e l'intelletto agente si unifica con il potenziale per formare l'intelligibile in atto.</div>
 </div>
 <div class="s14-metaphor-box">
 <span class="s14-metaphor-icon">🔨</span>
@@ -11250,8 +11355,8 @@ em; }
 <div class="s14-identity-box">
 <div class="s14-identity-content">In Temistio il problema resta <strong>aperto</strong>: da un lato il docente insiste che l'io empirico coincide con l'intelletto comune/passivo («siamo noi che amiamo, odiamo, ricordiamo»), dall'altro emerge anche la formula per cui «noi siamo l'intelletto attivo» in quanto essenza. Proprio questa oscillazione rende incerto che cosa, in senso stretto, sopravviva davvero.</div>
 <div class="s14-identity-question">
-<div class="s14-identity-question-label">Domanda aperta</div>
-      L'intelletto passivo e la stessa cosa dell'intelletto potenziale? Temistio introduce questa distinzione terminologica, ma non e chiaro se sia una mera variazione lessicale o indichi una vera differenza concettuale.
+<div class="s14-identity-question-label">Distinzione decisiva</div>
+      L'intelletto passivo <strong>non</strong> e la stessa cosa dell'intelletto potenziale: e l'intelletto comune, corruttibile e individuale, radicato nel composto ilemorfico, cui appartengono memoria, amore, odio e riflessione sulle cose di quaggiu.
     </div>
 </div>
 <!-- SEZIONE 4: Conseguenze per l'immortalita -->
@@ -11319,7 +11424,7 @@ em; }
           </td>
 <td>
 <span class="s9-pill" style="background:rgba(139,90,26,0.15);color:var(--arab-l);border:1px solid var(--arab);">lettura immanente, ma aperta</span><br/>
-            Temistio spinge verso una lettura immanente: «artigiano interno alla materia» che scende nel deposito di fantasmi e forma gli intelligibili dall'interno. La lezione, però, lascia aperto se ciò basti a farne senza residui una facoltà individuale.
+            Temistio spinge verso una lettura immanente: «artigiano interno alla materia» che opera sul materiale fornito dai fantasmi e forma gli intelligibili dall'interno. La lezione, però, lascia aperto se ciò basti a farne senza residui una facoltà individuale.
           </td>
 </tr>
 <tr>
@@ -11331,7 +11436,7 @@ em; }
             Distinto dall'intelletto materiale: è la disposizione stabile acquisita dopo l'apprendimento. Lo stato in cui la potenza diventa una capacità esercitabile a piacere.
           </td>
 <td>
-            Intelletto potenziale che ha ricevuto le forme: «deposito di concetti». Contiene i fantasmi come «materia» che l'intelletto agente deve ancora elaborare pienamente.
+            Intelletto potenziale che ha ricevuto le forme: «deposito di concetti» o abito intelligibile. I fantasmi rimangono il materiale sensibile predisposto, non contenuti immagazzinati direttamente nell'intelletto potenziale.
           </td>
 </tr>
 <tr>
@@ -11552,7 +11657,7 @@ em; }
 <div class="s19-cosmo-item"><strong>Deferente (eccentrico)</strong> — sfera principale eccentrica rispetto alla Terra</div>
 <div class="s19-cosmo-item"><strong>Epiciclo</strong> — sfera minore che ruota sulla superficie del deferente; il pianeta vi è incastonato</div>
 <div class="s19-cosmo-item"><strong>9ª sfera (aggiunta araba)</strong> — invisibile, spiega la precessione degli equinozi (~1° ogni 100 anni → Grande Anno di 36.000 anni)</div>
-<div class="s19-cosmo-item" style="margin-top:0.4rem;font-style:italic;color:var(--muted2);font-size:0.77rem;">La Terra non è letteralmente al centro — è spostata. Il «centro» è un punto matematico. Essere al centro non è privilegio: la nobiltà aumenta verso le sfere esterne.</div>
+<div class="s19-cosmo-item" style="margin-top:0.4rem;font-style:italic;color:var(--muted2);font-size:0.77rem;">La Terra resta geostatica nel quadro geocentrico; nel modello tolemaico, però, alcuni centri geometrici dei moti/deferenti sono eccentrici. Essere al centro non è privilegio: la nobiltà aumenta verso le sfere esterne.</div>
 </div>
 <div class="s19-cosmo-card">
 <div class="s19-cosmo-hdr">I cieli dal centro verso l'esterno</div>
@@ -11993,17 +12098,17 @@ em; }
     <div class="s39-name">Alessandro di Afrodisia</div>
     <div class="s39-era">peripatetico greco · II–III sec. d.C. · <em>De anima</em>, <em>De intellectu</em></div>
     <div class="s39-q">Chi compie l'astrazione delle forme?</div>
-    <div class="s39-a">L'<strong>intelletto agente esterno</strong>. L'intelletto potenziale è pura disposizione passiva — non la tavoletta, ma il «<em>non-essere-scritto</em>» della tavoletta.</div>
-    <div class="s39-meta">L'intelletto potenziale dipende addirittura dalla <em>complessione corporea</em>: è mera disposizione ricettiva, che <strong>aspetta</strong> di essere attivata dal contatto con l'intelletto agente (identificato con Dio / nous thyrathen). Senza quel contatto non si muove.</div>
-    <div class="s39-cons">Conseguenza: l'attività intellettiva umana è radicalmente <em>dipendente</em> da un principio esterno; l'immortalità è fluttuante (quando penso cose immortali, sono immortale; quando smetto, ritorno mortale).</div>
+    <div class="s39-a">Non l'intelletto agente esterno: l'astrazione spetta all'<strong>intelletto materiale/potenziale quando diventa intelletto in abito</strong>.</div>
+    <div class="s39-meta">L'intelletto potenziale dipende dalla <em>complessione corporea</em> ed è pura disposizione; nel <em>De Intellectu</em> l'agente divino lo attualizza, mentre nel <em>De Anima</em> maturo l'intelletto produttivo è soprattutto il fine pensato, non il primo operatore dell'astrazione.</div>
+    <div class="s39-cons">Conseguenza: l'attività intellettiva resta mortalista e non garantisce una facoltà personale separata; l'immortalità è fluttuante, legata all'atto di pensare ciò che è immortale.</div>
   </div>
   <div class="s39-sep">≠</div>
   <div class="s39-side s39-fara">
     <div class="s39-name">Al-Fārābī</div>
     <div class="s39-era">falsafa araba · X sec. · <em>Risāla fī al-'Aql</em></div>
     <div class="s39-q">Chi compie l'astrazione delle forme?</div>
-    <div class="s39-a">L'<strong>intelletto potenziale stesso</strong>. Non aspetta di essere attivato: si muove attivamente verso i dati sensibili, ne estrae le forme intelligibili, le riceve come propria attualizzazione.</div>
-    <div class="s39-meta">L'intelletto potenziale è la <em>materia</em>, gli intelligibili sono la <em>forma</em>: quando il primo riceve i secondi si attualizza, come ogni sostrato materiale che riceve la propria forma. Il baricentro dell'operazione conoscitiva si sposta <strong>dentro</strong> il soggetto umano.</div>
+    <div class="s39-a">L'<strong>intelletto potenziale stesso</strong>: l'intelletto agente non pensa al suo posto, ma garantisce la «diafaneità» intelligibile che rende possibile l'astrazione.</div>
+    <div class="s39-meta">L'intelletto potenziale è la <em>materia</em>, gli intelligibili sono la <em>forma</em>: quando il primo riceve i secondi si attualizza, come ogni sostrato materiale che riceve la propria forma. Il baricentro dell'atto di pensare resta nel soggetto umano, mentre l'agente funge da condizione cosmologica.</div>
     <div class="s39-cons">Conseguenza: l'autonomia intellettuale del soggetto; l'immortalità si consolida come statuto stabile (non fluttuante) man mano che si costituisce l'intelletto acquisito.</div>
   </div>
 </div>
@@ -12025,7 +12130,7 @@ em; }
       <div class="s32-state-box s32-state-empty">
         <div class="s32-state-title">Intelletto Potenziale</div>
         <div class="s32-state-sub">tabula rasa — astrae attivamente</div>
-        <p>Non attende passivamente l'illuminazione dall'Intelletto Agente esterno: opera attivamente sulle cose sensibili, astraendone le forme e spogliandole degli accidenti materiali.</p>
+        <p>Non viene sostituito dall'Intelletto Agente: grazie alla diafaneità intelligibile resa possibile dall'agente, opera sulle cose sensibili astraendone le forme e spogliandole degli accidenti materiali.</p>
       </div>
     </div>
   </div>
@@ -12402,7 +12507,7 @@ em; }
   <div class="s32a-arrow">&darr;</div>
   <div class="s32a-level s32a-lv-intel">
     <div class="s32a-lev-n">I</div>
-    <div><div class="s32a-lev-name">Prima intelligenza</div><div class="s32a-lev-desc">Muove il primo cielo (cielo delle stelle fisse). Pensa se stessa e il principio che l'ha creata.</div></div>
+    <div><div class="s32a-lev-name">Prima intelligenza</div><div class="s32a-lev-desc">Muove il primo cielo, cioe il Cristallino privo di corpi luminosi. Pensa se stessa e il principio che l'ha creata.</div></div>
     <div class="s32a-lev-func" style="color:var(--aristo-l);">Motore immobile</div>
   </div>
   <div class="s32a-arrow">&darr;</div>
@@ -12713,7 +12818,7 @@ em; }
 <span class="badge-l">LL. 16–21</span>
 </div>
 <h2>Confronto sinottico: Al-Kind&#299; vs. Al-F&#257;r&#257;b&#299;</h2>
-<p class="desc">I due capostipiti della <em>falsafa</em> condividono la griglia aristotelica del <em>De Anima</em>, ma la interpretano in modo profondamente diverso. Al-Kind&#299; costruisce un modello illuminazionistico dove l&rsquo;intelletto agente &egrave; trascendente e coincide con la Causa Prima; Al-F&#257;r&#257;b&#299; separa radicalmente Dio dall&rsquo;intelletto agente &mdash; che declassa a decima intelligenza &mdash; e trasforma il processo conoscitivo da &laquo;ricezione passiva&raquo; a &laquo;conquista attiva&raquo; dell&rsquo;essere razionale.</p>
+<p class="desc">I due capostipiti della <em>falsafa</em> condividono la griglia aristotelica del <em>De Anima</em>, ma la interpretano in modo profondamente diverso. Al-Kind&#299; costruisce un modello illuminazionistico dove l&rsquo;intelletto agente &egrave; trascendente ma <strong>non</strong> coincide con la Causa Prima: &egrave; il <em>Nous</em> neoplatonico, seconda ipostasi e cosmo intelligibile. Al-F&#257;r&#257;b&#299; separa radicalmente Dio dall&rsquo;intelletto agente &mdash; identificato con la decima intelligenza &mdash; e trasforma il processo conoscitivo da &laquo;ricezione passiva&raquo; a &laquo;conquista attiva&raquo; dell&rsquo;essere razionale.</p>
 
 <!-- Mini-header con i due profili -->
 <div class="s44-direction">
@@ -12721,7 +12826,7 @@ em; }
     <div class="s44-dir-lbl">Il Primo Filosofo Arabo</div>
     <div class="s44-dir-name">Al-Kind&#299;</div>
     <div class="s44-dir-arrow">&darr;</div>
-    <div class="s44-dir-desc">Modello <strong>discendente</strong>: l&rsquo;intelletto agente trascendente <strong>illumina dall&rsquo;alto</strong> l&rsquo;anima umana. Il contatto con la Causa Prima &egrave; il punto di <strong>partenza</strong> del processo conoscitivo.</div>
+    <div class="s44-dir-desc">Modello <strong>discendente</strong>: l&rsquo;intelletto agente trascendente, cio&egrave; il <em>Nous</em> neoplatonico e non Dio, <strong>illumina dall&rsquo;alto</strong> l&rsquo;anima umana. Il contatto con questo intelletto ipostatico &egrave; il punto di <strong>partenza</strong> del processo conoscitivo.</div>
   </div>
   <div class="s44-dir-center">&ne;</div>
   <div class="s44-dir-side s44-dir-farabi">
@@ -12751,13 +12856,13 @@ em; }
   <div class="s44-row">
     <div class="s44-lbl"><span class="s44-lbl-icon">&#128300;</span> N&deg; intelletti</div>
     <div class="s44-cell-k"><strong>4</strong>: sempre in atto (trascendente), potenziale, passato in atto, manifesto/espresso</div>
-    <div class="s44-cell-f"><strong>4 nell&rsquo;anima</strong> (potenziale, in atto, acquisito, agente) + intelletto agente come quinta entit&agrave; separata</div>
+    <div class="s44-cell-f">Tre stadi individuali dell'intelletto umano: potenziale, in atto, acquisito; l'<strong>intelletto agente</strong> &egrave; invece unico e separato</div>
   </div>
 
   <!-- 2. Intelletto agente — KEY -->
   <div class="s44-row s44-key">
     <div class="s44-lbl"><span class="s44-lbl-icon">&#9733;</span> Intelletto agente</div>
-    <div class="s44-cell-k"><strong>Trascendente</strong>, coincide con la Causa Prima / <em>Nous</em> neoplatonico. Illumina dall&rsquo;alto, &egrave; il principio primo.<br><span class="s44-pill s44-pill-illum">Causa Prima</span></div>
+    <div class="s44-cell-k"><strong>Trascendente</strong>, coincide con il <em>Nous</em> neoplatonico, seconda ipostasi e cosmo intelligibile; <strong>non</strong> coincide con la Causa Prima/Dio.<br><span class="s44-pill s44-pill-illum">Nous ipostatico</span></div>
     <div class="s44-cell-f"><strong>Decima intelligenza separata</strong> (NON Dio). Limite inferiore delle intelligenze celesti; &egrave; il culmine del percorso umano.<br><span class="s44-pill s44-pill-ascend">Decima intelligenza</span></div>
   </div>
 
@@ -12785,7 +12890,7 @@ em; }
   <!-- 6. Dio e intelletto -->
   <div class="s44-row">
     <div class="s44-lbl"><span class="s44-lbl-icon">&#10035;</span> Dio e intelletto</div>
-    <div class="s44-cell-k">Dio = intelletto agente trascendente. <strong>Coincidenza forte</strong> tra Causa Prima e intelletto agente del <em>De Anima</em>.</div>
+    <div class="s44-cell-k">Dio/Causa Prima resta al di sopra dell'intelletto agente. L'intelletto agente &egrave; il <strong>Nous</strong> neoplatonico, non il primo principio.</div>
     <div class="s44-cell-f">Dio &egrave; al di sopra di tutto (apofatico, assolutamente semplice). Intelletto agente = <strong>ultima</strong> delle 10 intelligenze, non Dio.</div>
   </div>
 
@@ -14313,7 +14418,7 @@ em; }
 </section>
 
 <section class="ds" id="s52">
-  <div class="sec-top"><span class="badge-n">Schema 50</span><span class="badge-l">L. 26</span></div>
+  <div class="sec-top"><span class="badge-n">Schema 50</span><span class="badge-l">LL. 26–27</span></div>
   <h2>Uomo sospeso: sostanzialità dell’anima e verità unica</h2>
   <p class="desc">L’esperimento dell’homo volans mostra che il sé resta affermabile anche sopprimendo ogni condizione corporea; la ricezione latina dovrà integrare questa tesi con l’anima forma del corpo.</p>
   <div class="s52-layout">
@@ -14323,11 +14428,248 @@ em; }
   <div class="insight"><div class="insight-lbl">Punto chiave</div><p>L’uomo sospeso non dimostra semplicemente che “penso”: mostra che il sé è afferrato anche senza corpo percepito. Per Avicenna questo basta a indicare la <strong>sostanzialità incorporea dell’anima</strong>.</p></div>
 </section>
 
+
+  <!-- Schema 51 -->
+  <section class="ds" id="snew52">
+    <div class="sec-top">
+      <span class="badge-n">Schema 51</span>
+      <span class="badge-l">L. 27</span>
+    </div>
+    <h2>La critica di Al-Ghazali ai Falasifa</h2>
+    <p class="desc">Le tre tesi filosofiche giudicate eretiche da Al-Ghazali e la dottrina dell'occasionalismo.</p>
+
+    <div class="snew52-layout">
+      <div class="snew52-col-left">
+        <div class="snew52-era-hdr eh-q">Le 3 Tesi Eretiche dei Filosofi</div>
+        <div class="snew52-grid">
+          <div class="snew52-card nd">
+            <div class="snew52-card-num">I</div>
+            <div class="snew52-card-content">
+              <div class="snew52-card-title">Eternità del mondo</div>
+              <div class="snew52-card-pos"><strong>Posizione:</strong> Il mondo è prodotto ab aeterno dal Creatore.</div>
+              <div class="snew52-card-crit"><strong>Critica:</strong> Nega la creazione nel tempo.</div>
+            </div>
+          </div>
+          <div class="snew52-card nd">
+            <div class="snew52-card-num">II</div>
+            <div class="snew52-card-content">
+              <div class="snew52-card-title">Ignoranza dei particolari</div>
+              <div class="snew52-card-pos"><strong>Posizione:</strong> Dio conosce solo gli universali.</div>
+              <div class="snew52-card-crit"><strong>Critica:</strong> Nega la Provvidenza e l'onniscienza coranica.</div>
+            </div>
+          </div>
+          <div class="snew52-card nd">
+            <div class="snew52-card-num">III</div>
+            <div class="snew52-card-content">
+              <div class="snew52-card-title">Negazione resurrezione</div>
+              <div class="snew52-card-pos"><strong>Posizione:</strong> Sopravvive solo l'anima.</div>
+              <div class="snew52-card-crit"><strong>Critica:</strong> Contraddice la resurrezione della carne.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="snew52-col-right">
+        <div class="snew52-conn-box">
+          <div class="snew52-conn-hdr">L'Occasionalismo</div>
+          <div class="snew52-conn-text">Negazione assoluta delle cause seconde. Ogni evento è causato direttamente da Dio (es. Dio brucia la paglia, non il fuoco). Le cause naturali sono solo "occasioni".</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="insight-lbl">Punto chiave</div>
+      <p>Al-Ghazali è il <strong>primo pensatore occasionalista della storia</strong>: pur conoscendo Aristotele, ne rigetta il naturalismo per salvaguardare l'assoluta onnipotenza divina.</p>
+    </div>
+  </section>
+
+  <!-- Schema 52 -->
+  <section class="ds" id="snew53">
+    <div class="sec-top">
+      <span class="badge-n">Schema 52</span>
+      <span class="badge-l">L. 27</span>
+    </div>
+    <h2>Il Trattato decisivo (Fasl al-Maqal)</h2>
+    <p class="desc">La fatwa di Averroè che sancisce l'obbligatorietà dello studio della filosofia per il credente musulmano.</p>
+
+    <div class="snew53-hierarchy">
+      <div class="snew53-level">
+        <div class="snew53-level-title">1. Obbligo di Legge</div>
+        <div class="snew53-level-desc">La legge religiosa obbliga alla riflessione sugli esseri esistenti per conoscere il Creatore.</div>
+      </div>
+      <div class="snew53-arrow-down"></div>
+      <div class="snew53-level">
+        <div class="snew53-level-title">2. Sillogismo Dimostrativo</div>
+        <div class="snew53-level-desc">Questa riflessione richiede il metodo più rigoroso: il sillogismo (inferenza dell'ignoto dal noto).</div>
+      </div>
+      <div class="snew53-arrow-down"></div>
+      <div class="snew53-level">
+        <div class="snew53-level-title">3. Studio degli Antichi</div>
+        <div class="snew53-level-desc">Se i filosofi antichi hanno già perfezionato il metodo logico, è obbligatorio studiarli.</div>
+      </div>
+      <div class="snew53-arrow-down"></div>
+      <div class="snew53-level">
+        <div class="snew53-level-title">4. Accettazione Critica</div>
+        <div class="snew53-level-desc">Ciò che è dimostrato vero si accetta; gli errori si segnalano, ma senza condannare l'impresa filosofica.</div>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="insight-lbl">Punto chiave</div>
+      <p>Strutturato non come un saggio, ma come una <strong>fatwa</strong> (parere giuridico vincolante), il testo stabilisce che proibire la filosofia a chi ne è capace è un atto contro la volontà di Dio.</p>
+    </div>
+  </section>
+
+  <!-- Schema 53 -->
+  <section class="ds" id="snew54">
+    <div class="sec-top">
+      <span class="badge-n">Schema 53</span>
+      <span class="badge-l">L. 28</span>
+    </div>
+    <h2>Il rifiuto della doppia verità</h2>
+    <p class="desc">La soluzione di Averroè all'apparente contrasto tra conclusioni filosofiche e testo rivelato.</p>
+
+    <div class="snew54-layout">
+      <div class="snew54-axiom">Assioma: Il Vero non può contrastare col Vero</div>
+      
+      <div class="snew54-grid">
+        <div class="snew54-card n-meta">
+          <div class="snew54-card-cond">Silenzio Coranico</div>
+          <div class="snew54-card-act">Nessun problema. Il filosofo deduce come il giurista.</div>
+        </div>
+        <div class="snew54-card n-meta">
+          <div class="snew54-card-cond">Accordo</div>
+          <div class="snew54-card-act">Nessun problema. Piena armonia.</div>
+        </div>
+        <div class="snew54-card n-meta">
+          <div class="snew54-card-cond">Contrasto (Lettera vs Dimostrazione)</div>
+          <div class="snew54-card-act">La dimostrazione non si tocca. Il testo sacro deve subire Ta'wil.</div>
+        </div>
+      </div>
+
+      <div class="snew54-tawil">
+        <div class="snew54-tawil-title">Ta'wil (Interpretazione Allegorica)</div>
+        <div class="snew54-tawil-desc">Passaggio dal senso letterale al significato remoto/metaforico, seguendo regole linguistiche arabe controllate. Non è arbitraria.</div>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="insight-lbl">Punto chiave</div>
+      <p>La teoria della 'doppia verità' è un'invenzione dei censori latini (Tempier, 1277). Averroè, al contrario, <strong>subordina l'esegesi letterale all'incorruttibilità della verità scientifica</strong>.</p>
+    </div>
+  </section>
+
+  <!-- Schema 54 -->
+  <section class="ds" id="snew55">
+    <div class="sec-top">
+      <span class="badge-n">Schema 54</span>
+      <span class="badge-l">LL. 27-28</span>
+    </div>
+    <h2>La tripartizione epistemologica</h2>
+    <p class="desc">La stratificazione della società umana in base al metodo conoscitivo e all'accesso al Testo Sacro in Averroè.</p>
+
+    <div class="snew55-cardgrid">
+      <div class="snew55-card snew55-card-masse">
+        <div class="snew55-class">Masse</div>
+        <div class="snew55-sub">Semplici credenti</div>
+        <div class="snew55-row"><span>Assenso</span><strong>Retorico</strong></div>
+        <div class="snew55-row"><span>Metodo</span><strong>Persuasione / immaginazione</strong></div>
+        <div class="snew55-access">Senso letterale obbligatorio del Corano</div>
+      </div>
+      <div class="snew55-card snew55-card-teologi">
+        <div class="snew55-class">Teologi</div>
+        <div class="snew55-sub">Kalam</div>
+        <div class="snew55-row"><span>Assenso</span><strong>Dialettico</strong></div>
+        <div class="snew55-row"><span>Metodo</span><strong>Premesse probabili</strong></div>
+        <div class="snew55-access">Interpretazione allegorica non dimostrativa, ibrida e instabile</div>
+      </div>
+      <div class="snew55-card snew55-card-filosofi">
+        <div class="snew55-class">Filosofi</div>
+        <div class="snew55-sub">Falasifa</div>
+        <div class="snew55-row"><span>Assenso</span><strong>Scientifico</strong></div>
+        <div class="snew55-row"><span>Metodo</span><strong>Sillogismo dimostrativo</strong></div>
+        <div class="snew55-access">Senso remoto e profondo tramite <em>ta'wil</em> controllato</div>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="insight-lbl">Punto chiave</div>
+      <p>L'elitarismo averroistico vieta la divulgazione: spiegare allegorie a chi non ha gli strumenti dimostrativi genera scetticismo e miscredenza. L'errore dei teologi è <strong>l'ibridazione dei metodi</strong>.</p>
+    </div>
+  </section>
+
+  <!-- Schema 55 -->
+  <section class="ds" id="snew56">
+    <div class="sec-top">
+      <span class="badge-n">Schema 55</span>
+      <span class="badge-l">L. 28</span>
+    </div>
+    <h2>L'evoluzione dell'Intelletto Potenziale in Averroè</h2>
+    <p class="desc">Le tre fasi del pensiero averroistico sulla natura dell'intelletto con cui l'uomo pensa.</p>
+
+    <div class="snew56-timeline">
+      <div class="snew56-phase phase-1">
+        <div class="snew56-phase-title">1. Epitome (Commento Breve)</div>
+        <div class="snew56-phase-pos">Intelletto = Fantasmi</div>
+        <div class="snew56-phase-desc">Posizione antisostanzialistica vicina ad Avempace. Massimo deflazionismo ontologico.</div>
+      </div>
+      <div class="snew56-phase phase-2">
+        <div class="snew56-phase-title">2. Commento Medio</div>
+        <div class="snew56-phase-pos">Avvicinamento a Temistio</div>
+        <div class="snew56-phase-desc">L'intelletto potenziale è parte di una sostanza separata, ma deve avere un legame con l'individuo per giustificare l'autoconsapevolezza.</div>
+      </div>
+      <div class="snew56-phase phase-3">
+        <div class="snew56-phase-title">3. Grande Commento</div>
+        <div class="snew56-phase-pos">Monopsichismo Assoluto</div>
+        <div class="snew56-phase-desc">Intelletto potenziale come Sostanza Separata, Unica per tutta l'umanità. È un 'quarto genere di essere'.</div>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="insight-lbl">Punto chiave</div>
+      <p>Averroè è l'esempio perfetto della lettura evolutiva: cambiando tipologia di commento ad Aristotele, trasforma radicalmente la sua concezione, arrivando all'estremo iper-sostanzialismo del <strong>monopsichismo</strong>.</p>
+    </div>
+  </section>
+
+  <!-- Schema 56 -->
+  <section class="ds" id="snew57">
+    <div class="sec-top">
+      <span class="badge-n">Schema 56</span>
+      <span class="badge-l">L. 28</span>
+    </div>
+    <h2>Gli argomenti per il Monopsichismo</h2>
+    <p class="desc">Le ragioni ontologiche e gnoseologiche dietro la tesi dell'intelletto potenziale come sostanza unica separata.</p>
+
+    <div class="snew57-layout">
+      <div class="snew57-grid">
+        <div class="snew57-card">
+          <div class="snew57-card-title">Argomento Ontologico</div>
+          <div class="snew57-card-text">Se l'intelletto fosse individuale, sarebbe forma immanente alla materia. Ma una forma materiale è 'oggetto' di conoscenza, non 'soggetto' conoscente.</div>
+        </div>
+        <div class="snew57-card">
+          <div class="snew57-card-title">Argomento Gnoseologico</div>
+          <div class="snew57-card-text">La conoscenza intellettiva coglie l'universale. Se la facoltà fosse individuale, coglierebbe solo il particolare, non distinguendosi dai sensi.</div>
+        </div>
+      </div>
+      
+      <div class="snew57-doppio-sogg">
+        <div class="snew57-ds-title">Teoria del Doppio Soggetto (Analogia Kantiana)</div>
+        <div class="snew57-ds-desc">Per la conoscenza servono due principi: i contenuti (i fantasmi individuali dell'anima) e l'universalizzazione (l'intelletto potenziale separato). Il singolo umano 'partecipa' a una struttura collettiva.</div>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="insight-lbl">Punto chiave</div>
+      <p>Il monopsichismo risponde al problema della comunicazione: se i concetti fossero prodotti da intelletti puramente individuali, non avremmo la garanzia di pensare la <strong>stessa verità oggettiva</strong>.</p>
+    </div>
+  </section>
+
+
 <!-- FOOTER -->
 <div style="padding:2rem 3.5rem;background:var(--surface);border-top:1px solid var(--border);font-size:0.78rem;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
 <div>
 <div style="font-family:var(--font-h);color:var(--cream);font-size:0.85rem;margin-bottom:0.2rem;">Filosofia Medievale Araba ed Ebraica</div>
-<div style="font-style:italic;"><span class="schema-count-var">50</span> schemi visivi · Lezioni 01–<span class="ultima-lezione-var">26</span> · Università degli Studi di Milano</div>
+<div style="font-style:italic;"><span class="schema-count-var">56</span> schemi visivi · Lezioni 01–<span class="ultima-lezione-var">28</span> · Università degli Studi di Milano</div>
 </div>
 <div style="font-style:italic;color:var(--muted2);">davide.prando@studenti.unimi.it</div>
 </div>
@@ -14511,8 +14853,8 @@ if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
 // Mobile toggle
 const mobThemeBtn = document.getElementById('mob-theme-toggle');
 if (mobThemeBtn) mobThemeBtn.addEventListener('click', toggleTheme);
-const ULTIMA_LEZIONE = 26;
-const TOTAL_SCHEMAS = 50;
+const ULTIMA_LEZIONE = 28;
+const TOTAL_SCHEMAS = 56;
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".ultima-lezione-var").forEach(el => {
